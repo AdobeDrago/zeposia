@@ -1,0 +1,157 @@
+/* ==========================================================================
+   Gateway Block
+   Indication selector landing page — centered logo + HCP attestation + CTA cards
+   Source: https://www.zeposiahcp.com/
+   ========================================================================== */
+
+/* Section-level styling (applied via section-metadata style=gateway) */
+.section.gateway-container {
+  background: linear-gradient(270deg, #C0E5FF, #F0F9FF);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+
+/* Utility banner above gateway */
+.gateway-wrapper::before {
+  content: 'THIS SITE IS INTENDED FOR U.S. HCP AUDIENCES ONLY';
+  display: block;
+  width: 100%;
+  background-color: #F7F8F9;
+  color: var(--color-brand-blue, #0032A0);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-family-primary, 'Montserrat', sans-serif);
+}
+
+/* Block container */
+.gateway-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+}
+
+.gateway {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Row 1: Logo */
+.gateway > div:nth-child(1) {
+  margin-bottom: 32px;
+}
+
+.gateway > div:nth-child(1) img {
+  width: 233px;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Row 2: Description text */
+.gateway > div:nth-child(2) {
+  margin-bottom: 40px;
+}
+
+.gateway > div:nth-child(2) p {
+  font-family: var(--font-family-primary, 'Montserrat', sans-serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: #4D4D4F;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Row 3: CTA cards container */
+.gateway > div:nth-child(3) {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* Individual CTA cards */
+.gateway > div:nth-child(3) > div {
+  flex: 1;
+  max-width: 343px;
+}
+
+.gateway > div:nth-child(3) > div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 24px 32px;
+  text-decoration: none;
+  color: var(--color-text-dark, #333333);
+  font-family: var(--font-family-heading-semi, 'MontserratSemiBold', 'Montserrat', sans-serif);
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  height: 100%;
+  min-height: 80px;
+}
+
+.gateway > div:nth-child(3) > div a:hover {
+  box-shadow: 0 4px 16px rgba(0, 50, 160, 0.15);
+  transform: translateY(-2px);
+}
+
+.gateway > div:nth-child(3) > div a::after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 12px;
+  background: url('/icons/arrow-right.svg') no-repeat center;
+  background-size: contain;
+}
+
+/* Responsive: stack cards on mobile */
+@media (max-width: 768px) {
+  .gateway > div:nth-child(3) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gateway > div:nth-child(3) > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gateway > div:nth-child(3) > div a {
+    font-size: 18px;
+    padding: 20px 24px;
+  }
+
+  .gateway > div:nth-child(2) p {
+    font-size: 16px;
+  }
+
+  .gateway > div:nth-child(1) img {
+    width: 180px;
+  }
+}
