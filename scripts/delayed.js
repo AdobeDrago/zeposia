@@ -40,8 +40,12 @@ if (template) {
 
   // Probe first. If the template ships no animation engine, the URL
   // 404s and we skip silently — no CDN deps loaded either.
+  // Also skip if the file is tiny (placeholder comment only).
   fetch(enginePath, { method: 'HEAD' })
-    .then((probe) => { if (probe.ok) loadEngine(); })
+    .then((probe) => {
+      const len = parseInt(probe.headers.get('content-length') || '0', 10);
+      if (probe.ok && len > 200) loadEngine();
+    })
     .catch(() => {
       // Network error on the probe itself — also a "no engine"
       // signal; skip silently.
