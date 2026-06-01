@@ -351,6 +351,19 @@ function loadDelayed() {
   window.setTimeout(() => import('./delayed.js'), 3000);
 }
 
+// Document-level HCP modal handler — fires regardless of script timing
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.hcp_btn');
+  if (btn) {
+    e.preventDefault();
+    e.stopPropagation();
+    const modal = document.getElementById('entryModal');
+    if (modal) modal.style.display = 'none';
+    document.body.style.overflow = '';
+    sessionStorage.setItem('hcp-verified', 'true');
+  }
+});
+
 function initHCPModal() {
   const modal = document.getElementById('entryModal');
   if (!modal) return;
@@ -363,31 +376,6 @@ function initHCPModal() {
   modal.style.display = 'block';
   document.body.style.overflow = 'hidden';
   window.scrollTo(0, 0);
-
-  function dismissModal() {
-    modal.style.display = 'none';
-    document.body.style.overflow = '';
-    sessionStorage.setItem('hcp-verified', 'true');
-  }
-
-  // Attach click directly to .hcp_btn (avoids pointer-events inheritance issues from Bootstrap)
-  const hcpBtn = modal.querySelector('.hcp_btn');
-  if (hcpBtn) {
-    hcpBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      dismissModal();
-    });
-  }
-
-  // Fallback: delegation on the modal overlay
-  modal.addEventListener('click', (e) => {
-    if (e.target.closest('.hcp_btn')) {
-      e.preventDefault();
-      e.stopPropagation();
-      dismissModal();
-    }
-  });
 }
 
 async function loadPage() {
