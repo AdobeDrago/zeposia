@@ -364,15 +364,28 @@ function initHCPModal() {
   document.body.style.overflow = 'hidden';
   window.scrollTo(0, 0);
 
-  // Attach click to dismiss
-  modal.addEventListener('click', (e) => {
-    const btn = e.target.closest('.hcp_btn');
-    if (btn) {
+  function dismissModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+    sessionStorage.setItem('hcp-verified', 'true');
+  }
+
+  // Attach click directly to .hcp_btn (avoids pointer-events inheritance issues from Bootstrap)
+  const hcpBtn = modal.querySelector('.hcp_btn');
+  if (hcpBtn) {
+    hcpBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-      sessionStorage.setItem('hcp-verified', 'true');
+      dismissModal();
+    });
+  }
+
+  // Fallback: delegation on the modal overlay
+  modal.addEventListener('click', (e) => {
+    if (e.target.closest('.hcp_btn')) {
+      e.preventDefault();
+      e.stopPropagation();
+      dismissModal();
     }
   });
 }
