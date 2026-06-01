@@ -1,4 +1,4 @@
-/* Zeposia Gateway — import source site CSS directly for pixel-perfect match */
+/* Zeposia Gateway  import source site CSS directly for pixel-perfect match */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css');
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css');
@@ -34,7 +34,7 @@ main {
   }
 }
 
-/* === HCP MODAL — positioning only, styling from source CSS === */
+/* === HCP MODAL  positioning only, styling from source CSS === */
 .entry-modal.show,
 .entry-modal[style*="display: block"],
 .entry-modal[style*="display:block"] {
@@ -73,4 +73,12 @@ body:has(.entry-modal[style*="display: block"]),
 body:has(.entry-modal[style*="display:block"]) {
   overflow: hidden !important;
   height: 100vh !important;
+}
+
+/* Fix: Bootstrap modal sets pointer-events:none on dialog  restore on content */
+.entry-modal .modal-dialog {
+  pointer-events: none;
+}
+.entry-modal .modal-content {
+  pointer-events: auto !important;
 }
