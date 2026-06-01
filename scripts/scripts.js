@@ -332,10 +332,9 @@ async function loadEager(doc) {
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
 
-  loadHeader(doc.querySelector('header'));
-  loadFooter(doc.querySelector('footer'));
-
   if (!main.dataset.overlay) {
+    loadHeader(doc.querySelector('header'));
+    loadFooter(doc.querySelector('footer'));
     await loadSections(main);
   }
 
