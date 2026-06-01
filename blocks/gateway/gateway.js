@@ -21,11 +21,11 @@ function showHCPModal() {
       <div class="gateway-modal-buttons">
         <div class="gateway-modal-choice">
           <span>I <b>am</b> a U.S. Healthcare Professional</span>
-          <button class="gateway-modal-btn" data-action="confirm">Proceed to Site</button>
+          <button type="button" class="gateway-modal-btn" data-action="confirm">Proceed to Site</button>
         </div>
         <div class="gateway-modal-choice">
           <span>I <b>am not</b> a U.S. Healthcare Professional</span>
-          <a href="https://www.zeposia.com" class="gateway-modal-btn" data-action="deny">Return</a>
+          <a href="https://www.zeposia.com" class="gateway-modal-btn gateway-modal-btn-outline" data-action="deny">Return</a>
         </div>
       </div>
     </div>
@@ -36,37 +36,51 @@ function showHCPModal() {
   // Prevent background scrolling
   document.body.style.overflow = 'hidden';
 
-  // Handle confirm button
-  const confirmBtn = overlay.querySelector('[data-action="confirm"]');
-  confirmBtn.addEventListener('click', () => {
-    sessionStorage.setItem('hcp-verified', 'true');
-    overlay.remove();
-    document.body.style.overflow = '';
+  // Delegated handler — survives any DOM shuffling and catches clicks on pseudo-elements / children
+  overlay.addEventListener('click', (e) => {
+    const target = e.target.closest('[data-action]');
+    if (!target) return;
+    if (target.dataset.action === 'confirm') {
+      e.preventDefault();
+      sessionStorage.setItem('hcp-verified', 'true');
+      overlay.remove();
+      document.body.style.overflow = '';
+    }
+    // deny: let the <a> navigate naturally
   });
-
-  // The deny button is an <a> tag that navigates away, no extra handler needed
 }
 
 export default function decorate(block) {
-  // Add aria-label for accessibility
   block.setAttribute('role', 'region');
   block.setAttribute('aria-label', 'Indication selector');
 
-  // Mark the CTA row for card styling
-  const rows = [...block.children];
-  if (rows.length >= 3) {
-    rows[0].classList.add('gateway-logo');
-    rows[1].classList.add('gateway-description');
-    rows[2].classList.add('gateway-ctas');
+  // Authored rows are label/value pairs: top-header, logo, banner-text, uc-link, ms-link
+  const ctaWrapper = document.createElement('div');
+  ctaWrapper.className = 'gateway-ctas';
 
-    // Add arrow icons to CTA links
-    const ctaLinks = rows[2].querySelectorAll('a');
-    ctaLinks.forEach((link) => {
-      link.classList.add('gateway-cta');
-      link.setAttribute('aria-label', `View ${link.textContent.trim()} information`);
-    });
-  }
+  [...block.children].forEach((row) => {
+    const label = row.firstElementChild?.textContent.trim().toLowerCase();
+    if (!label) return;
+    row.firstElementChild.remove();
 
-  // Show HCP verification modal
+    if (label === 'top-header') row.classList.add('gateway-top-header');
+    else if (label === 'logo') row.classList.add('gateway-logo');
+    else if (label === 'banner-text') row.classList.add('gateway-description');
+    else if (label === 'uc-link' || label === 'ms-link') {
+      const link = row.querySelector('a');
+      if (link) {
+        link.classList.add('gateway-cta');
+        link.setAttribute('aria-label', `View ${link.textContent.trim()} information`);
+        const card = document.createElement('div');
+        card.className = `gateway-cta-card gateway-cta-${label.split('-')[0]}`;
+        card.append(link);
+        ctaWrapper.append(card);
+      }
+      row.remove();
+    }
+  });
+
+  if (ctaWrapper.children.length) block.append(ctaWrapper);
+
   showHCPModal();
 }

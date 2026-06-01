@@ -90,8 +90,8 @@
   margin: 0 auto;
 }
 
-/* Row 3: CTA cards container */
-.gateway > div:nth-child(3) {
+/* CTA cards container */
+.gateway .gateway-ctas {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -99,15 +99,15 @@
   align-items: stretch;
   width: 100%;
   max-width: 1175px;
+  margin: 0 auto;
 }
 
-/* Individual CTA cards */
-.gateway > div:nth-child(3) > div {
+.gateway .gateway-cta-card {
   flex: 1;
   max-width: 577px;
 }
 
-.gateway > div:nth-child(3) > div a {
+.gateway .gateway-cta-card a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,12 +126,12 @@
   text-align: center;
 }
 
-.gateway > div:nth-child(3) > div a:hover {
+.gateway .gateway-cta-card a:hover {
   box-shadow: rgba(147, 178, 199, 0.7) 1px 8px 18px 0px;
   transform: translateY(-2px);
 }
 
-.gateway > div:nth-child(3) > div a::after {
+.gateway .gateway-cta-card a::after {
   content: '';
   display: inline-block;
   width: 24px;
@@ -238,6 +238,20 @@
   background-color: #e03830;
 }
 
+.gateway-modal-btn-outline {
+  background-color: #FFFFFF;
+  color: #F9423A;
+  border: 2px solid #F9423A;
+}
+
+.gateway-modal-btn-outline:hover {
+  background-color: #FFF5F4;
+}
+
+.gateway-modal-btn-outline::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F9423A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E") !important;
+}
+
 .gateway-modal-btn::after {
   content: '';
   display: inline-block;
@@ -251,17 +265,17 @@
 
 /* Responsive: stack cards on mobile */
 @media (max-width: 768px) {
-  .gateway > div:nth-child(3) {
+  .gateway .gateway-ctas {
     flex-direction: column;
     align-items: center;
   }
 
-  .gateway > div:nth-child(3) > div {
+  .gateway .gateway-cta-card {
     width: 100%;
     max-width: 100%;
   }
 
-  .gateway > div:nth-child(3) > div a {
+  .gateway .gateway-cta-card a {
     font-size: 18px;
     padding: 0 24px;
     height: 100px;
