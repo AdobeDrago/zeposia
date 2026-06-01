@@ -13,7 +13,10 @@ document.addEventListener('click', function(e) {
   while (btn && btn !== document) {
     if (btn.classList && btn.classList.contains('hcp_btn')) {
       var modal = document.getElementById('entryModal');
-      if (modal) { modal.style.display = 'none'; }
+      if (modal) {
+        modal.classList.add('hcp-dismissed');
+        modal.style.display = 'none';
+      }
       document.body.style.overflow = '';
       try { sessionStorage.setItem('hcp-verified', 'true'); } catch(x) {}
       e.preventDefault();
