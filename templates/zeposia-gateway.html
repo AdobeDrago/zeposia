@@ -626,4 +626,34 @@ span.blue a {
       </div>
     </div>
   </section>
+
+  <!-- HCP Verification Modal -->
+  <div class="cmp-modal entry-modal modal fade show" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="entryModal" style="display:block; background: rgba(0,0,0,0.5);">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5">
+          <div class="modalhead">Please verify that you are a U.S. Healthcare Professional</div>
+          <p>This information is intended for U.S. Healthcare Professionals.</p>
+          <div class="buttoncnt d-flex">
+            <div class="leftbtn btncont">
+              <p>I <b>am</b> a U.S. Healthcare Professional</p>
+              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" onclick="document.getElementById('entryModal').style.display='none'; sessionStorage.setItem('hcp-verified','true');">Proceed to Site</div>
+            </div>
+            <div class="rightbtn btncont">
+              <p>I <b>am not</b> a U.S. Healthcare Professional</p>
+              <div class="nonhcp_btn entrymodal_btn"><a href="https://www.zeposia.com">Return</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Hide modal if already verified
+    if (sessionStorage.getItem('hcp-verified') === 'true') {
+      var m = document.getElementById('entryModal');
+      if (m) m.style.display = 'none';
+    }
+  </script>
 </main>
