@@ -637,7 +637,7 @@ span.blue a {
           <div class="buttoncnt d-flex">
             <div class="leftbtn btncont">
               <p>I <b>am</b> a U.S. Healthcare Professional</p>
-              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" >Proceed to Site</div>
+              <button type="button" class="hcp_btn entrymodal_btn" onclick="document.getElementById('entryModal').style.display='none';document.body.style.overflow='';sessionStorage.setItem('hcp-verified','true');">Proceed to Site</button>
             </div>
             <div class="rightbtn btncont">
               <p>I <b>am not</b> a U.S. Healthcare Professional</p>
