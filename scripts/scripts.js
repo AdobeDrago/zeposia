@@ -358,7 +358,10 @@ document.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     const modal = document.getElementById('entryModal');
-    if (modal) modal.style.display = 'none';
+    if (modal) {
+      modal.classList.add('hcp-dismissed');
+      modal.style.display = 'none';
+    }
     document.body.style.overflow = '';
     sessionStorage.setItem('hcp-verified', 'true');
   }
@@ -369,6 +372,7 @@ function initHCPModal() {
   if (!modal) return;
 
   if (sessionStorage.getItem('hcp-verified') === 'true') {
+    modal.classList.add('hcp-dismissed');
     modal.style.display = 'none';
     return;
   }
