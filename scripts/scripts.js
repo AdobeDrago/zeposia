@@ -349,31 +349,38 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
+}
 
-  // HCP Modal — show on first visit, dismiss to sessionStorage
+function initHCPModal() {
   const modal = document.getElementById('entryModal');
-  if (modal) {
-    if (sessionStorage.getItem('hcp-verified') === 'true') {
-      modal.style.display = 'none';
-    } else {
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-      window.scrollTo(0, 0);
-      const proceedBtn = modal.querySelector('.hcp_btn');
-      if (proceedBtn) {
-        proceedBtn.addEventListener('click', () => {
-          modal.style.display = 'none';
-          document.body.style.overflow = '';
-          sessionStorage.setItem('hcp-verified', 'true');
-        });
-      }
-    }
+  if (!modal) return;
+
+  if (sessionStorage.getItem('hcp-verified') === 'true') {
+    modal.style.display = 'none';
+    return;
   }
+
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  window.scrollTo(0, 0);
+
+  // Attach click to dismiss
+  modal.addEventListener('click', (e) => {
+    const btn = e.target.closest('.hcp_btn');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      sessionStorage.setItem('hcp-verified', 'true');
+    }
+  });
 }
 
 async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
+  initHCPModal();
   loadDelayed();
 }
 
