@@ -74,13 +74,13 @@
   --font-family-heading:          'Montserrat', sans-serif;
   --font-family-body:             'Montserrat', sans-serif;
   --font-family-display:          'Outfit', sans-serif;
-  --font-family-footer:           'Arial', sans-serif;
+  --font-family-footer:           'Montserrat', sans-serif;
 
   /* --- Typography: Font Sizes --- */
-  --font-size-h1:                 46px;
-  --font-size-h1-sm:              33px;
+  --font-size-h1:                 36px;
+  --font-size-h1-sm:              28px;
   --font-size-h2:                 26px;
-  --font-size-h2-sm:              24px;
+  --font-size-h2-sm:              22px;
   --font-size-h3:                 20px;
   --font-size-h4:                 18px;
   --font-size-h5:                 16px;
@@ -89,9 +89,9 @@
   --font-size-body-sm:            14px;
   --font-size-body-xs:            12px;
   --font-size-body-xxs:           10px;
-  --font-size-nav:                18px;
+  --font-size-nav:                16px;
   --font-size-nav-sub:            14px;
-  --font-size-cta:                16px;
+  --font-size-cta:                14px;
   --font-size-heading-large:      30px;
 
   /* --- Typography: Font Weights --- */
@@ -102,7 +102,7 @@
   --font-weight-extrabold:        800;
 
   /* --- Typography: Line Heights --- */
-  --line-height-h1:               1.2;
+  --line-height-h1:               1.06;
   --line-height-h2:               1.23;
   --line-height-h3:               1.25;
   --line-height-body:             1.5;
@@ -123,7 +123,7 @@
   --content-max-width:            1200px;
   --section-padding-y:            48px;
   --section-padding-x:            16px;
-  --nav-height:                   72px;
+  --nav-height:                   91px;
 
   /* --- Borders & Radii --- */
   --border-radius-btn:            20px;
@@ -133,6 +133,7 @@
 
   /* --- Shadows --- */
   --shadow-none:                  none;
+  --shadow-header:                0 3px 6px rgba(0, 0, 0, 0.16);
 
   /* --- Transitions --- */
   --transition-default:           all 0.3s ease;
@@ -142,6 +143,9 @@
   --z-isi-sticky:                 1010;
   --z-overlay:                    1040;
   --z-modal:                      1050;
+
+  /* --- EDS Section background variable default --- */
+  --background-color:             transparent;
 }
 
 
@@ -198,7 +202,7 @@ h6 {
 }
 
 h1 {
-  font-size: var(--font-size-h1-sm);
+  font-size: var(--font-size-h1);
   line-height: var(--line-height-h1);
   letter-spacing: -0.01em;
 }
@@ -206,6 +210,8 @@ h1 {
 h2 {
   font-size: var(--font-size-h2);
   line-height: var(--line-height-h2);
+  color: var(--color-text-subheading);
+  font-weight: var(--font-weight-semibold);
 }
 
 h3 {
@@ -243,10 +249,11 @@ p {
   margin: 0 0 var(--spacing-md);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
+  color: var(--color-text-secondary);
 }
 
 a {
-  color: var(--color-brand-blue);
+  color: var(--color-brand-purple);
   text-decoration: underline;
   transition: color 0.2s ease;
 }
@@ -319,11 +326,11 @@ button.button {
   gap: var(--spacing-sm);
   font-family: var(--font-family-primary);
   font-size: var(--font-size-cta);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-semibold);
   line-height: 1;
   text-decoration: none;
   border: 2px solid transparent;
-  border-radius: var(--border-radius-btn);
+  border-radius: var(--border-radius-btn-sm);
   padding: 10px 24px;
   cursor: pointer;
   transition: var(--transition-default);
@@ -341,6 +348,7 @@ button.button {
   background-color: var(--color-brand-blue);
   color: var(--color-text-white);
   border-color: var(--color-brand-blue);
+  border-radius: var(--border-radius-btn-sm);
 }
 
 .button.primary:hover,
@@ -385,6 +393,7 @@ header {
   top: 0;
   z-index: var(--z-nav);
   background-color: var(--color-bg-white);
+  box-shadow: var(--shadow-header);
 }
 
 main {
@@ -401,14 +410,24 @@ main .section > .block {
   margin: 0 auto;
 }
 
-/* Section variants */
+/* Section variants — EDS metadata class names */
 main .section.highlight {
+  background-color: var(--color-uc-section-bg);
+}
+
+main .section.light-blue-bg {
+  background-color: var(--color-uc-hero-bg);
+  --background-color: var(--color-text-heading);
+}
+
+main .section.light-gray-bg {
   background-color: var(--color-uc-section-bg);
 }
 
 main .section.dark {
   background-color: var(--color-brand-blue-dark);
   color: var(--color-text-white);
+  --background-color: var(--color-text-white);
 }
 
 main .section.dark h1,
@@ -424,15 +443,57 @@ main .section.dark a {
   color: var(--color-text-white);
 }
 
+/* Hero sections — ensure --background-color is set for h1 inside hero blocks */
+main .section.hero-container {
+  --background-color: var(--color-text-heading);
+}
+
+main .section.hero-container.light-blue-bg {
+  --background-color: var(--color-text-heading);
+}
+
+main .section.hero-container.dark {
+  --background-color: var(--color-text-white);
+}
+
 footer {
   font-family: var(--font-family-footer);
   font-size: var(--font-size-body-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 
 /* ==========================================================================
-   8. UC INDICATION STYLES — [data-indication="uc"] / .uc
+   8. NAVIGATION — Links
+   ========================================================================== */
+
+/* Navigation links — override general link purple to blue */
+header a,
+nav a,
+.header a {
+  color: var(--color-brand-blue);
+  text-decoration: none;
+  font-size: var(--font-size-nav);
+  font-weight: var(--font-weight-regular);
+}
+
+header a:hover,
+nav a:hover,
+.header a:hover {
+  color: var(--color-text-link-hover);
+  text-decoration: none;
+}
+
+/* Utility bar links (smaller) */
+header .header-utility a,
+.header .header-utility a {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-xs);
+}
+
+
+/* ==========================================================================
+   9. UC INDICATION STYLES — [data-indication="uc"] / .uc
    ========================================================================== */
 
 [data-indication="uc"],
@@ -457,7 +518,8 @@ footer {
 
 [data-indication="uc"] h1,
 .uc h1 {
-  font-size: var(--font-size-h1-sm);
+  font-size: var(--font-size-h1);
+  color: var(--color-text-heading);
 }
 
 [data-indication="uc"] .button.primary,
@@ -515,7 +577,7 @@ footer {
 
 
 /* ==========================================================================
-   9. MS INDICATION STYLES — [data-indication="ms"] / .ms
+   10. MS INDICATION STYLES — [data-indication="ms"] / .ms
    ========================================================================== */
 
 [data-indication="ms"],
@@ -668,7 +730,7 @@ footer {
 
 
 /* ==========================================================================
-   10. RESPONSIVE BREAKPOINTS
+   11. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
 /* --- Tablet (768px+) --- */
@@ -679,7 +741,7 @@ footer {
   }
 
   h1 {
-    font-size: var(--font-size-h1-sm);
+    font-size: var(--font-size-h1);
   }
 
   h2 {
@@ -704,7 +766,7 @@ footer {
 
   [data-indication="uc"] h1,
   .uc h1 {
-    font-size: var(--font-size-heading-large);
+    font-size: var(--font-size-h1);
   }
 
   [data-indication="ms"] h1,
@@ -723,12 +785,12 @@ footer {
 /* --- Mobile only (below 768px) --- */
 @media (max-width: 767px) {
   h1 {
-    font-size: 28px;
+    font-size: var(--font-size-h1-sm);
     line-height: 1.25;
   }
 
   h2 {
-    font-size: 22px;
+    font-size: var(--font-size-h2-sm);
   }
 
   h3 {
@@ -751,7 +813,7 @@ footer {
 
 
 /* ==========================================================================
-   11. UTILITY CLASSES
+   12. UTILITY CLASSES
    ========================================================================== */
 
 .visually-hidden {
@@ -780,7 +842,7 @@ footer {
 
 
 /* ==========================================================================
-   12. ISI (Important Safety Information) — Sticky Tray
+   13. ISI (Important Safety Information) — Sticky Tray
    ========================================================================== */
 
 .isi-tray {
@@ -811,7 +873,7 @@ footer {
 
 
 /* ==========================================================================
-   13. PRINT STYLES
+   14. PRINT STYLES
    ========================================================================== */
 
 @media print {
