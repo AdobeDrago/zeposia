@@ -637,7 +637,7 @@ span.blue a {
           <div class="buttoncnt d-flex">
             <div class="leftbtn btncont">
               <p>I <b>am</b> a U.S. Healthcare Professional</p>
-              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" onclick="document.getElementById('entryModal').style.display='none'; sessionStorage.setItem('hcp-verified','true');">Proceed to Site</div>
+              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" onclick="document.getElementById('entryModal').style.display='none'; document.body.classList.remove('entrypopupshow'); sessionStorage.setItem('hcp-verified','true');">Proceed to Site</div>
             </div>
             <div class="rightbtn btncont">
               <p>I <b>am not</b> a U.S. Healthcare Professional</p>
@@ -650,10 +650,14 @@ span.blue a {
   </div>
 
   <script>
-    // Hide modal if already verified
-    if (sessionStorage.getItem('hcp-verified') === 'true') {
+    (function() {
       var m = document.getElementById('entryModal');
-      if (m) m.style.display = 'none';
-    }
+      if (sessionStorage.getItem('hcp-verified') === 'true') {
+        if (m) m.style.display = 'none';
+      } else {
+        document.body.classList.add('entrypopupshow');
+        window.scrollTo(0, 0);
+      }
+    })();
   </script>
 </main>

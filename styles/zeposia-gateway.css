@@ -120,3 +120,32 @@ body {
   color: #F9423A;
   text-decoration: none;
 }
+
+/* Fix modal positioning - match source exactly */
+body.entrypopupshow {
+  overflow: hidden !important;
+}
+
+.entry-modal.show {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1050 !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: rgba(0,0,0,0.5) !important;
+}
+
+.entry-modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.entry-modal .modal-content {
+  background: #fff;
+  padding: 40px;
+}
