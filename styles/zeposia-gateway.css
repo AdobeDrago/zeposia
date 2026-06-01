@@ -149,3 +149,23 @@ body.entrypopupshow {
   background: #fff;
   padding: 40px;
 }
+
+/* Lock body scroll when modal is visible (no JS class needed) */
+body:has(.entry-modal[style*="display:block"]),
+body:has(.entry-modal[style*="display: block"]) {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Ensure modal dialog is vertically centered */
+.entry-modal .modal-dialog {
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Make modal backdrop fully opaque overlay */
+.entry-modal.show {
+  background: rgba(0, 0, 0, 0.6) !important;
+}

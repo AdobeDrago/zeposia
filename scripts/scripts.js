@@ -349,6 +349,26 @@ async function loadLazy(doc) {
 function loadDelayed() {
   // eslint-disable-next-line import/no-cycle
   window.setTimeout(() => import('./delayed.js'), 3000);
+
+  // HCP Modal — show on first visit, dismiss to sessionStorage
+  const modal = document.getElementById('entryModal');
+  if (modal) {
+    if (sessionStorage.getItem('hcp-verified') === 'true') {
+      modal.style.display = 'none';
+    } else {
+      modal.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      window.scrollTo(0, 0);
+      const proceedBtn = modal.querySelector('.hcp_btn');
+      if (proceedBtn) {
+        proceedBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+          document.body.style.overflow = '';
+          sessionStorage.setItem('hcp-verified', 'true');
+        });
+      }
+    }
+  }
 }
 
 async function loadPage() {

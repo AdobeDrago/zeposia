@@ -24,7 +24,7 @@
                       <div class="banner-wrapper gateway-bg">
                         <div class="gateway-bg-shadow"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/gateway/gateway-bg-shadow.png"></div>
                         <div class="container">
-                          <div class="gateway-logo"><img alt="ZEPOSIA® (ozanimod) Logo" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/OZANIMOD_US_Logo_SPOT.png"></div>
+                          <div class="gateway-logo"><img alt="ZEPOSIA� (ozanimod) Logo" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/OZANIMOD_US_Logo_SPOT.png"></div>
                           <p class="banner-text" data-slot="banner-text">I am a U.S. healthcare professional interested in information about ZEPOSIA for the following indications.</p>
                           <div class="main-buttons d-flex">
                             <div class="uc callout"><a href="/ulcerative-colitis" title="" class="mobile-arrow" target="" aria-label="" lang=""><span>Ulcerative Colitis</span><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/gateway/arrow-icn.png" class="mobile-arrow"></a></div>
@@ -628,7 +628,7 @@ span.blue a {
   </section>
 
   <!-- HCP Verification Modal -->
-  <div class="cmp-modal entry-modal modal fade show" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="entryModal" style="display:block; background: rgba(0,0,0,0.5);">
+  <div class="cmp-modal entry-modal modal fade show" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="entryModal" style="display:none;">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body text-center p-5">
@@ -637,7 +637,7 @@ span.blue a {
           <div class="buttoncnt d-flex">
             <div class="leftbtn btncont">
               <p>I <b>am</b> a U.S. Healthcare Professional</p>
-              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" onclick="document.getElementById('entryModal').style.display='none'; document.body.classList.remove('entrypopupshow'); sessionStorage.setItem('hcp-verified','true');">Proceed to Site</div>
+              <div class="hcp_btn entrymodal_btn" data-dismiss="modal" >Proceed to Site</div>
             </div>
             <div class="rightbtn btncont">
               <p>I <b>am not</b> a U.S. Healthcare Professional</p>
@@ -649,15 +649,5 @@ span.blue a {
     </div>
   </div>
 
-  <script>
-    (function() {
-      var m = document.getElementById('entryModal');
-      if (sessionStorage.getItem('hcp-verified') === 'true') {
-        if (m) m.style.display = 'none';
-      } else {
-        document.body.classList.add('entrypopupshow');
-        window.scrollTo(0, 0);
-      }
-    })();
-  </script>
+
 </main>
