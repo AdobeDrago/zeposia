@@ -35,7 +35,7 @@ main {
 }
 
 /* === HCP MODAL — positioning only, styling from source CSS === */
-.entry-modal.show,
+.entry-modal.show:not(.hcp-dismissed),
 .entry-modal[style*="display: block"],
 .entry-modal[style*="display:block"] {
   position: fixed !important;
@@ -48,6 +48,10 @@ main {
   z-index: 9999 !important;
   background: rgba(0, 0, 0, 0.75) !important;
   display: block !important;
+}
+
+.entry-modal.hcp-dismissed {
+  display: none !important;
 }
 
 .entry-modal .modal-dialog {
