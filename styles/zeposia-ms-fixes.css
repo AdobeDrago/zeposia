@@ -1,0 +1,25 @@
+/* EDS overrides for MS template */
+
+/* Hide EDS default header/footer - template provides its own */
+body > header, body > footer { display: none !important; }
+
+/* Hide duplicate ISI rendering section */
+.isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Ensure banner flex layout works */
+.flx-ban { display: flex !important; }
+
+/* Banner info padding reset */
+.banner-info.ms_home { padding: 0; }
+
+/* Bootstrap d-lg-block override at correct breakpoint */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
+
+/* Hide experiencefragment outer wrapper if doubled */
+main > .experiencefragment.section { display: none !important; }
+
+/* Ensure carousel/slider visibility */
+.carousel-inner .carousel-item.active { display: block; }
