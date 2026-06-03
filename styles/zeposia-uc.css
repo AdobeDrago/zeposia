@@ -23,31 +23,57 @@ main {
   padding: 0 !important;
 }
 
-/* Override EDS section defaults that conflict with source layout */
+/* Override EDS section/block defaults */
 main .section {
   max-width: unset;
   padding: 0;
   margin: 0;
 }
 
-/* Force ISI content visible (source uses JS to toggle) */
+/* Force ISI content visible (source uses JS to toggle these) */
 .isi-rendering > div,
 .isi-rendering .cmp-isi,
+.isi-rendering .cmp-isi.hidden,
 .isi-rendering .isi-content,
 .isi-rendering .isi-wrapper,
+.isi-rendering .isi-container,
+.isi-rendering .expand-container,
+.isi-rendering .collapse-container,
 .isi-rendering .indication-container,
-.isi-rendering .safety-container {
+.isi-rendering .safety-container,
+.isi-rendering .isi-mobile-view-links {
   display: block !important;
 }
 
-/* ISI sticky bar - position it correctly */
+/* ISI should flow naturally, not be fixed/sticky */
+.isi-rendering .cmp-isi,
 .isi-rendering .cmp-isi.sticky-element {
   position: relative !important;
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
-/* Force ISI height auto */
+/* ISI expand container needs auto height */
+.isi-rendering .isi-container.expand-container {
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Force ISI rendering section height auto */
 .isi-rendering {
   height: auto !important;
+  overflow: visible !important;
+}
+
+/* Also handle the inline ISI in column-control */
+.column-control .isi-content,
+.column-control .indication-container,
+.column-control .safety-container,
+.column-control .isi-container {
+  display: block !important;
+  max-height: none !important;
   overflow: visible !important;
 }
 
@@ -68,6 +94,12 @@ img[src*="zeposiahcp.com"] {
   height: auto;
 }
 
+/* Footer links */
+.footer-links-section,
+.utility-nav-footer {
+  display: block !important;
+}
+
 /* HCP Modal overlay */
 .cmp-modal.entry-modal {
   position: fixed;
@@ -84,13 +116,4 @@ img[src*="zeposiahcp.com"] {
 
 .cmp-modal.entry-modal.hcp-dismissed {
   display: none !important;
-}
-
-/* Footer links */
-.footer-links-section {
-  display: block !important;
-}
-
-.utility-nav-footer {
-  display: block !important;
 }
