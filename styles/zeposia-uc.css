@@ -39,40 +39,6 @@ main .section {
   margin: 0;
 }
 
-/* === ISI Visibility (source uses JS toggles) === */
-
-.isi-rendering > div,
-.isi-rendering .cmp-isi,
-.isi-rendering .cmp-isi.hidden,
-.isi-rendering .isi-content,
-.isi-rendering .isi-wrapper,
-.isi-rendering .isi-container,
-.isi-rendering .expand-container,
-.isi-rendering .collapse-container,
-.isi-rendering .indication-container,
-.isi-rendering .safety-container,
-.isi-rendering .isi-mobile-view-links {
-  display: block !important;
-}
-
-.isi-rendering .cmp-isi,
-.isi-rendering .cmp-isi.sticky-element {
-  position: relative !important;
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.isi-rendering .isi-container.expand-container {
-  max-height: none !important;
-  height: auto !important;
-  overflow: visible !important;
-}
-
-.isi-rendering {
-  height: auto !important;
-  overflow: visible !important;
-}
 
 /* Inline ISI in column-control */
 .column-control .isi-content,
@@ -157,7 +123,8 @@ main .utility-nav-footer.utilitynav {
 }
 
 /* Hide standalone ISI-rendering section (content shown inline in column-control) */
-.isi-rendering.aem-GridColumn {
+main > .isi-rendering.aem-GridColumn,
+.isi-rendering.aem-GridColumn.aem-GridColumn--default--12 {
 display: none !important;
 height: 0 !important;
 }
