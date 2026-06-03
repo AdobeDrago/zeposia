@@ -1,0 +1,486 @@
+body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+
+
+/*body.disabled.ucsite.scrolling_up{
+	padding-top:100px;
+}*/
+.ucsite .transparent-bg.fixedSMenu, .dropdown.mobile-list-dropdown.mobile-scroll-link {top: 0;}
+#ucHomeBanner #myVideo { /* ZMSH-95 to be removed */
+mask-image:linear-gradient(#95D1F4, #93D1f4);
+mask-position:center center;
+mask-repeat:no-repeat;
+mask-size:cover;
+    -webkit-mask-image: linear-gradient(#95D1F4, #93D1f4);
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+}
+.fixedHeader {
+    position: fixed;
+    top:0; 
+	left:0;
+	z-index:2;
+    width: 100%; 
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active{
+	font-family:'MontserratMedium'!important;
+	font-weight:500;
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active.active-now, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active.active-now{
+	font-family:'MontserratBold'!important;
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active-now, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active-now{
+	font-family:'MontserratBold';
+}
+
+
+	.left-banner p.bane_one sup{font-family: 'MontserratBold';}
+	@media (min-width: 1024px){
+        .navbar-nav.ucMenu.side-pad{position: relative; right: 56%; top: 0px !important;}
+	p.bane_one{line-height: 22px;}
+	}
+	
+
+#open-converse, #open-converse-mobile { background: url(/content/dam/commercial/us/zeposiahcp/en/images/req-button.svg)!important; left: 97%!important; width: 58px !important; border-bottom-left-radius: 30%!important; height: 178px !important;} 
+.ucsite #myPlayerID.video-js:hover .vjs-dock-text { display: none; }
+#ucHomeBanner {background: #A4E2FF;}
+
+.video-mask {position: absolute;left: 0px;top: 0;right: 0;content: '';bottom: 0;background: url(/content/dam/commercial/us/zeposiahcp/en/images/uc/UC_Video_overlay_blend.png) no-repeat; background-size: cover;max-width: 100%;height: 520px;margin: auto;width: 1004px;transform: translateX(-100px);z-index: 1;}
+.ucsite nav.navbar.navbar-expand-lg { z-index: 2; }
+.video-container {overflow: hidden; position: relative;}
+#ucHomeBanner .banner-info {z-index: 3;}
+.video-container video {height: 520px;clip-path: inset(1px 1px); width: 100%;margin-left: -100px; display: block; }
+.round-btn a {background: #F9423A; color: #ffffff!important;}
+.rar-item.d-page {width: 65px; right: -15px; }
+.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow {text-indent: -31px;}
+
+@media (max-width: 1280px) {
+#open-converse, #open-converse-mobile {left: 95.5%!important;}
+.ucsite .safety-banner-content .right-intro-text h1 { max-width: 315px; }
+}
+@media (min-width: 1023px) {
+
+img.menu-arrow.red-arrow.d-page{transform: rotate(0deg);}
+.ucsite .navbar-expand-lg .navbar-nav li:hover .nav-link .menu-arrow.red-arrow.d-page {
+    transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+}
+
+#open-converse, #open-converse-mobile { left: 97%!important; }
+.ucsite .cta-button.home-banner img {  height: 28px; }
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link { /*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+.ucsite .callout h3.head3 { margin-bottom: 5px; }
+.ucsite ul.section-list li { margin-left: 90px; }
+#tuc-patient .box3.gettingStartedBody3 .callout.one .callout-button {margin-top: 28px;}
+.ucsite .white-box.oneMoa.d-page { margin-bottom: 55px; }
+.ucsite  .white-box.twoMoa {  margin-bottom: 25px; }
+.ucsite .dosing-info-section .downloadCTA.callout-button.download-arrow { margin-top: 10px; }
+.ucsite #BlueCloudBG button.callout-button { text-transform: capitalize; }
+.ucsite img.menu-arrow.red-arrow.d-page { top: 3px; right: -14px; }
+.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu {  left: 0; top: 33px; }
+.ucsite .utilitycont {margin-bottom: 30px;}
+.ucsite .isi-content div.head3 { padding-top: 50px; }
+.ucsite .isi-content div.head3.mt-30 {padding-top: 0;margin-top: 21px;}
+.ucsite .sticky-element .isi-content div.head3 { padding-top: 0px; }
+.ucsite .cmp-accordion__button {font-size: 20px;}
+.footer-people.dosing img { margin-top: -75px; }
+.efficacy-accordion-content .white-box.section3 .fullChart img { margin: 0 auto; padding-bottom: 30px; padding-top: 30px; }
+.footer-people.study-design-footer img { margin-top: -10px; }
+.ucsite #zeposia360 .d-flex.supportIcons .img-wrap img {margin-top: 25px; margin-left: 32px; height: 47px;}
+}
+
+@media only screen 
+  and (min-device-width: 390px) 
+  and (max-device-width: 844px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+#safety-page #advrReaction div.col2-table {margin-left: 53px;}
+#safety-page #advrReaction div.col3-table {margin-left: -8px;}
+.cta-button.home-banner {font-size: 12px;}
+.ucsite .card-img-container h2 { line-height: 32px; }
+.ucsite .cmp-isi .isi-container .isi-container-title { font-size: 14px; }
+div.grey-section p { font-size: 10px; padding: 17px 15px 32px 19px; }
+.ucsite table tr { border-bottom: 0.5px solid #B2BEC5; }
+.ucsite #study-design-page .gradient {margin-bottom: 40px;}
+.ucsite p.blueBoldHeading { font-size: 14px;}
+.ucsite p.blueBoldHeading span { color: #0032A0; }
+p.blueBoldHeading.contactinfo {color: #0032A0;}
+#safety-page div.blueBorder div {font-size: 14px;}
+#safety-page .thirdTable div.blueBorder div, #safety-page .fourthTable div.blueBorder div {font-size: 13px;}
+#safety-page .safety-acc1 table tr th, #safety-page .seventhTable div.blueBorder div {font-size: 11px; }
+#safety-page .seventhTable .blueBorder .fiveCol2 { margin-left: 69px!important; }
+#safety-page .seventhTable .blueBorder .fiveCol4 {margin-left: 28px!important;}
+#safety-page .seventhTable .blueBorder.seventhtable-table-two .fiveCol4 {margin-left: 31px!important;}
+#safety-page .lastTableHeader .halfWidth-two .secondHalf {width: 88px;}
+#safety-page .ninethTable div.table9col2 {margin-left: 70px; padding-top: 10px; padding-left: 5px;}
+#safety-page .ninethTable div.table9col4 { padding-top: 10px;font-size: 13px;margin-left: -2px;}
+#safety-page .seventhTable .white-bg.safety.box3 table tr:first-child th {font-size: 11px;}
+.ucsite #safety-page .tenthTable div.img-title { font-size: 15px; padding-left: 5px; padding-right: 5px; }
+#safety-page .safety-acc1 div.blueBorder div, #safety-page .safety-acc1 table tr td, #safety-page .white-bg.safety.box3 table tr td {font-size: 11px;}
+div.blueBorder.fontStyle,  #safety-page .ninethTable div.table9col2 {font-size: 12px;}
+.ucsite .gettingStarted-banner-content h1 {margin-top: 25px;}
+.bold.label2 {margin-left: 100px;}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {/*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+.ucsite .cta-button.home-banner a { letter-spacing: -1px; }
+.ucsite .card-img-container h2.fntSz20 { padding-left: 15px; padding-right: 15px; }
+.ucsite #efficacy-page .white-bg.box7.efficacy-section7 h2.fntSz26 {font-size: 25px;}
+.ucsite #safety-page .white-bg.safety.box2 h2 {font-size: 28px;}
+.ucsite #efficacy-page .white-bg h2.fntSz20 {font-size: 19px;line-height: 22px;}
+#efficacy-page .graph-container .img-title {width: 100%;}
+.ucsite .efficacy-accordion-content .img-title {font-size: 14px;}
+div.support-icon2 p.blueBoldHeading { font-size: 15px; }
+.ucsite #safety-page .white-bg.safety.box3 h2.fntSz20, .ucsite #safety-page .white-bg.safety.box2 h2.fntSz20 { padding-left: 8px; padding-right: 8px; font-size: 19px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width : 1440px)  {
+/* iPad */
+_::-webkit-full-page-media, _:future, :root ul.list.horizontal li{
+     font-size: 13px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-width : 1920px)  {
+/* Monitor Safari */
+_::-webkit-full-page-media, _:future, :root ul.list.horizontal li{
+     font-size: 13px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width : 375px)  {
+/* Monitor Safari */
+_::-webkit-full-page-media, _:future, :root .moa-img1-caption .bold.label2{
+     margin-left: 110px;
+    }
+}
+
+@media (max-width: 1023px){
+.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu{top: auto !important;}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link { /*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+#ucHomeBanner .left-banner img { height: 215px; }
+.ucsite .banner-info h1 { margin-top: 25px; }
+.ucsite p.yellow-highlight.support-alert-text { padding: 21px 12px; } 
+.ucsite .home-content.container {padding-left: 6px;}
+.ucsite .isi-container-title {padding-top: 0px;}
+.ucsite #safety-page .secondTable.white-box div.col2-table {margin-left: 128px;}
+.ucsite #safety-page .thirdTable.white-box div.col2-table {margin-left: 64px;}
+.ucsite #safety-page .thirdTable.white-box div.col3-table { margin-right: 24px;}
+#open-converse, #open-converse-mobile { display: none!important; }
+.study-banner-right { margin-right: -105px!important; }
+ul.list.dosing2 {padding-left: 20px;}
+.ucsite .white-bg.box3.gettingStartedBody3 h2 { padding-left: 0px; padding-right: 0px; }
+.ucsite .card-img-container h2.fntSz20 { padding-top: 20px; padding-left: 15px; padding-right: 15px; }
+.ucsite #efficacy-page .prev-acc-content .graph-container .img-title {line-height: 24px;}
+.efficacy-accordion-content .white-box.section3 .fullChart {margin-top: 40px;}
+.safety-banner-right.safety { width: 300px; height: 190px; margin-right: -130px; }
+.ucsite p { font-size: 16px; line-height: 20px;}
+.study-banner-right.gettingStarted {height: 100%;margin-top: 50px; width: 170px;}
+.study-banner-right.moa {width: 125px; margin-top: 50px;}
+.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded div.blueBorder div.acCol5 { line-height: 71px; margin-left: 5px; }
+.safety-acc2 .white-box img { height: 300px; margin-bottom: -40px;}
+.ucsite .white-bg.box3.gettingStartedBody3 h2 { text-align: center; }  
+.ucsite .downloadCTA.callout-button.download-arrow img.download-arrow {right: 9px;}
+.ucsite .study-table div.grey-section p {line-height: 15px;
+    padding: 32px 34px 32px 19px;font-family:'MontserratBold';
+    font-size: 11px; }
+.mt-sm-3 {margin-top: 20px;}
+.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.efficacySubmenu .dropdown-item, .ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.safetySubmenu .dropdown-item  {font-weight: 400;font-family: 'MontserratRegular';}
+.ucsite .gettingStartedBody button.callout-button{max-width: 330px;width: 330px;height: 40px!important; margin-top: 15px;}
+.ucsite .gettingStartedBody img.download-arrow{right: 8px;margin-top: -2px;}
+.ucsite .cmp-isi .isi-content.expand-text {overflow-x: hidden;}
+.ucsite .efficacy-section6 .footnote-list {margin-bottom: 0px;}
+#safetyToggle, #hcpToggle {padding-bottom: 20px;}
+.ucsite #resources .support-section2 {padding-bottom: 5px;}
+.ucsite .efficacy-section2 p.blueBoldHeading, .ucsite .efficacy-section1 p.blueBoldHeading {font-size: 16px;}
+.ucsite .card-img-container .white-bg h2.fntSz20 {margin-bottom: 37px;}
+.ucsite .efficacy-accordion-content .section3 .left-graph {height: 350px;}
+.ucsite #ehmi .section5 .chart-section {margin-top: 5px;}
+#efficacy-page .efficacy-section1 .graph-container .left-graph .white-box, #efficacy-page .white-bg.box2.efficacy-section2 .graph-container .left-graph .white-box, #efficacy-page .efficacy-section6 .graph-container .left-graph .white-box {border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+.rar-item img {max-width: 245px;}
+.video-mask, .video-container {display: none;}
+}
+
+@media (max-width: 1024px){
+	.ucsite .study-banner-content .right-intro-text h1 {margin-top: 15px;}
+}
+@media (max-width: 480px){
+	.ucsite .study-banner-content .right-intro-text h1 {margin-top: 45px;}
+	.ucsite .study-banner-right.moa, .study-banner-right.support {margin-right: 0px!important;}
+	.ucsite .study-banner-right.gettingStarted {margin-right: -40px!important;}
+}
+
+
+body{padding-right: 0 !important;}
+#evg-exit-intent-popup { z-index: 10000;}
+#evg-exit-intent-popup .evg-btn-lg{font-family: 'MontserratBold';}
+@media (min-width: 1024px) {
+
+#evg-exit-intent-popup .evg-popup{
+    padding: 20px 90px;
+}
+#evg-exit-intent-popup .evg-main-panel{
+	position: relative;
+    padding-bottom: 55px;
+    justify-content: flex-start;
+}
+#evg-exit-intent-popup .evg-btn-lg{
+	position: absolute;
+	left: 90px;
+    bottom: 52px;
+}
+#evg-exit-intent-popup .evg-btn-lg:last-child{
+	right: 90px;
+	left: unset;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4{
+	font-size: 26px;
+    line-height: 28px;
+	padding-top: 55px;
+}
+
+}
+
+@media (max-width: 1023px) {
+
+#evg-exit-intent-popup .evg-popup{
+    min-width: 356px;
+    width: 356px;
+    max-height: 393px;
+	padding: 20px 40px;
+}
+#evg-exit-intent-popup .evg-btn-dismissal{
+    top: 15px;
+    right: 20px;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4 .headerTextA{
+    font-size: 24px;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4{
+    font-size: 24px;
+    line-height: 26px;
+    padding: 20px 0 50px;
+}
+#evg-exit-intent-popup .evg-btn-lg{
+    margin-bottom: 1.5rem;
+	font-weight: bold;
+}
+	
+
+}
+
+
+@media (min-width: 1024px){
+#evg-exit-intent-popup .evg-btn-lg{right: 90px; left: unset;}
+#evg-exit-intent-popup .evg-btn-lg:last-child{left: 90px; right: unset;}
+}
+
+@media (max-width: 1023px){
+#evg-exit-intent-popup .evg-h1.evg-display-4{padding: 20px 15px 44px;}
+#evg-exit-intent-popup .evg-main-panel{justify-content: start; padding-top: 26px;}
+#evg-exit-intent-popup .evg-btn-lg{position: absolute;  bottom: 76px;}
+#evg-exit-intent-popup .evg-btn-lg:last-child{    position: relative;   bottom: 0;}
+}	
+
+
+#dntshw{display: none;}
+.transparent-bg.moaPage{height: auto;}
+.ucsite #BlueCloudBG{background: #A4E2FF;}
+.footer-people.moaFooter img {display: none;}
+
+@media (min-width: 1023px){
+.ucsite #tuc-unmet-need-page .gradient {
+    margin-bottom: 40px;}
+}
+@media (max-width: 1023px){
+.ucsite #BlueCloudBG .cmp-card-container .card-img-container{padding-bottom: 40px;}
+.ucsite .container.cmp-footer-isi-content-element{margin-top: 0;}
+.moaaa .z360-banner-content h1 {font-size: 22px;  line-height: 28px;}
+.moaaa .z360-banner-content h1:after{height: 58px; bottom: -2px;}
+}	
+
+
+p.moa-copy, .ucsite .moa-copy sup{
+	font-family: 'MontserratBold';
+	color: #515B64;
+}
+.font_20{
+	font-size:20px !important;
+	line-height: 24px !important;
+}
+.ucsite p.font1416{
+	font-size:14px !important;
+	line-height: 16px !important;
+}
+.text-font-size{
+    font-size: 17px !important;
+}
+ .yellow-highlight.border_gne_red{
+  	
+    color: #F9423A !important;
+    background: none !important;
+    font-weight: bold;
+}
+.moaBody p.yellow-highlight {height: auto;}
+.ucsite .white-box.new:after {display: none;}
+.moa-copy sub { font-weight: 400;}
+
+
+@media (max-width: 1023px){
+.mb-left-tx{
+	    text-align: left !important;
+}
+}
+
+
+a.imgt-ft.pl-0.cmp-image__link.inlineblockk.ms-bms.d-none.d-block.open-modal.nav-link {
+    width: 288px;
+}
+    .ucsite .new-veeva-code {
+        font-size: 14px;
+        line-height: 16px;
+        color: #000;
+        font-family: arial;
+        margin-bottom: 0;
+    }
+
+    #gatewayWrapper .gateway-site-text {
+        display: none;
+    }
+
+    .gatewayFootero {
+        display: none;
+    }
+
+    .ms-orphan .viva-ms,
+    .ms-sitemap .viva-ms {
+        display: none;
+    }
+
+    #gatewayWrapper .gatewayFootero {
+        display: inline-block;
+    }
+
+    #gatewayWrapper .dnss {
+        display: none !important;
+    }
+
+    .gatewayFooteron,
+    #gatewayWrapper .gatewaymno {
+        display: none;
+    }
+
+    #gatewayWrapper .gatewayFooteron {
+        display: block;
+    }
+
+    img.wdt375 {
+        max-width: 375px;
+    }
+
+    @media (max-width : 1023px) {
+        .desk-no-display {
+            display: none !important;
+        }
+
+        .mssite .ftrcopytxt.plms {
+            padding-top: 0;
+        }
+
+        .ucsite .ftrcopytxt.plms {
+            padding-top: 0;
+        }
+    }
+    @media (max-width: 1023px) {
+        .ucsite .sticky-element .isi-content div.head3.newhead-uc {
+    margin-top: 0px;
+}
+.head3.newhead-uc {
+    margin-top: 73px;
+}
+    }
+
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+    .ucsite .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(6) {
+        display: none;
+    }
+}
+
+li.nav-item.cmp-utility-nav-list-item.uc-lnp a::after {
+
+    content: "|" !important;
+}
+
+.uc-sitemaplink {
+    display: block !important;
+}
+
+.cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(4) {
+    display: block !important;
+}
+
+/* .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(4) a::after {
+    content: none;
+} */
+
+.cmp-utility-nav-list li.cmp-utility-nav-list-item:last-child {
+    display: none;
+}
+
+.Onetrustformc {
+    display: block !important;
+}
+
+.Onetrustformc a::after {
+    content: none !important;
+}
+
+.Onetrustforbms a span {
+    padding-left: 7px;
+}
+
+footer .cmp-utility-nav ul.nav.cmp-utility-nav-list,
+.cmp-isi .cmp-utility-nav ul.nav.cmp-utility-nav-list {
+    justify-content: normal !important;
+}
+
+span.ln-cd {
+    margin-top: 3px;
+    color: #e1e1e1;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    margin-left: 4px;
+
+
+}
+
+footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link,
+.cmp-isi .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {
+    padding: 5px 6px 0px 0px !important;
+}
+
+footer li:not(:last-child) .nav-link::after,
+.cmp-isi li:not(:last-child) .nav-link::after {
+    padding-left: 6px !important;
+}
+
+@media (max-width:1023px) {
+    .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item :last-child a {
+        margin-left: 0px !important;
+    }
+
+    footer .cmp-utility-nav ul.nav.cmp-utility-nav-list {
+        margin-top: 0px !important;
+    }
+}
+@media (max-width:1023px){ #efficacy-pgcont #greenbg {
+    padding-bottom: 0 !important;
+}}
+
+
+
