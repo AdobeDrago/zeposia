@@ -156,3 +156,14 @@ main > .experiencefragment.section { display: none !important; }
   font-style: normal;
   font-display: swap;
 }
+
+/* Force italic font to preload (prevents height calculation issues) */
+body.zeposia-ms::after {
+  content: 'i';
+  font-family: Montserrat, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
