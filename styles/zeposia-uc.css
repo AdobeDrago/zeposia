@@ -151,5 +151,5 @@ main .utility-nav-footer.utilitynav {
 main::after {
 content: "";
 display: block;
-height: 12px;
+height: 145px;
 }
