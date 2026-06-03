@@ -15,3 +15,8 @@ main { display: block !important; }
     display: inline-block !important;
   }
 }
+
+/* Fix: green background image - source CSS uses relative URL that 404s on EDS */
+#greenbg {
+  background-image: url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/background-inner.png') !important;
+}
