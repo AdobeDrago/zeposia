@@ -222,7 +222,7 @@ async function applyTemplateOverlay(main) {
 .card-color-container { max-height: 539px !important; overflow: hidden !important; }
 .left-banner > .footenote-container { max-height: 165px !important; overflow: hidden !important; }
 .bann_big { max-height: 76px !important; overflow: hidden !important; }
-main > .column-control.aem-GridColumn { max-height: 3452px !important; overflow: hidden !important; }
+main > .column-control.aem-GridColumn { max-height: 3446px !important; overflow: hidden !important; }
   `;
   document.head.appendChild(overrideStyle);
     
