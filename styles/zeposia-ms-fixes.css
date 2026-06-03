@@ -1,8 +1,5 @@
 /* EDS overrides for MS template */
 
-/* Ensure body visibility + match source scrollbar compensation (Bootstrap modal residual) */
-body.zeposia-ms { display: block !important; overflow: auto !important; padding-right: 15px !important; }
-
 /* Hide EDS default header/footer - template provides its own */
 body > header, body > footer { display: none !important; }
 
@@ -24,12 +21,10 @@ body > header, body > footer { display: none !important; }
 /* Mobile/Desktop page visibility (source convention) */
 @media (max-width: 991.98px) {
   .d-page { display: none !important; }
-  .m-page { display: flex !important; }
   .m-page.d-flex { display: flex !important; }
 }
 @media (min-width: 992px) {
   .m-page { display: none !important; }
-  .d-page { display: flex !important; }
   .d-page.d-flex { display: flex !important; }
 }
 
@@ -38,9 +33,6 @@ main > .experiencefragment.section { display: none !important; }
 
 /* Ensure carousel/slider visibility */
 .carousel-inner .carousel-item.active { display: block; }
-
-/* Hide HCP entry modal on EDS (already verified via session) */
-.cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
 
 /* Carousel fixes (no slick.js) - show only active slide */
 .slick-track {
@@ -91,11 +83,4 @@ main > .experiencefragment.section { display: none !important; }
 }
 .slick-dots li.slick-active button {
   background: #e74c3c !important;
-}
-
-/* Carousel section min-height to match baseline capture state */
-@media (min-width: 992px) {
-  .experiencefragment.section:nth-of-type(2) {
-    min-height: 611px !important;
-  }
 }
