@@ -1,10 +1,4 @@
-/* Import Google Fonts Montserrat (same source as original page) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
-
 /* EDS overrides for MS template */
-
-/* Ensure body visibility + match source scrollbar compensation (Bootstrap modal residual) */
-body.zeposia-ms { display: block !important; overflow: auto !important; padding-right: 15px !important; }
 
 /* Hide EDS default header/footer - template provides its own */
 body > header, body > footer { display: none !important; }
@@ -24,14 +18,21 @@ body > header, body > footer { display: none !important; }
   .d-lg-none { display: none !important; }
 }
 
+/* Mobile/Desktop page visibility (source convention) */
+@media (max-width: 991.98px) {
+  .d-page { display: none !important; }
+  .m-page.d-flex { display: flex !important; }
+}
+@media (min-width: 992px) {
+  .m-page { display: none !important; }
+  .d-page.d-flex { display: flex !important; }
+}
+
 /* Hide experiencefragment outer wrapper if doubled */
 main > .experiencefragment.section { display: none !important; }
 
 /* Ensure carousel/slider visibility */
 .carousel-inner .carousel-item.active { display: block; }
-
-/* Hide HCP entry modal on EDS (already verified via session) */
-.cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
 
 /* Carousel fixes (no slick.js) - show only active slide */
 .slick-track {
@@ -39,6 +40,8 @@ main > .experiencefragment.section { display: none !important; }
   overflow: hidden !important;
   width: 100% !important;
   position: relative !important;
+  transform: translate3d(0, 0, 0) !important;
+  transition: none !important;
 }
 .slick-list {
   overflow: hidden !important;
@@ -61,7 +64,10 @@ main > .experiencefragment.section { display: none !important; }
   display: flex !important;
   justify-content: center !important;
   list-style: none !important;
-  padding: 10px 0 !important;
+  padding: 4px 0 !important;
+  margin: 0 !important;
+  height: 25px !important;
+  align-items: center !important;
 }
 .slick-dots li {
   margin: 0 5px !important;
@@ -79,23 +85,74 @@ main > .experiencefragment.section { display: none !important; }
   background: #e74c3c !important;
 }
 
-/* Fix slick dots height to match source (25px total) */
-.slick-dots {
-  padding: 4px 0 !important;
-  margin: 0 !important;
-  height: 25px !important;
-  align-items: center !important;
+/* Local Montserrat fonts to match source rendering exactly */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
-
-/* Carousel section min-height to match baseline capture state */
-@media (min-width: 992px) {
-  .experiencefragment.section:nth-of-type(2) {
-    min-height: 611px !important;
-  }
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
-
-/* Reset slick-track transform (DOM snapshot has wrong position) */
-.slick-track {
-  transform: translate3d(0, 0, 0) !important;
-  transition: none !important;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratExtraBold';
+  src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
