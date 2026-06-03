@@ -1,6 +1,6 @@
 /* EDS overrides for MS template */
 
-/* Ensure body visibility for overlay template (appear class race condition fix) */
+/* Ensure body visibility + match source scrollbar compensation (Bootstrap modal residual) */
 body.zeposia-ms { display: block !important; overflow: auto !important; padding-right: 15px !important; }
 
 /* Hide EDS default header/footer - template provides its own */
@@ -82,6 +82,13 @@ main > .experiencefragment.section { display: none !important; }
   margin: 0 !important;
   height: 25px !important;
   align-items: center !important;
+}
+
+/* Carousel section min-height to match baseline capture state */
+@media (min-width: 992px) {
+  .experiencefragment.section:nth-of-type(2) {
+    min-height: 611px !important;
+  }
 }
 
 /* Reset slick-track transform (DOM snapshot has wrong position) */
