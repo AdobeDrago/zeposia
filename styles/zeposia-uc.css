@@ -137,8 +137,17 @@ height: 0 !important;
   overflow: hidden !important;
 }
 
-/* Force left-banner to take full width */
+}
+
+/* Fix value props layout - must be flex row */
+.flx-ban {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Fix left-banner width (should be constrained, not 100%) */
 .left-banner {
-  width: 100% !important;
-  flex: 1 1 100% !important;
+  width: auto !important;
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
 }
