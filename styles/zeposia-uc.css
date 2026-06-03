@@ -141,3 +141,12 @@ img[src*="Logo"], img[src*="logo"] {
   max-width: 200px;
   max-height: 80px;
 }
+
+/* Match source footer spacing */
+.footer-links-section {
+  padding: 10px 0 !important;
+}
+
+.utility-nav-footer {
+  padding: 5px 0 !important;
+}
