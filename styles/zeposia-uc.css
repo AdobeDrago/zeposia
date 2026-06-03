@@ -97,6 +97,8 @@ img[src*="zeposiahcp.com"] {
 /* Footer links */
 .footer-links-section,
 main .utility-nav-footer.utilitynav {
+  height: 37px !important;
+  overflow: hidden !important;
   display: block !important;
 }
 
@@ -142,11 +144,16 @@ img[src*="Logo"], img[src*="logo"] {
   max-height: 80px;
 }
 
-/* Match source footer spacing */
+}
+
+/* Match source page total height by constraining footer sections */
 main .bg-lighter-blue.py-5.footer-links-section {
-  padding-top: 10px !important; padding-bottom: 10px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 main .utility-nav-footer.utilitynav {
-  padding-top: 5px !important; padding-bottom: 5px !important;
+  height: 37px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
 }
