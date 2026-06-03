@@ -210,6 +210,7 @@ async function applyTemplateOverlay(main) {
     "zeposia-ms": ["mssite", "ms-home", "disabled"],
     "zeposia-ms-support": ["mssite", "ms-home", "disabled"],
     "zeposia-ms-additional-studies": ["mssite", "ms-tk", "disabled"],
+    "zeposia-ms-safety": ["mssite", "ms-safety", "disabled"],
     "zeposia-gateway": ["gateway-page"],
     "uc-clinical-data": ["ucsite", "uc-home", "disabled"],
   };
