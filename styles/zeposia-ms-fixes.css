@@ -1,7 +1,7 @@
 /* EDS overrides for MS template */
 
 /* Ensure body visibility for overlay template (appear class race condition fix) */
-body.zeposia-ms { display: block !important; overflow: auto !important; }
+body.zeposia-ms { display: block !important; overflow: auto !important; padding-right: 15px !important; }
 
 /* Hide EDS default header/footer - template provides its own */
 body > header, body > footer { display: none !important; }
@@ -84,17 +84,8 @@ main > .experiencefragment.section { display: none !important; }
   align-items: center !important;
 }
 
-/* Force carousel section to match source height (611px at desktop) */
-@media (min-width: 992px) {
-  .experiencefragment.section:nth-of-type(2) {
-    min-height: 611px !important;
-  }
-}
-
 /* Reset slick-track transform (DOM snapshot has wrong position) */
 .slick-track {
   transform: translate3d(0, 0, 0) !important;
   transition: none !important;
 }
-
-/* Force classic scrollbar to match source page width (1425px client width) */
