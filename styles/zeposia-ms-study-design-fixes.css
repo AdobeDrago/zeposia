@@ -1,0 +1,10 @@
+body > header, body > footer { display: none !important; }
+main { display: block !important; }
+.isi-reference-section { display: none !important; }
+.isi-reference-section.study_design_ref { display: block !important; }
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
+#common-pgcont .column-control .column-control .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
