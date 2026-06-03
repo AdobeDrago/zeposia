@@ -1,5 +1,8 @@
 /* EDS overrides for MS template */
 
+/* Ensure body visibility for overlay template (appear class race condition fix) */
+body.zeposia-ms { display: block !important; overflow: auto !important; }
+
 /* Hide EDS default header/footer - template provides its own */
 body > header, body > footer { display: none !important; }
 
@@ -23,3 +26,6 @@ main > .experiencefragment.section { display: none !important; }
 
 /* Ensure carousel/slider visibility */
 .carousel-inner .carousel-item.active { display: block; }
+
+/* Hide HCP entry modal on EDS (already verified via session) */
+.cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
