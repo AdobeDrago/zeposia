@@ -29,3 +29,49 @@ main > .experiencefragment.section { display: none !important; }
 
 /* Hide HCP entry modal on EDS (already verified via session) */
 .cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
+
+/* Carousel fixes (no slick.js) - show only active slide */
+.slick-track {
+  display: flex !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+}
+.slick-list {
+  overflow: hidden !important;
+  position: relative !important;
+}
+.carousel-item.slick-slide {
+  display: none !important;
+  min-width: 100% !important;
+  flex-shrink: 0 !important;
+}
+.carousel-item.slick-slide.slick-current {
+  display: block !important;
+}
+.carousel-container-body .carousel {
+  position: relative !important;
+  overflow: hidden !important;
+}
+/* Slick dots */
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important;
+  list-style: none !important;
+  padding: 10px 0 !important;
+}
+.slick-dots li {
+  margin: 0 5px !important;
+}
+.slick-dots li button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 50% !important;
+  border: 1px solid #ccc !important;
+  background: #fff !important;
+  font-size: 0 !important;
+  cursor: pointer !important;
+}
+.slick-dots li.slick-active button {
+  background: #e74c3c !important;
+}
