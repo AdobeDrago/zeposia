@@ -1,0 +1,25 @@
+/* Hide EDS header/footer - overlay provides its own */
+body > header, body > footer { display: none !important; }
+
+/* Ensure main is visible */
+main { display: block !important; }
+
+/* Show efficacy page content */
+#efficacy-pgcont, #innerpgcont { display: flex !important; }
+
+/* Show efficacy references, hide others */
+.isi-reference-section { display: none !important; }
+.isi-reference-section.efficacy_ref { display: block !important; }
+.isi-reference-section.home_design_ref { display: block !important; }
+
+/* ISI sections */
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
+
+/* Fix utility links at mobile */
+@media (max-width: 575px) {
+  .utilitycont .utilitylink a {
+    max-width: 120px !important;
+    display: inline-block !important;
+  }
+}
