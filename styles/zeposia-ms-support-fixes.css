@@ -1,13 +1,9 @@
-/* EDS overlay fixes for zeposia-ms-support */
 body > header, body > footer { display: none !important; }
-.isi-rendering.aem-GridColumn { display: none !important; }
-.flx-ban { display: flex !important; }
-@media (min-width: 992px) {
-  .d-lg-block { display: block !important; }
-  .d-lg-none { display: none !important; }
+main { display: block !important; }
+.isi-reference-section { display: none !important; }
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
+#common-pgcont .column-control .column-control .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
-main > .experiencefragment.section { display: none !important; }
-
-/* Support page specific fixes */
-#support-pgcont { display: block !important; }
-#greenbg { display: block !important; }
