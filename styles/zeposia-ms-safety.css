@@ -1,0 +1,47 @@
+/* EDS Snowflake Overlay Fixes for MS Safety Page */
+
+/* Hide EDS default header/footer — template provides its own */
+body > header, body > footer { display: none !important; }
+
+/* Ensure overlay main is visible */
+main { display: block !important; }
+
+/* Hide ISI rendering section (uses template-internal ISI) */
+.isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Ensure banner flex layout */
+.flx-ban { display: flex !important; }
+
+/* === Safety page visibility === */
+
+/* Show safety-pgcont and common-pgcont */
+#safety-pgcont { display: flex !important; }
+#common-pgcont { display: flex !important; }
+#innerpgcont { display: flex !important; }
+
+/* Hide other page content sections if somehow present */
+#home-pgcont,
+#efficacy-pgcont,
+#moa-pgcont,
+#study-design-pgcont,
+#getting-started-pgcont,
+#support-pgcont { display: none !important; }
+
+/* === Reference sections: only show safety_ref === */
+.isi-reference-section { display: none !important; }
+.isi-reference-section.safety_ref { display: block !important; }
+
+/* === ISI section visibility === */
+.footer.section { display: block !important; }
+.cmp-footer-isi-content-element { display: block !important; }
+.isi-content { display: block !important; }
+
+/* Ensure the ISI preview container is shown */
+.isi-container.preview-container { display: block !important; }
+
+/* The full ISI collapse container should also be accessible */
+.isi-container.collapse-container { display: none; }
+
+/* ISI sticky bar */
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
