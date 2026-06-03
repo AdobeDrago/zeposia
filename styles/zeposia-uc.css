@@ -117,3 +117,27 @@ img[src*="zeposiahcp.com"] {
 .cmp-modal.entry-modal.hcp-dismissed {
   display: none !important;
 }
+
+/* Fix SVG icon sizing - these are small icons, not full-width images */
+.flx-ban img[src*="icon_pill"] {
+  width: 18px !important;
+  height: 56px !important;
+}
+
+.flx-ban img[src*="arrow_i"],
+img[src*="arrow_i.svg"] {
+  width: 8px !important;
+  height: 13px !important;
+}
+
+/* Generic SVG icon constraint */
+img[src$=".svg"] {
+  max-width: 50px;
+  max-height: 60px;
+}
+
+/* Except for logos */
+img[src*="Logo"], img[src*="logo"] {
+  max-width: 200px;
+  max-height: 80px;
+}
