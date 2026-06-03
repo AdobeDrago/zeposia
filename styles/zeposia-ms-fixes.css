@@ -98,4 +98,3 @@ main > .experiencefragment.section { display: none !important; }
 }
 
 /* Force classic scrollbar to match source page width (1425px client width) */
-html { overflow-y: scroll !important; }
