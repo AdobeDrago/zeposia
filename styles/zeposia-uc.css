@@ -96,8 +96,9 @@ img[src*="zeposiahcp.com"] {
 
 /* Footer links */
 .footer-links-section,
+main { min-height: 3629px !important; }
+
 main .utility-nav-footer.utilitynav {
-  margin-bottom: 6px !important;
   height: 37px !important;
   overflow: hidden !important;
   display: block !important;
@@ -153,8 +154,9 @@ main .bg-lighter-blue.py-5.footer-links-section {
   padding-bottom: 10px !important;
 }
 
+main { min-height: 3629px !important; }
+
 main .utility-nav-footer.utilitynav {
-  margin-bottom: 6px !important;
   height: 37px !important;
   overflow: hidden !important;
   padding: 0 !important;
