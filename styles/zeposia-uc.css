@@ -140,7 +140,7 @@ height: 0 !important;
 }
 
 /* Fix value props layout - must be flex row */
-.flx-ban {
+.grey-con .flx-ban, .left-banner .flx-ban, .flx-ban {
   display: flex !important;
   flex-wrap: nowrap !important;
 }
