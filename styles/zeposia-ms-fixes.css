@@ -90,3 +90,9 @@ main > .experiencefragment.section { display: none !important; }
     min-height: 611px !important;
   }
 }
+
+/* Reset slick-track transform (DOM snapshot has wrong position) */
+.slick-track {
+  transform: translate3d(0, 0, 0) !important;
+  transition: none !important;
+}
