@@ -27,3 +27,13 @@
 .utility-nav-footer {
   height: 38px !important;
 }
+
+/* Fix navbar collapse - show at desktop */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+}
