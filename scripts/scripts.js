@@ -219,7 +219,6 @@ async function applyTemplateOverlay(main) {
   .grey-con .flx-ban, .left-banner .flx-ban, .flx-ban { display: flex !important; flex-wrap: nowrap !important; }
   .banner-info.ucs_home { padding: 0 !important; width: 0 !important; overflow: hidden !important; }
   main > .isi-rendering.aem-GridColumn { display: none !important; height: 0 !important; }
-.card-color-container { max-height: 539px !important; overflow: hidden !important; }
   `;
   document.head.appendChild(overrideStyle);
     
