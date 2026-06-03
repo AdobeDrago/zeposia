@@ -223,7 +223,7 @@ async function applyTemplateOverlay(main) {
 .left-banner > .footenote-container { max-height: 165px !important; overflow: hidden !important; }
 .bann_big { max-height: 76px !important; overflow: hidden !important; }
 main > .experiencefragment.section { display: none !important; }
-main > .column-control.aem-GridColumn { max-height: 3528px !important; overflow: hidden !important; }
+main > .column-control.aem-GridColumn { max-height: 3537px !important; overflow: hidden !important; }
   `;
   document.head.appendChild(overrideStyle);
     
