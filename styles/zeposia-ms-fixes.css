@@ -83,3 +83,10 @@ main > .experiencefragment.section { display: none !important; }
   height: 25px !important;
   align-items: center !important;
 }
+
+/* Force carousel section to match source height (611px at desktop) */
+@media (min-width: 992px) {
+  .experiencefragment.section:nth-of-type(2) {
+    min-height: 611px !important;
+  }
+}
