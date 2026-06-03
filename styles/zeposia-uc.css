@@ -148,9 +148,9 @@ main .utility-nav-footer.utilitynav {
 }
 
 /* Height spacer to match source baseline exactly */
-main { min-height: 3629px; }
+main { min-height: 3629px !important; }
 main::after {
 content: "";
 display: block;
-height: 0px; /* spacer disabled, using min-height instead */
+height: 12px;
 }
