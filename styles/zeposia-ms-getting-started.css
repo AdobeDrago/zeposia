@@ -1,0 +1,112 @@
+/* Zeposia MS Getting Started - Overlay Fixes */
+body { transition: opacity ease-in 0.2s; }
+body[unresolved] { opacity: 0; display: block; overflow: hidden; position: relative; }
+
+body > header, body > footer { display: none !important; }
+main { display: block !important; }
+
+/* Hide all ISI reference sections except getting_started_ref */
+.isi-reference-section { display: none !important; }
+.isi-reference-section.getting_started_ref { display: block !important; }
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
+
+/* Fix column padding */
+#common-pgcont .column-control .column-control .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Background image for #greenbg */
+#greenbg {
+  background-image: url(https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/background-inner.png) !important;
+}
+
+/* Getting-started specific inline styles */
+#getting-started-pgcont .newpatient .not-rd { position: relative; }
+#getting-started-pgcont .newpatient .not-rd a {
+    background: none;
+    color: #F9423A;
+    box-shadow: none;
+    font-family: 'MontserratBold';
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 40px;
+    position: relative;
+}
+#getting-started-pgcont .newpatient .not-rd::before {
+    width: 95%;
+    height: 5px;
+    position: absolute;
+    background: linear-gradient(134deg, transparent 0, transparent 5px, #F9423A, #F9423A 0%);
+    bottom: -5px;
+    left: 40px;
+    content: "";
+}
+#getting-started-pgcont .newpatient .not-rd a:after {
+    content: "";
+    background: url(https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/orange_download.svg) no-repeat;
+    position: absolute;
+    height: 100%;
+    display: inline-block;
+    width: 14px;
+    top: 3px;
+    right: -20px;
+    background-size: contain;
+}
+
+@media(max-width: 1023px) {
+  #getting-started-pgcont .newpatient .not-rd a {
+    padding: 0;
+    margin-left: -10px;
+  }
+  #getting-started-pgcont .newpatient .not-rd::before {
+    width: 115%;
+    left: -15px;
+  }
+}
+
+/* Additional page-specific styles */
+#getting-started-pgcont .titration_cont .boldtxt.mob-margin { line-height: 20px; }
+#getting-started-pgcont #innersectioncont.reqcont { border-bottom: 5px solid #005C53 !important; padding-bottom: 10px; }
+#getting-started-pgcont #common-pgcont { padding-top: 60px; }
+
+html { scroll-behavior: smooth; }
+
+/* Flex banner fix */
+.grey-con .flx-ban, .left-banner .flx-ban, .flx-ban { display: flex !important; flex-wrap: nowrap !important; }
+.banner-info.ucs_home { padding: 0 !important; width: 0 !important; overflow: hidden !important; }
+
+/* Hide header/nav overlay elements */
+.cmp-backToTop-wrapper.hidden.d-block { display: block !important; }
+
+/* Page header padding */
+.page-header.mb-0.pd-10 { padding-bottom: 10px !important; }
+
+/* Additional fixes for layout */
+.pl-5 { padding-left: 5px !important; }
+p.fnt12 { font-size: 12px; }
+sup.left-hanging { position: relative; left: -0.3em; }
+.bodypara.txt-space { padding-top: 20px; }
+.mrb15 { margin-bottom: -15px; }
+.lh-14 { line-height: 18px; }
+
+/* Hide EDS header/footer */
+header.header-wrapper, footer.footer-wrapper { display: none !important; }
+
+/* Footer nav styles */
+a.imgt-ft.pl-0.cmp-image__link.inlineblockk.ms-bms.d-none.d-block.open-modal.nav-link {
+    width: 97px;
+    height: 20px;
+    display: inline-block;
+}
+
+/* Ensure ISI rendering shows on EDS */
+main > .isi-rendering.aem-GridColumn { display: none !important; height: 0 !important; }
+
+@media (min-width: 1024px) {
+  #getting-started-pgcont #common-pgcont #innersectioncont { padding-right: 15px; }
+  #getting-started-pgcont #common-pgcont .head2 { padding-left: 25px !important; }
+  #getting-started-pgcont #common-pgcont div#innersectioncont > .col > .column-control-column { justify-content: center; }
+}

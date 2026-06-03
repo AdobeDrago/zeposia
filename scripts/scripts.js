@@ -215,6 +215,7 @@ async function applyTemplateOverlay(main) {
     "uc-clinical-data": ["ucsite", "uc-home", "disabled"],
     "zeposia-ms-efficacy": ["mssite", "ms-efficacy", "disabled"],
     "zeposia-ms-study-design": ["mssite", "ms-studydesign", "disabled"],
+    "zeposia-ms-getting-started": ["mssite", "ms-gettingstarted", "disabled"],
   };
   const bodyClasses = templateBodyClasses[templateName];
   if (bodyClasses) bodyClasses.forEach((cls) => document.body.classList.add(cls));
