@@ -204,6 +204,15 @@ async function applyTemplateOverlay(main) {
   main.innerHTML = newMain.innerHTML;
   main.dataset.overlay = templateName;
 
+  // Add body classes based on template for source CSS compatibility
+  const templateBodyClasses = {
+    "zeposia-uc": ["ucsite", "uc-home", "disabled"],
+    "zeposia-ms": ["mssite", "ms-home", "disabled"],
+    "zeposia-gateway": ["gateway-page"],
+  };
+  const bodyClasses = templateBodyClasses[templateName];
+  if (bodyClasses) bodyClasses.forEach((cls) => document.body.classList.add(cls));
+  
   await cssLoaded;
   return true;
 }
