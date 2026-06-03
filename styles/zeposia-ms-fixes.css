@@ -75,3 +75,11 @@ main > .experiencefragment.section { display: none !important; }
 .slick-dots li.slick-active button {
   background: #e74c3c !important;
 }
+
+/* Fix slick dots height to match source (25px total) */
+.slick-dots {
+  padding: 4px 0 !important;
+  margin: 0 !important;
+  height: 25px !important;
+  align-items: center !important;
+}
