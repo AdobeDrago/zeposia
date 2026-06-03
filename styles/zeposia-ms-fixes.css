@@ -21,6 +21,18 @@ body > header, body > footer { display: none !important; }
   .d-lg-none { display: none !important; }
 }
 
+/* Mobile/Desktop page visibility (source convention) */
+@media (max-width: 991.98px) {
+  .d-page { display: none !important; }
+  .m-page { display: flex !important; }
+  .m-page.d-flex { display: flex !important; }
+}
+@media (min-width: 992px) {
+  .m-page { display: none !important; }
+  .d-page { display: flex !important; }
+  .d-page.d-flex { display: flex !important; }
+}
+
 /* Hide experiencefragment outer wrapper if doubled */
 main > .experiencefragment.section { display: none !important; }
 
@@ -36,6 +48,8 @@ main > .experiencefragment.section { display: none !important; }
   overflow: hidden !important;
   width: 100% !important;
   position: relative !important;
+  transform: translate3d(0, 0, 0) !important;
+  transition: none !important;
 }
 .slick-list {
   overflow: hidden !important;
@@ -58,7 +72,10 @@ main > .experiencefragment.section { display: none !important; }
   display: flex !important;
   justify-content: center !important;
   list-style: none !important;
-  padding: 10px 0 !important;
+  padding: 4px 0 !important;
+  margin: 0 !important;
+  height: 25px !important;
+  align-items: center !important;
 }
 .slick-dots li {
   margin: 0 5px !important;
@@ -76,23 +93,9 @@ main > .experiencefragment.section { display: none !important; }
   background: #e74c3c !important;
 }
 
-/* Fix slick dots height to match source (25px total) */
-.slick-dots {
-  padding: 4px 0 !important;
-  margin: 0 !important;
-  height: 25px !important;
-  align-items: center !important;
-}
-
 /* Carousel section min-height to match baseline capture state */
 @media (min-width: 992px) {
   .experiencefragment.section:nth-of-type(2) {
     min-height: 611px !important;
   }
-}
-
-/* Reset slick-track transform (DOM snapshot has wrong position) */
-.slick-track {
-  transform: translate3d(0, 0, 0) !important;
-  transition: none !important;
 }
