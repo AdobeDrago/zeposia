@@ -1,0 +1,19 @@
+/* EDS overrides for MS additional-studies template */
+
+/* Ensure body visibility for overlay template */
+body.zeposia-ms-additional-studies { display: block !important; overflow: auto !important; }
+
+/* Match source html overflow for correct scrollbar width */
+html { overflow-y: auto !important; overflow-x: hidden !important; }
+
+/* Hide EDS default header/footer - template provides its own */
+body > header, body > footer { display: none !important; }
+
+/* Hide duplicate ISI rendering section */
+.isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Hide experiencefragment outer wrapper if doubled */
+main > .experiencefragment.section { display: none !important; }
+
+/* Hide HCP entry modal on EDS */
+.cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
