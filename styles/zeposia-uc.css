@@ -148,8 +148,9 @@ main .utility-nav-footer.utilitynav {
 }
 
 /* Height spacer to match source baseline exactly */
+main { min-height: 3629px; }
 main::after {
 content: "";
 display: block;
-height: 145px;
+height: 0px; /* spacer disabled, using min-height instead */
 }
