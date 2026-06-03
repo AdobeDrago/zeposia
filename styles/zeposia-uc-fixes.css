@@ -37,3 +37,10 @@
     overflow: visible !important;
   }
 }
+
+/* Override Bootstrap collapse hidden state */
+.collapse.navbar-collapse {
+  height: auto !important;
+  overflow: visible !important;
+  visibility: visible !important;
+}
