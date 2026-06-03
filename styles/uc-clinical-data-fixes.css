@@ -1,0 +1,10 @@
+/* EDS overrides for UC clinical data template */
+body > header, body > footer { display: none !important; }
+.isi-rendering.aem-GridColumn { display: none !important; }
+.flx-ban { display: flex !important; }
+.banner-info.ucs_home { padding: 0; }
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
+main > .experiencefragment.section { display: none !important; }
