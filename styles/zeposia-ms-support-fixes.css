@@ -7,3 +7,11 @@ main { display: block !important; }
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* Fix: utility links wrap at mobile to match source */
+@media (max-width: 575px) {
+  .utilitycont .utilitylink a {
+    max-width: 120px !important;
+    display: inline-block !important;
+  }
+}
