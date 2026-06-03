@@ -50,5 +50,6 @@ main { display: block !important; }
 @media (max-width: 575px) {
   .utilitycont .utilitylink a {
     max-width: 120px;
+   display: inline-block;
   }
 }
