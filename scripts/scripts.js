@@ -212,7 +212,16 @@ async function applyTemplateOverlay(main) {
   };
   const bodyClasses = templateBodyClasses[templateName];
   if (bodyClasses) bodyClasses.forEach((cls) => document.body.classList.add(cls));
-  
+
+  // Inject critical CSS overrides that must win over imported source stylesheets
+  const overrideStyle = document.createElement("style");
+  overrideStyle.textContent = `
+  .grey-con .flx-ban, .left-banner .flx-ban, .flx-ban { display: flex !important; flex-wrap: nowrap !important; }
+  .banner-info.ucs_home { padding: 0 !important; width: 0 !important; overflow: hidden !important; }
+  main > .isi-rendering.aem-GridColumn { display: none !important; height: 0 !important; }
+  `;
+  document.head.appendChild(overrideStyle);
+    
   await cssLoaded;
   return true;
 }
