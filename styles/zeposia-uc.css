@@ -161,3 +161,17 @@ main .utility-nav-footer.utilitynav {
 display: none !important;
 height: 0 !important;
 }
+
+/* Fix hero layout - banner-info should have no padding on UC */
+.banner-info.ucs_home {
+  padding: 0 !important;
+  width: 0 !important;
+  flex-shrink: 1 !important;
+  overflow: hidden !important;
+}
+
+/* Force left-banner to take full width */
+.left-banner {
+  width: 100% !important;
+  flex: 1 1 100% !important;
+}
