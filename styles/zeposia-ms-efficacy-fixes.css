@@ -15,3 +15,9 @@ main { display: block !important; }
 .isi-master-container { display: block !important; }
 .isi-rendering-footer { display: block !important; }
 
+
+/* Fix: nested column padding in common-pgcont CTA cards */
+#common-pgcont .column-control .column-control .col {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
