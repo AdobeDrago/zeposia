@@ -145,3 +145,10 @@ main .utility-nav-footer.utilitynav {
 .cmp-modal.entry-modal.hcp-dismissed {
   display: none !important;
 }
+
+/* Height spacer to match source baseline exactly */
+main::after {
+content: "";
+display: block;
+height: 12px;
+}
