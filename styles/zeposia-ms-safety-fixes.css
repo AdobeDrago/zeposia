@@ -49,7 +49,7 @@ main { display: block !important; }
 /* Fix: utility links wrap at mobile to match source (119px width) */
 @media (max-width: 575px) {
   .utilitycont .utilitylink a {
-    max-width: 120px;
-   display: inline-block;
+    max-width: 120px !important;
+   display: inline-block !important;
   }
 }
