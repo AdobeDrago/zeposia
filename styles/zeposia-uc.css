@@ -1,12 +1,96 @@
-/* Source CSS imports for visual fidelity */
+/* ZEPOSIA UC Page — Source CSS Imports for Snowflake Overlay Fidelity */
+
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* AEM Source Stylesheets */
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css');
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css');
 @import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style.css');
 @import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style_UC.css');
 
-/* Hide EDS default header/footer since template provides its own */
-body > header, body > footer { display: none !important; }
+/* Hide EDS default header/footer — template provides its own */
+body > header,
+body > footer {
+  display: none !important;
+}
 
-/* Ensure overlay main is visible */
-main { display: block !important; }
+/* Ensure main is visible and unrestricted */
+main {
+  display: block !important;
+  max-width: unset !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override EDS section defaults that conflict with source layout */
+main .section {
+  max-width: unset;
+  padding: 0;
+  margin: 0;
+}
+
+/* Force ISI content visible (source uses JS to toggle) */
+.isi-rendering > div,
+.isi-rendering .cmp-isi,
+.isi-rendering .isi-content,
+.isi-rendering .isi-wrapper,
+.isi-rendering .indication-container,
+.isi-rendering .safety-container {
+  display: block !important;
+}
+
+/* ISI sticky bar - position it correctly */
+.isi-rendering .cmp-isi.sticky-element {
+  position: relative !important;
+}
+
+/* Force ISI height auto */
+.isi-rendering {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+/* Bootstrap responsive overrides (source uses 992px for lg) */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
+
+@media (min-width: 768px) {
+  .d-md-block { display: block !important; }
+  .d-md-none { display: none !important; }
+}
+
+/* Ensure images from source domain load */
+img[src*="zeposiahcp.com"] {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HCP Modal overlay */
+.cmp-modal.entry-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmp-modal.entry-modal.hcp-dismissed {
+  display: none !important;
+}
+
+/* Footer links */
+.footer-links-section {
+  display: block !important;
+}
+
+.utility-nav-footer {
+  display: block !important;
+}
