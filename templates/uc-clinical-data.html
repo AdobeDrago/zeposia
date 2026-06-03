@@ -1,0 +1,2915 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css" type="text/css">
+<link rel="stylesheet" href="https://www.zeposiahcp.com/etc.clientlibs/granite/ui/components/coral/foundation/components/clientlibs/components.min.css" type="text/css">
+<link rel="stylesheet" href="https://www.zeposiahcp.com/etc.clientlibs/granite/ui/components/coral/foundation/clientlibs/foundation.min.css" type="text/css">
+<link rel="stylesheet" href="https://www.zeposiahcp.com/etc.clientlibs/bmscorp/clientlibs/clientlibs/shared/clientlib-granite-authoring-overides.min.css" type="text/css">
+<link rel="stylesheet" href="https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css" type="text/css">
+<link href="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style.css" rel="stylesheet" type="text/css">
+<link href="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style_UC.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/styles/uc-clinical-data-inline.css" type="text/css">
+<link rel="stylesheet" href="/styles/uc-clinical-data-fixes.css" type="text/css">
+<main>
+
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="column-control aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="moa-page">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="column-control section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="header-wrap">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="experiencefragment section">
+
+
+
+
+
+    
+	
+    <div>
+    	
+
+
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<script>
+$(document).ready(function(){
+	$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+	  if (!$(this).next().hasClass('show')) {
+		//$(this).addClass('active');
+		$(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+	  }
+	  var $subMenu = $(this).next('.dropdown-menu');
+	  $subMenu.toggleClass('show');
+
+
+	  $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+		$('.dropdown-submenu .show').removeClass('show');
+	  });
+
+
+	  return false;
+	});
+	
+	var lastScrollTop = 0;
+	$(window).scroll(function(event){
+	   var st = $(this).scrollTop();
+	   if (st > lastScrollTop){
+		   $('body.ucsite').addClass('scrolling_down');
+		   $('body.ucsite').removeClass('scrolling_up');
+		   //$('.headerWrapUC').removeClass('fixedHeader');
+		   //$(".dropdown.mobile-list-dropdown").removeClass("mobile-scroll-link");
+		   //$('.dropSecond').removeClass('fixedsmenu');
+		   //$('.transparent-bg').removeClass('fixedSMenu');
+		   //$('.headerWrapUC').addClass('fixedHeader');
+		   //$(".dropdown.mobile-list-dropdown").addClass("mobile-scroll-link");
+		   //$('.dropSecond').addClass('fixedsmenu');
+		   //$('.transparent-bg').addClass('fixedSMenu');
+		   if($('#navbarNavDropdown').hasClass('show')){
+				$('.headerWrapUC').removeClass('fixedHeader');
+			}
+	   }else if(st == 0){
+			//$('.headerWrapUC').removeClass('fixedHeader');
+			$(".dropdown.mobile-list-dropdown").removeClass("mobile-scroll-link");
+			$('.dropSecond').removeClass('fixedsmenu');
+			$('body.ucsite').removeClass('scrolling_up');
+		}	   
+	   else {
+		   $('body.ucsite').addClass('scrolling_up');
+		   $('body.ucsite').removeClass('scrolling_down');
+		   if($('body').hasClass('navbar-open')){
+					//$('.headerWrapUC').removeClass('fixedHeader');
+					$(".dropdown.mobile-list-dropdown").removeClass("mobile-scroll-link");
+					$('.dropSecond').removeClass('fixedsmenu');
+				}else{
+					//$('.headerWrapUC').addClass('fixedHeader');
+					//$(".dropdown.mobile-list-dropdown").addClass("mobile-scroll-link");
+					//$('.dropSecond').addClass('fixedsmenu');
+					if($('#navbarNavDropdown').hasClass('show')){
+						$('.headerWrapUC').removeClass('fixedHeader');
+					}
+			}
+			if ( $('.transparent-bg .container').children().length > 0 ) {
+						//$('.transparent-bg').addClass('fixedSMenu');
+						//$('.showTop').addClass('tempFull');
+						if (st <= 70) {
+							$('.transparent-bg').removeClass('fixedSMenu');
+							$('.showTop').removeClass('tempFull');
+						}
+					}else{
+						$('.transparent-bg').removeClass('fixedSMenu');
+						$('.showTop').removeClass('tempFull');
+			}
+	   }
+	   lastScrollTop = st;
+	});	
+	
+	$(".dropdown-item2").on('click', function() {
+		console.log($(this).attr('href'));
+		var x = $(this).attr('href');
+		
+		$(".navbar-toggler").click();
+		setTimeout(function() {
+		$('html, body').animate({
+			scrollTop: $('#'+x.split('#')[1]).offset().top
+		}, 200);
+		},1000);
+		$('.dropdown-item2').removeClass('active active-now');
+		$(this).addClass('active active-now')
+	});
+	
+	$('.dropdown-item').on('click', function() {
+		$('.dropdown-item').removeClass('active');
+		$('.nav-item').removeClass('active');
+		$(this).addClass('active');
+		$(this).parent().parent().addClass('active');
+	});
+	
+	
+	
+	
+	var hashVal = window.location.href.split("#")[1];
+	if((hashVal)){
+	console.log("Line no. 97")
+	setTimeout(function(){
+		if ($(window).width() >= 700){
+		  $('html, body').animate({ scrollTop: $("#"+hashVal).offset().top-10,
+			  }, 800, function(){
+			});
+		}
+		},500);
+	}
+	
+});
+
+
+
+
+</script>
+<style>
+/*body.disabled.ucsite.scrolling_up{
+	padding-top:100px;
+}*/
+.ucsite .transparent-bg.fixedSMenu, .dropdown.mobile-list-dropdown.mobile-scroll-link {top: 0;}
+#ucHomeBanner #myVideo { /* ZMSH-95 to be removed */
+mask-image:linear-gradient(#95D1F4, #93D1f4);
+mask-position:center center;
+mask-repeat:no-repeat;
+mask-size:cover;
+    -webkit-mask-image: linear-gradient(#95D1F4, #93D1f4);
+    -webkit-mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+}
+.fixedHeader {
+    position: fixed;
+    top:0; 
+	left:0;
+	z-index:2;
+    width: 100%; 
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active{
+	font-family:'MontserratMedium'!important;
+	font-weight:500;
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active.active-now, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active.active-now{
+	font-family:'MontserratBold'!important;
+}
+.ucsite .dropdown-menu.zeposiaSubMenu .dropdown-item.dropdown-item2.active-now, 
+.ucsite .dropdown-menu.dosingSubMenu .dropdown-item.dropdown-item2.active-now{
+	font-family:'MontserratBold';
+}
+</style>
+
+    
+    
+
+</div>
+
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<!--div class="headerWrapUC">
+<div class="sitetxt"><div class="container">This site is intended for U.S. Healthcare Professionals only.</div></div>
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+	<ul class="utilitycont d-flex m-page">
+        <li class="utilitylink"><a href='https://packageinserts.bms.com/pi/pi_zeposia.pdf' title='' class='' target='_blank'  aria-label=''lang=''>U.S. Full Prescribing Information</a></li>
+        <li class="utilitylink"><a href='https://packageinserts.bms.com/medguide/medguide_zeposia.pdf' title='' class='' target='_blank'  aria-label=''lang=''>Medication Guide</a></li>
+    </ul>
+	<div class="logoWrap">
+	  <a href='/ulcerative-colitis' data-authorurl='/ulcerative-colitis' title='' aria-label='' lang='' class='open-modal navbar-brand' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis|'><img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/hdrlogo.svg" alt="ZEPOSIA® (ozanimod) Logo"></a>
+	  <p class="d-page ucAlert desktopIndi">For adults with moderate to severe ulcerative colitis</p>
+	 </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/mobile-menu.png" alt="mobile menu button closeMenu" class="mobile-menu-icon"><p class="openMenu d-none">Close <br><span class="closeMenubutton">×</span></p></span>
+	<span class="navbar-toggler-icon d-none"></span>
+	<span class="navbar-toggler-icon d-none"></span>
+  </button>
+  <div class="collapse navbar-collapse hdrlinkscont" id="navbarNavDropdown">
+    <ul class="utilitycont d-flex d-page">
+        <li class="utilitylink"><a href='https://packageinserts.bms.com/pi/pi_zeposia.pdf' title='' class='' target='_blank'  aria-label=''lang=''>U.S. Full Prescribing Information</a></li>
+        <li class="utilitylink"><a href='https://packageinserts.bms.com/medguide/medguide_zeposia.pdf' title='' class='' target='_blank'  aria-label=''lang=''>Medication Guide</a></li>
+        <li class="utilitylink"><a href='#' id='' title='' class='openResources' target='' aria-label=''lang=''>BMS Resources</a></li>
+        <li class="utilitylink"><a href='https://www.zeposia.com/ulcerative-colitis' data-authorurl='https://www.zeposia.com/ulcerative-colitis' title='' aria-label='' lang='' class='open-modal ' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Visit Patient Site' data-classname='external-link-warning-modal cross-site' data-aa-popup='https://www.zeposia.com/ulcerative-colitis|Visit Patient Site'>Visit Patient Site</a></li>
+		<li class="utilitylink indication_cont">
+            <a id='nav-ind'></a>           
+        </li>   
+    </ul>
+    <ul class="navbar-nav ucMenu">
+      <li class="nav-item">
+        <a href='/ulcerative-colitis/home' data-authorurl='/ulcerative-colitis/home' title='' aria-label='' lang='' class='open-modal nav-link' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Home' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/home|Home'>Home</a>
+      </li>
+		<li class="nav-item dropdown d-page">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Clinical Data <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow red-arrow d-page"/></a>
+			<div class="dropdown-menu ucSubMenu vertical d-page" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+				<a href='/ulcerative-colitis/zeposia-clinical-data/study-design' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/study-design' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Study Design' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/study-design|Study Design'>Study Design</a>
+				<a href='/ulcerative-colitis/zeposia-clinical-data/efficacy' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Efficacy' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy|Efficacy'>Efficacy</a>
+				<a href='/ulcerative-colitis/zeposia-clinical-data/safety' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/safety' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Safety' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/safety|Safety'>Safety</a>
+			</div>
+		</li>
+		<li class="nav-item dropdown-submenu m-page">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Clinical Data <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow m-page"></a>
+					<ul class="submenu dropdown-menu ucSubMenuMenu" aria-labelledby="navbarDropdownMenuLink">
+						<li><a href='/ulcerative-colitis/zeposia-clinical-data/study-design' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/study-design' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Study Design' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/study-design|Study Design'>Study Design</a></li>
+						<li>
+							<a href='#' id='efficacyToggle' title='' class='nav-link dropdown-item dropdown-toggle' target='' aria-label=''lang=''>Efficacy <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow m-page safetyArrow"></a>
+							<ul class="dropdown-menu m-page efficacySubmenu navaigationList" aria-labelledby="efficacyToggle">
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/efficacy#remission' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy#remission' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Remission' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy#remission|Remission'>Remission</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/efficacy#response' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy#response' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Response' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy#response|Response'>Response</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/efficacy#ehmi' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy#ehmi' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='EHMI' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy#ehmi|EHMI'>EHMI</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/efficacy#csFree' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy#csFree' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='CS-Free' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy#csFree|CS-Free'>CS-Free</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/efficacy#tnfi' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/efficacy#tnfi' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='TNFi' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/efficacy#tnfi|TNFi'>TNFi</a></li>
+							</ul>
+						</li>
+						
+						<li><a href='#' id='safetyToggle' title='' class='nav-link dropdown-item dropdown-toggle' target='' aria-label=''lang=''> Safety <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow m-page safetyArrow"></a>
+							<ul class="dropdown-menu m-page safetySubmenu navaigationList" aria-labelledby="safetyToggle">
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/safety#advrReaction' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/safety#advrReaction' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Adverse Reaction' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/safety#advrReaction|Adverse Reaction'>Adverse Reaction</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/safety#lDR' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/safety#lDR' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Discontinuation Rates' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/safety#lDR|Discontinuation Rates'>Discontinuation Rates</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/safety#sam' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/safety#sam' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Serious Infections and Malignancies' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/safety#sam|Serious Infections and Malignancies'>Serious Infections and Malignancies</a></li>
+								<li><a href='/ulcerative-colitis/zeposia-clinical-data/safety#ole' data-authorurl='/ulcerative-colitis/zeposia-clinical-data/safety#ole' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='OLE Safety' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/zeposia-clinical-data/safety#ole|OLE Safety'>OLE Safety</a></li>
+							</ul>
+						</li>
+					</ul>
+
+		</li>
+	  <li class="nav-item">
+        <a href='/ulcerative-colitis/MOA' data-authorurl='/ulcerative-colitis/MOA' title='' aria-label='' lang='' class='open-modal nav-link' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='MOA' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/MOA|MOA'>MOA</a>
+      </li>
+      <li class="nav-item dropdown m-page">
+        <a href='#' id='navbarDropdownMenuLink' title='' class='nav-link dropdown-toggle' target='' aria-label=''lang=''>Starting ZEPOSIA <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow m-page"></a>
+		<div class="dropdown-menu dosingSubMenu navaigationList" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+			<a href='/ulcerative-colitis/starting-zeposia#dosing' data-authorurl='/ulcerative-colitis/starting-zeposia#dosing' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Dosing' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/starting-zeposia#dosing|Dosing'>Dosing</a>
+			<a href='/ulcerative-colitis/starting-zeposia#gs' data-authorurl='/ulcerative-colitis/starting-zeposia#gs' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Getting Started' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/starting-zeposia#gs|Getting Started'>Getting Started</a>
+		</div>
+      </li>
+	   <li class="nav-item d-page">
+		<a href='/ulcerative-colitis/starting-zeposia' data-authorurl='/ulcerative-colitis/starting-zeposia' title='' aria-label='' lang='' class='open-modal nav-link d-page' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Starting ZEPOSIA' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/starting-zeposia|Starting ZEPOSIA'>Starting ZEPOSIA</a>
+	   </li>
+      <li class="nav-item dropdown m-page">
+        <a href='#' id='navbarDropdownMenuLink' title='' class='nav-link dropdown-toggle' target='' aria-label=''lang=''>Support <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/red-arrow.svg" class="menu-arrow m-page"></a>
+		<div class="dropdown-menu zeposiaSubMenu" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+			<a href='/ulcerative-colitis/support#zeposia360' data-authorurl='/ulcerative-colitis/support#zeposia360' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='ZEPOSIA 360' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/support#zeposia360|ZEPOSIA 360'>ZEPOSIA 360</a>
+			<a href='/ulcerative-colitis/support#resources' data-authorurl='/ulcerative-colitis/support#resources' title='' aria-label='' lang='' class='open-modal dropdown-item' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Resources' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/support#resources|Resources'>Resources</a>
+		</div>
+	  </li>
+	  <li class="nav-item d-page">
+		<a href='/ulcerative-colitis/support' data-authorurl='/ulcerative-colitis/support' title='' aria-label='' lang='' class='open-modal nav-link d-page' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Support' data-classname='external-link-warning-modal cross-site' data-aa-popup='/ulcerative-colitis/support|Support'>Support</a>
+	  </li>
+      <li class="nav-item m-page">
+        <a href='#' id='' title='' class='nav-link openResources' target='' aria-label=''lang=''>BMS Resources</a>
+      </li>
+      <li class="nav-item m-page"><a href='https://www.zeposia.com/ulcerative-colitis' data-authorurl='https://www.zeposia.com/ulcerative-colitis' title='' aria-label='' lang='' class='open-modal nav-link' data-target='externalLink' data-url='/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html' data-aa-launchid='Rich Text Editor' data-aa-launchdata='Visit Patient Site' data-classname='external-link-warning-modal cross-site' data-aa-popup='https://www.zeposia.com/ulcerative-colitis|Visit Patient Site'>Visit Patient Site</a></li>
+		<li class="utilitylink nav-item indication_cont m-page">
+            <a id='nav-ind'></a>           
+        </li>  
+    </ul>
+  </div>
+  <p class="d-none ucAlert">For adults with moderate to severe ulcerative colitis</p>
+  </div>
+</nav>
+
+</div>
+<div class="headerWrapUC-support">
+
+</div>
+<div class="container indmodal_container">
+    <div id="indication_modal" class="modal" tabindex="-1" role="dialog" aria-labelledby="nav-ind" aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Indications</h5>
+					<button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="body_txt">ZEPOSIA<sup>&reg;</sup> (ozanimod) is indicated for the treatment of:<ol>
+					<li>Moderately to severely active ulcerative colitis (UC) in adults.</li>
+					<li>Relapsing forms of multiple sclerosis (MS), to include clinically isolated syndrome, relapsing-remitting disease, and active secondary progressive disease, in adults.</li>
+					</ol></div>
+				</div>
+            </div>
+        </div>                
+    </div>
+   </div> 
+   
+<div id="resourcesPopup" style="display: none; position: fixed; height: 100%; top: 0;left: 0;width: 100%;">
+<div id="close_btn_new">X</div>    
+    <div class="resourcesContent">&nbsp;</div>
+</div -->
+    
+    
+
+</div>
+
+</div>
+<div class="removable-wrapper-div aem-GridColumn aem-GridColumn--default--12 activeMainParent">
+	
+    
+    	<div class="headerWrapUC">
+    <!-- <div class="sitetxt"><div class="container">This site is intended for U.S. Healthcare Professionals only.</div></div> -->
+    <nav class="navbar navbar-expand-lg activeMainParent">
+    <div class="container activeParent">
+        <div class="m-page">
+            <ul class="utilitycont d-flex">
+                <li class="utilitylink"><a href="https://packageinserts.bms.com/pi/pi_zeposia.pdf" target="_blank">U.S. Full Prescribing Information</a></li>
+                <li class="utilitylink indication_cont">
+                    <a id="nav-ind-m" class="nav-indlink">Indications</a>           
+                </li> 
+                <!-- <li class="utilitylink"><a href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" target="_blank">Medication Guide</a></li> -->
+            </ul>
+        </div>
+        <div class="logoWrap">
+          <!--<a class="navbar-brand" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis.html"><img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/hdrlogo.png" alt="ZEPOSIA® (ozanimod) Logo"></a>-->
+		  <a class="navbar-brand" href="/ulcerative-colitis"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/OZANIMOD_US_Logo_SPOT.jpg" alt="ZEPOSIA® (ozanimod) Logo"></a>
+          <p class="d-page ucAlert desktopIndi">For adults with moderate-to-severe ulcerative colitis</p>
+         </div>
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 15px;">
+        <span class="navbar-toggler-icon"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile-menu.png" alt="mobile menu button closeMenu" class="mobile-menu-icon"><p class="openMenu d-none">Close <br><span class="closeMenubutton">×</span></p></span>
+        <span class="navbar-toggler-icon d-none"></span>
+        <span class="navbar-toggler-icon d-none"></span>
+      </button>
+      <div class="collapse navbar-collapse hdrlinkscont" id="navbarNavDropdown">
+        <ul class="utilitycont d-flex d-page">
+            <li class="utilitylink"><a href="https://packageinserts.bms.com/pi/pi_zeposia.pdf" target="_blank">U.S. Full Prescribing Information</a></li>
+            <li class="utilitylink"><a href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" target="_blank">Medication Guide</a></li>
+            <li class="utilitylink"><a href="#" class="openResources" data-aa-popup="|BMS Resources">BMS Resources</a></li>
+            <li class="utilitylink"><a href="https://www.zeposia.com/ulcerative-colitis/" target="_blank">Visit Patient Site</a></li>
+            <li class="utilitylink indication_cont">
+                <a id="nav-ind" class="nav-indlink">Indications</a>           
+            </li>   
+    
+        </ul>
+        <ul class="navbar-nav ucMenu side-pad activeParent">
+          <!--ZUCHCP-5, ZUCHCP-6 <li class="nav-item">
+            <a class="nav-link" href="/ulcerative-colitis">Home</a>
+          </li>-->
+          <li class="nav-item dropdown d-page active-now">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Clinical Data <img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow red-arrow d-page"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/blue-up-arrow.svg" class="menu-arrow blue-arrow d-page"></a>
+            <div class="dropdown-menu ucSubMenu vertical d-page" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+                <a class="dropdown-item" href="/ulcerative-colitis/zeposia-clinical-data/study-design">Study Design</a>
+                <a class="dropdown-item" href="/ulcerative-colitis/zeposia-clinical-data/efficacy">Efficacy</a>
+                <a class="dropdown-item" href="/ulcerative-colitis/zeposia-clinical-data/safety">Safety</a>
+                <a class="dropdown-item active" href="/ulcerative-colitis/zeposia-clinical-data/moa">MOA</a>
+
+            </div>
+        </li>
+          <li class="nav-item dropdown-submenu m-page">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Clinical Data <img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow m-page"></a>
+                    <ul class="submenu dropdown-menu ucSubMenuMenu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/ulcerative-colitis/zeposia-clinical-data/study-design">Study Design</a></li>
+                        <li>
+                            <a class="nav-link dropdown-item" id="efficacyToggle" href="/ulcerative-colitis/zeposia-clinical-data/efficacy">Efficacy</a>
+                          
+                        </li>
+                        
+                        <li>
+                            <a class="nav-link dropdown-item" href="/ulcerative-colitis/zeposia-clinical-data/safety">Safety</a>
+                            
+                        </li>
+                        <li class="active-now">
+                            <a class="nav-link dropdown-item active" href="/ulcerative-colitis/zeposia-clinical-data/moa">MOA</a>
+                        </li>
+                    </ul>
+
+        </li>
+		  <!-- <li class="nav-item dropdown d-page">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ZEPOSIA in Practice <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow red-arrow d-page"><img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/blue-up-arrow.svg" class="menu-arrow blue-arrow d-page"></a>
+                <div class="dropdown-menu ucSubMenu vertical d-page" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+                    <a class="dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/unmet-need.html">Patient Profile</a>
+                    <a class="dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/zeposia-patient.html">ZEPOSIA Experience</a>
+                </div>
+            </li> -->
+			<!-- <li class="nav-item dropdown-submenu m-page treating-uc-link">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                ZEPOSIA in Practice <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow m-page"></a>
+					<ul class="submenu dropdown-menu ucSubMenuMenu" aria-labelledby="navbarDropdownMenuLink">
+						<li><a class="dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/unmet-need.html">Patient Profile</a></li>
+						<li>
+							<a class="nav-link dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/zeposia-patient.html">ZEPOSIA Experience</a>
+							<ul class="dropdown-menu m-page efficacySubmenu navaigationList" aria-labelledby="efficacyToggle" id="patientToggleDropdown">
+								<li><a class="dropdown-item dropdown-item2" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/zeposia-patient.html#patient-profiles">Patient Profile</a></li>
+								<li><a class="dropdown-item dropdown-item2" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/treating-uc/zeposia-patient.html#hcp-patient-dialogue">HCP-Patient Dialogue</a></li>
+							</ul>
+						</li>
+					</ul>
+            </li> -->
+           
+         
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/moa.html">MOA</a>
+          </li> -->
+          <li class="nav-item dropdown m-page">
+            <a class="nav-link dropdown-toggle" href="/ulcerative-colitis/dosing-and-initiation">Dosing &amp; Initiation</a>
+            
+          </li>
+           <li class="nav-item d-page">
+            <a class="nav-link d-page" href="/ulcerative-colitis/dosing-and-initiation">Dosing &amp; Initiation</a>
+           </li>
+		   
+<!-- <li class="nav-item dropdown-submenu m-page">
+<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Support <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow m-page"></a>
+	<ul class="submenu dropdown-menu ucSubMenuMenu" aria-labelledby="navbarDropdownMenuLink">
+		<li><a class="nav-link dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/support/zeposia-360.html">ZEPOSIA 360</a></li>
+		<li><a class="nav-link dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/support/resources.html">Resources</a></li>
+	</ul>
+</li> -->
+
+		  <!-- <li class="nav-item dropdown d-page">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Support <img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/redarrow.svg" class="menu-arrow red-arrow d-page"><img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/blue-up-arrow.svg" class="menu-arrow blue-arrow d-page"></a>
+                <div class="dropdown-menu ucSubMenu vertical d-page" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
+                    <a class="dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/support/zeposia-360.html">ZEPOSIA 360</a>
+                    <a class="dropdown-item" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/support/resources.html">Resources</a>
+                </div>
+            </li> -->
+		  <li class="nav-item round-btn d-page">
+            <!--<a class="nav-link d-page" href="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/pdf/uc/zeposia-gastro-start-form.pdf" target="_blank">-->
+            <!-- <a href="/content/commercial/us/zeposiahcp/en/covermeds_modal.html" class="nav-link d-page">Get Started</a> -->
+          </li>
+          <li class="nav-item m-page">
+            <a class="nav-link openResources" href="#">BMS Resources</a>
+          </li>
+          <li class="nav-item m-page"><a class="nav-link" href="https://www.zeposia.com/ulcerative-colitis/" target="_blank">Visit Patient Site</a></li>
+          <li class="utilitylink nav-item m-page"><a class="nav-link" href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" target="_blank">Medication Guide</a></li>
+            <!-- <li class="utilitylink nav-item indication_cont m-page">
+                <a id="nav-ind" class="nav-indlink nav-link">Indications</a>           
+            </li>  --> 
+		<div class="round-btn m-page">
+			<!--<a class="nav-link" href="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/pdf/uc/zeposia-gastro-start-form.pdf" target="_blank">-->
+            <!-- <a href="/content/commercial/us/zeposiahcp/en/covermeds_modal.html" class="nav-link">Get Started</a> -->
+		</div>	
+         <!-- <div class="rar-item m-page">
+            <img onclick="chatController.openConverse(this, true)" src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/Contact_Rep_Floating_Button_Mobile.png" alt="Request a Rep Icon">         
+          </div>   -->
+    
+        </ul>
+      </div>
+      <p class="d-none ucAlert">For adults with moderate-to-severe ulcerative colitis</p>
+      </div>
+    </nav>
+    
+    </div>
+    <!-- <div class="rar-item d-page">
+            <img onclick="chatController.openConverse(this, false)" src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/uc-req-button.png" alt="Request a Rep Icon">         
+    </div>   -->
+    <div class="headerWrapUC-support">
+    
+    </div>
+    <div class="container indmodal_container">
+        <div id="indication_modal" class="modal show" tabindex="-1" role="dialog" aria-labelledby="nav-ind" data-backdrop="false" style="padding-right: 15px; display: block;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Indications</h5>
+                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="body_txt">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of:<ol>
+                        <li>Moderately to severely active ulcerative colitis (UC) in adults.</li>
+                        <li class="blueanchor"><!--<a href="/content/commercial/us/zeposiahcp/en/multiple-sclerosis.html" data-authorurl="/content/commercial/us/zeposiahcp/en/multiple-sclerosis.html" title="" aria-label="" class="open-modal " data-target="externalLink" data-url="/content/commercial/us/zeposiahcp/en.warning.html" data-classname="external-link-warning-modal" data-aa-popup="/content/commercial/us/zeposiahcp/en/multiple-sclerosis.html|Bristol-Myers Squibb Company">--><a href="/multiple-sclerosis">Relapsing forms of multiple sclerosis (MS)</a>,<br class="d-page"> to include clinically isolated syndrome, relapsing-remitting disease, and active secondary progressive disease, in adults.</li>
+                        </ol></div>
+                    </div>
+                </div>
+            </div>                
+        </div>
+       </div> 
+       
+    <div id="resourcesPopup" style="display: none; position: fixed; height: 100%; top: 0;left: 0;width: 100%;">
+        <div class="resourcesContent"><div id="close_btn_new">X</div><div class="pagecont"></div></div>
+    </div>
+    
+    <script>
+    $( document ).ready(function() {
+    $('.ucSubMenuMenu li a').on('click', function (e) {
+            var menuItem = $( e.currentTarget );
+    
+           /*if (menuItem.attr( 'aria-expanded') === 'true') {
+                $(this).attr( 'aria-expanded', 'false');
+            } else {
+                $(this).attr( 'aria-expanded', 'true');
+                $(this).parent().addClass('selected').siblings().removeClass('selected');
+            } - commented for ZMSH-130 */
+            if(menuItem.next().hasClass('dropdown-menu')){
+                if(menuItem.next().hasClass('show')){
+                    $(this).attr( 'aria-expanded', 'true');
+                    $(this).parent().addClass('selected').siblings().removeClass('selected');
+                }
+                else{
+                    $(this).attr( 'aria-expanded', 'false');
+                }
+            }                
+            
+        });
+    
+    });
+    
+    </script>
+	<style>
+	.left-banner p.bane_one sup{font-family: 'MontserratBold';}
+	@media (min-width: 1024px){
+        .navbar-nav.ucMenu.side-pad{position: relative; right: 56%; top: 0px !important;}
+	p.bane_one{line-height: 22px;}
+	}
+	</style>
+	</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<div id="resourcesPopup" style="display: none; position: fixed; height: 100%; top: 0;left: 0;width: 100%;">
+<div id="close_btn">X</div>
+    <div class="resourcesContent">&nbsp;</div>
+</div>
+
+<!--script>
+$(document).ready(function(){
+			function resourceOverlayNew() {
+
+				var pageUrl = 'https://www.bmscustomerconnect.com/';
+				if ((window.location.href.search('author.bms.com')>0) || (window.location.href.search('preview')>0)) {
+				pageUrl=window.location.origin+"/content/commercial/us/BMSCUSTOMERCONNECT/en/home.html";
+				}
+			  
+				$('#resourcesPopup').show();
+			  $( ".resourcesContent" ).load( pageUrl);
+			  $('body').addClass('resOverlay');
+			  var resourceLinkClass = $(".openResources").attr("class");  
+			   resourceLinkClass = resourceLinkClass.split(" ");
+			  setTimeout(function(){ 	if($('.resourcesContent').length>0){
+			  $( ".resourcesContent" ).addClass('res-pop');
+			  } }, 5000);
+			  }
+
+
+		$("#close_btn").on("click", function(){
+		   $("#resourcesPopupNew").hide();
+		   location.reload ()
+        });
+        
+        $('.openResources').click(function(e) {
+			e.preventDefault();
+			resourceOverlayNew();
+        });
+});
+</script-->
+
+    
+    
+
+</div>
+
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<style>
+#open-converse, #open-converse-mobile { background: url(/content/dam/commercial/us/zeposiahcp/en/images/req-button.svg)!important; left: 97%!important; width: 58px !important; border-bottom-left-radius: 30%!important; height: 178px !important;} 
+.ucsite #myPlayerID.video-js:hover .vjs-dock-text { display: none; }
+#ucHomeBanner {background: #A4E2FF;}
+
+.video-mask {position: absolute;left: 0px;top: 0;right: 0;content: '';bottom: 0;background: url(/content/dam/commercial/us/zeposiahcp/en/images/uc/UC_Video_overlay_blend.png) no-repeat; background-size: cover;max-width: 100%;height: 520px;margin: auto;width: 1004px;transform: translateX(-100px);z-index: 1;}
+.ucsite nav.navbar.navbar-expand-lg { z-index: 2; }
+.video-container {overflow: hidden; position: relative;}
+#ucHomeBanner .banner-info {z-index: 3;}
+.video-container video {height: 520px;clip-path: inset(1px 1px); width: 100%;margin-left: -100px; display: block; }
+.round-btn a {background: #F9423A; color: #ffffff!important;}
+.rar-item.d-page {width: 65px; right: -15px; }
+.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow {text-indent: -31px;}
+
+@media (max-width: 1280px) {
+#open-converse, #open-converse-mobile {left: 95.5%!important;}
+.ucsite .safety-banner-content .right-intro-text h1 { max-width: 315px; }
+}
+@media (min-width: 1023px) {
+
+img.menu-arrow.red-arrow.d-page{transform: rotate(0deg);}
+.ucsite .navbar-expand-lg .navbar-nav li:hover .nav-link .menu-arrow.red-arrow.d-page {
+    transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+}
+
+#open-converse, #open-converse-mobile { left: 97%!important; }
+.ucsite .cta-button.home-banner img {  height: 28px; }
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link { /*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+.ucsite .callout h3.head3 { margin-bottom: 5px; }
+.ucsite ul.section-list li { margin-left: 90px; }
+#tuc-patient .box3.gettingStartedBody3 .callout.one .callout-button {margin-top: 28px;}
+.ucsite .white-box.oneMoa.d-page { margin-bottom: 55px; }
+.ucsite  .white-box.twoMoa {  margin-bottom: 25px; }
+.ucsite .dosing-info-section .downloadCTA.callout-button.download-arrow { margin-top: 10px; }
+.ucsite #BlueCloudBG button.callout-button { text-transform: capitalize; }
+.ucsite img.menu-arrow.red-arrow.d-page { top: 3px; right: -14px; }
+.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu {  left: 0; top: 33px; }
+.ucsite .utilitycont {margin-bottom: 30px;}
+.ucsite .isi-content div.head3 { padding-top: 50px; }
+.ucsite .isi-content div.head3.mt-30 {padding-top: 0;margin-top: 21px;}
+.ucsite .sticky-element .isi-content div.head3 { padding-top: 0px; }
+.ucsite .cmp-accordion__button {font-size: 20px;}
+.footer-people.dosing img { margin-top: -75px; }
+.efficacy-accordion-content .white-box.section3 .fullChart img { margin: 0 auto; padding-bottom: 30px; padding-top: 30px; }
+.footer-people.study-design-footer img { margin-top: -10px; }
+.ucsite #zeposia360 .d-flex.supportIcons .img-wrap img {margin-top: 25px; margin-left: 32px; height: 47px;}
+}
+
+@media only screen 
+  and (min-device-width: 390px) 
+  and (max-device-width: 844px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+#safety-page #advrReaction div.col2-table {margin-left: 53px;}
+#safety-page #advrReaction div.col3-table {margin-left: -8px;}
+.cta-button.home-banner {font-size: 12px;}
+.ucsite .card-img-container h2 { line-height: 32px; }
+.ucsite .cmp-isi .isi-container .isi-container-title { font-size: 14px; }
+div.grey-section p { font-size: 10px; padding: 17px 15px 32px 19px; }
+.ucsite table tr { border-bottom: 0.5px solid #B2BEC5; }
+.ucsite #study-design-page .gradient {margin-bottom: 40px;}
+.ucsite p.blueBoldHeading { font-size: 14px;}
+.ucsite p.blueBoldHeading span { color: #0032A0; }
+p.blueBoldHeading.contactinfo {color: #0032A0;}
+#safety-page div.blueBorder div {font-size: 14px;}
+#safety-page .thirdTable div.blueBorder div, #safety-page .fourthTable div.blueBorder div {font-size: 13px;}
+#safety-page .safety-acc1 table tr th, #safety-page .seventhTable div.blueBorder div {font-size: 11px; }
+#safety-page .seventhTable .blueBorder .fiveCol2 { margin-left: 69px!important; }
+#safety-page .seventhTable .blueBorder .fiveCol4 {margin-left: 28px!important;}
+#safety-page .seventhTable .blueBorder.seventhtable-table-two .fiveCol4 {margin-left: 31px!important;}
+#safety-page .lastTableHeader .halfWidth-two .secondHalf {width: 88px;}
+#safety-page .ninethTable div.table9col2 {margin-left: 70px; padding-top: 10px; padding-left: 5px;}
+#safety-page .ninethTable div.table9col4 { padding-top: 10px;font-size: 13px;margin-left: -2px;}
+#safety-page .seventhTable .white-bg.safety.box3 table tr:first-child th {font-size: 11px;}
+.ucsite #safety-page .tenthTable div.img-title { font-size: 15px; padding-left: 5px; padding-right: 5px; }
+#safety-page .safety-acc1 div.blueBorder div, #safety-page .safety-acc1 table tr td, #safety-page .white-bg.safety.box3 table tr td {font-size: 11px;}
+div.blueBorder.fontStyle,  #safety-page .ninethTable div.table9col2 {font-size: 12px;}
+.ucsite .gettingStarted-banner-content h1 {margin-top: 25px;}
+.bold.label2 {margin-left: 100px;}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {/*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+.ucsite .cta-button.home-banner a { letter-spacing: -1px; }
+.ucsite .card-img-container h2.fntSz20 { padding-left: 15px; padding-right: 15px; }
+.ucsite #efficacy-page .white-bg.box7.efficacy-section7 h2.fntSz26 {font-size: 25px;}
+.ucsite #safety-page .white-bg.safety.box2 h2 {font-size: 28px;}
+.ucsite #efficacy-page .white-bg h2.fntSz20 {font-size: 19px;line-height: 22px;}
+#efficacy-page .graph-container .img-title {width: 100%;}
+.ucsite .efficacy-accordion-content .img-title {font-size: 14px;}
+div.support-icon2 p.blueBoldHeading { font-size: 15px; }
+.ucsite #safety-page .white-bg.safety.box3 h2.fntSz20, .ucsite #safety-page .white-bg.safety.box2 h2.fntSz20 { padding-left: 8px; padding-right: 8px; font-size: 19px; }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width : 1440px)  {
+/* iPad */
+_::-webkit-full-page-media, _:future, :root ul.list.horizontal li{
+     font-size: 13px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-width : 1920px)  {
+/* Monitor Safari */
+_::-webkit-full-page-media, _:future, :root ul.list.horizontal li{
+     font-size: 13px;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-width : 375px)  {
+/* Monitor Safari */
+_::-webkit-full-page-media, _:future, :root .moa-img1-caption .bold.label2{
+     margin-left: 110px;
+    }
+}
+
+@media (max-width: 1023px){
+.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu{top: auto !important;}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link { /*font-family: Arial, Helvetica, sans-serif!important; ZUCHCP-12*/ font-family:'MontserratRegular' !important;}
+#ucHomeBanner .left-banner img { height: 215px; }
+.ucsite .banner-info h1 { margin-top: 25px; }
+.ucsite p.yellow-highlight.support-alert-text { padding: 21px 12px; } 
+.ucsite .home-content.container {padding-left: 6px;}
+.ucsite .isi-container-title {padding-top: 0px;}
+.ucsite #safety-page .secondTable.white-box div.col2-table {margin-left: 128px;}
+.ucsite #safety-page .thirdTable.white-box div.col2-table {margin-left: 64px;}
+.ucsite #safety-page .thirdTable.white-box div.col3-table { margin-right: 24px;}
+#open-converse, #open-converse-mobile { display: none!important; }
+.study-banner-right { margin-right: -105px!important; }
+ul.list.dosing2 {padding-left: 20px;}
+.ucsite .white-bg.box3.gettingStartedBody3 h2 { padding-left: 0px; padding-right: 0px; }
+.ucsite .card-img-container h2.fntSz20 { padding-top: 20px; padding-left: 15px; padding-right: 15px; }
+.ucsite #efficacy-page .prev-acc-content .graph-container .img-title {line-height: 24px;}
+.efficacy-accordion-content .white-box.section3 .fullChart {margin-top: 40px;}
+.safety-banner-right.safety { width: 300px; height: 190px; margin-right: -130px; }
+.ucsite p { font-size: 16px; line-height: 20px;}
+.study-banner-right.gettingStarted {height: 100%;margin-top: 50px; width: 170px;}
+.study-banner-right.moa {width: 125px; margin-top: 50px;}
+.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded div.blueBorder div.acCol5 { line-height: 71px; margin-left: 5px; }
+.safety-acc2 .white-box img { height: 300px; margin-bottom: -40px;}
+.ucsite .white-bg.box3.gettingStartedBody3 h2 { text-align: center; }  
+.ucsite .downloadCTA.callout-button.download-arrow img.download-arrow {right: 9px;}
+.ucsite .study-table div.grey-section p {line-height: 15px;
+    padding: 32px 34px 32px 19px;font-family:'MontserratBold';
+    font-size: 11px; }
+.mt-sm-3 {margin-top: 20px;}
+.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.efficacySubmenu .dropdown-item, .ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.safetySubmenu .dropdown-item  {font-weight: 400;font-family: 'MontserratRegular';}
+.ucsite .gettingStartedBody button.callout-button{max-width: 330px;width: 330px;height: 40px!important; margin-top: 15px;}
+.ucsite .gettingStartedBody img.download-arrow{right: 8px;margin-top: -2px;}
+.ucsite .cmp-isi .isi-content.expand-text {overflow-x: hidden;}
+.ucsite .efficacy-section6 .footnote-list {margin-bottom: 0px;}
+#safetyToggle, #hcpToggle {padding-bottom: 20px;}
+.ucsite #resources .support-section2 {padding-bottom: 5px;}
+.ucsite .efficacy-section2 p.blueBoldHeading, .ucsite .efficacy-section1 p.blueBoldHeading {font-size: 16px;}
+.ucsite .card-img-container .white-bg h2.fntSz20 {margin-bottom: 37px;}
+.ucsite .efficacy-accordion-content .section3 .left-graph {height: 350px;}
+.ucsite #ehmi .section5 .chart-section {margin-top: 5px;}
+#efficacy-page .efficacy-section1 .graph-container .left-graph .white-box, #efficacy-page .white-bg.box2.efficacy-section2 .graph-container .left-graph .white-box, #efficacy-page .efficacy-section6 .graph-container .left-graph .white-box {border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;}
+.rar-item img {max-width: 245px;}
+.video-mask, .video-container {display: none;}
+}
+
+@media (max-width: 1024px){
+	.ucsite .study-banner-content .right-intro-text h1 {margin-top: 15px;}
+}
+@media (max-width: 480px){
+	.ucsite .study-banner-content .right-intro-text h1 {margin-top: 45px;}
+	.ucsite .study-banner-right.moa, .study-banner-right.support {margin-right: 0px!important;}
+	.ucsite .study-banner-right.gettingStarted {margin-right: -40px!important;}
+}
+</style>
+    
+    
+
+</div>
+
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<!-- Interactive studion css --> 
+<style>
+body{padding-right: 0 !important;}
+#evg-exit-intent-popup { z-index: 10000;}
+#evg-exit-intent-popup .evg-btn-lg{font-family: 'MontserratBold';}
+@media (min-width: 1024px) {
+
+#evg-exit-intent-popup .evg-popup{
+    padding: 20px 90px;
+}
+#evg-exit-intent-popup .evg-main-panel{
+	position: relative;
+    padding-bottom: 55px;
+    justify-content: flex-start;
+}
+#evg-exit-intent-popup .evg-btn-lg{
+	position: absolute;
+	left: 90px;
+    bottom: 52px;
+}
+#evg-exit-intent-popup .evg-btn-lg:last-child{
+	right: 90px;
+	left: unset;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4{
+	font-size: 26px;
+    line-height: 28px;
+	padding-top: 55px;
+}
+
+}
+
+@media (max-width: 1023px) {
+
+#evg-exit-intent-popup .evg-popup{
+    min-width: 356px;
+    width: 356px;
+    max-height: 393px;
+	padding: 20px 40px;
+}
+#evg-exit-intent-popup .evg-btn-dismissal{
+    top: 15px;
+    right: 20px;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4 .headerTextA{
+    font-size: 24px;
+}
+#evg-exit-intent-popup .evg-h1.evg-display-4{
+    font-size: 24px;
+    line-height: 26px;
+    padding: 20px 0 50px;
+}
+#evg-exit-intent-popup .evg-btn-lg{
+    margin-bottom: 1.5rem;
+	font-weight: bold;
+}
+	
+
+}
+</style>
+    
+    
+
+</div>
+
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<!-- video modal -->
+<!-- <div class="modal fade" id="video-overlay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog vertical-align-center" role="document">
+		<div class="modal-content modalvideocontent">	
+			<button type="button" class="close kolclose" data-dismiss="modal">X</button>
+			<div class="modal-body p-0">
+			<div class="videoContainer">
+				<div class="commonClassvideo"></div>
+				<div class="videoObjCode"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+<!-- <style>
+	@media (min-width: 1024px) {
+		#video-overlay .videoContainer.active .videoObjCode {
+    height: 400px !important;
+}
+.modal-content.modalvideocontent {
+    border-radius: 0px;
+    border: 12px solid #ffffff;
+    width: 140%;
+    max-width: 800px;
+    top: 10%;
+    right: 91px;
+    margin: auto;
+}
+.ucsite .modal .close.kolclose {
+    z-index: 1;
+    right: 20px !important;
+    top: 20px !important;
+    font-size: 20px;
+}
+
+	}
+
+    @media (max-width: 1023px){
+        #video-overlay .videoContainer.active .videoObjCode {
+    height: 300px !important;
+}
+.modal-content.modalvideocontent{
+
+    border-radius: 0px;
+    width: 100%;
+    max-width: 400px;
+    top: 10%;
+    margin: auto;
+
+}
+.ucsite .modal .close.kolclose{
+    z-index: 1;
+    color: #fff;
+    font-size: 20px;
+}
+
+    }
+	
+</style>
+
+<style>
+    span.newref-new {
+    color: #FF00FF;
+}
+	.kolvidnewtext {
+		
+		background-color: #F9423A;
+		border-radius: 10px 10px 0px 0px;
+		color: #fff;
+		font-size: 20px !important;    
+		font-family: 'MontserratBold';
+	}
+	p.koltext {
+		font-size: 20px;
+		font-family: 'MontserratBold';
+		padding-top: 14px;
+		padding-left: 26px;
+	}
+	
+	span.newwkoltxt {
+		position: relative;
+		left: 9px;
+		top: 1px;
+	}
+	
+	.kolvidnewsection1 {
+		padding-top: 40px;
+	}
+	.kolvidnewsection2 {
+		padding-top: 40px;
+	}
+	p.kolvidtitle {
+		color: #0032A0;
+		font-family: 'MontserratBold';
+		line-height: 20px;
+	}
+	p.abbr.kolfootnote {
+		color: #0032A0;
+		padding-top: 41px;
+	}
+	ul.list.kolvideolist {
+		color: #0032A0;
+	}
+	.calloutkolnew1 {
+		display: flex;
+		border: 1px solid #F9423A;
+		border-radius: 11px;
+		padding: 7px;
+		background-color: whitesmoke;
+		width: 862px;
+	}
+	p.callout-kol-txt1 {
+		padding-top: 17px;
+		padding-left: 32px;
+		color: #F9423A;
+		text-decoration: underline;
+		font-family: 'MontserratBold';
+	}
+	.calloutkolnew1{
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+	
+	@media (min-width: 1024px) {
+		.kolvidnewtext {
+		width: 1020px;
+		height: 60px;
+		line-height: 39px;
+		margin-top: -30px;
+		margin-left: -65px;
+	}
+	.kolvibox{
+		height: 390px !important;
+	}
+	.newsectionkol{
+		column-gap: 76px;
+	}
+	.calloutkolnew1 {
+		width: 862px;
+	}
+	.callout-kol-img1 {
+    position: relative;
+    left: 10px;
+    top: 4px;
+}
+p.callout-kol-txt1.kolonelinetxt {
+    padding-top: 24px !important;
+}
+.callout-kol-img1.kolimgoneline {
+    top: 0px !important;
+}
+	}
+	@media (max-width: 1023px) {
+		.kolvidnewtext {
+		width: 362px;
+		height: 60px;
+		margin-left: -5px;
+		margin-top: -25px;
+	}
+	.callout-kol-img1 {
+		
+		width: 100%;
+		margin-top: 31px;
+		margin-left: 11px;
+		
+	}
+	.calloutkolnew1 {
+		width: 320px;
+		
+	}
+    p.callout-kol-txt1 {
+		padding-left: 15px !important;
+
+	}
+    p.callout-kol-txt1.kolonelinetxt {
+    padding-left: 4px !important;
+}
+img.kolvidsection2img {
+    width: 321px;
+    height: 193px;
+    position: relative;
+    left: 16px;
+    top: -19px;
+}
+.kolvidnewsection1{
+	margin-left: 26px;
+}
+p.abbr.kolfootnote {
+    margin-left: 26px;
+    padding-top: 10px;
+}
+	}
+	</style> -->
+
+    
+    
+
+</div>
+
+</div>
+
+    
+</div>
+
+
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+<div class="column-control section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="banner-wrap">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="experiencefragment section">
+
+
+
+
+
+    
+	
+    <div>
+    	
+
+
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="bgimage aem-GridColumn aem-GridColumn--default--12">
+
+<div class="cmp-bgimage" id="dntshw"> 
+		<div class="desktop-img-container mx-auto" style="width:100%;height:px;background-image:url('\2f content\2f dam\2f commercial\2fus\2fzeposiahcp\2f en\2fimages\2fuc\2f Fixed_BG_desktop_v5.png.png')">
+            <div class="overlay-element">
+                <div class="html section">
+<div>
+	
+		<img class="study-banner-right moa d-page" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/MOA-corner.png" alt="Woman Walking Header Image">
+<img class="study-banner-right moa m-page" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile/MOA-corner-mobile.png" alt="Woman Walking Header Image">
+
+    
+    
+
+</div>
+
+</div>
+<div class="html section">
+<div>
+	
+		<div class="container">
+	<div class="moa-banner-content d-flex">
+		<div class="left-poll">
+			<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/isolated-pill01.png" class="isolated-poll d-page" alt="ZEPOSIA® for UC Header Image">
+			<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile/mobile isolated-pill_041922.png" class="isolated-poll m-page" alt="ZEPOSIA® for UC Header Image">
+		</div>
+		<div class="right-intro-text"></div>
+	</div>
+</div>
+    
+    
+
+</div>
+
+</div>
+
+
+            </div>
+       </div>
+    
+		<div class="mobile-img-container mx-auto" style="width:100%;height:190px;background-image:url('\2f content\2f dam\2f commercial\2fus\2fzeposiahcp\2f en\2fimages\2fuc\2f Fixed_BG_mobile.png')"> 
+            <div class="overlay-element">
+                <div class="html section">
+<div>
+	
+		<img class="study-banner-right moa d-page" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/MOA-corner.png" alt="Woman Walking Header Image">
+<img class="study-banner-right moa m-page" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile/MOA-corner-mobile.png" alt="Woman Walking Header Image">
+
+    
+    
+
+</div>
+
+</div>
+<div class="html section">
+<div>
+	
+		<div class="container">
+	<div class="moa-banner-content d-flex">
+		<div class="left-poll">
+			<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/isolated-pill01.png" class="isolated-poll d-page" alt="ZEPOSIA® for UC Header Image">
+			<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile/mobile isolated-pill_041922.png" class="isolated-poll m-page" alt="ZEPOSIA® for UC Header Image">
+		</div>
+		<div class="right-intro-text"></div>
+	</div>
+</div>
+    
+    
+
+</div>
+
+</div>
+
+
+            </div>
+        </div>
+    
+</div>
+
+    
+
+</div>
+<div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<style>
+@media (min-width: 1024px){
+#evg-exit-intent-popup .evg-btn-lg{right: 90px; left: unset;}
+#evg-exit-intent-popup .evg-btn-lg:last-child{left: 90px; right: unset;}
+}
+
+@media (max-width: 1023px){
+#evg-exit-intent-popup .evg-h1.evg-display-4{padding: 20px 15px 44px;}
+#evg-exit-intent-popup .evg-main-panel{justify-content: start; padding-top: 26px;}
+#evg-exit-intent-popup .evg-btn-lg{position: absolute;  bottom: 76px;}
+#evg-exit-intent-popup .evg-btn-lg:last-child{    position: relative;   bottom: 0;}
+}	
+</style>	
+    
+    
+
+</div>
+
+</div>
+<div class="card-container aem-GridColumn aem-GridColumn--default--12">
+
+<div class="cmp-card-container row justify-content-center">   
+    
+    <div class="col-12">
+        <div class="card-color-container d-block mx-auto" data-value="#A4E2FF" style="background-color: #A4E2FF;width:100%;height:px">
+            <div class="overlay-element">
+              <div class="html section">
+<div>
+	
+		<div class="container moaaa">
+	<div class="z360-banner-content d-flex">
+		<h1 class="supporth1">ZEPOSIA Mechanism of Action (MOA)</h1>		
+	</div>
+</div>
+<style>
+#dntshw{display: none;}
+.transparent-bg.moaPage{height: auto;}
+.ucsite #BlueCloudBG{background: #A4E2FF;}
+.footer-people.moaFooter img {display: none;}
+
+@media (min-width: 1023px){
+.ucsite #tuc-unmet-need-page .gradient {
+    margin-bottom: 40px;}
+}
+@media (max-width: 1023px){
+.ucsite #BlueCloudBG .cmp-card-container .card-img-container{padding-bottom: 40px;}
+.ucsite .container.cmp-footer-isi-content-element{margin-top: 0;}
+.moaaa .z360-banner-content h1 {font-size: 22px;  line-height: 28px;}
+.moaaa .z360-banner-content h1:after{height: 58px; bottom: -2px;}
+}	
+</style>
+    
+    
+
+</div>
+
+</div>
+
+
+            </div>
+        </div>
+ 	</div>
+   	
+</div>
+
+    
+</div>
+
+    
+</div>
+
+
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+<div class="column-control section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="BlueCloudBG">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="experiencefragment section">
+
+
+
+
+
+    
+	
+    <div>
+    	
+
+
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="html aem-GridColumn aem-GridColumn--default--12">
+<div>
+	
+		<div class="transparent-bg moaPage">
+<div class="container">
+
+</div>
+</div>
+    
+    
+
+</div>
+
+</div>
+<div class="card-container aem-GridColumn aem-GridColumn--default--12">
+
+<div class="cmp-card-container row justify-content-center">   
+    <div class="col-12">
+        <div class="card-img-container d-block mx-auto" style="width:100%;height:px;background-image:url('\2f content\2f dam\2f commercial\2fus\2fzeposiahcp\2f en\2fimages\2fuc\2f banner-bg.png')">
+            <div class="overlay-element">
+                <div class="html section">
+<div>
+	
+		<div class="container">
+	<div class="white-bg box1 moaBody">
+
+		<h2 class="h2-head mb-left-tx">ZEPOSIA: The Only Highly Selective S1P Receptor Modulator Specific to Receptors 1 and 5 in <nobr>UC<sup class="tbd">1,2 </sup></nobr></h2>
+		<p class="moa-copy">ZEPOSIA binds with a high affinity to S1P receptors 1 and 5 and has minimal or no activity on other S1P receptors (S1P<sub>2</sub>, S1P<sub>3</sub>, and S1P<sub>4</sub>)<sup>1</sup></p>
+		
+		
+		<div class="newmoa-img">
+			
+			<div class="">
+				<!--<img class="moa-img1 d-page" src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/MOA_chart1D.png" alt="ZEPOSIA UC Mechanism of Action"/>
+				<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/MOA_chart1M.png" alt="ZEPOSIA UC Mechanism of Action" class=" m-page mob_ml-30"/>-->
+				<img class="moa-img1 d-page" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/moa-chart1.png" alt="How Zeposia Selectively Binds S1P Receptors">
+				<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/moa-chart1-mob.png" alt="ZHow Zeposia Selectively Binds S1P Receptors" class=" m-page ">
+			</div>
+			
+		</div>
+		<!--<div class="white-box oneMoa m-page new">
+			<div class="img-part2">
+				
+				<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/MOA_chart1M.png" alt="ZEPOSIA UC Mechanism of Action" class="mob_ml-30"/>
+				
+			</div>
+		</div>-->
+		<p class="moa-copy mt-4">ZEPOSIA is an oral lymphocyte migration blocker that inhibits the capacity of inflammation-causing lymphocytes from reaching the inflamed colon<sup>1,5-10</sup></p>
+		
+		<div class="white-box oneMoa d-page">
+			
+			<div class="d-flex parentDiv">
+				<!--<img class="moa-img1" src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/MOA%20Chart_Update_desktop.png" alt="ZEPOSIA UC Mechanism of Action"/>-->
+				<img class="moa-img1" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/moa-chart2.svg" alt="ZEPOSIA UC Mechanism of Action">
+			</div>
+			
+		</div>
+		<div class="white-box oneMoa m-page">
+			<div class="img-part2">
+				<!--<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/uc/MOA%20Chart_Update_mobile.png" alt="ZEPOSIA UC Mechanism of Action" class="mob_ml-30"/>-->
+				<img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/moa-chart2-mob.svg" alt="ZEPOSIA UC Mechanism of Action" class="mob_ml-30">
+			</div>
+		</div>
+		
+		
+		
+		<p class="yellow-highlight head3 color_black font_20">Small molecules, like ZEPOSIA, may lack immunogenicity <br class="d-none d-lg-block">and may not develop antidrug antibodies<sup>1,12,13</sup></p> 
+		
+		
+		<!--<p class="mb-1 font1416">Artist rendering for illustrative purposes.</p>-->	
+		<p class="mb-1">The mechanism by which ZEPOSIA exerts therapeutic effect is unknown, but may involve reduction of lymphocyte mitigation into the intestine.<sup>1</sup></p>
+		<!--<p class="mb-1- font1416">ZEPOSIA has minimal or no activity on S1P receptors 2-4.<sup>1</sup></p>-->
+		<!-- <p class="mb-1 font1416"><span class="bold">S1P</span>=sphingosine 1-phosphate; <span class="bold">UC</span>=ulcerative colitis.</p> -->
+        <p class="abbr"><span class="bold">S1P</span>=sphingosine 1-phosphate; <span class="bold">UC</span>=ulcerative colitis.</p>
+	</div>
+	<!-- <div class="gradient">
+		<div class="callout-flex d-flex">
+			<div class="callout one">
+				<h3 class="head3">Get Your Patients<br /> Started</h3>
+				<p class="callout-copy">From the recommended titration<br /> schedule to any preinitiation screenings,<br /> learn how to start ZEPOSIA</p>
+				<a href='/content/commercial/us/zeposiahcp/en/ulcerative-colitis/dosing-and-initiation.html' title='' class='callout-button white-arrow mt-30' target='' aria-label='' lang=''><button class="callout-button white-arrow mt-30">LEARN MORE</button></a>
+			</div>
+			<div class="callout two">
+				<h3 class="head3">Support for You and<br /> Your Patients</h3>
+					<p class="callout-copy">With resources, tools, and information on<br /> ZEPOSIA 360 Support,<sup>TM</sup> support your patients<br /> every step of the way.</p>
+					<a href='/content/commercial/us/zeposiahcp/en/ulcerative-colitis/support/resources.html' title='' class='callout-button white-arrow mt-30' target='' aria-label='' lang=''><button class="callout-button white-arrow mt-30">GET RESOURCES</button></a>
+			</div>
+		</div>
+	</div> --> <!-- ZUCHCP-250 -->
+</div>
+<style>
+p.moa-copy, .ucsite .moa-copy sup{
+	font-family: 'MontserratBold';
+	color: #515B64;
+}
+.font_20{
+	font-size:20px !important;
+	line-height: 24px !important;
+}
+.ucsite p.font1416{
+	font-size:14px !important;
+	line-height: 16px !important;
+}
+.text-font-size{
+    font-size: 17px !important;
+}
+ .yellow-highlight.border_gne_red{
+  	
+    color: #F9423A !important;
+    background: none !important;
+    font-weight: bold;
+}
+.moaBody p.yellow-highlight {height: auto;}
+.ucsite .white-box.new:after {display: none;}
+.moa-copy sub { font-weight: 400;}
+
+
+@media (max-width: 1023px){
+.mb-left-tx{
+	    text-align: left !important;
+}
+}
+</style>
+    
+    
+
+</div>
+
+</div>
+<div class="html section">
+<div>
+	
+		<div class="footer-people moaFooter d-page"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/moa-footer.png" alt=""></div>
+<div class="mobileCloudBG moaFooterBG m-page">
+	<div class="footer-people moaFooter"><img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/mobile/moa-footer-Mobile.png" alt=""></div>
+</div>
+<div class="cmp-backToTop-wrapper ucButton hidden" style="display: none;">
+    <a class="backToTop-link" href="#" aria-label="link">
+        <img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/uc/Backtotopicon.svg" class="backToTop-img ucImg" alt="Back to Top Icon">
+        <span class="backToTop-label ucLable">Back to Top</span>
+    </a>
+</div>
+    
+    
+
+</div>
+
+</div>
+
+
+            </div>
+        </div>      
+    </div>
+    
+   	
+</div>
+
+    
+</div>
+
+    
+</div>
+
+
+    </div>
+</div>
+<div class="footer section">
+    
+        
+            
+    
+	
+        <div>
+            <footer class="footer footer-variation-one my-4">
+                <!-- /* ISI Rendering component is only rendered when showIsi property is checked as true on the current page */ -->
+                
+                    <div class="container px-lg-0 cmp-footer-isi-content-element">
+
+                        
+                            <div class="isi-content"><div class="ucsite-indication-head d-none"><div class="isi-header isihdr_new"><div class="isi-container-title">IMPORTANT SAFETY INFORMATION</div>
+</div>
+<div class="head3 newhead-uc">INDICATION</div>
+<div class="bodypara">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of moderately to severely active ulcerative colitis (UC) in adults.</div>
+<div class="head3 pt-3">IMPORTANT SAFETY INFORMATION</div>
+<div class="head3 pt-0">Contraindications:</div>
+<div class="bodypara"><ul>
+<li>Patients who in the last 6 months, experienced myocardial infarction, unstable angina, stroke, transient ischemic attack (TIA), decompensated heart failure requiring hospitalization, or Class III/IV heart failure or have a presence of Mobitz type II second-degree or third-degree atrioventricular (AV) block, sick sinus syndrome, or sino-atrial block, unless the patient has a functioning pacemaker</li>
+<li>Patients with severe untreated sleep apnea</li>
+<li>Patients taking a monoamine oxidase (MAO) inhibitor</li>
+</ul>
+</div>
+<div class="bodypara"><span class="head3">Infections:</span> ZEPOSIA may increase the susceptibility to infections. Life-threatening and rare fatal infections have occurred in patients receiving ZEPOSIA. Obtain a recent (i.e., within 6 months or after discontinuation of prior UC therapy) complete blood count (CBC) including lymphocyte count before initiation of ZEPOSIA. Delay initiation of ZEPOSIA in patients with an active infection until the infection is resolved. Consider interruption of treatment with ZEPOSIA if a patient develops a serious infection. Continue monitoring for infections up to 3 months after discontinuing ZEPOSIA.</div>
+<ul class="indication-li">
+<li class="bodypara">Herpes zoster and herpes simplex were seen in clinical trials of ZEPOSIA. Herpes simplex encephalitis and varicella zoster meningitis have been reported with sphingosine 1-phosphate (S1P) receptor modulators. Patients without a healthcare professional-confirmed history of varicella (chickenpox), or without documentation of a full course of vaccination against varicella zoster virus (VZV), should be tested for antibodies to VZV before initiating ZEPOSIA.</li>
+<li class="bodypara">Cases of fatal cryptococcal meningitis (CM) and disseminated cryptococcal infections have been reported with S1P receptor modulators. If CM is suspected, ZEPOSIA should be suspended until cryptococcal infection has been excluded. If CM is diagnosed, appropriate treatment should be initiated.</li>
+<li class="bodypara">In the UC clinical studies, patients who received ZEPOSIA were not to receive concomitant treatment with antineoplastic, non-corticosteroid immunosuppressive, or immune-modulating therapies used for treatment of UC. Concomitant use of ZEPOSIA with any of these therapies would be expected to increase the risk of immunosuppression. When switching to ZEPOSIA from immunosuppressive medications, consider the duration of their effects and their mode of action to avoid unintended additive immunosuppressive effects.</li>
+<li class="bodypara">Use of live attenuated vaccines should be avoided during and for 3 months after treatment with ZEPOSIA. If live attenuated vaccine immunizations are required, administer at least 1 month prior to initiation of ZEPOSIA.</li>
+</ul>
+<div class="bodypara"><span class="head3">Progressive Multifocal Leukoencephalopathy (PML):</span> PML is an opportunistic viral infection of the brain that typically occurs in patients who are immunocompromised, and that usually leads to death or severe disability.</div>
+<div class="bodypara">PML has been reported in patients treated with S1P receptor modulators, including ZEPOSIA, and other UC therapies and has been associated with some risk factors (e.g., immunocompromised patients, polytherapy with immunosuppressants, duration of use). If PML is suspected, withhold ZEPOSIA and perform an appropriate diagnostic evaluation. If confirmed, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Bradyarrhythmia and Atrioventricular Conduction Delays:</span> Since initiation of ZEPOSIA may result in a transient decrease in heart rate and atrioventricular conduction delays, dose titration is recommended to help reduce cardiac effects. If treatment with ZEPOSIA is considered, advice from a cardiologist should be sought for those individuals:</div>
+<ul class="indication-li">
+<li class="bodypara">with significant QT prolongation</li>
+<li class="bodypara">with arrhythmias requiring treatment with Class 1a or III anti-arrhythmic drugs</li>
+<li class="bodypara">with ischemic heart disease, heart failure, history of cardiac arrest or myocardial infarction, cerebrovascular disease, and uncontrolled hypertension</li>
+<li class="bodypara">with a history of Mobitz type II second-degree or higher AV block, sick sinus syndrome, or sino-atrial heart block</li>
+</ul>
+<div class="bodypara"><span class="head3">Liver Injury:</span> Clinically significant liver injury, including acute liver failure requiring transplant, has occurred in patients treated with ZEPOSIA in the postmarketing setting. Signs of liver injury, including elevated serum hepatic enzymes and elevated total bilirubin, have occurred as early as ten days after the first dose. Obtain transaminase and bilirubin levels, if not recently available (i.e., within 6 months), before initiation of ZEPOSIA. Obtain transaminase levels and total bilirubin levels periodically during treatment and until two months after ZEPOSIA discontinuation. Patients should be monitored for signs and symptoms of any hepatic injury. Patients who develop symptoms suggestive of hepatic dysfunction should have hepatic enzymes promptly checked, and ZEPOSIA should be interrupted. Treatment should not be resumed if a plausible alternative etiology for the signs and symptoms cannot be established, because these patients are at risk for severe drug-induced liver injury.</div>
+<div class="bodypara"><span class="head3">Fetal Risk:</span> There are no adequate and well-controlled studies in pregnant women. Based on animal studies, ZEPOSIA may cause fetal harm. Women of childbearing potential should use effective contraception to avoid pregnancy during treatment and for 3 months after stopping ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Increased Blood Pressure:</span> Increase in systolic pressure was observed after about 3 months of treatment and persisted throughout treatment. Blood pressure should be monitored during treatment and managed appropriately.</div>
+<div class="bodypara"><span class="head3">Respiratory Effects:</span> ZEPOSIA may cause a decline in pulmonary function. Spirometric evaluation of respiratory function should be performed during therapy, if clinically indicated.</div>
+<div class="bodypara"><span class="head3">Macular Edema:</span> S1P modulators have been associated with an increased risk of macular edema. Obtain a baseline evaluation of the fundus, including a macula, near the start of treatment with ZEPOSIA. Perform an examination of the fundus, including the macula, periodically while on therapy and any time there is a change in vision. Continuation of ZEPOSIA therapy in patients with macular edema has not been evaluated. Macular edema over an extended period of time (i.e. 6 months) can lead to permanent visual loss. Consider discontinuing ZEPOSIA if macular edema develops. The risk of recurrence after rechallenge has not been evaluated.</div>
+<div class="bodypara"><span class="head3"></span>Patients with a history of uveitis and patients with a history of diabetes mellitus are at increased risk of macular edema during ZEPOSIA therapy.</div>
+<div class="bodypara"><span class="head3">Cutaneous Malignancies:</span> The risk of cutaneous malignancies (including basal cell carcinoma, squamous cell carcinoma, and melanoma) is increased in patients treated with S1P receptor modulators. Skin examinations are recommended prior to or shortly after the start of treatment and periodically thereafter for all patients, particularly those with risk factors for skin cancer. Providers and patients are advised to monitor for suspicious skin lesions. If a suspicious skin lesion is observed, it should be promptly evaluated. As usual for patients with increased risk for skin cancer, exposure to sunlight and ultraviolet light should be limited by wearing protective clothing and using sunscreen with a high protection factor. Concomitant phototherapy with UV-B radiation or PUV-A photochemotherapy is not recommended in patients taking ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Posterior Reversible Encephalopathy Syndrome (PRES):</span> Rare cases of PRES have been reported in patients receiving a S1P receptor modulator. If a ZEPOSIA-treated patient develops unexpected neurological or psychiatric symptoms or any symptom/sign suggestive of an increase in intracranial pressure, a complete physical and neurological examination should be conducted. Symptoms of PRES are usually reversible but may evolve into ischemic stroke or cerebral hemorrhage. Delay in diagnosis and treatment may lead to permanent neurological sequelae. If PRES is suspected, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Unintended Additive Immunosuppressive Effects From Prior Immunosuppressive or Immune-Modulating Drugs:</span> When switching from drugs with prolonged immune effects, the half-life and mode of action of these drugs must be considered to avoid unintended additive immunosuppressive effects while at the same time minimizing risk of disease reactivation.</div>
+<div class="bodypara"><span class="head3">Immune System Effects After Stopping ZEPOSIA:</span> After discontinuing ZEPOSIA, the median time for lymphocyte counts to return to the normal range was 30 days, with approximately 80% to 90% of patients in the normal range within 3 months. Use of immunosuppressants within this period may lead to an additive effect on the immune system, therefore caution should be applied when initiating other drugs 4 weeks after the last dose of ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Most Common Adverse Reactions (≥4%):</span> liver test increased, upper respiratory infection, and headache.</div>
+<div class="bodypara"><span class="head3">Use in Specific Populations:</span> Hepatic Impairment: Dosage adjustment in patients with mild or moderate hepatic impairment (Child-Pugh class A or B) is required, and use of ZEPOSIA in patients with severe hepatic impairment (Child-Pugh class C) is not recommended.</div>
+<div class="bodypara boldtxt">For additional safety information, please see the full <a href="https://packageinserts.bms.com/pi/pi_zeposia.pdf" target="_blank">Prescribing Information</a> and <a href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" target="_blank">Medication Guide</a>.</div>
+<div class="refrence-section homePage d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Khan N, Abbas A, Williamson A, Balart L. Prevalence of corticosteroids use and disease course after initial steroid exposure in ulcerative colitis. <i>Dig Dis Sci.</i> 2013;58(10):29​63-29​69.</li>
+<li>Burri E, Maillard MH, Schoepfer AM, et al. Treatment algorithm for mild and moderate-to-severe ulcerative colitis: an update. <i>Digestion.</i> 2020;101(suppl 1):2-15.</li>
+<li>Lamb CA, Kennedy NA, Raine T, et al. British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults. <i>Gut.</i> 2019;68(suppl 3):s1-s106.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/ct2/show/record/NCT01647516. Updated May 19, 2021. Accessed May 11, 2022.</li>
+</ol>
+</div>
+<div class="refrence-section study-design d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral Presentation at: ECCO 2022; February 16-19, 2022. Presentation DOP44.</li>
+<li>Data on File. BMS-REF-OZA-0031. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Data on File. BMS-REF-OZA-0022. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual, May 21–24, 2022. Poster Tu1458.</li>
+<li>Long M, Cross R, Calkwood J, et al. Ozanimod first-dose cardiac effects in patients with moderately to severely active ulcerative colitis and relapsing multiple sclerosis. Poster presented at AIBD 2021; December 9–11, 2021.</li>
+</ol>
+</div>
+<div class="refrence-section efficacy d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy-naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Siegmund B, Axelrad J, Pondel M, et al. Rapidity of ozanimod-induced symptomatic response and remission in patients with moderately to severely active ulcerative colitis: results from the induction period of True North. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) Virtual; February 16–19, 2022.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2023.</li>
+<li>Panaccione R, Afzali A, Hudesman D, et al. Extended therapy with ozanimod for delayed responders to ozanimod in moderately to severely active ulcerative colitis: data from the True North open-label extension study. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1450.</li>
+<li>Siegmund B, Irving P, D’Haens G, et al. Ozanimod as a maintenance therapy in advanced therapy-naive ulcerative colitis patients with moderate vs severe endoscopic disease. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP135.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral presentation at: ECCO 2022: February 16–19, 2022. Presentation DOP44.</li>
+<li>Danese S, Abreu MT, Wolf DC, et al. Efficacy and safety of 3 years of continuous ozanimod treatment: an interim analysis of the True North open-label extension study. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Presentation DOP37.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study.<i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Data on File. BMS_ZEP008535. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+<li>Danese S, Panaccione R, Abreu MT, et al. Efficacy and safety of approximately 3 years of continuous ozanimod in moderately to severely active ulcerative colitis: interim analysis of the True North open-label extension. <i>J Crohns Colitis.</i> Published online August 31, 2023. doi:10.1093/ecco-jcc/jjad146</li>
+</ol>
+</div>
+<div class="refrence-section tuc-umet-need d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy–naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+</ol>
+</div>
+<div class="refrence-section tuc-patient d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Study of ozanimod (RPC1063) in relapsing multiple sclerosis (MS) (SUNBEAM). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02294058. Updated November 25, 2020. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod in relapsing multiple sclerosis (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02047734. Updated February 11, 2021. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod (RPC1063) in relapsing multiple sclerosis patients (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01628393. Updated November 2, 2021. Accessed September 6, 2023.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med.</i> 2021;385(14):1280-1291.</li>
+<li>Safety and efficacy trial of RPC1063 for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02435992. Updated September 1, 2021. Accessed July 26, 2023.</li>
+<li>An extension study of RPC1063 as therapy for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02531126. Updated September 18, 2023. Accessed September 25, 2023.</li>
+<li>A multi-site, open-label extension trial of oral RPC1063 in relapsing multiple sclerosis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02576717. Updated January 30, 2024. Accessed February 6, 2024.</li>
+<li>Nakase H, Fujii T, Hisamatsu T, et al. Ozanimod as induction and maintenance therapy for ulcerative colitis: a randomized, double-blind, placebo-controlled study in Japan (J-True North). Poster presented at: Digestive Disease Week (DDW) 2024; Washington, DC; May 18-21, 2024. Poster Su1795.</li>
+<li>Study describing cognitive processing speed changes in relapsing multiple sclerosis subjects treated with ozanimod (RPC-1063) (ENLIGHTEN). Clinicaltrials.gov. https://clinicaltrials.gov/study/NCT0414035. Updated November 15, 2023. Accessed June 18, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0076. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0077. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Selmaj KW, Steinman L, Comi G, et al. Long-term safety and efficacy of ozanimod in relapsing multiple sclerosis: final analysis of the DAYBREAK open-label extension study. Poster presented at: ACTRIMS 2024 Forum; February 29–March 2, 2024; West Palm Beach, FL. Poster P090.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), a new oral treatment for relapsing forms of multiple sclerosis. Princeton, NJ: Bristol-Myers Squibb Company; 2020.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), an oral treatment for adults with moderately to severely active ulcerative colitis. Princeton, NJ: Bristol-Myers Squibb Company; 2021.</li>
+<li>Data on File. BMS-REF-0079. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+</ol>
+</div>
+<div class="refrence-section safety d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Long M, Cross RK, Lichtenstein GR, et al. Long-term cardiac safety of ozanimod in phase 3 clinical program of ulcerative colitis and relapsing multiple sclerosis. Presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Presentation 15.</li>
+<li>Rieder F, Wolf DC, Charles L, Kollengode K, Patel A, Ghosh S. Incidence of infections in patients with moderately to severely active ulcerative colitis treated with ozanimod and relationship to significant lymphopenia: results from a pooled safety analysis. Poster presented at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Danese S, Feagan BG, Wolf DC. Ozanimod as maintenance therapy in patients with moderate-to-severe ulcerative colitis: results from the phase 3, randomized, double-blind, placebo-controlled True North study. Paper presented at: United European Gastroenterology Week Virtual 2020; October 10–14, 2020. Presentation LB10.</li>
+<li>D’Haens G, Colombel JF, Lichtenstein GR, et al. Safety of ozanimod in patients with moderately to severely active ulcerative colitis over time: pooled analysis from phase 2, phase 3, and open-label extension trials. Oral presentation at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study. <i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+</ol>
+</div>
+<div class="refrence-section moa d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Vermeire S, Peyrin-Biroulet L, et al. Etrasimod as induction and maintenance therapy for ulcerative colitis (ELEVATE): two randomised, double-blind, placebo-controlled, phase 3 studies [published correction appears in <i>Lancet</i>. 2023 Mar 25;401(10381):1000]. <i>Lancet</i>. 2023;401(10383):1159-1171.</li>
+<li>McGinley MP, Cohen JA. Sphingosine 1-phosphate receptor modulators in multiple sclerosis and other conditions [published correction appears in <i>Lancet</i>. 2021 Sep 25;398(10306):1132]. <i>Lancet</i>. 2021;398(10306):1184-1194.</li>
+<li>Roggeri A, Schepers M, Tiane A, et al. Sphingosine-1-phosphate receptor modulators and oligodendroglial cells: beyond immunomodulation. <i>Int J Mol Sci</i>. 2020;21(20):7537.</li>
+<li>Pérez-Jeldres T, Tyler CJ, Boyer JD, et al. Cell trafficking interference in inflammatory bowel disease. <i>Inflamm Bowel Dis.</i> 2019;2(25):270-282.</li>
+<li>Al-Bawardy B, Shivashankar R, Proctor DD. Novel and emerging therapies for inflammatory bowel disease. <i>Front Pharmacol.</i> 2021;12:651415.</li>
+<li>Nikolakis D, de Voogd FAE, Pruijit MJ, et al. The role of the lymphatic system in the pathogenesis and treatment of inflammatory bowel disease. <i>Int J Mol Sci.</i> 2022;23(3):1854.</li>
+<li>Harris S, Tran JQ, Southworth H, Spencer CM, Cree BAC, Zamvil SS. Effect of the sphingosine-1-phosphate receptor modulator ozanimod on leukocyte subtypes in relapsing MS. <i>Neurol Neuroimmunol Neuroinflamm.</i> 2020;7(5):e839.</li>
+<li>Jaigirdar SA, Benson RA, Elmesmari A, et al. Sphingosine 1-phosphate promotes the persistence of activated CD4 T cells in inflamed sites. <i>Front Immunol.</i> 2017;8:1627.</li>
+<li>Scott FL, Clemons B, Brooks J, et al. Ozanimod (RPC1063) is a potent sphingosine 1-phosphate receptor-1 (S1P<sub>1</sub>) and receptor-5 (S1P<sub>5</sub>) agonist with autoimmune disease-modifying activity. <i>Br J Pharmacol.</i> 2016;173:1778-1792.</li>
+<li>Kayal M, Shah S. Ulcerative colitis: current and emerging treatment strategies. <i>J Clin Med.</i> 2019;9(1):94.</li>
+<li>Olivera P, Danese S, Peyrin-Biroulet L. Next generation of small molecules in inflammatory bowel disease. <i>Gut.</i> 2017;66(2):199-209.</li>
+<li>Lucaciu LA, Seicean R, Seicean A. Small molecule drugs in the treatment of inflammatory bowel diseases: which one, when and why? – a systematic review. <i>Eur J Gastroenterol Hepatol.</i> 2020;32(6):669-677.</li>
+</ol>
+</div>
+<div class="refrence-section dosing d-none"><p class="reference-title">Reference:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+</ol>
+</div>
+</div>
+</div>
+                        
+                        
+                    </div>
+					<div class="isi-master-container">
+                        
+                        <div class="isi-rendering-footer isi-rendering">
+	<input type="hidden" name="defaultTrayStatus" value="collapsed">
+<input type="hidden" name="suppressRememberStatus" value="false">
+<input type="hidden" name="enableExpandButton" value="false">
+<input type="hidden" name="enableCollapseButton" value="false">
+	<!-- /* When in Edit mode, showing the help text */-->
+	
+	<!-- /* When in Preview/Disabled mode, rendering the component */-->
+	
+		
+		
+			
+    <div class="cmp-isi hidden sticky-element col-12 is-preview" style="display: block;">
+        <div class="isi-container preview-container" style="display: block;">
+			
+		    <div class="isi-mobile-view-links d-block d-sm">
+			
+				
+                
+                
+                   <a></a>
+                				
+                
+			    
+                
+                
+                   <a></a>
+				
+            </div>
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0">IMPORTANT SAFETY INFORMATION</div>
+                <div class="more-text-container text-right px-0 col-3">
+                    <span class="arrow up-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content preview-text">
+			
+                <div class="ucsite-indication-head d-none"><div class="head3">INDICATION</div>
+<div class="bodypara">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of moderately to severely active ulcerative colitis (UC) in adults.</div>
+<div class="head3 pt-3">IMPORTANT SAFETY INFORMATION</div>
+<div class="head3 pt-0">Contraindications:</div>
+<div class="bodypara"><ul>
+<li>Patients who in the last 6 months, experienced myocardial infarction, unstable angina, stroke, transient ischemic attack (TIA), decompensated heart failure requiring hospitalization, or Class III/IV heart failure or have a presence of Mobitz type II second-degree or third-degree atrioventricular (AV) block, sick sinus syndrome, or sino-atrial block, unless the patient has a functioning pacemaker</li>
+<li>Patients with severe untreated sleep apnea</li>
+<li>Patients taking a monoamine oxidase (MAO) inhibitor</li>
+</ul>
+</div>
+</div>
+
+            </div>
+        </div>
+        <div class="isi-container collapse-container" style="display: none;">
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0"></div>
+                
+                <div class="hide-text-container text-right px-0 col-3">
+                    <span class="arrow down-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content collapse-text">
+			
+                
+            </div>
+        </div>
+        <div class="isi-container expand-container" style="display: none;">
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0">IMPORTANT SAFETY INFORMATION</div>
+                <div class="hide-text-container text-right px-0 col-3">
+                    <span class="arrow down-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content expand-text">
+			
+                <div class="ucsite-indication-head d-none"><div class="isi-header isihdr_new"><div class="isi-container-title">IMPORTANT SAFETY INFORMATION</div>
+</div>
+<div class="head3 newhead-uc">INDICATION</div>
+<div class="bodypara">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of moderately to severely active ulcerative colitis (UC) in adults.</div>
+<div class="head3 pt-3">IMPORTANT SAFETY INFORMATION</div>
+<div class="head3 pt-0">Contraindications:</div>
+<div class="bodypara"><ul>
+<li>Patients who in the last 6 months, experienced myocardial infarction, unstable angina, stroke, transient ischemic attack (TIA), decompensated heart failure requiring hospitalization, or Class III/IV heart failure or have a presence of Mobitz type II second-degree or third-degree atrioventricular (AV) block, sick sinus syndrome, or sino-atrial block, unless the patient has a functioning pacemaker</li>
+<li>Patients with severe untreated sleep apnea</li>
+<li>Patients taking a monoamine oxidase (MAO) inhibitor</li>
+</ul>
+</div>
+<div class="bodypara"><span class="head3">Infections:</span> ZEPOSIA may increase the susceptibility to infections. Life-threatening and rare fatal infections have occurred in patients receiving ZEPOSIA. Obtain a recent (i.e., within 6 months or after discontinuation of prior UC therapy) complete blood count (CBC) including lymphocyte count before initiation of ZEPOSIA. Delay initiation of ZEPOSIA in patients with an active infection until the infection is resolved. Consider interruption of treatment with ZEPOSIA if a patient develops a serious infection. Continue monitoring for infections up to 3 months after discontinuing ZEPOSIA.</div>
+<ul class="indication-li">
+<li class="bodypara">Herpes zoster and herpes simplex were seen in clinical trials of ZEPOSIA. Herpes simplex encephalitis and varicella zoster meningitis have been reported with sphingosine 1-phosphate (S1P) receptor modulators. Patients without a healthcare professional-confirmed history of varicella (chickenpox), or without documentation of a full course of vaccination against varicella zoster virus (VZV), should be tested for antibodies to VZV before initiating ZEPOSIA.</li>
+<li class="bodypara">Cases of fatal cryptococcal meningitis (CM) and disseminated cryptococcal infections have been reported with S1P receptor modulators. If CM is suspected, ZEPOSIA should be suspended until cryptococcal infection has been excluded. If CM is diagnosed, appropriate treatment should be initiated.</li>
+<li class="bodypara">In the UC clinical studies, patients who received ZEPOSIA were not to receive concomitant treatment with antineoplastic, non-corticosteroid immunosuppressive, or immune-modulating therapies used for treatment of UC. Concomitant use of ZEPOSIA with any of these therapies would be expected to increase the risk of immunosuppression. When switching to ZEPOSIA from immunosuppressive medications, consider the duration of their effects and their mode of action to avoid unintended additive immunosuppressive effects.</li>
+<li class="bodypara">Use of live attenuated vaccines should be avoided during and for 3 months after treatment with ZEPOSIA. If live attenuated vaccine immunizations are required, administer at least 1 month prior to initiation of ZEPOSIA.</li>
+</ul>
+<div class="bodypara"><span class="head3">Progressive Multifocal Leukoencephalopathy (PML):</span> PML is an opportunistic viral infection of the brain that typically occurs in patients who are immunocompromised, and that usually leads to death or severe disability.</div>
+<div class="bodypara">PML has been reported in patients treated with S1P receptor modulators, including ZEPOSIA, and other UC therapies and has been associated with some risk factors (e.g., immunocompromised patients, polytherapy with immunosuppressants, duration of use). If PML is suspected, withhold ZEPOSIA and perform an appropriate diagnostic evaluation. If confirmed, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Bradyarrhythmia and Atrioventricular Conduction Delays:</span> Since initiation of ZEPOSIA may result in a transient decrease in heart rate and atrioventricular conduction delays, dose titration is recommended to help reduce cardiac effects. If treatment with ZEPOSIA is considered, advice from a cardiologist should be sought for those individuals:</div>
+<ul class="indication-li">
+<li class="bodypara">with significant QT prolongation</li>
+<li class="bodypara">with arrhythmias requiring treatment with Class 1a or III anti-arrhythmic drugs</li>
+<li class="bodypara">with ischemic heart disease, heart failure, history of cardiac arrest or myocardial infarction, cerebrovascular disease, and uncontrolled hypertension</li>
+<li class="bodypara">with a history of Mobitz type II second-degree or higher AV block, sick sinus syndrome, or sino-atrial heart block</li>
+</ul>
+<div class="bodypara"><span class="head3">Liver Injury:</span> Clinically significant liver injury, including acute liver failure requiring transplant, has occurred in patients treated with ZEPOSIA in the postmarketing setting. Signs of liver injury, including elevated serum hepatic enzymes and elevated total bilirubin, have occurred as early as ten days after the first dose. Obtain transaminase and bilirubin levels, if not recently available (i.e., within 6 months), before initiation of ZEPOSIA. Obtain transaminase levels and total bilirubin levels periodically during treatment and until two months after ZEPOSIA discontinuation. Patients should be monitored for signs and symptoms of any hepatic injury. Patients who develop symptoms suggestive of hepatic dysfunction should have hepatic enzymes promptly checked, and ZEPOSIA should be interrupted. Treatment should not be resumed if a plausible alternative etiology for the signs and symptoms cannot be established, because these patients are at risk for severe drug-induced liver injury.</div>
+<div class="bodypara"><span class="head3">Fetal Risk:</span> There are no adequate and well-controlled studies in pregnant women. Based on animal studies, ZEPOSIA may cause fetal harm. Women of childbearing potential should use effective contraception to avoid pregnancy during treatment and for 3 months after stopping ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Increased Blood Pressure:</span> Increase in systolic pressure was observed after about 3 months of treatment and persisted throughout treatment. Blood pressure should be monitored during treatment and managed appropriately.</div>
+<div class="bodypara"><span class="head3">Respiratory Effects:</span> ZEPOSIA may cause a decline in pulmonary function. Spirometric evaluation of respiratory function should be performed during therapy, if clinically indicated.</div>
+<div class="bodypara"><span class="head3">Macular Edema:</span> S1P modulators have been associated with an increased risk of macular edema. Obtain a baseline evaluation of the fundus, including a macula, near the start of treatment with ZEPOSIA. Perform an examination of the fundus, including the macula, periodically while on therapy and any time there is a change in vision. Continuation of ZEPOSIA therapy in patients with macular edema has not been evaluated. Macular edema over an extended period of time (i.e. 6 months) can lead to permanent visual loss. Consider discontinuing ZEPOSIA if macular edema develops. The risk of recurrence after rechallenge has not been evaluated.</div>
+<div class="bodypara"><span class="head3"></span>Patients with a history of uveitis and patients with a history of diabetes mellitus are at increased risk of macular edema during ZEPOSIA therapy.</div>
+<div class="bodypara"><span class="head3">Cutaneous Malignancies:</span> The risk of cutaneous malignancies (including basal cell carcinoma, squamous cell carcinoma, and melanoma) is increased in patients treated with S1P receptor modulators. Skin examinations are recommended prior to or shortly after the start of treatment and periodically thereafter for all patients, particularly those with risk factors for skin cancer. Providers and patients are advised to monitor for suspicious skin lesions. If a suspicious skin lesion is observed, it should be promptly evaluated. As usual for patients with increased risk for skin cancer, exposure to sunlight and ultraviolet light should be limited by wearing protective clothing and using sunscreen with a high protection factor. Concomitant phototherapy with UV-B radiation or PUV-A photochemotherapy is not recommended in patients taking ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Posterior Reversible Encephalopathy Syndrome (PRES):</span> Rare cases of PRES have been reported in patients receiving a S1P receptor modulator. If a ZEPOSIA-treated patient develops unexpected neurological or psychiatric symptoms or any symptom/sign suggestive of an increase in intracranial pressure, a complete physical and neurological examination should be conducted. Symptoms of PRES are usually reversible but may evolve into ischemic stroke or cerebral hemorrhage. Delay in diagnosis and treatment may lead to permanent neurological sequelae. If PRES is suspected, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Unintended Additive Immunosuppressive Effects From Prior Immunosuppressive or Immune-Modulating Drugs:</span> When switching from drugs with prolonged immune effects, the half-life and mode of action of these drugs must be considered to avoid unintended additive immunosuppressive effects while at the same time minimizing risk of disease reactivation.</div>
+<div class="bodypara"><span class="head3">Immune System Effects After Stopping ZEPOSIA:</span> After discontinuing ZEPOSIA, the median time for lymphocyte counts to return to the normal range was 30 days, with approximately 80% to 90% of patients in the normal range within 3 months. Use of immunosuppressants within this period may lead to an additive effect on the immune system, therefore caution should be applied when initiating other drugs 4 weeks after the last dose of ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Most Common Adverse Reactions (≥4%):</span> liver test increased, upper respiratory infection, and headache.</div>
+<div class="bodypara"><span class="head3">Use in Specific Populations:</span> Hepatic Impairment: Dosage adjustment in patients with mild or moderate hepatic impairment (Child-Pugh class A or B) is required, and use of ZEPOSIA in patients with severe hepatic impairment (Child-Pugh class C) is not recommended.</div>
+<div class="bodypara boldtxt">For additional safety information, please see the full <a href="https://packageinserts.bms.com/pi/pi_zeposia.pdf" title="" target="_blank" aria-label="">Prescribing Information</a> and <a href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" title="" target="_blank" aria-label="">Medication Guide</a>.</div>
+<div class="refrence-section homePage d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Khan N, Abbas A, Williamson A, Balart L. Prevalence of corticosteroids use and disease course after initial steroid exposure in ulcerative colitis. <i>Dig Dis Sci.</i> 2013;58(10):29​63-29​69.</li>
+<li>Burri E, Maillard MH, Schoepfer AM, et al. Treatment algorithm for mild and moderate-to-severe ulcerative colitis: an update. <i>Digestion.</i> 2020;101(suppl 1):2-15.</li>
+<li>Lamb CA, Kennedy NA, Raine T, et al. British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults. <i>Gut.</i> 2019;68(suppl 3):s1-s106.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/ct2/show/record/NCT01647516. Updated May 19, 2021. Accessed May 11, 2022.</li>
+</ol>
+</div>
+<div class="refrence-section study-design d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral Presentation at: ECCO 2022; February 16-19, 2022. Presentation DOP44.</li>
+<li>Data on File. BMS-REF-OZA-0031. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Data on File. BMS-REF-OZA-0022. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual, May 21–24, 2022. Poster Tu1458.</li>
+<li>Long M, Cross R, Calkwood J, et al. Ozanimod first-dose cardiac effects in patients with moderately to severely active ulcerative colitis and relapsing multiple sclerosis. Poster presented at AIBD 2021; December 9–11, 2021.</li>
+</ol>
+</div>
+<div class="refrence-section efficacy d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy-naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Siegmund B, Axelrad J, Pondel M, et al. Rapidity of ozanimod-induced symptomatic response and remission in patients with moderately to severely active ulcerative colitis: results from the induction period of True North. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) Virtual; February 16–19, 2022.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2023.</li>
+<li>Panaccione R, Afzali A, Hudesman D, et al. Extended therapy with ozanimod for delayed responders to ozanimod in moderately to severely active ulcerative colitis: data from the True North open-label extension study. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1450.</li>
+<li>Siegmund B, Irving P, D’Haens G, et al. Ozanimod as a maintenance therapy in advanced therapy-naive ulcerative colitis patients with moderate vs severe endoscopic disease. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP135.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral presentation at: ECCO 2022: February 16–19, 2022. Presentation DOP44.</li>
+<li>Danese S, Abreu MT, Wolf DC, et al. Efficacy and safety of 3 years of continuous ozanimod treatment: an interim analysis of the True North open-label extension study. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Presentation DOP37.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study.<i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Data on File. BMS_ZEP008535. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+<li>Danese S, Panaccione R, Abreu MT, et al. Efficacy and safety of approximately 3 years of continuous ozanimod in moderately to severely active ulcerative colitis: interim analysis of the True North open-label extension. <i>J Crohns Colitis.</i> Published online August 31, 2023. doi:10.1093/ecco-jcc/jjad146</li>
+</ol>
+</div>
+<div class="refrence-section tuc-umet-need d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy–naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+</ol>
+</div>
+<div class="refrence-section tuc-patient d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Study of ozanimod (RPC1063) in relapsing multiple sclerosis (MS) (SUNBEAM). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02294058. Updated November 25, 2020. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod in relapsing multiple sclerosis (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02047734. Updated February 11, 2021. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod (RPC1063) in relapsing multiple sclerosis patients (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01628393. Updated November 2, 2021. Accessed September 6, 2023.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med.</i> 2021;385(14):1280-1291.</li>
+<li>Safety and efficacy trial of RPC1063 for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02435992. Updated September 1, 2021. Accessed July 26, 2023.</li>
+<li>An extension study of RPC1063 as therapy for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02531126. Updated September 18, 2023. Accessed September 25, 2023.</li>
+<li>A multi-site, open-label extension trial of oral RPC1063 in relapsing multiple sclerosis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02576717. Updated January 30, 2024. Accessed February 6, 2024.</li>
+<li>Nakase H, Fujii T, Hisamatsu T, et al. Ozanimod as induction and maintenance therapy for ulcerative colitis: a randomized, double-blind, placebo-controlled study in Japan (J-True North). Poster presented at: Digestive Disease Week (DDW) 2024; Washington, DC; May 18-21, 2024. Poster Su1795.</li>
+<li>Study describing cognitive processing speed changes in relapsing multiple sclerosis subjects treated with ozanimod (RPC-1063) (ENLIGHTEN). Clinicaltrials.gov. https://clinicaltrials.gov/study/NCT0414035. Updated November 15, 2023. Accessed June 18, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0076. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0077. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Selmaj KW, Steinman L, Comi G, et al. Long-term safety and efficacy of ozanimod in relapsing multiple sclerosis: final analysis of the DAYBREAK open-label extension study. Poster presented at: ACTRIMS 2024 Forum; February 29–March 2, 2024; West Palm Beach, FL. Poster P090.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), a new oral treatment for relapsing forms of multiple sclerosis. Princeton, NJ: Bristol-Myers Squibb Company; 2020.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), an oral treatment for adults with moderately to severely active ulcerative colitis. Princeton, NJ: Bristol-Myers Squibb Company; 2021.</li>
+<li>Data on File. BMS-REF-0079. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+</ol>
+</div>
+<div class="refrence-section safety d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Long M, Cross RK, Lichtenstein GR, et al. Long-term cardiac safety of ozanimod in phase 3 clinical program of ulcerative colitis and relapsing multiple sclerosis. Presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Presentation 15.</li>
+<li>Rieder F, Wolf DC, Charles L, Kollengode K, Patel A, Ghosh S. Incidence of infections in patients with moderately to severely active ulcerative colitis treated with ozanimod and relationship to significant lymphopenia: results from a pooled safety analysis. Poster presented at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Danese S, Feagan BG, Wolf DC. Ozanimod as maintenance therapy in patients with moderate-to-severe ulcerative colitis: results from the phase 3, randomized, double-blind, placebo-controlled True North study. Paper presented at: United European Gastroenterology Week Virtual 2020; October 10–14, 2020. Presentation LB10.</li>
+<li>D’Haens G, Colombel JF, Lichtenstein GR, et al. Safety of ozanimod in patients with moderately to severely active ulcerative colitis over time: pooled analysis from phase 2, phase 3, and open-label extension trials. Oral presentation at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study. <i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+</ol>
+</div>
+<div class="refrence-section moa d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Vermeire S, Peyrin-Biroulet L, et al. Etrasimod as induction and maintenance therapy for ulcerative colitis (ELEVATE): two randomised, double-blind, placebo-controlled, phase 3 studies [published correction appears in <i>Lancet</i>. 2023 Mar 25;401(10381):1000]. <i>Lancet</i>. 2023;401(10383):1159-1171.</li>
+<li>McGinley MP, Cohen JA. Sphingosine 1-phosphate receptor modulators in multiple sclerosis and other conditions [published correction appears in <i>Lancet</i>. 2021 Sep 25;398(10306):1132]. <i>Lancet</i>. 2021;398(10306):1184-1194.</li>
+<li>Roggeri A, Schepers M, Tiane A, et al. Sphingosine-1-phosphate receptor modulators and oligodendroglial cells: beyond immunomodulation. <i>Int J Mol Sci</i>. 2020;21(20):7537.</li>
+<li>Pérez-Jeldres T, Tyler CJ, Boyer JD, et al. Cell trafficking interference in inflammatory bowel disease. <i>Inflamm Bowel Dis.</i> 2019;2(25):270-282.</li>
+<li>Al-Bawardy B, Shivashankar R, Proctor DD. Novel and emerging therapies for inflammatory bowel disease. <i>Front Pharmacol.</i> 2021;12:651415.</li>
+<li>Nikolakis D, de Voogd FAE, Pruijit MJ, et al. The role of the lymphatic system in the pathogenesis and treatment of inflammatory bowel disease. <i>Int J Mol Sci.</i> 2022;23(3):1854.</li>
+<li>Harris S, Tran JQ, Southworth H, Spencer CM, Cree BAC, Zamvil SS. Effect of the sphingosine-1-phosphate receptor modulator ozanimod on leukocyte subtypes in relapsing MS. <i>Neurol Neuroimmunol Neuroinflamm.</i> 2020;7(5):e839.</li>
+<li>Jaigirdar SA, Benson RA, Elmesmari A, et al. Sphingosine 1-phosphate promotes the persistence of activated CD4 T cells in inflamed sites. <i>Front Immunol.</i> 2017;8:1627.</li>
+<li>Scott FL, Clemons B, Brooks J, et al. Ozanimod (RPC1063) is a potent sphingosine 1-phosphate receptor-1 (S1P<sub>1</sub>) and receptor-5 (S1P<sub>5</sub>) agonist with autoimmune disease-modifying activity. <i>Br J Pharmacol.</i> 2016;173:1778-1792.</li>
+<li>Kayal M, Shah S. Ulcerative colitis: current and emerging treatment strategies. <i>J Clin Med.</i> 2019;9(1):94.</li>
+<li>Olivera P, Danese S, Peyrin-Biroulet L. Next generation of small molecules in inflammatory bowel disease. <i>Gut.</i> 2017;66(2):199-209.</li>
+<li>Lucaciu LA, Seicean R, Seicean A. Small molecule drugs in the treatment of inflammatory bowel diseases: which one, when and why? – a systematic review. <i>Eur J Gastroenterol Hepatol.</i> 2020;32(6):669-677.</li>
+</ol>
+</div>
+<div class="refrence-section dosing d-none"><p class="reference-title">Reference:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+</ol>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="isi-overlay" style="display: none;"></div>
+
+		
+		
+	
+</div>
+
+                    </div>
+                
+				<div class="isi-footer-wrapper">
+					<div class="comp-footer-references">
+						 
+							<div class="foot-notes-rte rich-text text">
+
+    
+
+</div>
+
+						
+						
+					</div>
+					<div class="bg-lighter-blue py-5 footer-links-section">
+						<div class="container px-lg-0">
+							
+    
+    
+    
+    
+        <div class="column-control-list column-control">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="ftrlogocont">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="html section">
+<div>
+	
+		<div>
+    <!-- <a class="cmp-image__link inlineblockk noUC" href="https://www.bms.com" target="_blank">
+<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/BMS-logo-rgb.svg" class="cmp-image__image" alt="Bristol Myers SquibbTM Logo"></a> -->
+<!--<a class="cmp-image__link inlineblockk ms-bms d-none" href="https://www.bms.com" target="_blank">
+<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/BMS_Logo.svg" class="cmp-image__image" alt="Bristol Myers Squibb®Logo"></a>-->
+<a class="imgt-ft pl-0 cmp-image__link inlineblockk ms-bms d-none d-block open-modal nav-link" href="https://www.bms.com" data-authorurl="https://www.bms.com" data-target="externalLink" data-classname="external-link-warning-modal cross-site" data-url="/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html" data-aa-popup="https://www.bms.com" rel="noopener noreferrer" target="_blank">
+                <img src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/BMS_Logo.svg" class="cmp-image__image" alt="Bristol Myers Squibb®Logo"></a>
+
+<!-- <a class="cmp-image__link inlineblockk ucJobCode d-none" href="https://www.bms.com" target="_blank">
+<img src="https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/BMS_Logo.svg" class="cmp-image__image" alt="Bristol Myers Squibb® Logo"></a> -->
+
+</div>
+    
+    
+
+</div>
+
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+
+    
+
+						</div>
+					</div>
+					<div class="bg-light-blue">
+						<div class="container px-lg-0">
+							
+    
+    
+    
+    
+        <div class="utility-nav-footer utilitynav">
+
+	
+        
+    
+    <div class="container px-0 cmp-utilitynav-wrapper">
+	    <nav class="cmp-utility-nav d-none d-lg-block" role="navigation">
+        <div class="d-flex flex-row leftnav-utility-nosocial">
+            <ul class="nav cmp-utility-nav-list justify-content-around justify-content-lg-start col-md-12" data-listsize="6">
+                <li class="nav-item cmp-utility-nav-list-item">
+				
+				
+                
+				 <a class="open-modal nav-link" href="https://www.bms.com/about-us/contact-us.html" data-authorurl="https://www.bms.com/about-us/contact-us.html" data-target="externalLink" data-classname="external-link-warning-modal cross-site" data-url="/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html" data-aa-popup="https://www.bms.com/about-us/contact-us.html|Contact Us" rel="noopener noreferrer" target="_blank">
+                 <!--  <a class="nav-link" href="https://www.bms.com/about-us/contact-us.html" data-sly-attribute="{rel=noopener noreferrer, target=_blank}">-->
+					Contact Us</a>
+			    
+                
+                </li>
+             
+                <li class="nav-item cmp-utility-nav-list-item">
+				
+				
+                
+				 <a class="open-modal nav-link" href="https://www.bms.com/privacy-policy.html" data-authorurl="https://www.bms.com/privacy-policy.html" data-target="externalLink" data-classname="external-link-warning-modal cross-site" data-url="/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html" data-aa-popup="https://www.bms.com/privacy-policy.html|Privacy Policy" rel="noopener noreferrer" target="_blank">
+                 <!--  <a class="nav-link" href="https://www.bms.com/privacy-policy.html" data-sly-attribute="{rel=noopener noreferrer, target=_blank}">-->
+					Privacy Policy</a>
+			    
+                
+                </li><li class="nav-item cmp-utility-nav-list-item "><a class="nav-link onetrust" href="javascript:void(0)" onclick="OneTrust.ToggleInfoDisplay()">Your Privacy Choices <img style="width:25px !important" src="https://www.zeposiahcp.com/assets/commercial/global/privacyoptions.svg" alt="Privacy Link"> <span class="ln-cd" style="display: none;">|</span></a></li>
+             
+                <li class="nav-item cmp-utility-nav-list-item uc-lnp">
+				
+				
+                
+				 <a class="open-modal nav-link" href="https://www.bms.com/legal-notice.html" data-authorurl="https://www.bms.com/legal-notice.html" data-target="externalLink" data-classname="external-link-warning-modal cross-site" data-url="/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html" data-aa-popup="https://www.bms.com/legal-notice.html|Legal Notice" rel="noopener noreferrer" target="_blank">
+                 <!--  <a class="nav-link" href="https://www.bms.com/legal-notice.html" data-sly-attribute="{rel=noopener noreferrer, target=_blank}">-->
+					Legal Notice</a>
+			    
+                
+                </li>
+             
+                <li class="nav-item cmp-utility-nav-list-item">
+				
+				
+                
+				 <a class="open-modal nav-link" href="https://www.bms.com" data-authorurl="https://www.bms.com" data-target="externalLink" data-classname="external-link-warning-modal cross-site" data-url="/content/commercial/us/zeposiahcp/en.cross-site-warning-message.html" data-aa-popup="https://www.bms.com|Bristol Myers Squibb" rel="noopener noreferrer" target="_blank">
+                 <!--  <a class="nav-link" href="https://www.bms.com" data-sly-attribute="{rel=noopener noreferrer, target=_blank}">-->
+					Bristol Myers Squibb</a>
+			    
+                
+                </li>
+             
+                <li class="nav-item cmp-utility-nav-list-item" style="display: none;">
+				
+				
+                
+                
+				 <a class="nav-link" href="/multiple-sclerosis/sitemap" target="_self">
+                 <!--  <a class="nav-link" href="/content/commercial/us/zeposiahcp/en/multiple-sclerosis/sitemap.html" data-sly-attribute="{target=_self}">-->
+					Site Map</a>
+			    
+                </li>
+             
+                <li class="nav-item cmp-utility-nav-list-item uc-sitemaplink">
+				
+				
+                
+                
+				 <a class="nav-link" href="/ulcerative-colitis/sitemap" target="_self">
+                 <!--  <a class="nav-link" href="/content/commercial/us/zeposiahcp/en/ulcerative-colitis/sitemap.html" data-sly-attribute="{target=_self}">-->
+					Site Map</a>
+			    
+                </li>
+             </ul>
+               
+           </div>
+       </nav>   
+
+        
+       <nav class="cmp-utility-nav-mbl d-block d-lg-none " role="navigation"> 
+             
+       </nav> 
+       </div>
+    
+    
+
+
+    
+
+</div>
+
+    
+
+						</div>
+					</div>
+					<div class="copy-right-section">
+						
+    
+    
+    
+    
+        <div class="column-control-copyright column-control">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row" id="ftrhtmlcont">   
+        
+            <div class="col col-12">
+                <div class="column-control-column">
+                    <div class="html section">
+<div>
+	
+		<script>
+    $(document).ready(function () {
+        $('body.ucsite').on('click', 'a[href^="/content/commercial/us/zeposiahcp/en/multiple-sclerosis/sitemap.html"]', function () {
+            debugger;
+            $(this).attr('href', '/content/commercial/us/zeposiahcp/en/ulcerative-colitis/sitemap.html');
+        });
+
+
+        $(".sitemapviva").css("display", "none")
+
+		$(".ms-site-ft").css("display", "none");
+        if (window.location.href.includes("/multiple-sclerosis")) {
+            $(".ms-site-ft").css("display", "block");
+            $(".ms-site-ft-glb").css("display", "none");
+        }
+       
+    });
+
+
+
+
+</script>
+
+<div>
+    <div class="ftrcopytxtcont">
+        <div class="sitetxt mb-md-1">
+            <div class="container gateway-site-text">This site is intended for U.S. Healthcare Professionals only.</div>
+        </div>
+        <!-- <div class="ftrcopytxt fullsite">ZEPOSIA, ZEPOSIA 360 Support and ZEPOSIA logo are trademarks of Celgene
+            Corporation, a Bristol Myers Squibb company.<br class="">All other trademarks are the property of their
+            respective owners.</div> -->
+            <div class="ftrcopytxt fullsite ms-site-ft-glb">ZEPOSIA and ZEPOSIA logo are trademarks of Celgene
+                Corporation, a Bristol Myers Squibb company.<br class="">All other trademarks are the property of their
+                respective owners.</div>
+			<div class="ftrcopytxt ms-orphan d-none">ZEPOSIA and ZEPOSIA 360 Support are trademarks of Celgene Corporation,
+            a Bristol Myers Squibb company.<br class="">All other trademarks are the property of their respective
+            owners.</div>
+			
+			<div class="ftrcopytxt ms-site-ft" style="display: none;">ZEPOSIA, ZEPOSIA 360 Support and ZEPOSIA logo are trademarks of Celgene Corporation,
+            a Bristol Myers Squibb company.<br class="">All other trademarks are the property of their respective
+            owners.</div>
+
+        <div class="ftrcopytxt plms">© <span class="gatewayFootero nw-yr">2024</span><span class="dnss">2024</span>
+            <span class="pinkText d-none dnss">2023</span> Bristol-Myers Squibb Company. <br class="gatewaymno"><span class="d-none gatewayFooter wrd-space"><!--2084-US-2300999  09/23--><!--2084-US-2400445
+                06/24-->2084-US-2400728 09/24</span></div>
+        <div class="ftrcopytxt plms"><span class="noUC viva-ms"><!--2084-US-2301438 03/24--></span></div>
+        <!--ZMSH-250--><!--ZMSH-335-->
+        <div class="ftrcopytxt plms"><span class="noUC mercuryCode"><!--2084-US-2301324 1/24--><!--2084-US-2301438 03/24--><!--2084-US-2400677  09/24-->2084-US-2400919 11/24</span></div><!--ZMSH-335-->
+        <!-- <p class="new-veeva-code d-none">2084-US-2301388 12/23</p> --><!--ZUCHCP-197-->
+        <!-- <span class="ucJobCode done">2084-US-2300573  10/23</span> -->
+        <!-- <span class="ucJobCode done">2084-US-2400042  03/24</span> -->
+        <!-- <span class="ucJobCode done">2084-US-2400042  03/24</span> -->
+        <!--<span class="ucJobCode done">2084-US-2400440 06/24</span>--><!--ZUCHCP-220-->
+        <!-- <span class="ucJobCode done">2084-US-2400877 11/24</span> -->  <!--ZUCHCP-248-->
+        <span class="ucJobCode d-none">2084-US-2400899 11/24</span> <!-- ZUCHCP-250 -->
+        <!-- <p class="sitemapviva mb-0">2084-US-2301324 1/24</p> -->
+    </div>
+</div>
+<style>
+a.imgt-ft.pl-0.cmp-image__link.inlineblockk.ms-bms.d-none.d-block.open-modal.nav-link {
+    width: 288px;
+}
+    .ucsite .new-veeva-code {
+        font-size: 14px;
+        line-height: 16px;
+        color: #000;
+        font-family: arial;
+        margin-bottom: 0;
+    }
+
+    #gatewayWrapper .gateway-site-text {
+        display: none;
+    }
+
+    .gatewayFootero {
+        display: none;
+    }
+
+    .ms-orphan .viva-ms,
+    .ms-sitemap .viva-ms {
+        display: none;
+    }
+
+    #gatewayWrapper .gatewayFootero {
+        display: inline-block;
+    }
+
+    #gatewayWrapper .dnss {
+        display: none !important;
+    }
+
+    .gatewayFooteron,
+    #gatewayWrapper .gatewaymno {
+        display: none;
+    }
+
+    #gatewayWrapper .gatewayFooteron {
+        display: block;
+    }
+
+    img.wdt375 {
+        max-width: 375px;
+    }
+
+    @media (max-width : 1023px) {
+        .desk-no-display {
+            display: none !important;
+        }
+
+        .mssite .ftrcopytxt.plms {
+            padding-top: 0;
+        }
+
+        .ucsite .ftrcopytxt.plms {
+            padding-top: 0;
+        }
+    }
+    @media (max-width: 1023px) {
+        .ucsite .sticky-element .isi-content div.head3.newhead-uc {
+    margin-top: 0px;
+}
+.head3.newhead-uc {
+    margin-top: 73px;
+}
+    }
+</style>
+    
+    
+
+</div>
+
+</div>
+<div class="opentext section">	
+	
+	    
+    	 <script>
+$(document).ready(function () {
+        $('.cmp-utilitynav-wrapper ul li:eq(1)').after(`<li class="nav-item cmp-utility-nav-list-item " ><a class="nav-link onetrust" href="javascript:void(0)" onclick="OneTrust.ToggleInfoDisplay()" >Your Privacy Choices <img style="width:25px !important" src="https://www.zeposiahcp.com/assets/commercial/global/privacyoptions.svg" alt="Privacy Link" /> <span class="ln-cd" >|</span></a></li>`);
+
+        if (window.location.href.includes('/ulcerative-colitis')) {
+            $('.utility-nav-footer ul li:nth-child(6)').css("display", "none");
+            // $('.utility-nav-footer ul li:nth-child(6)').addClass("ms-stm");
+
+            $('span.ln-cd').css("display", "none");
+            $('.utility-nav-footer ul li:last-child').addClass('uc-sitemaplink');
+            $('.utility-nav-footer ul li:nth-child(4)').addClass('uc-lnp');
+        }
+
+        if (window.location.href.includes('/multiple-sclerosis')) {
+
+            $('.utility-nav-footer ul li:nth-child(6)').addClass('Onetrustformc'); 
+			$('.utility-nav-footer ul li:nth-child(5)').addClass('Onetrustforbms'); 
+			$('.utility-nav-footer ul li:nth-child(7)').css("display", "none");
+            $('span.ln-cd').css("display", "none");
+            /* $('.Onetrustforbms a').append('<span>|</span>');  */
+			$('.utility-nav-footer ul li:nth-child(4)').addClass('uc-lnp');
+        }
+		
+		
+// Function to detect Safari browser
+function isSafari() {
+  var userAgent = window.navigator.userAgent;
+  return /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
+}
+
+// Check if the current page is for the "multiple-sclerosis" URL and if the browser is Safari
+if (window.location.href.includes("/multiple-sclerosis") && isSafari()) {
+    // Hide Onetrustformc for Safari
+    var elementsToHide = document.querySelectorAll('.mssite .nav-item.cmp-utility-nav-list-item.Onetrustformc');
+    elementsToHide.forEach(function(element) {
+        element.style.display = 'none';
+    });
+
+    // Show Onetrustforbms for Safari
+    var elementsToShow = document.querySelectorAll('.mssite .nav-item.cmp-utility-nav-list-item.Onetrustforbms');
+    elementsToShow.forEach(function(element) {
+        element.style.display = 'block';
+    });
+	// Show Onetrustforbms for Safari
+    var elementsToShow = document.querySelectorAll('.mssite .nav-item.cmp-utility-nav-list-item.Onetrustforbms a.nav-link::after');
+    elementsToShow.forEach(function(element) {
+        element.style.setProperty('display', 'none', 'important');
+    });
+
+    // Hide the after pseudo-element of Onetrustforbms a.nav-link
+    var elementsToModify = document.querySelectorAll('.mssite .nav-item.cmp-utility-nav-list-item.Onetrustformc a.nav-link');
+    elementsToModify.forEach(function(element) {
+        element.style.setProperty('display', 'none', 'important');
+    });
+}
+
+
+
+    });
+</script>
+
+<style>@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+    .ucsite .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(6) {
+        display: none;
+    }
+}
+
+li.nav-item.cmp-utility-nav-list-item.uc-lnp a::after {
+
+    content: "|" !important;
+}
+
+.uc-sitemaplink {
+    display: block !important;
+}
+
+.cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(4) {
+    display: block !important;
+}
+
+/* .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(4) a::after {
+    content: none;
+} */
+
+.cmp-utility-nav-list li.cmp-utility-nav-list-item:last-child {
+    display: none;
+}
+
+.Onetrustformc {
+    display: block !important;
+}
+
+.Onetrustformc a::after {
+    content: none !important;
+}
+
+.Onetrustforbms a span {
+    padding-left: 7px;
+}
+
+footer .cmp-utility-nav ul.nav.cmp-utility-nav-list,
+.cmp-isi .cmp-utility-nav ul.nav.cmp-utility-nav-list {
+    justify-content: normal !important;
+}
+
+span.ln-cd {
+    margin-top: 3px;
+    color: #e1e1e1;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: bold;
+    margin-left: 4px;
+
+
+}
+
+footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link,
+.cmp-isi .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {
+    padding: 5px 6px 0px 0px !important;
+}
+
+footer li:not(:last-child) .nav-link::after,
+.cmp-isi li:not(:last-child) .nav-link::after {
+    padding-left: 6px !important;
+}
+
+@media (max-width:1023px) {
+    .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item :last-child a {
+        margin-left: 0px !important;
+    }
+
+    footer .cmp-utility-nav ul.nav.cmp-utility-nav-list {
+        margin-top: 0px !important;
+    }
+}
+@media (max-width:1023px){ #efficacy-pgcont #greenbg {
+    padding-bottom: 0 !important;
+}}
+
+</style>
+		
+
+
+
+
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+
+    
+
+					</div> 
+					<div class="modals">
+						
+						<input type="hidden" name="exitModalTargetPath" id="exitModalTargetPath" value="/content/commercial/us/zeposiahcp/en.modal-rules.json">
+						<div class="cmp-modal entry-modal modal fade" id="entryModal" tabindex="-1" role="dialog" aria-labelledby="entryModal" aria-hidden="true" data-backdrop="static" data-keyboard="true">
+							
+    <div class="d-none modal-details" data-modalpath="/content/experience-fragments/commercial/us/zeposiahcp/en/zeposiahcp-en-entrymodal-content/master" data-setcookie="true" data-cookiename="ishcp"></div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		</div>
+	</div>
+
+						 </div>
+						 <div class="cmp-modal exit-modal modal fade" id="exitModal" tabindex="-1" role="dialog" aria-labelledby="exitModal" data-targeturl="#" data-targettype="" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+							 
+    <div class="d-none modal-details" data-setcookie="false"></div>
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		</div>
+	</div>
+
+						 </div>
+					</div>
+					<div class="cmp-backToTop-wrapper hidden">
+                        
+					</div>
+				</div>
+            </footer>
+        </div>
+    
+	
+
+            
+        
+    
+
+<div id="loader" class="loader d-none">
+    <div class="loader-icon"></div>
+</div>
+</div>
+<div class="experiencefragment section">
+
+
+
+
+
+    
+	
+    <div>
+    	
+
+
+    
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="device-orientation aem-GridColumn aem-GridColumn--default--12">
+
+<div class="rotation-error dev-rotate-wrapper" id="device-rotation">
+    <div class="tab-portrait-error">
+		<div class="error-flex-content">
+			<img class="img-fluid" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/tab_err.svg">
+			<p></p><p class="mb-0 device-rotation-text">This website is best viewed<br>
+using the horizontal display on<br>
+your tablet device.</p>
+<p></p>
+		</div>
+    </div>
+    <div class="mobile-landscape-error">
+		<div class="error-flex-content">
+			<img class="img-fluid" src="https://www.zeposiahcp.com/assets/commercial/us/zeposiahcp/en/images/mob_err.svg">
+			<p></p><p class="mb-0 device-rotation-text">This website is best viewed<br>
+using the vertical display on<br>
+your mobile device.</p>
+<p></p>
+		</div>
+    </div>
+</div>
+
+    
+</div>
+
+    
+</div>
+
+
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+
+
+                </div>
+            </div>
+        
+        
+        
+		
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </div>
+    <!--//row -->
+
+
+    
+</div>
+<div class="isi-rendering aem-GridColumn aem-GridColumn--default--12">
+	<input type="hidden" name="defaultTrayStatus" value="collapsed">
+<input type="hidden" name="suppressRememberStatus" value="false">
+<input type="hidden" name="enableExpandButton" value="false">
+<input type="hidden" name="enableCollapseButton" value="false">
+	<!-- /* When in Edit mode, showing the help text */-->
+	
+	<!-- /* When in Preview/Disabled mode, rendering the component */-->
+	
+		
+		
+			
+    <div class="cmp-isi hidden sticky-element col-12 is-preview" style="display: block;">
+        <div class="isi-container preview-container" style="display: block;">
+			
+		    <div class="isi-mobile-view-links d-block d-sm">
+			
+				
+                
+                
+                   <a></a>
+                				
+                
+			    
+                
+                
+                   <a></a>
+				
+            </div>
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0">IMPORTANT SAFETY INFORMATION</div>
+                <div class="more-text-container text-right px-0 col-3">
+                    <span class="arrow up-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content preview-text">
+			
+                <div class="ucsite-indication-head d-none"><div class="head3">INDICATION</div>
+<div class="bodypara">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of moderately to severely active ulcerative colitis (UC) in adults.</div>
+<div class="head3 pt-3">IMPORTANT SAFETY INFORMATION</div>
+<div class="head3 pt-0">Contraindications:</div>
+<div class="bodypara"><ul>
+<li>Patients who in the last 6 months, experienced myocardial infarction, unstable angina, stroke, transient ischemic attack (TIA), decompensated heart failure requiring hospitalization, or Class III/IV heart failure or have a presence of Mobitz type II second-degree or third-degree atrioventricular (AV) block, sick sinus syndrome, or sino-atrial block, unless the patient has a functioning pacemaker</li>
+<li>Patients with severe untreated sleep apnea</li>
+<li>Patients taking a monoamine oxidase (MAO) inhibitor</li>
+</ul>
+</div>
+</div>
+
+            </div>
+        </div>
+        <div class="isi-container collapse-container" style="display: none;">
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0"></div>
+                
+                <div class="hide-text-container text-right px-0 col-3">
+                    <span class="arrow down-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content collapse-text">
+			
+                
+            </div>
+        </div>
+        <div class="isi-container expand-container" style="display: none;">
+            <div class="d-flex flex-row isi-header">
+                <div class="isi-container-title col-9 pl-0">IMPORTANT SAFETY INFORMATION</div>
+                <div class="hide-text-container text-right px-0 col-3">
+                    <span class="arrow down-arrow"></span>
+                </div>
+            </div>
+            <div class="isi-content expand-text">
+			
+                <div class="ucsite-indication-head d-none"><div class="isi-header isihdr_new"><div class="isi-container-title">IMPORTANT SAFETY INFORMATION</div>
+</div>
+<div class="head3 newhead-uc">INDICATION</div>
+<div class="bodypara">ZEPOSIA<sup>®</sup> (ozanimod) is indicated for the treatment of moderately to severely active ulcerative colitis (UC) in adults.</div>
+<div class="head3 pt-3">IMPORTANT SAFETY INFORMATION</div>
+<div class="head3 pt-0">Contraindications:</div>
+<div class="bodypara"><ul>
+<li>Patients who in the last 6 months, experienced myocardial infarction, unstable angina, stroke, transient ischemic attack (TIA), decompensated heart failure requiring hospitalization, or Class III/IV heart failure or have a presence of Mobitz type II second-degree or third-degree atrioventricular (AV) block, sick sinus syndrome, or sino-atrial block, unless the patient has a functioning pacemaker</li>
+<li>Patients with severe untreated sleep apnea</li>
+<li>Patients taking a monoamine oxidase (MAO) inhibitor</li>
+</ul>
+</div>
+<div class="bodypara"><span class="head3">Infections:</span> ZEPOSIA may increase the susceptibility to infections. Life-threatening and rare fatal infections have occurred in patients receiving ZEPOSIA. Obtain a recent (i.e., within 6 months or after discontinuation of prior UC therapy) complete blood count (CBC) including lymphocyte count before initiation of ZEPOSIA. Delay initiation of ZEPOSIA in patients with an active infection until the infection is resolved. Consider interruption of treatment with ZEPOSIA if a patient develops a serious infection. Continue monitoring for infections up to 3 months after discontinuing ZEPOSIA.</div>
+<ul class="indication-li">
+<li class="bodypara">Herpes zoster and herpes simplex were seen in clinical trials of ZEPOSIA. Herpes simplex encephalitis and varicella zoster meningitis have been reported with sphingosine 1-phosphate (S1P) receptor modulators. Patients without a healthcare professional-confirmed history of varicella (chickenpox), or without documentation of a full course of vaccination against varicella zoster virus (VZV), should be tested for antibodies to VZV before initiating ZEPOSIA.</li>
+<li class="bodypara">Cases of fatal cryptococcal meningitis (CM) and disseminated cryptococcal infections have been reported with S1P receptor modulators. If CM is suspected, ZEPOSIA should be suspended until cryptococcal infection has been excluded. If CM is diagnosed, appropriate treatment should be initiated.</li>
+<li class="bodypara">In the UC clinical studies, patients who received ZEPOSIA were not to receive concomitant treatment with antineoplastic, non-corticosteroid immunosuppressive, or immune-modulating therapies used for treatment of UC. Concomitant use of ZEPOSIA with any of these therapies would be expected to increase the risk of immunosuppression. When switching to ZEPOSIA from immunosuppressive medications, consider the duration of their effects and their mode of action to avoid unintended additive immunosuppressive effects.</li>
+<li class="bodypara">Use of live attenuated vaccines should be avoided during and for 3 months after treatment with ZEPOSIA. If live attenuated vaccine immunizations are required, administer at least 1 month prior to initiation of ZEPOSIA.</li>
+</ul>
+<div class="bodypara"><span class="head3">Progressive Multifocal Leukoencephalopathy (PML):</span> PML is an opportunistic viral infection of the brain that typically occurs in patients who are immunocompromised, and that usually leads to death or severe disability.</div>
+<div class="bodypara">PML has been reported in patients treated with S1P receptor modulators, including ZEPOSIA, and other UC therapies and has been associated with some risk factors (e.g., immunocompromised patients, polytherapy with immunosuppressants, duration of use). If PML is suspected, withhold ZEPOSIA and perform an appropriate diagnostic evaluation. If confirmed, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Bradyarrhythmia and Atrioventricular Conduction Delays:</span> Since initiation of ZEPOSIA may result in a transient decrease in heart rate and atrioventricular conduction delays, dose titration is recommended to help reduce cardiac effects. If treatment with ZEPOSIA is considered, advice from a cardiologist should be sought for those individuals:</div>
+<ul class="indication-li">
+<li class="bodypara">with significant QT prolongation</li>
+<li class="bodypara">with arrhythmias requiring treatment with Class 1a or III anti-arrhythmic drugs</li>
+<li class="bodypara">with ischemic heart disease, heart failure, history of cardiac arrest or myocardial infarction, cerebrovascular disease, and uncontrolled hypertension</li>
+<li class="bodypara">with a history of Mobitz type II second-degree or higher AV block, sick sinus syndrome, or sino-atrial heart block</li>
+</ul>
+<div class="bodypara"><span class="head3">Liver Injury:</span> Clinically significant liver injury, including acute liver failure requiring transplant, has occurred in patients treated with ZEPOSIA in the postmarketing setting. Signs of liver injury, including elevated serum hepatic enzymes and elevated total bilirubin, have occurred as early as ten days after the first dose. Obtain transaminase and bilirubin levels, if not recently available (i.e., within 6 months), before initiation of ZEPOSIA. Obtain transaminase levels and total bilirubin levels periodically during treatment and until two months after ZEPOSIA discontinuation. Patients should be monitored for signs and symptoms of any hepatic injury. Patients who develop symptoms suggestive of hepatic dysfunction should have hepatic enzymes promptly checked, and ZEPOSIA should be interrupted. Treatment should not be resumed if a plausible alternative etiology for the signs and symptoms cannot be established, because these patients are at risk for severe drug-induced liver injury.</div>
+<div class="bodypara"><span class="head3">Fetal Risk:</span> There are no adequate and well-controlled studies in pregnant women. Based on animal studies, ZEPOSIA may cause fetal harm. Women of childbearing potential should use effective contraception to avoid pregnancy during treatment and for 3 months after stopping ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Increased Blood Pressure:</span> Increase in systolic pressure was observed after about 3 months of treatment and persisted throughout treatment. Blood pressure should be monitored during treatment and managed appropriately.</div>
+<div class="bodypara"><span class="head3">Respiratory Effects:</span> ZEPOSIA may cause a decline in pulmonary function. Spirometric evaluation of respiratory function should be performed during therapy, if clinically indicated.</div>
+<div class="bodypara"><span class="head3">Macular Edema:</span> S1P modulators have been associated with an increased risk of macular edema. Obtain a baseline evaluation of the fundus, including a macula, near the start of treatment with ZEPOSIA. Perform an examination of the fundus, including the macula, periodically while on therapy and any time there is a change in vision. Continuation of ZEPOSIA therapy in patients with macular edema has not been evaluated. Macular edema over an extended period of time (i.e. 6 months) can lead to permanent visual loss. Consider discontinuing ZEPOSIA if macular edema develops. The risk of recurrence after rechallenge has not been evaluated.</div>
+<div class="bodypara"><span class="head3"></span>Patients with a history of uveitis and patients with a history of diabetes mellitus are at increased risk of macular edema during ZEPOSIA therapy.</div>
+<div class="bodypara"><span class="head3">Cutaneous Malignancies:</span> The risk of cutaneous malignancies (including basal cell carcinoma, squamous cell carcinoma, and melanoma) is increased in patients treated with S1P receptor modulators. Skin examinations are recommended prior to or shortly after the start of treatment and periodically thereafter for all patients, particularly those with risk factors for skin cancer. Providers and patients are advised to monitor for suspicious skin lesions. If a suspicious skin lesion is observed, it should be promptly evaluated. As usual for patients with increased risk for skin cancer, exposure to sunlight and ultraviolet light should be limited by wearing protective clothing and using sunscreen with a high protection factor. Concomitant phototherapy with UV-B radiation or PUV-A photochemotherapy is not recommended in patients taking ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Posterior Reversible Encephalopathy Syndrome (PRES):</span> Rare cases of PRES have been reported in patients receiving a S1P receptor modulator. If a ZEPOSIA-treated patient develops unexpected neurological or psychiatric symptoms or any symptom/sign suggestive of an increase in intracranial pressure, a complete physical and neurological examination should be conducted. Symptoms of PRES are usually reversible but may evolve into ischemic stroke or cerebral hemorrhage. Delay in diagnosis and treatment may lead to permanent neurological sequelae. If PRES is suspected, treatment with ZEPOSIA should be discontinued.</div>
+<div class="bodypara"><span class="head3">Unintended Additive Immunosuppressive Effects From Prior Immunosuppressive or Immune-Modulating Drugs:</span> When switching from drugs with prolonged immune effects, the half-life and mode of action of these drugs must be considered to avoid unintended additive immunosuppressive effects while at the same time minimizing risk of disease reactivation.</div>
+<div class="bodypara"><span class="head3">Immune System Effects After Stopping ZEPOSIA:</span> After discontinuing ZEPOSIA, the median time for lymphocyte counts to return to the normal range was 30 days, with approximately 80% to 90% of patients in the normal range within 3 months. Use of immunosuppressants within this period may lead to an additive effect on the immune system, therefore caution should be applied when initiating other drugs 4 weeks after the last dose of ZEPOSIA.</div>
+<div class="bodypara"><span class="head3">Most Common Adverse Reactions (≥4%):</span> liver test increased, upper respiratory infection, and headache.</div>
+<div class="bodypara"><span class="head3">Use in Specific Populations:</span> Hepatic Impairment: Dosage adjustment in patients with mild or moderate hepatic impairment (Child-Pugh class A or B) is required, and use of ZEPOSIA in patients with severe hepatic impairment (Child-Pugh class C) is not recommended.</div>
+<div class="bodypara boldtxt">For additional safety information, please see the full <a href="https://packageinserts.bms.com/pi/pi_zeposia.pdf" title="" target="_blank" aria-label="">Prescribing Information</a> and <a href="https://packageinserts.bms.com/medguide/medguide_zeposia.pdf" title="" target="_blank" aria-label="">Medication Guide</a>.</div>
+<div class="refrence-section homePage d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Khan N, Abbas A, Williamson A, Balart L. Prevalence of corticosteroids use and disease course after initial steroid exposure in ulcerative colitis. <i>Dig Dis Sci.</i> 2013;58(10):29​63-29​69.</li>
+<li>Burri E, Maillard MH, Schoepfer AM, et al. Treatment algorithm for mild and moderate-to-severe ulcerative colitis: an update. <i>Digestion.</i> 2020;101(suppl 1):2-15.</li>
+<li>Lamb CA, Kennedy NA, Raine T, et al. British Society of Gastroenterology consensus guidelines on the management of inflammatory bowel disease in adults. <i>Gut.</i> 2019;68(suppl 3):s1-s106.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/ct2/show/record/NCT01647516. Updated May 19, 2021. Accessed May 11, 2022.</li>
+</ol>
+</div>
+<div class="refrence-section study-design d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral Presentation at: ECCO 2022; February 16-19, 2022. Presentation DOP44.</li>
+<li>Data on File. BMS-REF-OZA-0031. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Data on File. BMS-REF-OZA-0022. Princeton, NJ; Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual, May 21–24, 2022. Poster Tu1458.</li>
+<li>Long M, Cross R, Calkwood J, et al. Ozanimod first-dose cardiac effects in patients with moderately to severely active ulcerative colitis and relapsing multiple sclerosis. Poster presented at AIBD 2021; December 9–11, 2021.</li>
+</ol>
+</div>
+<div class="refrence-section efficacy d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy-naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis [supplementary appendix]. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Siegmund B, Axelrad J, Pondel M, et al. Rapidity of ozanimod-induced symptomatic response and remission in patients with moderately to severely active ulcerative colitis: results from the induction period of True North. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) Virtual; February 16–19, 2022.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2023.</li>
+<li>Panaccione R, Afzali A, Hudesman D, et al. Extended therapy with ozanimod for delayed responders to ozanimod in moderately to severely active ulcerative colitis: data from the True North open-label extension study. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1450.</li>
+<li>Siegmund B, Irving P, D’Haens G, et al. Ozanimod as a maintenance therapy in advanced therapy-naive ulcerative colitis patients with moderate vs severe endoscopic disease. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP135.</li>
+<li>Danese S, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Oral presentation at: ECCO 2022: February 16–19, 2022. Presentation DOP44.</li>
+<li>Danese S, Abreu MT, Wolf DC, et al. Efficacy and safety of 3 years of continuous ozanimod treatment: an interim analysis of the True North open-label extension study. Oral presentation at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Presentation DOP37.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study.<i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Data on File. BMS_ZEP008535. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+<li>Danese S, Panaccione R, Abreu MT, et al. Efficacy and safety of approximately 3 years of continuous ozanimod in moderately to severely active ulcerative colitis: interim analysis of the True North open-label extension. <i>J Crohns Colitis.</i> Published online August 31, 2023. doi:10.1093/ecco-jcc/jjad146</li>
+</ol>
+</div>
+<div class="refrence-section tuc-umet-need d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Irving P, Long MD, Siegmund B, et al. Efficacy of ozanimod as an induction therapy in advanced therapy–naive ulcerative colitis patients suboptimally controlled on conventional treatments. Oral presentation at: United European Gastroenterology (UEG) Week 2023; Copenhagen, Denmark; October 14–17, 2023. Presentation OP133.</li>
+</ol>
+</div>
+<div class="refrence-section tuc-patient d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Study of ozanimod (RPC1063) in relapsing multiple sclerosis (MS) (SUNBEAM). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02294058. Updated November 25, 2020. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod in relapsing multiple sclerosis (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02047734. Updated February 11, 2021. Accessed July 26, 2023.</li>
+<li>Efficacy and safety study of ozanimod (RPC1063) in relapsing multiple sclerosis patients (RADIANCE). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01628393. Updated November 2, 2021. Accessed September 6, 2023.</li>
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med.</i> 2021;385(14):1280-1291.</li>
+<li>Safety and efficacy trial of RPC1063 for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02435992. Updated September 1, 2021. Accessed July 26, 2023.</li>
+<li>An extension study of RPC1063 as therapy for moderate to severe ulcerative colitis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02531126. Updated September 18, 2023. Accessed September 25, 2023.</li>
+<li>A multi-site, open-label extension trial of oral RPC1063 in relapsing multiple sclerosis. ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT02576717. Updated January 30, 2024. Accessed February 6, 2024.</li>
+<li>Nakase H, Fujii T, Hisamatsu T, et al. Ozanimod as induction and maintenance therapy for ulcerative colitis: a randomized, double-blind, placebo-controlled study in Japan (J-True North). Poster presented at: Digestive Disease Week (DDW) 2024; Washington, DC; May 18-21, 2024. Poster Su1795.</li>
+<li>Study describing cognitive processing speed changes in relapsing multiple sclerosis subjects treated with ozanimod (RPC-1063) (ENLIGHTEN). Clinicaltrials.gov. https://clinicaltrials.gov/study/NCT0414035. Updated November 15, 2023. Accessed June 18, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0076. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Data on File. BMS-REF-OZA-0077. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Selmaj KW, Steinman L, Comi G, et al. Long-term safety and efficacy of ozanimod in relapsing multiple sclerosis: final analysis of the DAYBREAK open-label extension study. Poster presented at: ACTRIMS 2024 Forum; February 29–March 2, 2024; West Palm Beach, FL. Poster P090.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), a new oral treatment for relapsing forms of multiple sclerosis. Princeton, NJ: Bristol-Myers Squibb Company; 2020.</li>
+<li>Press Release. U.S. Food and Drug Administration approves Bristol Myers Squibb’s ZEPOSIA<sup>®</sup> (ozanimod), an oral treatment for adults with moderately to severely active ulcerative colitis. Princeton, NJ: Bristol-Myers Squibb Company; 2021.</li>
+<li>Data on File. BMS-REF-0079. Princeton, NJ: Bristol-Myers Squibb Company; 2024.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+</ol>
+</div>
+<div class="refrence-section safety d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Sandborn WJ, Feagan BG, D’Haens G, et al; True North Study Group. Ozanimod as induction and maintenance therapy for ulcerative colitis. <i>N Engl J Med</i>. 2021;385(14):1280-1291.</li>
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Panaccione R, Danese S, Wolf DC, et al. Long-term safety of 3 years of ozanimod in moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Poster presented at: European Crohn’s and Colitis Organisation (ECCO) 2023; Copenhagen, Denmark; March 1–4, 2023. Poster P405.</li>
+<li>Efficacy and safety study of ozanimod in ulcerative colitis (Touchstone). ClinicalTrials.gov. https://clinicaltrials.gov/study/NCT01647516. Updated May 19, 2021. Accessed July 26, 2023.</li>
+<li>Long M, Cross RK, Lichtenstein GR, et al. Long-term cardiac safety of ozanimod in phase 3 clinical program of ulcerative colitis and relapsing multiple sclerosis. Presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Presentation 15.</li>
+<li>Rieder F, Wolf DC, Charles L, Kollengode K, Patel A, Ghosh S. Incidence of infections in patients with moderately to severely active ulcerative colitis treated with ozanimod and relationship to significant lymphopenia: results from a pooled safety analysis. Poster presented at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Danese S, Feagan BG, Wolf DC. Ozanimod as maintenance therapy in patients with moderate-to-severe ulcerative colitis: results from the phase 3, randomized, double-blind, placebo-controlled True North study. Paper presented at: United European Gastroenterology Week Virtual 2020; October 10–14, 2020. Presentation LB10.</li>
+<li>D’Haens G, Colombel JF, Lichtenstein GR, et al. Safety of ozanimod in patients with moderately to severely active ulcerative colitis over time: pooled analysis from phase 2, phase 3, and open-label extension trials. Oral presentation at: DDW 2021 Virtual Digestive Disease Week; May 21–23, 2021.</li>
+<li>Sandborn WJ, Feagan BG, Hanauer S, et al. Long-term efficacy and safety of ozanimod in moderately to severely active ulcerative colitis: results from the open-label extension of the randomized, phase 2 TOUCHSTONE study. <i>J Crohns Colitis</i>. 2021;15(7):1120-1129.</li>
+<li>Siegel CA, Danese S, Rubin DT, et al. Safety of long-term ozanimod treatment for up to 4 years in patients with moderately to severely active ulcerative colitis: an interim analysis of the True North open-label extension. Oral presentation at: European Crohn's and Colitis Organisation (ECCO) 2024; Stockholm, Sweden; February 21–24, 2024.</li>
+<li>Data on File. BMS-REF-OZA-0066. Princeton, NJ: Bristol-Myers Squibb Company; 2022.</li>
+<li>Wolf DC, Colombel JF, Ponich T, et al. Long-term use of ozanimod in patients with moderately to severely active ulcerative colitis. Poster presented at: Digestive Disease Week (DDW); San Diego, CA, and Virtual; May 21–24, 2022. Poster Tu1458.</li>
+</ol>
+</div>
+<div class="refrence-section moa d-none"><p class="reference-title">References:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+<li>Sandborn WJ, Vermeire S, Peyrin-Biroulet L, et al. Etrasimod as induction and maintenance therapy for ulcerative colitis (ELEVATE): two randomised, double-blind, placebo-controlled, phase 3 studies [published correction appears in <i>Lancet</i>. 2023 Mar 25;401(10381):1000]. <i>Lancet</i>. 2023;401(10383):1159-1171.</li>
+<li>McGinley MP, Cohen JA. Sphingosine 1-phosphate receptor modulators in multiple sclerosis and other conditions [published correction appears in <i>Lancet</i>. 2021 Sep 25;398(10306):1132]. <i>Lancet</i>. 2021;398(10306):1184-1194.</li>
+<li>Roggeri A, Schepers M, Tiane A, et al. Sphingosine-1-phosphate receptor modulators and oligodendroglial cells: beyond immunomodulation. <i>Int J Mol Sci</i>. 2020;21(20):7537.</li>
+<li>Pérez-Jeldres T, Tyler CJ, Boyer JD, et al. Cell trafficking interference in inflammatory bowel disease. <i>Inflamm Bowel Dis.</i> 2019;2(25):270-282.</li>
+<li>Al-Bawardy B, Shivashankar R, Proctor DD. Novel and emerging therapies for inflammatory bowel disease. <i>Front Pharmacol.</i> 2021;12:651415.</li>
+<li>Nikolakis D, de Voogd FAE, Pruijit MJ, et al. The role of the lymphatic system in the pathogenesis and treatment of inflammatory bowel disease. <i>Int J Mol Sci.</i> 2022;23(3):1854.</li>
+<li>Harris S, Tran JQ, Southworth H, Spencer CM, Cree BAC, Zamvil SS. Effect of the sphingosine-1-phosphate receptor modulator ozanimod on leukocyte subtypes in relapsing MS. <i>Neurol Neuroimmunol Neuroinflamm.</i> 2020;7(5):e839.</li>
+<li>Jaigirdar SA, Benson RA, Elmesmari A, et al. Sphingosine 1-phosphate promotes the persistence of activated CD4 T cells in inflamed sites. <i>Front Immunol.</i> 2017;8:1627.</li>
+<li>Scott FL, Clemons B, Brooks J, et al. Ozanimod (RPC1063) is a potent sphingosine 1-phosphate receptor-1 (S1P<sub>1</sub>) and receptor-5 (S1P<sub>5</sub>) agonist with autoimmune disease-modifying activity. <i>Br J Pharmacol.</i> 2016;173:1778-1792.</li>
+<li>Kayal M, Shah S. Ulcerative colitis: current and emerging treatment strategies. <i>J Clin Med.</i> 2019;9(1):94.</li>
+<li>Olivera P, Danese S, Peyrin-Biroulet L. Next generation of small molecules in inflammatory bowel disease. <i>Gut.</i> 2017;66(2):199-209.</li>
+<li>Lucaciu LA, Seicean R, Seicean A. Small molecule drugs in the treatment of inflammatory bowel diseases: which one, when and why? – a systematic review. <i>Eur J Gastroenterol Hepatol.</i> 2020;32(6):669-677.</li>
+</ol>
+</div>
+<div class="refrence-section dosing d-none"><p class="reference-title">Reference:</p>
+<ol class="ref-list">
+<li>Zeposia. Prescribing Information. Bristol-Myers Squibb Company; 2024.</li>
+</ol>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    <div class="isi-overlay" style="display: none;"></div>
+
+		
+		
+	
+</div>
+
+    
+</div>
+
+</main>
