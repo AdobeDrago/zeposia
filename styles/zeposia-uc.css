@@ -154,3 +154,9 @@ content: "";
 display: block;
 height: 12px;
 }
+
+/* Hide standalone ISI-rendering section (content shown inline in column-control) */
+.isi-rendering.aem-GridColumn {
+display: none !important;
+height: 0 !important;
+}
