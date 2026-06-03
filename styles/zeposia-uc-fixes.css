@@ -13,3 +13,17 @@
   height: 55px !important;
   width: auto !important;
 }
+/* Fix hero card height (source has inline height:539px from CMS) */
+.card-color-container {
+  height: 539px !important;
+}
+/* Fix footer-links section height */
+.footer-links-section {
+  height: 54px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+/* Fix utility footer height */
+.utility-nav-footer {
+  height: 38px !important;
+}
