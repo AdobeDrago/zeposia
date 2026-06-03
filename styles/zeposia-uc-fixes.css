@@ -1,0 +1,15 @@
+/* Fix nav height to match source (91px) */
+.column-control-column > .experiencefragment.section {
+  min-height: 91px !important;
+}
+.column-control-column > .experiencefragment .navbar {
+  min-height: 91px !important;
+}
+.column-control-column > .experiencefragment .navbar .container {
+  min-height: 75px !important;
+}
+/* Fix navbar-brand logo area */
+.navbar-brand img {
+  height: 55px !important;
+  width: auto !important;
+}
