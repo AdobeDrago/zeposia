@@ -168,8 +168,6 @@ body.zeposia-ms::after {
   visibility: hidden;
 }
 /* Chat: show floating Request a Rep button, hide chat window until opened */
-#chat-window { display: none !important; }
-#chat-window.chat-open { display: block !important; }
 #open-converse { display: block !important; cursor: pointer; }
 
 /* Hide HCP entry modal after dismissal (blocks clicks on underlying elements) */
