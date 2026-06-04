@@ -62,3 +62,8 @@ body > header, body > footer { display: none !important; }
 
 #moa-pgcont .pt-sm-40 { padding-top: 40px; }
 #moa-pgcont .moa-img { height: 51px; margin-top: 20px; }
+
+/* Fix pt-sm-40 applying at desktop - should only apply at mobile */
+@media (min-width: 1024px) {
+  #moa-pgcont .pt-sm-40 { padding-top: 0 !important; }
+}
