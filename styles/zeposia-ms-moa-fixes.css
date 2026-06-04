@@ -66,3 +66,12 @@ body > header, body > footer { display: none !important; }
 @media (min-width: 1024px) {
   #moa-pgcont .pt-sm-40 { padding-top: 0 !important; }
 }
+
+/* Fix scrollbar causing layout shift at tablet */
+html { 
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
