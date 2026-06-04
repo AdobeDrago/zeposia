@@ -59,7 +59,7 @@
     carousel.slick({
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 5000,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
