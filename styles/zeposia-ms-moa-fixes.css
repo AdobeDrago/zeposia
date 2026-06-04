@@ -1,29 +1,64 @@
-/* EDS Snowflake Overlay Fixes for MS MOA Page */
-
-/* Hide EDS default header/footer — template provides its own */
+/* Fix body display:none from EDS styles.css (anti-FOUC) */
+body { display: block !important; overflow: visible !important; }
+/* Zeposia MS MOA - Fixes CSS */
+/* Hide EDS header/footer */
 body > header, body > footer { display: none !important; }
 
-/* Ensure overlay main is visible */
-main { display: block !important; }
-
 /* Show MOA page content */
-#moa-pgcont, #common-pgcont, #innerpgcont { display: flex !important; }
+#moa-pgcont { display: block !important; }
 
-/* Hide other page content sections */
-#home-pgcont,
-#efficacy-pgcont,
-#safety-pgcont,
-#study-design-pgcont,
-#getting-started-pgcont,
-#support-pgcont { display: none !important; }
+/* Hide other page containers */
+#home-pgcont, #efficacy-pgcont, #safety-pgcont, #study-design-pgcont,
+#getting-started-pgcont, #support-pgcont, #tk-pgcont { display: none !important; }
 
-/* Show MOA references, hide others */
-.isi-reference-section { display: none !important; }
-.isi-reference-section.moa_ref { display: block !important; }
+/* Hide ISI rendering at desktop */
+.isi-rendering.aem-GridColumn { display: none !important; }
 
-/* ISI sections */
-.isi-master-container { display: block !important; }
-.isi-rendering-footer { display: block !important; }
+/* Show MOA reference section */
+.moa_ref { display: block !important; }
 
-/* Ensure banner flex layout */
-.flx-ban { display: flex !important; }
+/* Fix nested column padding */
+#common-pgcont .column-control .column-control .col { padding: 0 !important; }
+
+/* Fix background image URLs */
+#greenbg { background-image: url(https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/green-bg-2.png) !important; }
+
+/* Fix Bootstrap d-lg-block override */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
+
+/* MOA-specific fixes */
+.innersection.moa.bg-leafve::before,
+.innersection.moa.bg-leafve::after { display: none; }
+.desc-text ul li::before { background: #000000; }
+.mb-bg-clr { background: #D9E0F1; }
+.s1p2-img { margin-top: 25px; }
+.blue_b { background: #0032A0; }
+
+@media (min-width: 1024px) {
+  .mg-crd { margin: 40px 0 38px; }
+  .green-box { width: 100%; margin: 40px 0px 55px; }
+  .moa-image .desc .desc-text div:nth-child(2) { width: 155px; }
+  .moa-image .desc .desc-text div:nth-child(3) { width: 120px; }
+}
+
+@media (max-width: 1023px) {
+  .p-lft { margin-left: 20px; }
+  .mb-wd-ig { width: auto !important; }
+  .moa-image .main { padding: 68px 0 0px; }
+  .moa-image .desc .desc-text div:nth-child(2) { margin: 0 0 15px; }
+  .desc-text ul li::before { top: 5px; }
+  .mob-blue { padding-right: 0px !important; }
+  .desc-text.sp-text { margin-top: 50px; margin-left: 3px; }
+}
+
+.mrgT12 { margin-top: 12px; }
+.lh-14 { line-height: 18px; }
+.bodypara.txt-space { padding-top: 20px; }
+.mrb15 { margin-bottom: -15px; }
+.cmp-backToTop-wrapper.hidden.d-block { display: block !important; }
+
+#moa-pgcont .pt-sm-40 { padding-top: 40px; }
+#moa-pgcont .moa-img { height: 51px; margin-top: 20px; }
