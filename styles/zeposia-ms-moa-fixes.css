@@ -1,5 +1,3 @@
-/* Reveal content - this file loads with external CSS so page is styled when visible */
-.root.responsivegrid { opacity: 1 !important; transition: opacity 0.15s ease-in; }
 /* Zeposia MS MOA - Fixes CSS */
 /* Hide EDS header/footer */
 body > header, body > footer { display: none !important; }
