@@ -548,7 +548,7 @@ loadPage();
           car[0].appendChild(items[i].cloneNode(true));
         }
         car.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 5000 });
-        setTimeout(function(){ car.slick("slickSetOption", "speed", 5000, true); }, 500);
+        car.slick("slickSetOption", "speed", 5000, true);
       });
   }
   var attempts = 0;
