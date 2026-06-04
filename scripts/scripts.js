@@ -509,7 +509,7 @@ loadPage();
     var triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
     if (!triggers.length) return false;
     var chatWindow = document.getElementById('chat-window');
-    if (!chatWindow || chatWindow.offsetHeight < 10) {
+    if (true) {
       if (chatWindow) chatWindow.remove();
       chatWindow = document.createElement('div');
       chatWindow.id = 'chat-window';
