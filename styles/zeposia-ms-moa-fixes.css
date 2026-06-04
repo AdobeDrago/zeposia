@@ -21,7 +21,6 @@ body > header, body > footer { display: none !important; }
 #common-pgcont .column-control .column-control .col { padding: 0 !important; }
 
 /* Fix background image URLs */
-#greenbg { background-image: url(https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/green-bg-2.png) !important; }
 
 /* Fix Bootstrap d-lg-block override */
 @media (min-width: 992px) {
