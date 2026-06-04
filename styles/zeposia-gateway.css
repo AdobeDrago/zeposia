@@ -111,6 +111,6 @@ body:has(.entry-modal[style*="display:block"]) {
   border-radius: 9px !important;
 }
 
-.cmp-modal.entry-modal .modal-body.p-5 {
+#entryModal .modal-body.p-5, .cmp-modal.entry-modal .modal-body.p-5 {
 padding: 0 !important;
 }
