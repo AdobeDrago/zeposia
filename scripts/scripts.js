@@ -503,17 +503,18 @@ loadPage();
 
 
 
-// Global: Request a Rep chat popup
+// Global: Request a Rep chat popup (injects on all pages)
 (function() {
   function setup() {
     var triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
     if (!triggers.length) return false;
     var chatWindow = document.getElementById('chat-window');
-    if (!chatWindow) {
+    if (!chatWindow || chatWindow.offsetHeight < 10) {
+      if (chatWindow) chatWindow.remove();
       chatWindow = document.createElement('div');
       chatWindow.id = 'chat-window';
-      chatWindow.style.cssText = 'position:fixed;right:0;bottom:80px;width:320px;max-height:500px;z-index:9999;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:none;overflow:auto;';
-      chatWindow.innerHTML = '<div class="chat-header" style="background:#0054a6;color:#fff;padding:12px 15px;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:space-between"><div class="chat-header-label" style="font-weight:bold">Request a Rep</div><div><span class="chat-header-btn minimize" style="cursor:pointer;margin-right:10px;color:#fff">&#8722;</span><span class="chat-header-btn close" style="cursor:pointer;color:#fff">&#10005;</span></div></div><div style="padding:20px"><p style="margin:0 0 15px;font-size:14px">Before we begin, please know that all conversations are recorded for quality purposes.</p><p style="margin:0 0 15px;font-size:14px">This chat feature is intended for healthcare professionals (HCPs).</p><p style="margin:0 0 15px;font-size:14px">I cannot provide medical advice. Please consult your healthcare provider for medical guidance.</p><p style="margin:0 0 15px;font-size:12px"><b>Terms:</b> When you interact with this BMS chat feature, any personal information collected is governed by our <a href="https://www.bms.com/privacy-policy.html" target="_blank">Privacy Notice</a> which may be updated periodically.</p><div style="margin-top:15px"><button class="intro-accept" style="background:#0054a6;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;margin-right:10px">Accept</button><button class="intro-decline" style="background:#fff;color:#0054a6;border:1px solid #0054a6;padding:8px 20px;border-radius:4px;cursor:pointer">Decline</button></div></div>';
+      chatWindow.style.cssText = 'position:fixed;right:0;bottom:80px;width:320px;max-height:500px;z-index:9999;background:#fff;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:none;overflow:auto;font-family:Montserrat,sans-serif;';
+      chatWindow.innerHTML = '<div style="background:#0054a6;color:#fff;padding:12px 15px;border-radius:8px 8px 0 0;display:flex;align-items:center;justify-content:space-between"><div style="font-weight:bold;font-size:15px">Request a Rep</div><div><span class="chat-close" style="cursor:pointer;color:#fff;font-size:18px">&#10005;</span></div></div><div style="padding:20px"><p style="margin:0 0 12px;font-size:13px;line-height:1.5">Before we begin, please know that all conversations are recorded for quality purposes.</p><p style="margin:0 0 12px;font-size:13px;line-height:1.5">This chat feature is intended for healthcare professionals (HCPs).</p><p style="margin:0 0 12px;font-size:13px;line-height:1.5">I cannot provide medical advice. Please consult your healthcare provider for medical guidance.</p><p style="margin:0 0 12px;font-size:11px;line-height:1.4"><b>Terms:</b> When you interact with this BMS chat feature, any personal information collected is governed by our <a href="https://www.bms.com/privacy-policy.html" target="_blank" style="color:#0054a6">Privacy Notice</a> which may be updated periodically.</p><div style="margin-top:15px;display:flex;gap:10px"><button class="chat-accept" style="background:#0054a6;color:#fff;border:none;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:13px">Accept</button><button class="chat-decline" style="background:#fff;color:#0054a6;border:1px solid #0054a6;padding:8px 20px;border-radius:4px;cursor:pointer;font-size:13px">Decline</button></div></div>';
       document.body.appendChild(chatWindow);
     }
     triggers.forEach(function(btn) {
@@ -522,15 +523,11 @@ loadPage();
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        var d = chatWindow.style.display;
-        chatWindow.style.display = (d === 'none' || d === '') ? 'block' : 'none';
+        chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
       });
     });
-    chatWindow.querySelectorAll('.chat-header-btn.close, .chat-header-btn.minimize').forEach(function(b) {
-      b.addEventListener('click', function() { chatWindow.style.display = 'none'; });
-    });
-    var decline = chatWindow.querySelector('.intro-decline');
-    if (decline) decline.addEventListener('click', function() { chatWindow.style.display = 'none'; });
+    chatWindow.querySelector('.chat-close')?.addEventListener('click', function() { chatWindow.style.display = 'none'; });
+    chatWindow.querySelector('.chat-decline')?.addEventListener('click', function() { chatWindow.style.display = 'none'; });
     return true;
   }
   var attempts = 0;
