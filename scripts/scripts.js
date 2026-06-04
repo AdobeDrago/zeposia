@@ -463,3 +463,39 @@ loadPage();
     if (setup() || ++attempts > 20) clearInterval(interval);
   }, 250);
 })();
+
+// Tab switching for efficacy page (and any page with .tab-switch + .page-section)
+(function initTabs() {
+  function setup() {
+    const sections = document.querySelectorAll('.color-box.highlight-section, [id=week10], [id=week52], [id=ole-study]');
+    if (!sections.length) return false;
+    let bound = false;
+    sections.forEach(section => {
+      const tabs = section.querySelectorAll('.tab-switch');
+      const panels = section.querySelectorAll('.page-section');
+      if (tabs.length === 0 || panels.length === 0) return;
+      tabs.forEach((tab, idx) => {
+        tab.style.cursor = 'pointer';
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          panels.forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
+          tab.classList.add('active');
+          if (panels[idx]) { panels[idx].classList.add('active'); panels[idx].style.display = 'block'; }
+        });
+        bound = true;
+      });
+    });
+    // Smooth scroll for nav-link anchors
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+    });
+    return bound;
+  }
+  let attempts = 0;
+  const interval = setInterval(() => {
+    if (setup() || ++attempts > 20) clearInterval(interval);
+  }, 250);
+})();
