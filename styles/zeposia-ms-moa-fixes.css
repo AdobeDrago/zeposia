@@ -1,5 +1,3 @@
-/* Fix body display:none from EDS styles.css (anti-FOUC) */
-body { display: block !important; overflow: visible !important; }
 /* Zeposia MS MOA - Fixes CSS */
 /* Hide EDS header/footer */
 body > header, body > footer { display: none !important; }
