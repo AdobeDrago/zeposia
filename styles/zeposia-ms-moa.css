@@ -1,3 +1,39 @@
-/* Zeposia MS MOA - Template CSS placeholder */
-/* Actual styles are in zeposia-ms-moa-fixes.css loaded via template HTML link tag */
+/* Critical styles loaded BEFORE body.appear fires */
+/* Prevents FOUC while external CSS (base.min.css, style.css) loads from zeposiahcp.com */
 
+/* Hide everything until external stylesheets load */
+body.appear .root.responsivegrid {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+/* Show content once fonts and external CSS are ready */
+body.appear.fonts-loaded .root.responsivegrid,
+body.appear .root.responsivegrid:has(~ style[data-loaded]) {
+  opacity: 1;
+}
+
+/* Fallback: show after 1.5s regardless (prevents permanent blank) */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+body.appear .root.responsivegrid {
+  animation: fadeIn 0s 1.5s forwards;
+}
+
+/* Critical background - matches source site green */
+#greenbg {
+  background-color: #e8efe8;
+}
+
+/* Base font so text doesn't reflow */
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Hide raw DA content that shows before overlay */
+body:not([class*="ms-moa"]) main {
+  visibility: hidden;
+}
