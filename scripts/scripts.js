@@ -502,13 +502,12 @@ loadPage();
 
 
 
-// Global: Request a Rep chat toggle (works on all MS pages)
+// Global: Request a Rep chat toggle (works on all pages with the button)
 (function() {
   function setup() {
     var chatWindow = document.getElementById('chat-window');
     var triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
     if (!triggers.length) return false;
-    
     triggers.forEach(function(btn) {
       btn.removeAttribute('onclick');
       btn.style.cursor = 'pointer';
@@ -517,10 +516,11 @@ loadPage();
         e.stopPropagation();
         if (chatWindow) {
           chatWindow.classList.toggle('chat-open');
+        } else {
+          window.open('https://www.zeposiahcp.com' + window.location.pathname, '_blank');
         }
       });
     });
-    
     if (chatWindow) {
       var closeBtn = chatWindow.querySelector('.chat-header-btn.close');
       var minBtn = chatWindow.querySelector('.chat-header-btn.minimize');
