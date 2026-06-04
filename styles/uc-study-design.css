@@ -1,4 +1,71 @@
 /* UC Study Design - EDS overlay fixes */
+
+/* Self-hosted Montserrat fonts (matching source site metrics) */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratBold';
+  src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratSemiBold';
+  src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratMedium';
+  src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MontserratExtraBold';
+  src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Hide EDS default header/footer */
 body > header, body > footer { display: none !important; }
 main { display: block !important; }
 .isi-rendering.aem-GridColumn { display: none !important; }
@@ -6,6 +73,7 @@ main { display: block !important; }
 /* Show study-design reference section, hide others */
 .refrence-section { display: none !important; }
 .refrence-section.study-design { display: block !important; }
+.refrence-section.homePage { display: none !important; }
 
 /* Fix nested column padding */
 #common-pgcont .column-control .column-control .col {
@@ -21,6 +89,3 @@ main { display: block !important; }
 
 .flx-ban { display: flex !important; }
 .banner-info.ucs_home { padding: 0; }
-
-/* Hide homepage reference, show study-design */
-.refrence-section.homePage { display: none !important; }
