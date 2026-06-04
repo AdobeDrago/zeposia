@@ -1,23 +1,105 @@
-/* Critical styles - prevents FOUC while external CSS loads from zeposiahcp.com */
+/* Zeposia MS MOA - Template CSS (loaded before body.appear) */
 
-/* Keep content hidden initially, fade in after external CSS likely loaded */
-body.appear .root.responsivegrid {
-  animation: revealContent 0s 0.8s both;
+/* Hide EDS header/footer */
+body > header, body > footer { display: none !important; }
+
+/* Show MOA page content */
+#moa-pgcont { display: block !important; }
+
+/* Hide other page containers */
+#home-pgcont, #efficacy-pgcont, #safety-pgcont, #study-design-pgcont,
+#getting-started-pgcont, #support-pgcont, #tk-pgcont { display: none !important; }
+
+/* Hide ISI rendering at desktop */
+.isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Show MOA reference section */
+.moa_ref { display: block !important; }
+
+/* Fix nested column padding */
+#common-pgcont .column-control .column-control .col { padding: 0 !important; }
+
+/* Fix Bootstrap d-lg-block override */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
 }
 
-@keyframes revealContent {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* MOA-specific layout fixes */
+.innersection.moa.bg-leafve::before,
+.innersection.moa.bg-leafve::after { display: none; }
+.desc-text ul li::before { background: #000000; }
+.mb-bg-clr { background: #D9E0F1; }
+.s1p2-img { margin-top: 25px; }
+.blue_b { background: #0032A0; }
+
+@media (min-width: 1024px) {
+  .mg-crd { margin: 40px 0 38px; }
+  .green-box { width: 100%; margin: 40px 0px 55px; }
+  .moa-image .desc .desc-text div:nth-child(2) { width: 155px; }
+  .moa-image .desc .desc-text div:nth-child(3) { width: 120px; }
+  #moa-pgcont .pt-sm-40 { padding-top: 0 !important; }
 }
 
-/* Critical background */
-#greenbg {
-  background-color: #e8efe8;
+@media (max-width: 1023px) {
+  .p-lft { margin-left: 20px; }
+  .mb-wd-ig { width: auto !important; }
+  .moa-image .main { padding: 68px 0 0px; }
+  .moa-image .desc .desc-text div:nth-child(2) { margin: 0 0 15px; }
+  .desc-text ul li::before { top: 5px; }
+  .mob-blue { padding-right: 0px !important; }
+  .desc-text.sp-text { margin-top: 50px; margin-left: 3px; }
 }
 
-/* Base font */
-body {
-  font-family: Montserrat, sans-serif;
-  margin: 0;
-  overflow-x: hidden;
+.mrgT12 { margin-top: 12px; }
+.lh-14 { line-height: 18px; }
+.bodypara.txt-space { padding-top: 20px; }
+.mrb15 { margin-bottom: -15px; }
+.cmp-backToTop-wrapper.hidden.d-block { display: block !important; }
+#moa-pgcont .pt-sm-40 { padding-top: 40px; }
+#moa-pgcont .moa-img { height: 51px; margin-top: 20px; }
+
+/* FIX: Hide HCP modals that block clicks */
+.cmp-modal.entry-modal,
+.cmp-modal.exit-modal,
+.isi-overlay,
+.modal-backdrop {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* FIX: Scrollbar layout shift */
+html {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* FIX: ISI/Footer Important Safety Information section layout */
+/* Match source site's narrow container for ISI content */
+.footer.section .container.px-lg-0,
+.footer.section .cmp-footer-isi-content {
+  max-width: 375px !important;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer.section .isi-content {
+  padding-left: 0;
+}
+
+.footer.section .isi-header {
+  background: #005c53;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: 700;
+}
+
+.footer.section .isi-footer-wrapper {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 15px;
 }
