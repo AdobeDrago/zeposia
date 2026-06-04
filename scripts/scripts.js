@@ -425,43 +425,41 @@ async function loadPage() {
 
 loadPage();
 
-// Indications popup: show once per session, closeable
-(function initIndicationModal() {
+// Indications popup: show once, close button, localStorage persistence
+(function() {
   const KEY = 'zeposia_ind_seen';
   function setup() {
     const modal = document.getElementById('indication_modal');
-    if (!modal) return;
+    if (!modal) return false;
     if (localStorage.getItem(KEY)) {
       modal.style.display = 'none';
-      return;
+      return true;
     }
     modal.style.display = 'block';
     modal.classList.add('show');
-    const closeBtn = modal.querySelector('.btn-close');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
+    const close = modal.querySelector('.btn-close') || modal.querySelector('[class*=close]');
+    if (close) {
+      close.style.cursor = 'pointer';
+      close.addEventListener('click', () => {
         modal.style.display = 'none';
         modal.classList.remove('show');
         localStorage.setItem(KEY, '1');
       });
     }
-    // Also handle clicking the "Indications" nav link to toggle
-    const navLink = document.querySelector('#nav-ind-m, .nav-indlink');
-    if (navLink) {
-      navLink.addEventListener('click', (e) => {
+    // Nav link toggle
+    document.querySelectorAll('#nav-ind-m, .nav-indlink').forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
-        if (modal.style.display === 'none') {
-          modal.style.display = 'block';
-          modal.classList.add('show');
-        } else {
-          modal.style.display = 'none';
-          modal.classList.remove('show');
-          localStorage.setItem(KEY, '1');
-        }
+        const vis = modal.style.display !== 'none';
+        modal.style.display = vis ? 'none' : 'block';
+        if (vis) localStorage.setItem(KEY, '1');
       });
-    }
+    });
+    return true;
   }
-  // Run after overlay completes (slight delay)
-  if (document.readyState === 'complete') setTimeout(setup, 500);
-  else window.addEventListener('load', () => setTimeout(setup, 500));
+  // Retry until modal exists (overlay may not have finished)
+  let attempts = 0;
+  const interval = setInterval(() => {
+    if (setup() || ++attempts > 20) clearInterval(interval);
+  }, 250);
 })();
