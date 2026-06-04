@@ -1,9 +1,26 @@
+/* UC Study Design - EDS overlay fixes */
 body > header, body > footer { display: none !important; }
 main { display: block !important; }
 .isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Show study-design reference section, hide others */
 .refrence-section { display: none !important; }
 .refrence-section.study-design { display: block !important; }
+
+/* Fix nested column padding */
 #common-pgcont .column-control .column-control .col {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* Bootstrap responsive fixes */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
+
+.flx-ban { display: flex !important; }
+.banner-info.ucs_home { padding: 0; }
+
+/* Hide homepage reference, show study-design */
+.refrence-section.homePage { display: none !important; }
