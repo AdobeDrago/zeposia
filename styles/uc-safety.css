@@ -22,11 +22,5 @@ main { display: block !important; }
 .flx-ban { display: flex !important; }
 .banner-info.ucs_home { padding: 0; }
 
-/* Hide indication modal by default */
-#indication_modal { display: none !important; }
-/* Indications popup hidden - no source JS to toggle */
-
-
-/* Hide HCP entry modal overlay - blocks all clicks */
-#entryModal, .cmp-modal.entry-modal { display: none !important; }
-
+/* Indication modal - shown/hidden by JS, not CSS */
+#indication_modal { z-index: 1060; position: absolute; }
