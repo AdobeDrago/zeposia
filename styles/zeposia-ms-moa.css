@@ -1,10 +1,2 @@
-/* Critical anti-FOUC: content hidden until external CSS arrives */
-/* The fixes CSS (loaded via template <link>) sets opacity:1 when it loads */
-.root.responsivegrid {
-  opacity: 0;
-}
-
-body {
-  font-family: Montserrat, sans-serif;
-  margin: 0;
-}
+/* Template-scoped CSS placeholder — required by overlay engine loadCSS() */
+/* External styles loaded via template HTML <link> tags */
