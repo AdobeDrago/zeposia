@@ -167,3 +167,8 @@ body.zeposia-ms::after {
   left: -9999px;
   visibility: hidden;
 }
+
+/* Chat window: hidden by default, toggled by Request a Rep tab */
+#chat-window { display: none !important; }
+#chat-window.chat-open { display: block !important; }
+
