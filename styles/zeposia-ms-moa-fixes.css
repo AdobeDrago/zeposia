@@ -1,0 +1,29 @@
+/* EDS Snowflake Overlay Fixes for MS MOA Page */
+
+/* Hide EDS default header/footer — template provides its own */
+body > header, body > footer { display: none !important; }
+
+/* Ensure overlay main is visible */
+main { display: block !important; }
+
+/* Show MOA page content */
+#moa-pgcont, #common-pgcont, #innerpgcont { display: flex !important; }
+
+/* Hide other page content sections */
+#home-pgcont,
+#efficacy-pgcont,
+#safety-pgcont,
+#study-design-pgcont,
+#getting-started-pgcont,
+#support-pgcont { display: none !important; }
+
+/* Show MOA references, hide others */
+.isi-reference-section { display: none !important; }
+.isi-reference-section.moa_ref { display: block !important; }
+
+/* ISI sections */
+.isi-master-container { display: block !important; }
+.isi-rendering-footer { display: block !important; }
+
+/* Ensure banner flex layout */
+.flx-ban { display: flex !important; }
