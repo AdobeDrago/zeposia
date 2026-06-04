@@ -68,13 +68,6 @@ body > header, body > footer { display: none !important; }
   pointer-events: none !important;
 }
 
-/* FIX: Scrollbar layout shift */
-html {
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-html::-webkit-scrollbar {
-  display: none;
 }
 
 /* FIX: ISI/Footer Important Safety Information section layout */
@@ -109,4 +102,9 @@ body {
   overflow: visible !important;
   overflow-y: auto !important;
   height: auto !important;
+}
+
+html {
+  overflow: auto !important;
+  overflow-y: auto !important;
 }
