@@ -499,3 +499,71 @@ loadPage();
     if (setup() || ++attempts > 20) clearInterval(interval);
   }, 250);
 })();
+
+// Carousel fix: replace frozen Slick state with simple auto-rotating carousel
+(function initCarousel() {
+  function setup() {
+    const slider = document.querySelector('.carousel.slick-initialized');
+    if (!slider) return false;
+    const track = slider.querySelector('.slick-track');
+    const list = slider.querySelector('.slick-list');
+    if (!track || !list) return false;
+
+    // Get real slides (not cloned)
+    const allSlides = track.querySelectorAll('.slick-slide');
+    const slides = [...allSlides].filter(s => !s.classList.contains('slick-cloned'));
+    if (slides.length === 0) return false;
+
+    // Remove cloned slides
+    [...allSlides].filter(s => s.classList.contains('slick-cloned')).forEach(s => s.remove());
+
+    // Reset inline styles
+    track.style.cssText = 'display:flex; transition:transform 0.5s ease; width:' + (slides.length * 100) + '%;';
+    list.style.cssText = 'overflow:hidden; width:100%;';
+    slides.forEach(s => {
+      s.style.cssText = 'width:100%; flex-shrink:0;';
+      s.querySelectorAll('img').forEach(img => { img.style.maxWidth = '100%'; img.style.height = 'auto'; });
+    });
+    slider.style.overflow = 'hidden';
+
+    let current = 0;
+    function goTo(idx) {
+      current = ((idx % slides.length) + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100 / slides.length) + '%)';
+      slides.forEach((s, i) => {
+        s.classList.toggle('slick-active', i === current);
+        s.classList.toggle('slick-current', i === current);
+        s.setAttribute('aria-hidden', i !== current ? 'true' : 'false');
+      });
+      // Update dots
+      slider.querySelectorAll('.slick-dots li').forEach((dot, i) => {
+        dot.classList.toggle('slick-active', i === current);
+      });
+    }
+
+    // Arrow handlers
+    const prev = slider.querySelector('.slick-prev');
+    const next = slider.querySelector('.slick-next');
+    if (prev) prev.addEventListener('click', () => { goTo(current - 1); resetTimer(); });
+    if (next) next.addEventListener('click', () => { goTo(current + 1); resetTimer(); });
+
+    // Dot handlers
+    slider.querySelectorAll('.slick-dots li button').forEach((btn, i) => {
+      btn.addEventListener('click', () => { goTo(i); resetTimer(); });
+    });
+
+    // Auto-rotate
+    let timer;
+    function resetTimer() { clearInterval(timer); timer = setInterval(() => goTo(current + 1), 5000); }
+    resetTimer();
+
+    // Initialize to first slide
+    goTo(0);
+    return true;
+  }
+
+  let attempts = 0;
+  const interval = setInterval(() => {
+    if (setup() || ++attempts > 30) clearInterval(interval);
+  }, 300);
+})();
