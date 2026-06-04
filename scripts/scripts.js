@@ -504,9 +504,6 @@ loadPage();
 // Carousel: load jQuery + Slick, re-fetch items from template, initialize
 (function() {
   function start() {
-// Preconnect hints for faster CDN loading
-var pc1 = document.createElement("link"); pc1.rel = "preconnect"; pc1.href = "https://code.jquery.com"; document.head.appendChild(pc1);
-var pc2 = document.createElement("link"); pc2.rel = "preconnect"; pc2.href = "https://cdn.jsdelivr.net"; document.head.appendChild(pc2);
     var container = document.querySelector('.carousel-container-body .carousel');
     if (!container) return false;
     if (!window.jQuery) {
@@ -550,11 +547,11 @@ var pc2 = document.createElement("link"); pc2.rel = "preconnect"; pc2.href = "ht
           items[i].removeAttribute('aria-hidden');
           car[0].appendChild(items[i].cloneNode(true));
         }
-        car.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 5000, cssEase: "linear" });
+        car.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600 });
       });
   }
   var attempts = 0;
-  var interval = setInterval(function() { if (start() || ++attempts > 30) clearInterval(interval); }, 100);
+  var interval = setInterval(function() { if (start() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
 
 // Dropdown menus: toggle on click (Bootstrap dropdowns without Bootstrap JS)
