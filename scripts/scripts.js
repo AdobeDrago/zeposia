@@ -502,48 +502,31 @@ loadPage();
 
 
 
-
-// Global: Request a Rep chat popup (injects chat window if missing, toggles on click)
+// Global: Request a Rep chat toggle (works on all pages with the button)
 (function() {
-  var CHAT_HTML = '<div id="chat-window"><div class="chat-header"><div class="chat-header-btn close"></div><div class="chat-header-btn minimize"></div><div class="chat-header-btn icon"></div><div class="chat-header-label bot" id="header-label">Request a Rep</div></div><div id="chat-messages"><div id="msgWindow"><div class="bot-message"><p>Hello! I can help connect you with a ZEPOSIA representative. Please provide your information below.</p></div></div></div><form class="user-interaction-bar" id="chatbotForm"><div class="text-box"><input id="chat-user-input" autocomplete="off" placeholder="Write a message..."><button class="btn-chat-send" id="sendText" type="button"></button></div></form><div id="intro-overlay" style="display:block"><div id="intro-elise-icon"></div><div id="intro-para-one"><span class="introSpanOne">Before we begin, please know that all conversations are recorded for quality purposes.<br><br>This chat feature is intended for healthcare professionals (HCPs).<br><br>I cannot provide medical advice — please consult your healthcare provider for medical guidance.<br><br><b>Terms:</b> When you interact with this BMS chat feature, any personal information collected is governed by our <a href="https://www.bms.com/privacy-policy.html" target="_blank">Privacy Notice</a> which may be updated periodically.</span></div><div style="margin-top:15px"><button class="convButton-overlay" style="margin-right:10px" id="intro-accept">Accept</button><button class="convButton-overlay" id="intro-decline">Decline</button></div></div></div>';
-
   function setup() {
+    var chatWindow = document.getElementById('chat-window');
     var triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
     if (!triggers.length) return false;
-
-    var chatWindow = document.getElementById('chat-window');
-    if (!chatWindow) {
-      // Inject chat window
-      var container = document.createElement('div');
-      container.innerHTML = CHAT_HTML;
-      chatWindow = container.firstChild;
-      chatWindow.style.cssText = 'position:fixed; right:0; bottom:80px; width:320px; z-index:9999; background:#fff; border-radius:8px; box-shadow:0 4px 20px rgba(0,0,0,0.3); display:none;';
-      document.body.appendChild(chatWindow);
-    }
-
     triggers.forEach(function(btn) {
       btn.removeAttribute('onclick');
       btn.style.cursor = 'pointer';
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        chatWindow.classList.toggle('chat-open');
+        if (chatWindow) {
+          if (chatWindow.style.display === 'none' || chatWindow.style.display === '') { chatWindow.style.display = 'block'; chatWindow.classList.add('chat-open'); } else { chatWindow.style.display = 'none'; chatWindow.classList.remove('chat-open'); }
+        } else {
+          window.open('https://www.zeposiahcp.com' + window.location.pathname, '_blank');
+        }
       });
     });
-
-    // Close/minimize
-    var closeBtn = chatWindow.querySelector('.chat-header-btn.close');
-    var minBtn = chatWindow.querySelector('.chat-header-btn.minimize');
-    if (closeBtn) { closeBtn.removeAttribute('onclick'); closeBtn.style.cursor = 'pointer'; closeBtn.addEventListener('click', function() { chatWindow.classList.remove('chat-open'); }); }
-    if (minBtn) { minBtn.removeAttribute('onclick'); minBtn.style.cursor = 'pointer'; minBtn.addEventListener('click', function() { chatWindow.classList.remove('chat-open'); }); }
-
-    // Accept/Decline in intro overlay
-    var accept = chatWindow.querySelector('#intro-accept');
-    var decline = chatWindow.querySelector('#intro-decline');
-    var intro = chatWindow.querySelector('#intro-overlay');
-    if (accept) accept.addEventListener('click', function() { intro.style.display = 'none'; });
-    if (decline) decline.addEventListener('click', function() { chatWindow.classList.remove('chat-open'); });
-
+    if (chatWindow) {
+      var closeBtn = chatWindow.querySelector('.chat-header-btn.close');
+      var minBtn = chatWindow.querySelector('.chat-header-btn.minimize');
+      if (closeBtn) { closeBtn.removeAttribute('onclick'); closeBtn.addEventListener('click', function() { chatWindow.style.display = 'none'; chatWindow.classList.remove('chat-open'); }); }
+      if (minBtn) { minBtn.removeAttribute('onclick'); minBtn.addEventListener('click', function() { chatWindow.style.display = 'none'; chatWindow.classList.remove('chat-open'); }); }
+    }
     return true;
   }
   var attempts = 0;
