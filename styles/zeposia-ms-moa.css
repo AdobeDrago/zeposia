@@ -1,2 +1,23 @@
-/* Template-scoped CSS placeholder — required by overlay engine loadCSS() */
-/* External styles loaded via template HTML <link> tags */
+/* Critical styles - prevents FOUC while external CSS loads from zeposiahcp.com */
+
+/* Keep content hidden initially, fade in after external CSS likely loaded */
+body.appear .root.responsivegrid {
+  animation: revealContent 0s 0.8s both;
+}
+
+@keyframes revealContent {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Critical background */
+#greenbg {
+  background-color: #e8efe8;
+}
+
+/* Base font */
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
