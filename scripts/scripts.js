@@ -547,8 +547,7 @@ loadPage();
           items[i].removeAttribute('aria-hidden');
           car[0].appendChild(items[i].cloneNode(true));
         }
-        car.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 5000 });
-        car.slick("slickSetOption", "speed", 5000, true);
+        car.slick({ autoplay: true, autoplaySpeed: 10000, dots: true, arrows: true, infinite: true, speed: 5000 });
       });
   }
   var attempts = 0;
