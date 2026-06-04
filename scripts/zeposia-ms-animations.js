@@ -50,10 +50,28 @@
   const $ = window.jQuery;
   const carousel = $('.carousel-container-body .carousel');
   if (carousel.length) {
-    // Remove existing slick classes (from source DOM) that interfere
+        // Remove existing slick wrappers (they contain frozen state)
     carousel.removeClass('slick-initialized slick-slider slick-dotted');
-    carousel.find('.slick-slide').removeClass('slick-slide slick-current slick-active slick-cloned');
-    carousel.find('.slick-list, .slick-track, .slick-dots').remove();
+    // Save any carousel-items before removing track
+    carousel.find('.slick-list, .slick-track, .slick-dots, .slick-arrow').remove();
+    // Items were inside slick-track and got removed - re-fetch from template
+    const tplMeta = document.querySelector('meta[name=template]');
+    if (tplMeta && carousel.find('.carousel-item').length === 0) {
+      const resp = await fetch(window.hlx.codeBasePath + '/templates/' + tplMeta.content + '.html');
+      const html = await resp.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const track = doc.querySelector('.slick-track');
+      const items = track ? track.querySelectorAll('.carousel-item:not(.slick-cloned)') : [];
+      items.forEach(item => {
+        item.className = 'carousel-item';
+        item.removeAttribute('style');
+        item.removeAttribute('data-slick-index');
+        item.removeAttribute('tabindex');
+        item.removeAttribute('aria-hidden');
+        carousel[0].appendChild(item.cloneNode(true));
+      });
+    }
 
     // Init slick with source settings
     carousel.slick({
@@ -67,5 +85,6 @@
       arrows: false,
       adaptiveHeight: true,
     });
+
   }
 })();
