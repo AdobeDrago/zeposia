@@ -171,3 +171,7 @@ body.zeposia-ms::after {
 #chat-window { display: none !important; }
 #chat-window.chat-open { display: block !important; }
 #open-converse { display: block !important; cursor: pointer; }
+
+/* Hide HCP entry modal after dismissal (blocks clicks on underlying elements) */
+#entryModal, .cmp-modal.entry-modal { display: none !important; pointer-events: none !important; }
+
