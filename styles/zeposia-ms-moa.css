@@ -108,3 +108,8 @@ html {
   overflow-x: hidden !important;
   overflow-y: auto !important;
 }
+
+/* Height matching fixes at 1440 */
+@media (min-width: 1024px) {
+  #ftrhtmlcont { max-height: 95px; overflow: hidden; }
+}
