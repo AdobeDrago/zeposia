@@ -96,3 +96,9 @@ body:has(.entry-modal[style*="display:block"]) {
 .entry-modal .nonhcp_btn {
   cursor: pointer;
 }
+
+/* Fix HCP verification modal size - match source (no centered, no min-height) */
+.cmp-modal.entry-modal .modal-dialog.modal-dialog-centered {
+  display: block !important;
+  min-height: unset !important;
+}
