@@ -26,3 +26,7 @@ main { display: block !important; }
 #indication_modal { display: none !important; }
 /* Indications popup hidden - no source JS to toggle */
 
+
+/* Hide HCP entry modal overlay - blocks all clicks */
+#entryModal, .cmp-modal.entry-modal { display: none !important; }
+
