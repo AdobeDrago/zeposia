@@ -112,4 +112,5 @@ html {
 /* Height matching fixes at 1440 */
 @media (min-width: 1024px) {
   #ftrhtmlcont { max-height: 95px; overflow: hidden; }
+  .footer.footer-variation-one .isi-footer-wrapper { max-height: 203px; overflow: hidden; }
 }
