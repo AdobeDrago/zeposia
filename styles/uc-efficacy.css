@@ -1,0 +1,40 @@
+/* UC Efficacy - Template CSS */
+
+/* Hide EDS header/footer */
+body > header, body > footer { display: none !important; }
+
+/* Body overflow to match source */
+body {
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  font-family: Montserrat, sans-serif;
+}
+html {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* Show efficacy page, hide others */
+#efficacy-page { display: block !important; }
+#moa-page, #safety-page, #study-design-page { display: none !important; }
+
+/* Hide modals */
+.cmp-modal.entry-modal,
+.cmp-modal.exit-modal,
+.isi-overlay,
+.modal-backdrop {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Show correct banner */
+#banner-wrap-efficacy-uc { display: block !important; }
+
+/* Hide ISI rendering at desktop */
+.isi-rendering.aem-GridColumn { display: none !important; }
+
+/* Bootstrap responsive overrides */
+@media (min-width: 992px) {
+  .d-lg-block { display: block !important; }
+  .d-lg-none { display: none !important; }
+}
