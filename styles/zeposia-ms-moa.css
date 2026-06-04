@@ -99,12 +99,12 @@ body > header, body > footer { display: none !important; }
 
 /* FIX: Body overflow:hidden from source modal JS - blocks scroll and clicks */
 body {
-  overflow: visible !important;
+  overflow-x: hidden !important;
   overflow-y: auto !important;
-  height: auto !important;
+  
 }
 
 html {
-  overflow: auto !important;
+  overflow-x: hidden !important;
   overflow-y: auto !important;
 }
