@@ -1,39 +1,23 @@
-/* Critical styles loaded BEFORE body.appear fires */
-/* Prevents FOUC while external CSS (base.min.css, style.css) loads from zeposiahcp.com */
+/* Critical styles - prevents FOUC while external CSS loads from zeposiahcp.com */
 
-/* Hide everything until external stylesheets load */
+/* Keep content hidden initially, fade in after external CSS likely loaded */
 body.appear .root.responsivegrid {
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
+  animation: revealContent 0s 0.8s both;
 }
 
-/* Show content once fonts and external CSS are ready */
-body.appear.fonts-loaded .root.responsivegrid,
-body.appear .root.responsivegrid:has(~ style[data-loaded]) {
-  opacity: 1;
-}
-
-/* Fallback: show after 1.5s regardless (prevents permanent blank) */
-@keyframes fadeIn {
+@keyframes revealContent {
+  from { opacity: 0; }
   to { opacity: 1; }
 }
-body.appear .root.responsivegrid {
-  animation: fadeIn 0s 1.5s forwards;
-}
 
-/* Critical background - matches source site green */
+/* Critical background */
 #greenbg {
   background-color: #e8efe8;
 }
 
-/* Base font so text doesn't reflow */
+/* Base font */
 body {
   font-family: Montserrat, sans-serif;
   margin: 0;
   overflow-x: hidden;
-}
-
-/* Hide raw DA content that shows before overlay */
-body:not([class*="ms-moa"]) main {
-  visibility: hidden;
 }
