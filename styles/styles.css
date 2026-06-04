@@ -53,3 +53,8 @@ body > footer {
   padding: 0;
   margin: 0;
 }
+
+/* Global: hide entry modal overlay (blocks clicks, handled by show-once JS) */
+body .cmp-modal.entry-modal.modal { pointer-events: none !important; }
+body .cmp-modal.entry-modal.modal * { pointer-events: none !important; }
+
