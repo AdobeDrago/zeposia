@@ -501,85 +501,55 @@ loadPage();
 })();
 
 
-// Carousel: dynamically load jQuery + Slick, destroy frozen state, reinitialize
+// Carousel: load jQuery + Slick, re-fetch items from template, initialize
 (function() {
-  function initSlickCarousel() {
-    const container = document.querySelector('.carousel-container-body .carousel');
+  function start() {
+    var container = document.querySelector('.carousel-container-body .carousel');
     if (!container) return false;
-    
-    // Load jQuery
     if (!window.jQuery) {
-      const jq = document.createElement('script');
+      var jq = document.createElement('script');
       jq.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
-      jq.onload = () => loadSlick();
+      jq.onload = function() { loadSlick(); };
       document.head.appendChild(jq);
-      return true;
-    }
-    loadSlick();
+    } else { loadSlick(); }
     return true;
   }
-
   function loadSlick() {
-    // Load Slick CSS
-    const css = document.createElement('link');
+    var css = document.createElement('link');
     css.rel = 'stylesheet';
     css.href = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
     document.head.appendChild(css);
-    
-    // Load Slick JS
-    const js = document.createElement('script');
+    var js = document.createElement('script');
     js.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
-    js.onload = () => reinitCarousel();
+    js.onload = function() { reinit(); };
     document.head.appendChild(js);
   }
-
-  function reinitCarousel() {
-    const $ = window.jQuery;
-    const $carousel = $('.carousel-container-body .carousel');
-    if (!$carousel.length) return;
-    
-    // Destroy frozen Slick state
-    $carousel.removeClass('slick-initialized slick-slider slick-dotted');
-    $carousel.find('.slick-list, .slick-track, .slick-dots, .slick-arrow, .slick-cloned').remove();
-    
-    // The carousel-items should now be direct children
-    const items = $carousel.find('.carousel-item');
-    if (items.length === 0) {
-      // Items were lost - re-fetch template and extract carousel content
-      fetch(window.hlx.codeBasePath + '/templates/' + document.querySelector('meta[name=template]').content + '.html')
-        .then(r => r.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const templateCarousel = doc.querySelector('.carousel-container-body .carousel');
-          if (templateCarousel) {
-            // Extract just the carousel-items
-            const templateItems = templateCarousel.querySelectorAll('.carousel-item:not(.slick-cloned)');
-            $carousel.empty();
-            templateItems.forEach(item => {
-              item.classList.remove('slick-slide', 'slick-current', 'slick-active', 'slick-cloned');
-              item.removeAttribute('style');
-              item.removeAttribute('data-slick-index');
-              item.removeAttribute('tabindex');
-              item.removeAttribute('aria-hidden');
-              $carousel[0].appendChild(item.cloneNode(true));
-            });
-          }
-          // Now initialize Slick
-          $carousel.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600, slidesToShow: 1 });
-        });
-    } else {
-      // Items exist, just reinitialize
-      items.each(function() {
-        $(this).removeClass('slick-slide slick-current slick-active slick-cloned');
-        $(this).removeAttr('style data-slick-index tabindex aria-hidden');
+  function reinit() {
+    var jq = jQuery;
+    var car = jq('.carousel-container-body .carousel');
+    if (!car.length) return;
+    if (car.hasClass('slick-initialized')) { try { car.slick('unslick'); } catch(e){} }
+    car.empty();
+    var tpl = document.querySelector('meta[name=template]');
+    if (!tpl) return;
+    fetch(window.hlx.codeBasePath + '/templates/' + tpl.content + '.html')
+      .then(function(r) { return r.text(); })
+      .then(function(html) {
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+        var track = doc.querySelector('.slick-track');
+        var items = track ? track.querySelectorAll('.carousel-item:not(.slick-cloned)') : [];
+        for (var i = 0; i < items.length; i++) {
+          items[i].className = 'carousel-item';
+          items[i].removeAttribute('style');
+          items[i].removeAttribute('data-slick-index');
+          items[i].removeAttribute('tabindex');
+          items[i].removeAttribute('aria-hidden');
+          car[0].appendChild(items[i].cloneNode(true));
+        }
+        car.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600 });
       });
-      $carousel.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600, slidesToShow: 1 });
-    }
   }
-
-  let attempts = 0;
-  const interval = setInterval(() => {
-    if (initSlickCarousel() || ++attempts > 30) clearInterval(interval);
-  }, 300);
+  var attempts = 0;
+  var interval = setInterval(function() { if (start() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
