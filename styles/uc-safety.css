@@ -21,3 +21,8 @@ main { display: block !important; }
 @media (min-width: 992px) { .d-lg-block { display: block !important; } .d-lg-none { display: none !important; } }
 .flx-ban { display: flex !important; }
 .banner-info.ucs_home { padding: 0; }
+
+/* Hide indication modal by default */
+#indication_modal { display: none !important; }
+/* Indications popup hidden - no source JS to toggle */
+
