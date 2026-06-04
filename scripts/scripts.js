@@ -424,3 +424,44 @@ async function loadPage() {
 }
 
 loadPage();
+
+// Indications popup: show once per session, closeable
+(function initIndicationModal() {
+  const KEY = 'zeposia_ind_seen';
+  function setup() {
+    const modal = document.getElementById('indication_modal');
+    if (!modal) return;
+    if (localStorage.getItem(KEY)) {
+      modal.style.display = 'none';
+      return;
+    }
+    modal.style.display = 'block';
+    modal.classList.add('show');
+    const closeBtn = modal.querySelector('.btn-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modal.classList.remove('show');
+        localStorage.setItem(KEY, '1');
+      });
+    }
+    // Also handle clicking the "Indications" nav link to toggle
+    const navLink = document.querySelector('#nav-ind-m, .nav-indlink');
+    if (navLink) {
+      navLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modal.style.display === 'none') {
+          modal.style.display = 'block';
+          modal.classList.add('show');
+        } else {
+          modal.style.display = 'none';
+          modal.classList.remove('show');
+          localStorage.setItem(KEY, '1');
+        }
+      });
+    }
+  }
+  // Run after overlay completes (slight delay)
+  if (document.readyState === 'complete') setTimeout(setup, 500);
+  else window.addEventListener('load', () => setTimeout(setup, 500));
+})();
