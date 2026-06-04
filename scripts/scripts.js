@@ -500,56 +500,86 @@ loadPage();
   }, 250);
 })();
 
-// Carousel: reset frozen Slick inline styles, show slides properly, auto-rotate
-(function initCarousel() {
-  function setup() {
-    const carousel = document.querySelector('.carousel.slick-initialized');
-    if (!carousel) return false;
-    const list = carousel.querySelector('.slick-list');
-    const track = list?.querySelector('.slick-track');
-    if (!track) return false;
 
-    // Check if slides have content (not just buttons)
-    const items = track.querySelectorAll('.carousel-item');
-    if (items.length === 0) {
-      // Slides lost their content - this page has a template rendering issue
-      // Try to find carousel-items elsewhere in the carousel
-      const allItems = carousel.closest('.carousel-container-body')?.querySelectorAll('.carousel-item');
-      if (!allItems || allItems.length === 0) return false;
+// Carousel: dynamically load jQuery + Slick, destroy frozen state, reinitialize
+(function() {
+  function initSlickCarousel() {
+    const container = document.querySelector('.carousel-container-body .carousel');
+    if (!container) return false;
+    
+    // Load jQuery
+    if (!window.jQuery) {
+      const jq = document.createElement('script');
+      jq.src = 'https://code.jquery.com/jquery-3.6.0.min.js';
+      jq.onload = () => loadSlick();
+      document.head.appendChild(jq);
+      return true;
     }
-
-    // Reset frozen slick dimensions to use CSS
-    const slides = track.querySelectorAll('.carousel-item:not(.slick-cloned), .slick-slide.carousel-item:not(.slick-cloned)');
-    if (slides.length === 0) return false;
-
-    // Fix widths to match container
-    const containerWidth = list.offsetWidth || carousel.offsetWidth;
-    list.style.overflow = 'hidden';
-    track.style.cssText = 'display:flex; width:' + (slides.length * containerWidth) + 'px; transition:transform 0.6s ease;';
-    slides.forEach(s => {
-      s.style.width = containerWidth + 'px';
-      s.style.flexShrink = '0';
-    });
-
-    // Hide cloned slides
-    track.querySelectorAll('.slick-cloned').forEach(c => c.style.display = 'none');
-
-    let current = 0;
-    function goTo(idx) {
-      current = ((idx % slides.length) + slides.length) % slides.length;
-      track.style.transform = 'translateX(-' + (current * containerWidth) + 'px)';
-    }
-
-    // Arrows
-    carousel.querySelectorAll('.slick-prev').forEach(b => b.addEventListener('click', () => goTo(current - 1)));
-    carousel.querySelectorAll('.slick-next').forEach(b => b.addEventListener('click', () => goTo(current + 1)));
-
-    // Auto-rotate every 5s
-    setInterval(() => goTo(current + 1), 5000);
-    goTo(0);
+    loadSlick();
     return true;
   }
 
+  function loadSlick() {
+    // Load Slick CSS
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
+    document.head.appendChild(css);
+    
+    // Load Slick JS
+    const js = document.createElement('script');
+    js.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+    js.onload = () => reinitCarousel();
+    document.head.appendChild(js);
+  }
+
+  function reinitCarousel() {
+    const $ = window.jQuery;
+    const $carousel = $('.carousel-container-body .carousel');
+    if (!$carousel.length) return;
+    
+    // Destroy frozen Slick state
+    $carousel.removeClass('slick-initialized slick-slider slick-dotted');
+    $carousel.find('.slick-list, .slick-track, .slick-dots, .slick-arrow, .slick-cloned').remove();
+    
+    // The carousel-items should now be direct children
+    const items = $carousel.find('.carousel-item');
+    if (items.length === 0) {
+      // Items were lost - re-fetch template and extract carousel content
+      fetch(window.hlx.codeBasePath + '/templates/' + document.querySelector('meta[name=template]').content + '.html')
+        .then(r => r.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const templateCarousel = doc.querySelector('.carousel-container-body .carousel');
+          if (templateCarousel) {
+            // Extract just the carousel-items
+            const templateItems = templateCarousel.querySelectorAll('.carousel-item:not(.slick-cloned)');
+            $carousel.empty();
+            templateItems.forEach(item => {
+              item.classList.remove('slick-slide', 'slick-current', 'slick-active', 'slick-cloned');
+              item.removeAttribute('style');
+              item.removeAttribute('data-slick-index');
+              item.removeAttribute('tabindex');
+              item.removeAttribute('aria-hidden');
+              $carousel[0].appendChild(item.cloneNode(true));
+            });
+          }
+          // Now initialize Slick
+          $carousel.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600, slidesToShow: 1 });
+        });
+    } else {
+      // Items exist, just reinitialize
+      items.each(function() {
+        $(this).removeClass('slick-slide slick-current slick-active slick-cloned');
+        $(this).removeAttr('style data-slick-index tabindex aria-hidden');
+      });
+      $carousel.slick({ autoplay: true, autoplaySpeed: 5000, dots: true, arrows: true, infinite: true, speed: 600, slidesToShow: 1 });
+    }
+  }
+
   let attempts = 0;
-  const interval = setInterval(() => { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+  const interval = setInterval(() => {
+    if (initSlickCarousel() || ++attempts > 30) clearInterval(interval);
+  }, 300);
 })();
