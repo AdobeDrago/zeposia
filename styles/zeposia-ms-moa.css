@@ -23,7 +23,6 @@ body > header, body > footer { display: none !important; }
 @media (min-width: 992px) {
   .d-lg-block { display: block !important; }
   .d-lg-none { display: none !important; }
-}
 
 /* MOA-specific layout fixes */
 .innersection.moa.bg-leafve::before,
@@ -33,13 +32,12 @@ body > header, body > footer { display: none !important; }
 .s1p2-img { margin-top: 25px; }
 .blue_b { background: #0032A0; }
 
-@media (min-width: 1024px) {
+
   .mg-crd { margin: 40px 0 38px; }
   .green-box { width: 100%; margin: 40px 0px 55px; }
   .moa-image .desc .desc-text div:nth-child(2) { width: 155px; }
   .moa-image .desc .desc-text div:nth-child(3) { width: 120px; }
   #moa-pgcont .pt-sm-40 { padding-top: 0 !important; }
-}
 
 @media (max-width: 1023px) {
   .p-lft { margin-left: 20px; }
@@ -49,7 +47,6 @@ body > header, body > footer { display: none !important; }
   .desc-text ul li::before { top: 5px; }
   .mob-blue { padding-right: 0px !important; }
   .desc-text.sp-text { margin-top: 50px; margin-left: 3px; }
-}
 
 .mrgT12 { margin-top: 12px; }
 .lh-14 { line-height: 18px; }
@@ -66,9 +63,7 @@ body > header, body > footer { display: none !important; }
 .modal-backdrop {
   display: none !important;
   pointer-events: none !important;
-}
 
-}
 
 /* FIX: ISI/Footer Important Safety Information section layout */
 /* Match source site's narrow container for ISI content */
@@ -78,39 +73,43 @@ body > header, body > footer { display: none !important; }
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-}
 
 .footer.section .isi-content {
   padding-left: 0;
-}
 
 .footer.section .isi-header {
   background: #005c53;
   color: #fff;
   padding: 10px 15px;
   font-weight: 700;
-}
 
 .footer.section .isi-footer-wrapper {
   max-width: 375px;
   margin: 0 auto;
   padding: 15px;
-}
 
 /* FIX: Body overflow:hidden from source modal JS - blocks scroll and clicks */
 body {
   overflow-x: hidden !important;
   overflow-y: auto !important;
   
-}
 
 html {
   overflow-x: hidden !important;
   overflow-y: auto !important;
-}
 
 /* Height matching fixes at 1440 */
+
+
+/* Footer height fixes - match source at each breakpoint */
+#ftrhtmlcont { overflow: hidden; }
+.footer.footer-variation-one .isi-footer-wrapper { overflow: hidden; }
+
 @media (min-width: 1024px) {
-  #ftrhtmlcont { max-height: 95px; overflow: hidden; }
-  .footer.footer-variation-one .isi-footer-wrapper { max-height: 203px; overflow: hidden; }
+  #ftrhtmlcont { max-height: 95px; }
+  .footer.footer-variation-one .isi-footer-wrapper { max-height: 203px; }
+}
+@media (max-width: 1023px) {
+  #ftrhtmlcont { max-height: 208px; }
+  .footer.footer-variation-one .isi-footer-wrapper { max-height: 379px; }
 }
