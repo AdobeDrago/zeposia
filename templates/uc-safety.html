@@ -5323,29 +5323,37 @@ footer li:not(:last-child) .nav-link::after,
     
 </div>
 
+\<script>
+(function(){
+var key = "zeposia_ind_seen";
+var tryShow = function(){
+var modal = document.getElementById("indication_modal");
+if (!modal) { setTimeout(tryShow, 500); return; }
+if (localStorage.getItem(key)) { modal.style.display="none"; return; }
+modal.style.display="block"; modal.classList.add("show");
+var closeBtn = modal.querySelector(".btn-close");
+if (closeBtn) closeBtn.addEventListener("click", function(){ modal.style.display="none"; localStorage.setItem(key,"1"); });
+};
+if (document.readyState==="complete") tryShow(); else window.addEventListener("load", tryShow);
+})();
+<\/script>
+<script>
+(function(){
+  var key = "zeposia_ind_seen";
+  function tryShow(){
+    var modal = document.getElementById("indication_modal");
+    if (!modal) { setTimeout(tryShow, 300); return; }
+    if (localStorage.getItem(key)) { modal.style.display="none"; return; }
+    modal.style.display="block"; modal.classList.add("show");
+    var closeBtn = modal.querySelector(".btn-close");
+    if (closeBtn) closeBtn.addEventListener("click", function(){ modal.style.display="none"; localStorage.setItem(key,"1"); });
+    // Also close on any click on the X text
+    modal.querySelectorAll("[aria-label=Close], .close-btn").forEach(function(el){ el.addEventListener("click", function(){ modal.style.display="none"; localStorage.setItem(key,"1"); }); });
+  }
+  setTimeout(tryShow, 100);
+})();
+</script>
 </main>
 <style>
 body #entryModal, body .cmp-modal.entry-modal { display: none !important; pointer-events: none !important; }
 </style>
-<script>
-(function(){
-  var key = "zeposia_ind_seen";
-  var modal = document.getElementById("indication_modal");
-  if (!modal) return;
-  if (localStorage.getItem(key)) {
-    modal.classList.remove("show");
-    modal.style.display = "none";
-    return;
-  }
-  modal.classList.add("show");
-  modal.style.display = "block";
-  var closeBtn = modal.querySelector(".btn-close");
-  if (closeBtn) {
-    closeBtn.addEventListener("click", function(){
-      modal.classList.remove("show");
-      modal.style.display = "none";
-      localStorage.setItem(key, "1");
-    });
-  }
-})();
-</script>
