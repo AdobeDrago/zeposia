@@ -553,3 +553,33 @@ loadPage();
   var attempts = 0;
   var interval = setInterval(function() { if (start() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
+
+// Dropdown menus: toggle on click (Bootstrap dropdowns without Bootstrap JS)
+(function() {
+  function setup() {
+    var toggles = document.querySelectorAll('.dropdown-toggle');
+    if (!toggles.length) return false;
+    toggles.forEach(function(toggle) {
+      var parent = toggle.closest('.dropdown') || toggle.parentElement;
+      var menu = parent.querySelector('.dropdown-menu');
+      if (!menu) return;
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var isOpen = menu.classList.contains('show');
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
+        if (!isOpen) menu.classList.add('show');
+      });
+    });
+    // Close on click outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
+      }
+    });
+    return true;
+  }
+  var attempts = 0;
+  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+})();
