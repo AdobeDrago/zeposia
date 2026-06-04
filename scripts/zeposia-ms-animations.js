@@ -88,3 +88,38 @@
 
   }
 })();
+
+// Chat window toggle: Request a Rep button opens/closes chat
+(function initChat() {
+  function setup() {
+    var chatWindow = document.getElementById('chat-window');
+    if (!chatWindow) return false;
+    
+    // Find trigger buttons (the floating images and #open-converse)
+    var triggers = document.querySelectorAll('#open-converse, [onclick*="openConverse"], img[alt*="Request a Rep"]');
+    if (!triggers.length) return false;
+    
+    triggers.forEach(function(btn) {
+      btn.removeAttribute('onclick');
+      btn.style.cursor = 'pointer';
+      btn.addEventListener('click', function() {
+        chatWindow.classList.toggle('chat-open');
+      });
+    });
+    
+    // Close/minimize buttons
+    var closeBtn = chatWindow.querySelector('.chat-header-btn.close');
+    var minBtn = chatWindow.querySelector('.chat-header-btn.minimize');
+    if (closeBtn) {
+      closeBtn.removeAttribute('onclick');
+      closeBtn.addEventListener('click', function() { chatWindow.classList.remove('chat-open'); });
+    }
+    if (minBtn) {
+      minBtn.removeAttribute('onclick');
+      minBtn.addEventListener('click', function() { chatWindow.classList.remove('chat-open'); });
+    }
+    return true;
+  }
+  var attempts = 0;
+  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+})();
