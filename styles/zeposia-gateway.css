@@ -97,8 +97,16 @@ body:has(.entry-modal[style*="display:block"]) {
   cursor: pointer;
 }
 
-/* Fix HCP verification modal size - match source (no centered, no min-height) */
+
+/* Fix HCP verification modal - match source site dimensions */
 .cmp-modal.entry-modal .modal-dialog.modal-dialog-centered {
   display: block !important;
   min-height: unset !important;
+  max-width: 1020px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.cmp-modal.entry-modal .modal-dialog .modal-content {
+  padding: 8px 8px 63px !important;
+  border-radius: 9px !important;
 }
