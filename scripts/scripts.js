@@ -510,7 +510,100 @@ loadPage();
   }, 250);
 })();
 
+// Sticky second-level navigation bar (#jumpLinkBar)
+// On pages with a .showTop > .transparent-ms#jumpLinkBar, the nav should stick
+// to the top when the user scrolls past it (replicates original site behavior
+// via .fixedNavMS class which triggers position:fixed in source CSS).
+(function initStickySubNav() {
+  function setup() {
+    var bar = document.getElementById('jumpLinkBar');
+    if (!bar) return false;
+    var showTop = bar.closest('.showTop');
+    if (!showTop) return false;
 
+    // Calculate the bar's natural offset from the top of the document
+    var barOffsetTop = 0;
+    function recalcOffset() {
+      // Temporarily remove fixed positioning to get natural position
+      var wasFixed = bar.classList.contains('fixedNavMS');
+      if (wasFixed) bar.classList.remove('fixedNavMS');
+      barOffsetTop = bar.getBoundingClientRect().top + window.pageYOffset;
+      if (wasFixed) bar.classList.add('fixedNavMS');
+    }
+    recalcOffset();
+
+    // Create a placeholder to prevent content jump when nav becomes fixed
+    var placeholder = document.createElement('div');
+    placeholder.id = 'jumpLinkBar-placeholder';
+    placeholder.style.cssText = 'display:none;height:' + bar.offsetHeight + 'px;';
+    bar.parentNode.insertBefore(placeholder, bar.nextSibling);
+
+    var isSticky = false;
+
+    function onScroll() {
+      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollY >= barOffsetTop && !isSticky) {
+        bar.classList.add('fixedNavMS');
+        placeholder.style.display = 'block';
+        isSticky = true;
+      } else if (scrollY < barOffsetTop && isSticky) {
+        bar.classList.remove('fixedNavMS');
+        placeholder.style.display = 'none';
+        isSticky = false;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // Handle resize (recalculate offset)
+    window.addEventListener('resize', function() {
+      if (isSticky) {
+        bar.classList.remove('fixedNavMS');
+        placeholder.style.display = 'none';
+        isSticky = false;
+      }
+      recalcOffset();
+      placeholder.style.height = bar.offsetHeight + 'px';
+      onScroll();
+    });
+
+    // Also handle smooth scrolling for the nav links with hash offset
+    bar.querySelectorAll('a.nav-link[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var targetId = link.getAttribute('href').substring(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          var barHeight = bar.offsetHeight;
+          var targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
+          window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Run once on load in case page is already scrolled (e.g. hash in URL)
+    onScroll();
+
+    // Handle initial hash navigation with offset
+    if (window.location.hash) {
+      setTimeout(function() {
+        var targetId = window.location.hash.substring(1);
+        var target = document.getElementById(targetId);
+        if (target) {
+          var barHeight = bar.offsetHeight;
+          var targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
+          window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        }
+      }, 500);
+    }
+
+    return true;
+  }
+
+  var attempts = 0;
+  var interval = setInterval(function() {
+    if (setup() || ++attempts > 30) clearInterval(interval);
+  }, 300);
+})();
 
 
 // Global: Request a Rep chat popup (injects on all pages)
