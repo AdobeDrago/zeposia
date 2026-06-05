@@ -131,14 +131,22 @@ function writeSlot(el, value) {
  * in `slots`, and write slot values into [data-slot] markers.
  */
 function applySlotsToTemplate(templateMain, slots) {
+  // Pass 1: section-based slot filling (original mechanism)
   templateMain.querySelectorAll('section[class]').forEach((section) => {
     const blockName = section.className.trim().split(/\s+/)[0];
     const blockSlots = slots[blockName];
     if (!blockSlots) return;
     section.querySelectorAll('[data-slot]').forEach((el) => {
       const slotName = el.getAttribute('data-slot');
-      if (slotName in blockSlots) writeSlot(el, blockSlots[slotName]);
+      if (slotName in blockSlots) { writeSlot(el, blockSlots[slotName]); el.setAttribute('data-slot-filled', '1'); }
     });
+  });
+  // Pass 2: global fallback for data-slot elements outside sections
+  const allSlotValues = {};
+  Object.values(slots).forEach((blockSlots) => Object.assign(allSlotValues, blockSlots));
+  templateMain.querySelectorAll('[data-slot]:not([data-slot-filled])').forEach((el) => {
+    const slotName = el.getAttribute('data-slot');
+    if (slotName in allSlotValues) writeSlot(el, allSlotValues[slotName]);
   });
 }
 
@@ -162,10 +170,11 @@ async function applyTemplateOverlay(main) {
 
   const slots = readBlockSlots(main);
  window._daSlots = slots;
+ window._daSlots = slots;
 
   // Load template-scoped CSS in parallel with the template HTML so
   // styles arrive before body.appear paints. `head.html` no longer
-  // hardcodes a per-template stylesheet — each template ships its
+  // hardcodes a per-template stylesheet  each template ships its
   // own at /styles/<template>.css.
   const cssLoaded = loadCSS(`${window.hlx.codeBasePath}/styles/${templateName}.css`);
 
@@ -386,7 +395,7 @@ function loadDelayed() {
   window.setTimeout(() => import('./delayed.js'), 3000);
 }
 
-// Document-level HCP modal handler — fires regardless of script timing
+// Document-level HCP modal handler  fires regardless of script timing
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.hcp_btn');
   if (btn) {
