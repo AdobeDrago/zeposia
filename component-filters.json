@@ -1,0 +1,25 @@
+[
+  {
+    "id": "section",
+    "components": [
+      "hero",
+      "cards",
+      "columns",
+      "gateway",
+      "fragment",
+      "sticky-isi"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "cards-item"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "columns-item"
+    ]
+  }
+]
