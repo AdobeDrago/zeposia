@@ -1,0 +1,187 @@
+[
+  {
+    "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Hero Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Hero Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "CTA Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "CTA Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "valueType": "string[]",
+        "options": [
+          { "name": "Light", "value": "light" },
+          { "name": "Dark", "value": "dark" },
+          { "name": "Full Width", "value": "full-width" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cards-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Card Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Card Content",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Card Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "label": "Link Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "columns-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Column Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Column Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "gateway",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Logo Image",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Logo Alt Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Gateway Content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "modalTitle",
+        "label": "HCP Modal Title",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "modalText",
+        "label": "HCP Modal Description",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "fragment",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Fragment Path",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "sticky-isi",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "ISI Content",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "ISI Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Section Style",
+        "valueType": "string[]",
+        "options": [
+          { "name": "Light Blue Background", "value": "light-blue-bg" },
+          { "name": "UC Hero", "value": "uc-hero" },
+          { "name": "Gradient Background", "value": "gradient-bg" },
+          { "name": "Contact Info", "value": "contact-info" },
+          { "name": "Resources", "value": "resources" }
+        ]
+      }
+    ]
+  }
+]
