@@ -9,26 +9,4 @@
 @font-face { font-family: "MontserratMedium"; src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); font-weight: normal; font-display: swap; }
 @font-face { font-family: "MontserratExtraBold"; src: url("/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
 
-/* Hide EDS header/footer - overlay provides its own */
-body > header, body > footer { display: none !important; }
-
-/* Ensure main is visible */
-main { display: block !important; }
-
-/* Show efficacy page content */
-#efficacy-pgcont, #innerpgcont { display: flex !important; }
-
-/* Show efficacy references, hide others */
-.isi-reference-section { display: none !important; }
-.isi-reference-section.efficacy_ref { display: block !important; }
-
-/* ISI sections */
-.isi-master-container { display: block !important; }
-.isi-rendering-footer { display: block !important; }
-
-
-/* Fix: nested column padding in common-pgcont CTA cards */
-#common-pgcont .column-control .column-control .col {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
+404: Not Found
