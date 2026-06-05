@@ -161,6 +161,7 @@ async function applyTemplateOverlay(main) {
   if (!templateName) return false;
 
   const slots = readBlockSlots(main);
+ window._daSlots = slots;
 
   // Load template-scoped CSS in parallel with the template HTML so
   // styles arrive before body.appear paints. `head.html` no longer

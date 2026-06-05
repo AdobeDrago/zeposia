@@ -86,6 +86,27 @@
       adaptiveHeight: true,
     });
 
+
+// Re-apply DA slot values to carousel content after Slick reinit
+if (window._daSlots) {
+Object.keys(window._daSlots).forEach(function(blockName) {
+var blockSlots = window._daSlots[blockName];
+Object.keys(blockSlots).forEach(function(slotName) {
+var el = carousel[0].querySelector("[data-slot=\"" + slotName + "\"]");
+if (el) {
+var value = blockSlots[slotName];
+if (el.tagName === "A") {
+var tmp = document.createElement("div"); tmp.innerHTML = value;
+var a = tmp.querySelector("a");
+if (a) { el.href = a.getAttribute("href"); el.innerHTML = a.innerHTML; }
+else el.innerHTML = value;
+} else {
+el.innerHTML = value;
+}
+}
+});
+});
+}
   }
 })();
 
