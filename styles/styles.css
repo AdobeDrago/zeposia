@@ -1,171 +1,149 @@
-/* Reset browser defaults */
-html, body {
-  margin: 0;
-  padding: 0;
-}
+/* Reset */
+html, body { margin: 0; padding: 0; }
 
 /* ==========================================================================
-   UC Native Page Styles — ZEPOSIA HCP
-   Applied to pages WITHOUT the overlay engine (native EDS blocks)
+   UC Native Page Styles — Matched to source computed styles
+   Source: www.zeposiahcp.com/ulcerative-colitis/dosing-and-initiation
    ========================================================================== */
 
-/* Typography — Montserrat (matches source) */
 body {
   display: none;
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #000;
-  line-height: 1.5;
+  color: #434343;
+  line-height: 16px;
+  background: #fff;
 }
 
-body.appear {
-  display: block;
-}
+body.appear { display: block; }
 
-h1, h2, h3, h4, h5, h6 {
+/* Headings — source uses 32px/500 for h1-h2, 28px for h3 */
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 500;
   color: #0032A0;
-  line-height: 1.3;
+  line-height: 40px;
+  margin: 0 0 8px;
 }
 
-h1 { font-size: 26px; margin: 0 0 8px; }
-h2 { font-size: 22px; margin-bottom: 10px; }
-h3 { font-size: 16px; margin-bottom: 4px; }
-h4 { font-size: 16px; }
+h2 { color: #434343; }
 
-a { color: #0032A0; }
-a:hover { color: #F9423A; }
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #434343;
+  line-height: 24px;
+  margin: 16px 0 8px;
+}
 
-/* Main content area */
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #434343;
+  margin: 12px 0 6px;
+}
+
+a { color: #0032A0; text-decoration: none; }
+a:hover { color: #F9423A; text-decoration: underline; }
+
+/* Main content */
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
-main .section {
-  padding: 8px 0;
+main .section { padding: 0; }
+
+/* Body text — source uses 16px/20px */
+main p {
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 10px;
+  color: #434343;
 }
 
-/* Lists */
 main ul, main ol {
   padding-left: 20px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 main li {
-  margin-bottom: 4px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #434343;
 }
 
-/* Paragraphs */
-main p {
-  margin-bottom: 4px;
-  line-height: 1.6;
-}
-
-/* Superscripts */
-sup {
-  font-size: 0.7em;
-  line-height: 0;
-}
-
-/* Strong/bold */
-strong {
-  font-weight: 700;
-}
+sup { font-size: 0.65em; line-height: 0; }
+strong { font-weight: 700; }
 
 /* Section visibility lifecycle */
 main .section[data-section-status="loading"],
-main .section[data-section-status="initialized"] {
-  display: none;
-}
+main .section[data-section-status="initialized"] { display: none; }
 
-/* Header/footer block visibility */
+/* Header/footer visibility */
 header > .header,
-footer > .footer {
-  visibility: hidden;
-}
-
+footer > .footer { visibility: hidden; }
 header > .header[data-block-status="loaded"],
-footer > .footer[data-block-status="loaded"] {
-  visibility: visible;
+footer > .footer[data-block-status="loaded"] { visibility: visible; }
+
+/* ISI Fragment — source uses blue text */
+.fragment h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0032A0;
+  line-height: 24px;
+  margin: 20px 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #0032A0;
 }
 
-/* Footer styling */
-footer {
-  background: #f5f5f5;
-  padding: 16px;
+.fragment h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0032A0;
+  margin: 14px 0 6px;
+}
+
+.fragment p, .fragment li {
+  font-size: 14px;
+  line-height: 18px;
+  color: #0032A0;
+}
+
+.fragment ul { padding-left: 18px; }
+.fragment li { margin-bottom: 6px; }
+
+/* Footer */
+footer .footer {
+  background: #fff;
+  padding: 20px 40px;
   font-size: 12px;
   color: #666;
   text-align: center;
+  border-top: 1px solid #e0e0e0;
 }
 
-footer a {
-  color: #0032A0;
-  text-decoration: none;
-}
-
-footer ul {
+footer .footer a { color: #0032A0; text-decoration: none; }
+footer .footer ul {
   list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin: 0 0 10px;
 }
 
-/* ISI Fragment styling */
-.fragment h2 {
-  font-size: 18px;
-  color: #0032A0;
-  border-bottom: 2px solid #0032A0;
-  padding-bottom: 8px;
-  margin-top: 16px;
-}
+footer .footer p { font-size: 12px; color: #666; margin: 4px 0; }
 
-.fragment h3 {
-  font-size: 16px;
-  color: #333;
-  margin-top: 12px;
-}
-
-.fragment p, .fragment li {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Abbreviations footnote section */
-main .section:last-of-type p {
-  font-size: 12px;
-}
-
-/* Font loading */
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-}
+/* Fonts */
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
