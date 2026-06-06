@@ -10,7 +10,7 @@ header > .header[data-block-status="loaded"] {
 .header {
   background: #fff;
   border-bottom: 1px solid #e0e0e0;
-  padding: 8px 24px;
+  padding: 4px 24px;
   font-family: Montserrat, sans-serif;
   font-size: 13px;
 }
