@@ -93,6 +93,7 @@ header > .header[data-block-status="loaded"],
 footer > .footer[data-block-status="loaded"] { visibility: visible; }
 
 /* ISI Fragment — source uses blue text */
+.fragment { max-width: 900px; }
 .fragment h2 {
   font-size: 18px;
   font-weight: 700;
@@ -103,21 +104,21 @@ footer > .footer[data-block-status="loaded"] { visibility: visible; }
   border-bottom: 2px solid #0032A0;
 }
 
-.fragment h3 {
+.fragment h3 { font-size: 13px; font-weight: 700; color: #0032A0; margin: 8px 0 3px; }
   font-size: 16px;
   font-weight: 700;
   color: #0032A0;
   margin: 14px 0 6px;
 }
 
-.fragment p, .fragment li {
+.fragment p, .fragment li { font-size: 12px; line-height: 15px; color: #0032A0; margin: 0 0 4px; }
   font-size: 14px;
   line-height: 18px;
   color: #0032A0;
 }
 
-.fragment ul { padding-left: 18px; }
-.fragment li { margin-bottom: 6px; }
+.fragment ul { padding-left: 16px; margin: 0 0 4px; }
+.fragment li { margin-bottom: 3px; }
 
 /* Footer */
 footer .footer {
