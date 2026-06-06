@@ -1,41 +1,89 @@
 /* Reset browser defaults */
 html, body {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-/*
- * Minimal EDS lifecycle CSS for overlay-driven pages.
- * The bulk of styling lives in /styles/<template>.css, loaded
- * dynamically by the overlay engine after it resolves the template
- * name. Boilerplate typography/button/icon styles were removed
- * because each template carries its own design system inline.
- */
+/* ==========================================================================
+   UC Native Page Styles — ZEPOSIA HCP
+   Applied to pages WITHOUT the overlay engine (native EDS blocks)
+   ========================================================================== */
 
+/* Typography — Montserrat (matches source) */
 body {
   display: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
 }
 
 body.appear {
   display: block;
 }
 
-/* Section visibility lifecycle used by aem.js decorateSections when
-   running on non-overlay pages. Harmless on overlay pages because the
-   overlay skips decorateSections entirely. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #0032A0;
+  line-height: 1.3;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 26px; margin-bottom: 16px; }
+h3 { font-size: 20px; margin-bottom: 12px; }
+h4 { font-size: 16px; }
+
+a { color: #0032A0; }
+a:hover { color: #F9423A; }
+
+/* Main content area */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+main .section {
+  padding: 20px 0;
+}
+
+/* Lists */
+main ul, main ol {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+main li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Paragraphs */
+main p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Superscripts */
+sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+/* Strong/bold */
+strong {
+  font-weight: 700;
+}
+
+/* Section visibility lifecycle */
 main .section[data-section-status="loading"],
 main .section[data-section-status="initialized"] {
   display: none;
 }
 
-/* Header/footer block visibility flag from aem.js block lifecycle.
-   Allows the empty <header>/<footer> placeholders to stay invisible
-   until our static fragments are fetched and injected.
-   Uses direct-child (>) so we only target the EDS block wrapper —
-   NOT any nested .header / .footer elements the fetched fragment
-   itself might contain (sources that wrap their nav in
-   <header class="header"> would otherwise stay permanently hidden
-   under a descendant selector). */
+/* Header/footer block visibility */
 header > .header,
 footer > .footer {
   visibility: hidden;
@@ -46,20 +94,78 @@ footer > .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
-/* Reset padding/margin on the EDS landmark <header>/<footer> elements.
-   Page CSS often uses generic selectors like `section, header, footer`
-   to set section padding — that rule incorrectly leaks into the EDS
-   landmarks (which wrap our fragments). The source page's <header>
-   was usually a SPECIFIC class like .promo-strip / .site-header with
-   class-level padding overrides; the EDS landmark <header> has no
-   such class so the generic rule wins. body > selector specificity
-   (0,0,2) wins over plain header (0,0,1) without !important. */
-body > header,
-body > footer {
-  padding: 0;
-  margin: 0;
+/* Footer styling */
+footer {
+  background: #f5f5f5;
+  padding: 24px;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
 }
 
-/* Global: hide entry modal overlay (blocks clicks, handled by show-once JS) */
-body:not(.gateway-page) .cmp-modal.entry-modal.modal { pointer-events: none !important; }
-body:not(.gateway-page) .cmp-modal.entry-modal.modal * { pointer-events: none !important; }
+footer a {
+  color: #0032A0;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ISI Fragment styling */
+.fragment h2 {
+  font-size: 18px;
+  color: #0032A0;
+  border-bottom: 2px solid #0032A0;
+  padding-bottom: 8px;
+  margin-top: 32px;
+}
+
+.fragment h3 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.fragment p, .fragment li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Abbreviations footnote section */
+main .section:last-of-type p {
+  font-size: 12px;
+}
+
+/* Font loading */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
