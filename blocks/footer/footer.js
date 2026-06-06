@@ -3,32 +3,34 @@
  *
  * For overlay pages: uses main.dataset.overlay to find /fragments/<template>/footer.html
  * For native pages: determines indication (uc/ms) from the URL path and loads
- *   /fragments/footer/<indication>.html
+ *   /fragments/footer/<indication>.plain.html (DA-served fragment)
  */
 export default async function decorate(block) {
   let path;
 
   const template = document.querySelector('main')?.dataset?.overlay;
   if (template) {
-    // Overlay page — use existing template-specific fragment
+    // Overlay page — use existing template-specific fragment from code bus
     path = `/fragments/${template}/footer.html`;
+    const resp = await fetch(path);
+    if (!resp.ok) return;
+    block.innerHTML = await resp.text();
   } else {
-    // Native EDS page — determine indication from URL
+    // Native EDS page — load DA-authored footer fragment
     const url = window.location.pathname;
-    let indication = 'uc'; // default
+    let indication = 'uc';
     if (url.includes('/multiple-sclerosis')) {
       indication = 'ms';
     } else if (url.includes('/ulcerative-colitis')) {
       indication = 'uc';
     }
-    path = `/fragments/footer/${indication}.html`;
+    const fragPath = `/fragments/footer/${indication}`;
+    const resp = await fetch(`${fragPath}.plain.html`);
+    if (!resp.ok) {
+      // eslint-disable-next-line no-console
+      console.warn(`[footer] fragment not found at ${fragPath}.plain.html`);
+      return;
+    }
+    block.innerHTML = await resp.text();
   }
-
-  const resp = await fetch(`${window.hlx.codeBasePath}${path}`);
-  if (!resp.ok) {
-    // eslint-disable-next-line no-console
-    console.warn(`[footer] fragment not found at ${path}`);
-    return;
-  }
-  block.innerHTML = await resp.text();
 }
