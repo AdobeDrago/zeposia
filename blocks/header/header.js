@@ -1,13 +1,29 @@
 /**
- * Loads the template-specific header fragment from the code bus.
- * Each overlay-controlled page sets main.dataset.overlay = <template>
- * during loadEager; we read it here to pick the right fragment.
- * Fragments live at /fragments/<template>/header.html.
+ * Loads the header fragment for both overlay and native EDS pages.
+ * 
+ * For overlay pages: uses main.dataset.overlay to find /fragments/<template>/header.html
+ * For native pages: determines indication (uc/ms) from the URL path and loads
+ *   /fragments/nav/<indication>.html
  */
 export default async function decorate(block) {
+  let path;
+  
   const template = document.querySelector('main')?.dataset?.overlay;
-  if (!template) return;
-  const path = `/fragments/${template}/header.html`;
+  if (template) {
+    // Overlay page — use existing template-specific fragment
+    path = `/fragments/${template}/header.html`;
+  } else {
+    // Native EDS page — determine indication from URL
+    const url = window.location.pathname;
+    let indication = 'uc'; // default
+    if (url.includes('/multiple-sclerosis')) {
+      indication = 'ms';
+    } else if (url.includes('/ulcerative-colitis')) {
+      indication = 'uc';
+    }
+    path = `/fragments/nav/${indication}.html`;
+  }
+
   const resp = await fetch(`${window.hlx.codeBasePath}${path}`);
   if (!resp.ok) {
     // eslint-disable-next-line no-console
