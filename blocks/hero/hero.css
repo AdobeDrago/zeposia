@@ -2,7 +2,7 @@
 
 .hero {
   position: relative;
-  padding: 20px 40px;
+  padding: 10px 40px;
   min-height: 80px;
   background: #0032A0;
   text-align: left;
@@ -35,5 +35,5 @@
 }
 
 @media (width >= 900px) {
-  .hero { padding: 20px 40px; }
+  .hero { padding: 10px 40px; }
 }
