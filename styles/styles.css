@@ -1,3 +1,9 @@
+/* Reset browser defaults */
+html, body {
+margin: 0;
+padding: 0;
+}
+
 /*
  * Minimal EDS lifecycle CSS for overlay-driven pages.
  * The bulk of styling lives in /styles/<template>.css, loaded
@@ -57,4 +63,3 @@ body > footer {
 /* Global: hide entry modal overlay (blocks clicks, handled by show-once JS) */
 body:not(.gateway-page) .cmp-modal.entry-modal.modal { pointer-events: none !important; }
 body:not(.gateway-page) .cmp-modal.entry-modal.modal * { pointer-events: none !important; }
-
