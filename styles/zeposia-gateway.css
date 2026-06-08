@@ -1,0 +1,179 @@
+/* Self-hosted Montserrat fonts */
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "MontserratRegular"; src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "MontserratBold"; src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "MontserratSemiBold"; src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "MontserratMedium"; src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "MontserratExtraBold"; src: url("/fonts/Montserrat-ExtraBold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "BMSHumanity"; src: url("/fonts/BMSHumanity-Regular.woff2") format("woff2"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "BMSHumanity-Regular"; src: url("/fonts/BMSHumanity-Regular.woff2") format("woff2"); font-weight: normal; font-display: swap; }
+
+/* Zeposia Gateway — import source site CSS directly for pixel-perfect match */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css');
+@import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css');
+@import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style.css');
+@import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style_UC.css');
+
+/* Hide only EDS landmark header/footer (not template-internal ones) */
+body > header,
+body > footer {
+  display: none !important;
+}
+
+/* Remove EDS section constraints so source CSS applies cleanly */
+main > section,
+main .section {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Fix: Bootstrap d-lg-block breakpoint for footer utility nav */
+@media (min-width: 992px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-none.d-lg-block {
+    display: block !important;
+  }
+}
+
+/* === HCP MODAL — positioning only, styling from source CSS === */
+.entry-modal.show:not(.hcp-dismissed),
+.entry-modal[style*="display: block"],
+.entry-modal[style*="display:block"] {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 9999 !important;
+  background: rgba(0, 0, 0, 0.75) !important;
+  display: block !important;
+}
+
+.entry-modal.hcp-dismissed {
+  display: none !important;
+}
+
+.entry-modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 950px;
+}
+
+.entry-modal .modal-content {
+  background: #fff;
+  padding: 50px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+/* Body scroll lock when modal is visible */
+body:has(.entry-modal[style*="display: block"]),
+body:has(.entry-modal[style*="display:block"]) {
+  overflow: hidden !important;
+  height: 100vh !important;
+}
+
+/* Fix: Bootstrap imported CSS sets pointer-events:none on .modal-dialog — override everything to auto */
+.entry-modal,
+.entry-modal .modal-dialog,
+.entry-modal .modal-content,
+.entry-modal .modal-body,
+.entry-modal .buttoncnt,
+.entry-modal .btncont,
+.entry-modal .hcp_btn,
+.entry-modal .nonhcp_btn,
+.entry-modal .entrymodal_btn {
+  pointer-events: auto !important;
+}
+
+.entry-modal .hcp_btn,
+.entry-modal .nonhcp_btn {
+  cursor: pointer;
+}
+
+
+/* Fix HCP verification modal - match source site dimensions */
+.cmp-modal.entry-modal .modal-dialog.modal-dialog-centered {
+  display: block !important;
+  min-height: unset !important;
+  max-width: 1020px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.cmp-modal.entry-modal .modal-dialog .modal-content {
+  padding: 8px 8px 63px !important;
+  border-radius: 9px !important;
+}
+
+#entryModal .modal-body.p-5, .cmp-modal.entry-modal .modal-body.p-5 {
+padding: 0 !important;
+}
+
+/* === GATEWAY LAYOUT FIXES — match legacy reference === */
+
+/* Hide scrollbar to match legacy page width */
+html { scrollbar-width: none !important; }
+html::-webkit-scrollbar { display: none !important; }
+
+/* Main/body full width */
+main { max-width: none !important; width: 100% !important; }
+@media (min-width: 1024px) { body { width: auto !important; } }
+.gatway-wrapper { width: 100% !important; max-width: none !important; }
+
+/* Hero min-height matches legacy */
+.gateway-bg, .banner-wrapper.gateway-bg {
+  min-height: 500px !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+#gatewayWrapper { height: auto !important; }
+
+/* Cards container */
+.main-buttons.d-flex {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* Card sizing */
+.callout, .uc.callout, .mc.callout {
+  width: 590px !important;
+  max-width: 590px !important;
+  height: 151px !important;
+  margin: 0 !important;
+}
+
+.main-buttons a {
+  height: 150px !important;
+  line-height: 150px !important;
+  font-size: 21px !important;
+}
+
+/* Footer fixes */
+.isi-footer-wrapper { border-top: none !important; }
+.isi-footer-wrapper img.cmp-image__image { width: 272px !important; }
+.bg-lighter-blue { background-color: #fff !important; padding: 10px 0 !important; }
+.ftrcopytxt { font-size: 11px !important; line-height: 15px !important; }
