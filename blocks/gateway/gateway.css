@@ -15,7 +15,7 @@
 /* Section-level styling (applied via section-metadata style=gateway) */
 .section.gateway-container {
   background: linear-gradient(270deg, #C0E5FF, #F0F9FF);
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
-  min-height: 500px;
+  min-height: auto;
   position: relative;
 }
 
@@ -71,8 +71,8 @@
   justify-content: center;
   text-align: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 80px 20px 60px;
+  max-width: 100%;
+  padding: 40px 20px 40px;
   margin: 0 auto;
 }
 
@@ -481,3 +481,7 @@
   border-top: 1px solid #707070;
   margin: 0;
 }
+
+
+
+
