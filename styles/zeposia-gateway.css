@@ -134,17 +134,16 @@ padding: 0 !important;
   height: auto !important;
 }
 
-/* Hero section bottom padding - creates blue space below cards before ISI */
+/* Hero section - match legacy min-height behavior */
 .gateway-bg,
 .banner-wrapper.gateway-bg {
   min-height: auto !important;
   height: auto !important;
-  padding-bottom: 110px !important;
   width: 100% !important;
   max-width: none !important;
 }
 
-/* Cards container - constrained width, centered, no internal padding */
+/* Cards container */
 .main-buttons.d-flex {
   display: flex !important;
   justify-content: center !important;
@@ -154,7 +153,7 @@ padding: 0 !important;
   padding: 0 !important;
 }
 
-/* Card sizing - match legacy 590px width */
+/* Card sizing - match legacy 590px */
 .callout, .uc.callout, .mc.callout {
   width: 590px !important;
   max-width: 590px !important;
@@ -162,62 +161,23 @@ padding: 0 !important;
   margin: 0 !important;
 }
 
-/* Card link styling */
 .main-buttons a {
   height: 150px !important;
   line-height: 150px !important;
   font-size: 21px !important;
 }
 
-/* Body full width on desktop */
+/* Body/main full width */
 @media (min-width: 1024px) {
   body { width: auto !important; }
 }
 
-/* Main element full-width */
 main {
   max-width: none !important;
   width: 100% !important;
 }
 
-/* Gateway wrapper full width */
 .gatway-wrapper {
   width: 100% !important;
   max-width: none !important;
-}
-
-/* Logo sizing - match legacy 323px */
-.gateway-logo img {
-  max-width: 323px !important;
-}
-
-/* Fix 3: ISI spacing - tighten text spacing */
-.gateway-indication-head .bodypara {
-  margin-bottom: 15px !important;
-}
-.gateway-indication-head ul, .gateway-indication-head ol {
-  margin-bottom: 15px !important;
-}
-
-/* Fix 4: BMS logo width */
-.isi-footer-wrapper img.cmp-image__image {
-  width: 272px !important;
-  margin-bottom: 15px !important;
-  margin-top: 4px !important;
-}
-
-/* Fix 5: Footer background */
-.bg-lighter-blue {
-  background-color: #ffffff !important;
-}
-
-/* Fix 6: Footer text size */
-.ftrcopytxt {
-  font-size: 11px !important;
-  line-height: 15px !important;
-}
-
-/* Fix 7: Remove border-top from ISI footer */
-.isi-footer-wrapper {
-  border-top: none !important;
 }
