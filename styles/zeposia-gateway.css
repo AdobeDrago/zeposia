@@ -193,10 +193,10 @@ main {
 
 /* Fix 3: ISI spacing - tighten text spacing */
 .gateway-indication-head .bodypara {
-  margin-bottom: 12px !important;
+  margin-bottom: 15px !important;
 }
 .gateway-indication-head ul, .gateway-indication-head ol {
-  margin-bottom: 10px !important;
+  margin-bottom: 15px !important;
 }
 
 /* Fix 4: BMS logo width */
