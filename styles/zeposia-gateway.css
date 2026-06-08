@@ -128,49 +128,59 @@ body:has(.entry-modal[style*="display:block"]) {
 padding: 0 !important;
 }
 
-/* === GATEWAY LAYOUT FIXES === */
-.gateway-bg,
-.banner-wrapper.gateway-bg {
-  min-height: auto !important;
-  height: auto !important;
-}
+/* === GATEWAY LAYOUT FIXES — match legacy reference === */
 
 #gatewayWrapper {
   height: auto !important;
 }
 
+/* Hero section bottom padding - creates blue space below cards before ISI */
+.gateway-bg,
+.banner-wrapper.gateway-bg {
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 110px !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Cards container - constrained width, centered */
 .main-buttons.d-flex {
   display: flex !important;
   justify-content: center !important;
   gap: 20px !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
+  padding: 0 15px !important;
 }
 
+/* Card sizing - match legacy 590px width */
 .callout, .uc.callout, .mc.callout {
-  width: 577px !important;
+  width: 590px !important;
   max-width: calc(50% - 10px) !important;
+  height: 151px !important;
 }
 
+/* Card link styling */
 .main-buttons a {
   height: 150px !important;
   line-height: 150px !important;
   font-size: 21px !important;
 }
 
+/* Body full width on desktop */
 @media (min-width: 1024px) {
   body { width: auto !important; }
 }
 
-/* Fix: main element must be full-width for gateway */
+/* Main element full-width */
 main {
   max-width: none !important;
   width: 100% !important;
 }
 
-/* Ensure gateway background extends full width */
-.gatway-wrapper,
-.banner-wrapper.gateway-bg {
+/* Gateway wrapper full width */
+.gatway-wrapper {
   width: 100% !important;
   max-width: none !important;
 }
