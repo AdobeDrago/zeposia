@@ -1,8 +1,16 @@
 /* ==========================================================================
    Gateway Block
    Indication selector landing page — centered logo + HCP attestation + CTA cards
-   Source: https://www.zeposiahcp.com/
+   Native EDS block (de-overlayed from source)
    ========================================================================== */
+
+/* Self-hosted Montserrat fonts (needed for gateway page) */
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Montserrat"; src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "MontserratBold"; src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
+@font-face { font-family: "MontserratSemiBold"; src: url("/fonts/Montserrat-SemiBold.ttf") format("truetype"); font-weight: normal; font-display: swap; }
 
 /* Section-level styling (applied via section-metadata style=gateway) */
 .section.gateway-container {
@@ -17,23 +25,27 @@
   position: relative;
 }
 
-/* Utility banner above gateway */
-.gateway-wrapper::before {
-  content: 'THIS SITE IS INTENDED FOR U.S. HCP AUDIENCES ONLY';
-  display: block;
-  width: 100%;
+/* Top-header utility bar (authored content, no longer a pseudo-element) */
+.gateway .gateway-top-header {
   background-color: #F7F8F9;
   color: #0032A0;
   font-size: 12px;
   font-weight: 600;
   text-align: center;
   padding: 10px 20px;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.02em;
   position: absolute;
   top: 0;
   left: 0;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.02em;
   z-index: 1;
+}
+
+.gateway .gateway-top-header div,
+.gateway .gateway-top-header p {
+  margin: 0;
+  padding: 0;
 }
 
 /* Block wrapper */
@@ -298,4 +310,44 @@
   .gateway-modal {
     padding: 32px 24px 48px;
   }
+}
+
+/* Red bottom border on gateway section */
+.section.gateway-container {
+  border-bottom: 10px solid #f9423a;
+}
+
+/* Background shadow decoration (top-right) */
+.gateway-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12vw;
+  max-width: 179px;
+  height: 268px;
+  background-image: url('/images/gateway-bg-shadow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top right;
+  pointer-events: none;
+}
+
+/* Fix: remove default EDS section padding for gateway */
+.section.gateway-container > .gateway-wrapper {
+  padding: 0;
+}
+
+/* Gateway logo row adjustments */
+.gateway .gateway-logo div,
+.gateway .gateway-logo p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Gateway description row adjustments */
+.gateway .gateway-description div,
+.gateway .gateway-description p {
+  margin: 0;
 }

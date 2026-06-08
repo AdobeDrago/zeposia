@@ -105,3 +105,8 @@ align-items: flex-start;
 gap: 8px;
 }
 }
+
+/* Gateway page has no header */
+header.header-hidden {
+display: none !important;
+}

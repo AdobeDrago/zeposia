@@ -6,6 +6,13 @@
  *   /fragments/nav/<indication>.plain.html (DA-served fragment)
  */
 export default async function decorate(block) {
+  // Gateway page has no traditional header — the top-header is part of the gateway block
+  const isGateway = document.querySelector('.gateway.block') || document.querySelector('.section.gateway-container');
+  if (isGateway) {
+    block.closest('header')?.classList.add('header-hidden');
+    return;
+  }
+
   let path;
 
   const template = document.querySelector('main')?.dataset?.overlay;
