@@ -351,3 +351,133 @@
 .gateway .gateway-description p {
   margin: 0;
 }
+
+/* ========================================================================
+   ISI Section Styling (gateway page)
+   Matches source template's gateway-indication-head styles
+   ======================================================================== */
+
+/* ISI section container */
+.fragment-container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.fragment-container .fragment-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+.fragment-container .fragment {
+  max-width: 100%;
+}
+
+/* ISI header bar */
+.fragment-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #0032a0;
+  background-color: #dce2e4;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  margin: 0;
+  padding: 0 1000em;
+  margin-left: -1000em;
+  margin-right: -1000em;
+}
+
+/* ISI section headings (INDICATIONS, ISI subsections) */
+.fragment-container h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19.2px;
+  font-weight: 700;
+  color: #0054a6;
+  margin: 15px 0;
+  padding-left: 35px;
+  line-height: 1.3;
+}
+
+/* ISI sub-headings (Contraindications, Infections, etc.) */
+.fragment-container h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0054a6;
+  margin: 15px 0 5px;
+  padding-left: 35px;
+  line-height: 20px;
+}
+
+/* ISI body text */
+.fragment-container p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #707070;
+  line-height: 20px;
+  margin: 0 0 15px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+/* ISI bold headings within paragraphs */
+.fragment-container p strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #0054a6;
+  font-size: 16px;
+}
+
+/* ISI lists */
+.fragment-container ul,
+.fragment-container ol {
+  padding-left: 55px;
+  padding-right: 35px;
+  margin: 0 0 15px;
+}
+
+.fragment-container li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #707070;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+
+/* ISI links */
+.fragment-container a {
+  color: #0054a6;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* ISI final bold paragraph (PI/MedGuide links) */
+.fragment-container p:last-of-type strong {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #4d4d4f;
+  font-size: 14px;
+}
+
+.fragment-container p:last-of-type strong a {
+  font-weight: 700;
+}
+
+/* ISI italic text (Macular Edema subheading) */
+.fragment-container em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+/* Border above ISI section */
+.fragment-container::before {
+  content: '';
+  display: block;
+  border-top: 1px solid #707070;
+  margin: 0;
+}

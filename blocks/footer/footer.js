@@ -19,7 +19,11 @@ export default async function decorate(block) {
     // Native EDS page — load DA-authored footer fragment
     const url = window.location.pathname;
     let indication = 'uc';
-    if (url.includes('/multiple-sclerosis')) {
+    // Gateway page gets its own footer fragment
+    const isGateway = document.querySelector('.gateway.block') || document.querySelector('.section.gateway-container');
+    if (isGateway) {
+      indication = 'gateway';
+    } else if (url.includes('/multiple-sclerosis')) {
       indication = 'ms';
     } else if (url.includes('/ulcerative-colitis')) {
       indication = 'uc';
