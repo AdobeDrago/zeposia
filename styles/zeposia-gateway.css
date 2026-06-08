@@ -161,3 +161,16 @@ padding: 0 !important;
 @media (min-width: 1024px) {
   body { width: auto !important; }
 }
+
+/* Fix: main element must be full-width for gateway */
+main {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Ensure gateway background extends full width */
+.gatway-wrapper,
+.banner-wrapper.gateway-bg {
+  width: 100% !important;
+  max-width: none !important;
+}
