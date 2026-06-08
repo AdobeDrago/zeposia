@@ -127,3 +127,52 @@ body:has(.entry-modal[style*="display:block"]) {
 #entryModal .modal-body.p-5, .cmp-modal.entry-modal .modal-body.p-5 {
 padding: 0 !important;
 }
+
+
+/* === GATEWAY LAYOUT FIXES — override template inline styles === */
+/* These use !important to beat inline <style> in the template HTML */
+
+.gateway-bg,
+.banner-wrapper.gateway-bg,
+section.gateway .banner-wrapper.gateway-bg {
+  min-height: auto !important;
+  height: auto !important;
+  padding-bottom: 40px !important;
+}
+
+#gatewayWrapper,
+.column-control .row#gatewayWrapper {
+  height: auto !important;
+}
+
+/* Full width cards matching legacy */
+.main-buttons.d-flex {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 15px !important;
+}
+
+.callout,
+.uc.callout,
+.mc.callout {
+  width: 577px !important;
+  max-width: calc(50% - 10px) !important;
+}
+
+.main-buttons a {
+  height: 150px !important;
+  line-height: 150px !important;
+  font-size: 21px !important;
+}
+
+/* Ensure body is full width on desktop */
+@media (min-width: 1024px) {
+  body.gateway-page,
+  body {
+    width: auto !important;
+    max-width: none !important;
+  }
+}
