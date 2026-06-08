@@ -181,3 +181,83 @@ main {
   width: 100% !important;
   max-width: none !important;
 }
+}
+}
+
+/* Main element full-width */
+main {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Gateway wrapper full width */
+.gatway-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Logo sizing - match legacy 323px */
+.gateway-logo img {
+  max-width: 323px !important;
+}
+
+/* Fix 3: ISI spacing - tighten text spacing */
+.gateway-indication-head .bodypara {
+  margin-bottom: 15px !important;
+}
+.gateway-indication-head ul, .gateway-indication-head ol {
+  margin-bottom: 15px !important;
+}
+
+/* Fix 4: BMS logo width */
+.isi-footer-wrapper img.cmp-image__image {
+  width: 272px !important;
+  margin-bottom: 15px !important;
+  margin-top: 4px !important;
+}
+
+/* Fix 5: Footer background */
+.bg-lighter-blue {
+  background-color: #ffffff !important;
+}
+
+/* Fix 6: Footer text size */
+.ftrcopytxt {
+  font-size: 11px !important;
+  line-height: 15px !important;
+}
+
+/* Fix 7: Remove border-top from ISI footer */
+.isi-footer-wrapper {
+  border-top: none !important;
+}
+
+/* Footer fixes - match legacy proportions */
+.isi-footer-wrapper {
+  border-top: none !important;
+}
+
+.isi-footer-wrapper img.cmp-image__image {
+  width: 272px !important;
+  margin-bottom: 10px !important;
+}
+
+.bg-lighter-blue {
+  background-color: #ffffff !important;
+  padding: 10px 0 !important;
+}
+
+.ftrcopytxt {
+  font-size: 11px !important;
+  line-height: 15px !important;
+}
+
+.ftrcopytxtcont {
+  padding: 5px 15px !important;
+  margin: 0 !important;
+}
+
+.footer-links-section .container {
+  padding: 5px 15px !important;
+  margin: 0 !important;
+}
