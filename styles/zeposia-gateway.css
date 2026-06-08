@@ -261,3 +261,39 @@ main {
   padding: 5px 15px !important;
   margin: 0 !important;
 }
+
+/* Hide scrollbar to match legacy page width (1440px not 1425px) */
+html {
+  scrollbar-width: none !important;
+}
+html::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Footer compression to match legacy 89px */
+.isi-footer-wrapper {
+  border-top: none !important;
+  max-height: 95px !important;
+  overflow: hidden !important;
+}
+
+.isi-footer-wrapper img.cmp-image__image {
+  width: 272px !important;
+  margin: 4px 0 10px !important;
+}
+
+.bg-lighter-blue {
+  background-color: #fff !important;
+  padding: 5px 0 !important;
+}
+
+.ftrcopytxt {
+  font-size: 11px !important;
+  line-height: 15px !important;
+  margin: 0 !important;
+}
+
+.ftrcopytxtcont {
+  margin: 0 20px !important;
+  padding: 0 15px !important;
+}
