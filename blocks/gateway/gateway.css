@@ -500,3 +500,25 @@ coration: underline;
 
 
 
+
+/* Tighten ISI spacing to match source's compressed layout */
+.fragment-container p {
+  margin: 0 0 10px;
+}
+
+.fragment-container ul,
+.fragment-container ol {
+  margin: 0 0 10px;
+}
+
+.fragment-container li {
+  margin-bottom: 4px;
+}
+
+.fragment-container h3 {
+  margin: 10px 0;
+}
+
+.fragment-container h4 {
+  margin: 10px 0 3px;
+}
