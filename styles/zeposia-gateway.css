@@ -144,20 +144,20 @@ padding: 0 !important;
   max-width: none !important;
 }
 
-/* Cards container - constrained width, centered */
+/* Cards container - constrained width, centered, no internal padding */
 .main-buttons.d-flex {
   display: flex !important;
   justify-content: center !important;
   gap: 20px !important;
   max-width: 1200px !important;
   margin: 0 auto !important;
-  padding: 0 15px !important;
+  padding: 0 !important;
 }
 
 /* Card sizing - match legacy 590px width */
 .callout, .uc.callout, .mc.callout {
   width: 590px !important;
-  max-width: calc(50% - 10px) !important;
+  max-width: 590px !important;
   height: 151px !important;
 }
 
@@ -183,4 +183,9 @@ main {
 .gatway-wrapper {
   width: 100% !important;
   max-width: none !important;
+}
+
+/* Logo sizing - match legacy 323px */
+.gateway-logo img {
+  max-width: 323px !important;
 }
