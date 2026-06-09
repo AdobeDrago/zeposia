@@ -355,6 +355,11 @@ async function loadEager(doc) {
   if (path.startsWith('/ulcerative-colitis')) {
     document.body.classList.add('ucsite');
     loadCSS(`${window.hlx.codeBasePath}/styles/zeposia-uc-native.css`);
+    // Load self-hosted source CSS for pixel-perfect rendering
+    loadCSS(`${window.hlx.codeBasePath}/styles/source-base.min.css`);
+    loadCSS(`${window.hlx.codeBasePath}/styles/source-commercial-global.min.css`);
+    loadCSS(`${window.hlx.codeBasePath}/styles/source-style.css`);
+    loadCSS(`${window.hlx.codeBasePath}/styles/source-style-uc.css`);
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
     }
