@@ -715,59 +715,117 @@ loadPage();
  * Map EDS DOM elements to source CSS classes for pixel-perfect rendering.
  * This adds classes that the self-hosted source CSS targets.
  */
-function applySourceClasses() {
+
+/**
+ * Transform EDS DOM to source-equivalent structure for pixel-perfect CSS rendering.
+ * Runs after page decoration. Converts semantic HTML (p, strong, ul, li) to 
+ * source-style DOM (div.bodypara, span.head3, ul.indication-li, li.bodypara).
+ */
+function transformToSourceDOM() {
   const path = window.location.pathname;
   if (!path.startsWith('/ulcerative-colitis')) return;
 
-  // Fragment wrapper (ISI) → source classes
-  document.querySelectorAll('.fragment-wrapper h3').forEach(el => el.classList.add('head3'));
-  document.querySelectorAll('.fragment-wrapper h2').forEach(el => el.classList.add('head3'));
-  document.querySelectorAll('.fragment-wrapper p').forEach(el => el.classList.add('bodypara'));
-  document.querySelectorAll('.fragment-wrapper ul').forEach(el => el.classList.add('indication-li'));
-  document.querySelectorAll('.fragment-wrapper li').forEach(el => el.classList.add('bodypara'));
-  document.querySelectorAll('.fragment-wrapper p strong').forEach(el => el.classList.add('head3'));
-  
-  // ISI container class
+  // Transform ISI fragment content
   const fragWrapper = document.querySelector('.fragment-wrapper');
   if (fragWrapper) {
-    fragWrapper.classList.add('cmp-footer-isi-content-element');
-    const frag = fragWrapper.querySelector('.fragment');
-    if (frag) frag.classList.add('isi-content');
-  }
-  
-  // Clinical trial section → source classes  
-  const sections = document.querySelectorAll('main > .section');
-  if (sections[1]) {
-    sections[1].classList.add('home-content', 'container');
-    const wrapper = sections[1].querySelector('.default-content-wrapper');
-    if (wrapper) wrapper.classList.add('secondPara');
-    sections[1].querySelectorAll('p strong').forEach(el => {
-      el.classList.add('blue', 'bold');
-    });
-  }
-  
-  // Hero section → source classes
-  if (sections[0]) {
-    const heroBlock = sections[0].querySelector('.hero');
-    if (heroBlock) {
-      heroBlock.classList.add('left-banner');
-      const firstP = heroBlock.querySelector('p');
-      if (firstP) firstP.classList.add('bane_one');
+    const content = fragWrapper.querySelector('.fragment');
+    if (content) {
+      // Transform all <p> to <div class="bodypara">
+      content.querySelectorAll('p').forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'bodypara';
+        div.innerHTML = p.innerHTML;
+        p.replaceWith(div);
+      });
+      
+      // Transform <h3> to <div class="head3">
+      content.querySelectorAll('h3').forEach(h3 => {
+        const div = document.createElement('div');
+        div.className = 'head3';
+        if (h3.id) div.id = h3.id;
+        div.innerHTML = h3.innerHTML;
+        h3.replaceWith(div);
+      });
+      
+      // Transform <h2> to <div class="head3 newhead-uc">  
+      content.querySelectorAll('h2').forEach(h2 => {
+        const div = document.createElement('div');
+        div.className = 'head3 newhead-uc';
+        div.innerHTML = h2.innerHTML;
+        h2.replaceWith(div);
+      });
+      
+      // Transform <strong> inside .bodypara to <span class="head3">
+      content.querySelectorAll('.bodypara > strong:first-child').forEach(strong => {
+        const span = document.createElement('span');
+        span.className = 'head3';
+        span.innerHTML = strong.innerHTML;
+        // Move the remaining text after the span
+        const parent = strong.parentElement;
+        strong.replaceWith(span);
+      });
+      
+      // Add indication-li class to ULs
+      content.querySelectorAll('ul').forEach(ul => {
+        ul.classList.add('indication-li');
+      });
+      
+      // Add bodypara class to LIs
+      content.querySelectorAll('li').forEach(li => {
+        li.classList.add('bodypara');
+      });
+      
+      // Wrap content in ISI structure
+      fragWrapper.classList.add('cmp-footer-isi-content-element');
+      content.classList.add('isi-content');
     }
   }
   
-  // Footer
-  const footer = document.querySelector('footer');
-  if (footer) {
-    footer.classList.add('footer', 'footer-variation-one');
-    const wrapper = footer.querySelector('.footer-wrapper');
-    if (wrapper) wrapper.classList.add('isi-footer-wrapper');
+  // Transform clinical section
+  const sections = document.querySelectorAll('main > .section');
+  if (sections[1]) {
+    const wrapper = sections[1].querySelector('.default-content-wrapper');
+    if (wrapper) {
+      // Add source container classes
+      sections[1].classList.add('column-control');
+      wrapper.classList.add('home-content', 'container', 'ptop200');
+      
+      // Wrap paragraphs in secondPara div
+      const secondPara = document.createElement('div');
+      secondPara.className = 'secondPara';
+      while (wrapper.firstChild) {
+        secondPara.appendChild(wrapper.firstChild);
+      }
+      wrapper.appendChild(secondPara);
+      
+      // Transform <strong> to <span class="blue bold">
+      secondPara.querySelectorAll('p strong').forEach(strong => {
+        const span = document.createElement('span');
+        span.className = 'blue bold';
+        span.innerHTML = strong.innerHTML;
+        strong.replaceWith(span);
+      });
+    }
+  }
+  
+  // Transform hero section
+  if (sections[0]) {
+    const hero = sections[0].querySelector('.hero');
+    if (hero) {
+      hero.classList.add('left-banner');
+      // Add banner-content wrapper
+      const innerDiv = hero.querySelector(':scope > div > div');
+      if (innerDiv) {
+        innerDiv.classList.add('banner-content', 'contentBlock');
+      }
+    }
   }
 }
 
-// Run after page is decorated
+// Run after all blocks are loaded
 if (document.readyState === 'complete') {
-  applySourceClasses();
+  setTimeout(transformToSourceDOM, 100);
 } else {
-  window.addEventListener('load', applySourceClasses);
+  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
 }
+
