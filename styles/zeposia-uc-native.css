@@ -386,3 +386,34 @@ body.ucsite .hero img {
   height: auto;
   object-fit: none;
 }
+
+/* ===== HEIGHT/SPACING CORRECTIONS (match source layout) ===== */
+/* Header height: source is 91px */
+body.ucsite header .header-wrapper {
+  min-height: 91px;
+  box-sizing: border-box;
+}
+
+/* Hero total height should be 539px */
+body.ucsite main > .section:first-child {
+  min-height: 539px;
+  box-sizing: border-box;
+}
+
+body.ucsite .hero {
+  min-height: 539px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+/* Clinical section: no extra padding, just content */
+body.ucsite main > .section:nth-child(2) {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* ISI fragment: reduce space between sections */
+body.ucsite main > .section:nth-child(3) {
+  padding-top: 0;
+}
