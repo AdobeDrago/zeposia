@@ -484,6 +484,8 @@ var toggleText = moreContainer.querySelector('.isi-toggle-text');
 
 function expand() {
 isExpanded = true;
+      // Move to body for correct fixed positioning
+      if (isiEl.parentElement !== document.body) { document.body.appendChild(isiEl); }
 isiEl.setAttribute('style', 'display:block;position:fixed;top:0;left:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;z-index:99999;background:#fff;overflow-y:auto;padding:60px 40px 40px;box-sizing:border-box;');
 if (previewContainer) previewContainer.style.display = 'none';
 expandContainer.style.display = 'block';
