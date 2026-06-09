@@ -356,10 +356,6 @@ async function loadEager(doc) {
     document.body.classList.add('ucsite');
     loadCSS(`${window.hlx.codeBasePath}/styles/zeposia-uc-native.css`);
     // Load self-hosted source CSS for pixel-perfect rendering
-    loadCSS(`${window.hlx.codeBasePath}/styles/source-base.min.css`);
-    loadCSS(`${window.hlx.codeBasePath}/styles/source-commercial-global.min.css`);
-    loadCSS(`${window.hlx.codeBasePath}/styles/source-style.css`);
-    loadCSS(`${window.hlx.codeBasePath}/styles/source-style-uc.css`);
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
       document.body.classList.add('disabled');
@@ -827,5 +823,22 @@ if (document.readyState === 'complete') {
   setTimeout(transformToSourceDOM, 100);
 } else {
   window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
+}
+
+ventListener('load', () => setTimeout(transformToSourceDOM, 100));
+}
+
+M, 100));
+}
+
+ventListener('load', () => setTimeout(transformToSourceDOM, 100));
+}
+
+tListener('load', () => setTimeout(transformToSourceDOM, 100));
+}
+
+}
+
+tListener('load', () => setTimeout(transformToSourceDOM, 100));
 }
 
