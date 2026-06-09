@@ -354,6 +354,7 @@ async function loadEager(doc) {
   const path = window.location.pathname;
   if (path.startsWith('/ulcerative-colitis')) {
     document.body.classList.add('ucsite');
+    loadCSS("${window.hlx.codeBasePath}/styles/zeposia-uc-native.css");
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
     }
