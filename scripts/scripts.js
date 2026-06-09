@@ -825,20 +825,16 @@ if (document.readyState === 'complete') {
   window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
 }
 
-ventListener('load', () => setTimeout(transformToSourceDOM, 100));
+ innerDiv.classList.add('banner-content', 'contentBlock');
+      }
+    }
+  }
 }
 
-M, 100));
-}
-
-ventListener('load', () => setTimeout(transformToSourceDOM, 100));
-}
-
-tListener('load', () => setTimeout(transformToSourceDOM, 100));
-}
-
-}
-
-tListener('load', () => setTimeout(transformToSourceDOM, 100));
+// Run after all blocks are loaded
+if (document.readyState === 'complete') {
+  setTimeout(transformToSourceDOM, 100);
+} else {
+  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
 }
 
