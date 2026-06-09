@@ -825,16 +825,3 @@ if (document.readyState === 'complete') {
   window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
 }
 
- innerDiv.classList.add('banner-content', 'contentBlock');
-      }
-    }
-  }
-}
-
-// Run after all blocks are loaded
-if (document.readyState === 'complete') {
-  setTimeout(transformToSourceDOM, 100);
-} else {
-  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
-}
-
