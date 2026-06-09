@@ -868,3 +868,76 @@ body.ucsite .hero h1 {
   margin-right: auto;
   line-height: 46px;
 }
+
+/* ===== EXACT SOURCE-MATCHED HERO ELEMENTS (iteration 12) ===== */
+
+/* Benefit box: semi-transparent white overlay */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 20px 20px;
+  padding: 12px 20px;
+  margin: 0 auto 15px;
+  max-width: 478px;
+  width: 478px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(0, 50, 160);
+}
+
+/* "Take the next step" - should be RED, semibold */
+body.ucsite .hero > div > div > p:nth-child(3) strong {
+  color: rgb(249, 66, 58);
+  font-family: 'MontserratSemiBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Override the earlier blue color for this specific strong */
+body.ucsite .hero > div > div > p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+/* Pill icon pseudo-element refinement */
+body.ucsite .hero > div > div > p:nth-child(4)::before {
+  width: 18px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+/* CTA button exact match */
+body.ucsite .hero > div > div > p:nth-child(5) a {
+  background-color: rgb(3, 50, 160);
+  color: #fff;
+  padding: 0 0 0 12px;
+  border-radius: 13px;
+  width: 207px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  min-width: unset;
+}
+
+/* CTA arrow indicator (right side) */
+body.ucsite .hero > div > div > p:nth-child(5) a::after {
+  content: '›';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 8px;
+  color: #fff;
+}
