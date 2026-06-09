@@ -173,3 +173,27 @@ body.zeposia-ms::after {
 /* Hide HCP entry modal after dismissal (blocks clicks on underlying elements) */
 #entryModal, .cmp-modal.entry-modal { display: none !important; pointer-events: none !important; }
 
+
+
+/* Fix: carousel/hero must be full viewport width (not constrained by main max-width) */
+main {
+max-width: 100% !important;
+padding-left: 0 !important;
+padding-right: 0 !important;
+margin: 0 !important;
+}
+
+main > .section {
+max-width: none;
+}
+
+/* Hero carousel full width */
+.hero-carousel,
+.hero-carousel .slick-list,
+.hero-carousel .slick-track,
+.hero-carousel .slick-slide,
+.hero-carousel .slick-slide > div {
+max-width: 100vw;
+width: 100vw;
+margin-left: calc(-50vw + 50%);
+}
