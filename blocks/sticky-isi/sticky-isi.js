@@ -2,13 +2,15 @@
  * Sticky ISI Bar Block — ZEPOSIA HCP (EDS)
  *
  * Fixed-bottom Important Safety Information bar with expand/collapse behavior.
+ * Matches the legacy zeposiahcp.com ISI drawer appearance and behavior.
  *
  * Behavior:
  * - Fixed at viewport bottom, always visible while scrolling
- * - Collapsed state: shows header "IMPORTANT SAFETY INFORMATION" + brief preview text
+ * - Collapsed state: shows header + preview of ISI content (clipped with overflow)
  * - Expanded state: shows full scrollable ISI content (max ~50vh)
- * - Toggle via chevron button (up-arrow to expand, down-arrow to collapse)
- * - Auto-collapses when the inline/full ISI section scrolls into view
+ * - Toggle via + EXPAND / − COLLAPSE button
+ * - Scroll-direction reactive: expand on scroll up, collapse on scroll down
+ * - Auto-hides when the inline/full ISI section scrolls into view
  * - Supports UC (blue) and MS (red) indication variants via CSS custom properties
  *
  * Authored content structure (in the document):
@@ -21,9 +23,6 @@
  * The first row/cell contains the full ISI HTML (typically loaded from a fragment).
  */
 
-const MOBILE_BREAKPOINT = 768;
-const EXPANDED_MAX_HEIGHT_VH = 50;
-const COLLAPSED_MAX_HEIGHT = '20%';
 const AUTO_HIDE_SELECTOR = '.section.isi-container, .section[data-isi], [data-full-isi]';
 
 /**
@@ -38,7 +37,7 @@ function getIndication() {
 }
 
 /**
- * Create the toggle/chevron button element.
+ * Create the toggle button element with +/− icon and EXPAND/COLLAPSE label.
  * @param {boolean} expanded — current state
  * @returns {HTMLButtonElement}
  */
@@ -48,7 +47,9 @@ function createToggleButton(expanded) {
   btn.className = 'sticky-isi-toggle';
   btn.setAttribute('aria-label', expanded ? 'Collapse safety information' : 'Expand safety information');
   btn.setAttribute('aria-expanded', String(expanded));
-  btn.innerHTML = `<span class="sticky-isi-arrow ${expanded ? 'arrow-down' : 'arrow-up'}"></span>`;
+  const icon = expanded ? '−' : '+';
+  const label = expanded ? 'COLLAPSE' : 'EXPAND';
+  btn.innerHTML = `<span class="sticky-isi-toggle-icon">${icon}</span> <span class="sticky-isi-toggle-label">${label}</span>`;
   return btn;
 }
 
@@ -83,22 +84,10 @@ export default function decorate(block) {
 
   header.append(title, toggleBtn);
 
+  // Preview content: show the full ISI HTML, clipped by CSS overflow
   const previewContent = document.createElement('div');
   previewContent.className = 'sticky-isi-preview-content';
-  // Extract first ~300 chars of text for preview (strip tags, take first paragraph)
-  const tempDiv = document.createElement('div');
-  tempDiv.innerHTML = isiHTML;
-  const firstParagraphs = tempDiv.querySelectorAll('p, .bodypara, li');
-  let previewText = '';
-  for (const p of firstParagraphs) {
-    previewText += p.textContent.trim() + ' ';
-    if (previewText.length > 200) break;
-  }
-  // Fallback: if no paragraphs, use raw text content
-  if (!previewText.trim()) {
-    previewText = tempDiv.textContent.trim().substring(0, 250);
-  }
-  previewContent.textContent = previewText.trim();
+  previewContent.innerHTML = isiHTML;
 
   previewContainer.append(header, previewContent);
 
@@ -133,22 +122,24 @@ export default function decorate(block) {
   // --- State Management ---
   let expanded = false;
 
+  function updateToggleButtons() {
+    block.querySelectorAll('.sticky-isi-toggle').forEach((btn) => {
+      btn.setAttribute('aria-expanded', String(expanded));
+      btn.setAttribute('aria-label', expanded ? 'Collapse safety information' : 'Expand safety information');
+      const icon = btn.querySelector('.sticky-isi-toggle-icon');
+      const label = btn.querySelector('.sticky-isi-toggle-label');
+      if (icon) icon.textContent = expanded ? '−' : '+';
+      if (label) label.textContent = expanded ? 'COLLAPSE' : 'EXPAND';
+    });
+  }
+
   function setExpanded(value) {
     expanded = value;
     block.classList.toggle('is-expanded', expanded);
     block.classList.toggle('is-collapsed', !expanded);
     previewContainer.hidden = expanded;
     expandContainer.hidden = !expanded;
-
-    // Update all toggle buttons
-    block.querySelectorAll('.sticky-isi-toggle').forEach((btn) => {
-      btn.setAttribute('aria-expanded', String(expanded));
-      btn.setAttribute('aria-label', expanded ? 'Collapse safety information' : 'Expand safety information');
-      const arrow = btn.querySelector('.sticky-isi-arrow');
-      if (arrow) {
-        arrow.className = `sticky-isi-arrow ${expanded ? 'arrow-down' : 'arrow-up'}`;
-      }
-    });
+    updateToggleButtons();
 
     // Focus management: when expanding, focus the scrollable content
     if (expanded) {
@@ -193,14 +184,53 @@ export default function decorate(block) {
     observer.observe(fullIsiSection);
   }
 
+  // --- Scroll-direction reactive behavior ---
+  // Scroll down → collapse (tray), Scroll up → expand (fly out)
+  function setupScrollDirectionTracking() {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const SCROLL_THRESHOLD = 10; // minimum px delta to trigger state change
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+
+      requestAnimationFrame(() => {
+        const currentScrollY = window.scrollY;
+        const delta = currentScrollY - lastScrollY;
+
+        // Only react if we've scrolled past the threshold and ISI isn't hidden
+        if (Math.abs(delta) > SCROLL_THRESHOLD && !block.classList.contains('is-hidden')) {
+          if (delta > 0 && expanded) {
+            // Scrolling DOWN → collapse to tray
+            setExpanded(false);
+          } else if (delta < 0 && !expanded) {
+            // Scrolling UP → expand (fly out)
+            setExpanded(true);
+          }
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
   // Initialize state
   block.classList.add('is-collapsed');
   setExpanded(false);
 
-  // Defer auto-collapse setup to allow page to fully render
-  if (document.readyState === 'complete') {
+  // Defer auto-collapse and scroll tracking setup to allow page to fully render
+  function initBehaviors() {
     setupAutoCollapse();
+    setupScrollDirectionTracking();
+  }
+
+  if (document.readyState === 'complete') {
+    initBehaviors();
   } else {
-    window.addEventListener('load', setupAutoCollapse, { once: true });
+    window.addEventListener('load', initBehaviors, { once: true });
   }
 }

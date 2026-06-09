@@ -1,519 +1,503 @@
-/* zeposia-uc-native.css — Native EDS styles for UC pages (de-overlaid)
+/* stylelint-disable no-descending-specificity */
+
+/* zeposia-uc-native.css — Native EDS styles for UC pages
    Matches computed styles from source: www.zeposiahcp.com/ulcerative-colitis
-   All values extracted from live page computed styles */
+   All values extracted from live page getComputedStyle.
+   v3.2 §4.1 UA-reset-first; single canonical rule per selector. */
+
+/* ===== UA RESET (§4.1 — neutralize user-agent defaults) ===== */
+body.ucsite *, body.ucsite *::before, body.ucsite *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== TEXT RENDERING (match source) ===== */
+body.ucsite, body.ucsite * {
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force scrollbar to match source container offset */
+html {
+  overflow-y: scroll;
+}
 
 /* ===== GLOBAL UC PAGE STYLES ===== */
 body.ucsite {
-  color: rgb(67, 67, 67);
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  color: rgb(67 67 67);
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  margin: 0;
-  padding: 0;
   background: #fff;
 }
 
 body.ucsite main {
   max-width: 100%;
-  margin: 0;
-  padding: 0;
 }
 
+/* All sections default to 1020px centered (source container width) */
 body.ucsite main > .section {
   max-width: 1020px;
   margin: 0 auto;
   padding: 0;
 }
 
+/* Section gaps: source has continuous flow */
+body.ucsite main > .section + .section {
+  margin-top: 0;
+}
+
 /* ===== HEADER ===== */
-body.ucsite header .header-wrapper {
-  max-width: 100%;
-  background-color: #fff;
+
+/* Protect header from overlay/disabled CSS interference */
+body.ucsite header,
+body.ucsite header *,
+body.ucsite.disabled header,
+body.ucsite.disabled header * {
+  visibility: visible !important;
 }
 
-body.ucsite header nav {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
+/* Hide legacy scraped header inside main on overlay pages — our EDS header replaces it */
+body.ucsite.disabled main nav.navbar {
+  display: none !important;
+}
+
+/* Also hide the indications modal from overlay templates */
+body.ucsite.disabled [id="indication_modal"] {
+  display: none !important;
+}
+
+/* Source: nav.navbar 1440x91, white bg, logo left + utility nav right + section nav below */
+body.ucsite header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  position: relative;
+  z-index: 100;
+  display: block !important;
+  width: 100% !important;
+}
+
+body.ucsite header.header-wrapper {
+  max-width: 100%;
   height: 91px;
-  box-sizing: border-box;
-}
-
-body.ucsite header nav p {
-  margin: 0;
-  font-size: 14px;
-}
-
-body.ucsite header nav a {
-  color: rgb(0, 50, 160);
-  text-decoration: none;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-}
-
-body.ucsite header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 20px;
-}
-
-body.ucsite header nav li {
-  margin: 0;
-}
-
-/* ===== HERO SECTION ===== */
-body.ucsite main > .section:first-child {
-  max-width: 100%;
-  padding: 0;
-  background-color: #A4E2FF;
-}
-
-body.ucsite .hero-wrapper {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 30px 0 20px;
-}
-
-body.ucsite .hero-wrapper .hero {
-  padding: 0;
-}
-
-body.ucsite .hero-wrapper .hero > div > div {
-  padding: 68px 15px 0 15px;
-}
-
-body.ucsite .hero-wrapper .hero p {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgb(67, 67, 67);
-  margin-bottom: 8px;
-}
-
-/* Hero intro line */
-body.ucsite .hero-wrapper .hero > div > div > p:first-child {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 20px;
-  line-height: 22px;
-  color: rgb(67, 67, 67);
-  margin-bottom: 8px;
-}
-
-/* H1 */
-body.ucsite .hero-wrapper h1,
-body.ucsite main h1 {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-size: 36px;
-  line-height: 38px;
-  color: rgb(0, 50, 160);
-  font-weight: 700;
-  margin: 0 0 8px;
-}
-
-/* Bold strong text in hero */
-body.ucsite .hero-wrapper .hero strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  color: rgb(0, 50, 160);
-}
-
-/* CTA button */
-body.ucsite .hero-wrapper .hero .button-container a,
-body.ucsite .hero-wrapper .hero a.button {
-  display: inline-flex;
-  align-items: center;
-  background-color: rgb(3, 50, 160);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 13px;
-  text-decoration: none;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-}
-
-/* Footnotes */
-body.ucsite .hero-wrapper .hero sup {
-  font-size: 10px;
-  vertical-align: super;
-  line-height: 0;
-}
-
-/* ===== CLINICAL TRIAL INFO (Section 2) ===== */
-body.ucsite main > .section:nth-child(2) {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-body.ucsite main > .section:nth-child(2) .default-content-wrapper {
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-body.ucsite main > .section:nth-child(2) .default-content-wrapper p {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  color: rgb(67, 67, 67);
-  margin-bottom: 10px;
-}
-
-body.ucsite main > .section:nth-child(2) .default-content-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  color: rgb(0, 50, 160);
-}
-
-/* ===== ISI FRAGMENT (Section 3) ===== */
-body.ucsite .fragment-wrapper {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-body.ucsite .fragment-wrapper .fragment {
-  padding: 0;
-}
-
-body.ucsite .fragment-wrapper h2,
-body.ucsite .fragment-wrapper h3 {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  color: rgb(67, 67, 67);
-  margin-bottom: 8px;
-}
-
-body.ucsite .fragment-wrapper h2 {
-  font-size: 20px;
-  line-height: 22px;
-  color: rgb(0, 50, 160);
-  border-top: 3px solid rgb(0, 50, 160);
-  padding-top: 15px;
-  margin-top: 20px;
-}
-
-body.ucsite .fragment-wrapper h3 {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-body.ucsite .fragment-wrapper p {
-  margin-bottom: 7px;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 10px;
-}
-
-body.ucsite .fragment-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-}
-
-body.ucsite .fragment-wrapper ul {
-  padding-left: 20px;
-  margin-bottom: 10px;
-  list-style: disc;
-}
-
-body.ucsite .fragment-wrapper li {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 8px;
-}
-
-body.ucsite .fragment-wrapper a {
-  color: rgb(0, 50, 160);
-  text-decoration: underline;
-}
-
-/* ===== REFERENCES (Section 4) ===== */
-body.ucsite main > .section:nth-child(4) .default-content-wrapper {
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-body.ucsite main > .section:nth-child(4) .default-content-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  color: rgb(0, 50, 160);
-}
-
-body.ucsite main > .section:nth-child(4) .default-content-wrapper ol {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color: rgb(67, 67, 67);
-  padding-left: 20px;
-  margin: 0;
-}
-
-body.ucsite main > .section:nth-child(4) .default-content-wrapper li {
-  margin-bottom: 5px;
-  font-size: 12px;
-}
-
-body.ucsite main > .section:nth-child(4) .default-content-wrapper em {
-  font-style: italic;
-}
-
-/* ===== STICKY ISI ===== */
-body.ucsite .sticky-isi-wrapper {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border-top: 3px solid rgb(0, 50, 160);
-  z-index: 1000;
-  padding: 10px 20px;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  max-width: 100%;
-}
-
-body.ucsite .sticky-isi-wrapper .sticky-isi p {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  color: rgb(0, 50, 160);
-  margin: 0;
-}
-
-/* ===== FOOTER ===== */
-body.ucsite footer {
-  background-color: #f8f9fa;
-  border-top: 1px solid #e0e0e0;
-}
-
-body.ucsite footer .footer-wrapper {
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 20px 15px;
-}
-
-body.ucsite footer nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-body.ucsite footer nav li {
-  margin: 0;
-}
-
-body.ucsite footer nav a {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 12px;
-  color: rgb(67, 67, 67);
-  text-decoration: none;
-}
-
-body.ucsite footer p {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  color: rgb(67, 67, 67);
-  margin-bottom: 5px;
-}
-
-/* ===== HERO BLOCK OVERRIDES (override blocks/hero/hero.css) ===== */
-body.ucsite .hero {
-  background: #A4E2FF;
-  padding: 30px 0;
-  min-height: auto;
-  text-align: left;
+  width: 100%;
+  padding: 8px 16px;
   overflow: visible;
 }
 
-body.ucsite .hero h1 {
-  color: rgb(0, 50, 160);
-  font-size: 36px;
-  font-weight: 700;
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  line-height: 38px;
-  max-width: none;
-  margin: 0 0 8px;
+body.ucsite header .header.block {
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+  height: 75px;
+  width: 100% !important;
+  display: grid !important;
+  overflow: visible !important;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 20px;
+  align-items: start;
 }
 
-body.ucsite .hero p {
-  color: rgb(67, 67, 67);
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  margin-bottom: 8px;
+body.ucsite header .header.block > div {
+  display: contents;
 }
 
-body.ucsite .hero > div > div > p:first-child {
+/* Logo: first p in header */
+body.ucsite header .header.block > div > p:first-child {
+  grid-row: 1 / 3;
+  grid-column: 1;
+  margin: 0;
   font-size: 20px;
-  line-height: 22px;
+  font-weight: 400;
+  color: rgb(0 50 160);
 }
 
-body.ucsite .hero strong {
-  color: rgb(0, 50, 160);
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
+body.ucsite header .header.block > div > p:first-child a {
+  display: block;
+  width: 266px;
+  height: 58px;
+  background: url('/images/uc/OZANIMOD_US_Logo_SPOT.jpg') no-repeat left center;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(190 43 187);
+  text-decoration: none !important;
 }
 
-body.ucsite .hero a {
-  display: inline-flex;
+/* Subtitle below logo */
+body.ucsite header .header.block > div > p:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1;
+  font-size: 10px;
+  line-height: 12px;
+  color: rgb(81 91 100);
+  font-family: MontserratRegular, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+body.ucsite header .header.block p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Nav list: 2-row layout — utility links (items 3+) right-aligned on top,
+   section nav (items 1-2) left-aligned on bottom */
+body.ucsite header .header.block > div > ul {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 43px;
+  list-style: none;
+  place-content: center flex-start;
   align-items: center;
-  background-color: rgb(3, 50, 160);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 13px;
-  text-decoration: none;
+}
+
+body.ucsite header .header.block > div > ul > li {
+  margin: 0;
+}
+
+/* Utility links (USFPI, Med Guide, BMS Resources, Visit Patient Site, Indications) — top row */
+body.ucsite header .header.block > div > ul > li:nth-child(n+3) {
+  order: -1;
+}
+
+/* Push first utility link right to right-align the entire top row */
+body.ucsite header .header.block > div > ul > li:nth-child(3) {
+  margin-left: auto;
+  margin-top: 4px;
+}
+
+body.ucsite header .header.block > div > ul > li:nth-child(n+4) {
+  margin-top: 4px;
+}
+
+/* Section nav row takes full width to force wrap */
+body.ucsite header .header.block > div > ul::before {
+  content: '';
+  width: 100%;
+  order: 0;
+}
+
+/* Section nav items (Clinical Data, Dosing) — bottom row, left-aligned */
+body.ucsite header .header.block > div > ul > li:first-child,
+body.ucsite header .header.block > div > ul > li:nth-child(2) {
+  order: 1;
+  margin-top: 14px;
+}
+
+/* Utility links — gray, 12px (matches legacy .utilitylink a) */
+body.ucsite header .header.block a,
+body.ucsite header .header.block > div > ul a {
+  font-size: 12px;
+  color: rgb(81 91 100);
+  text-decoration: none !important;
+  font-family: MontserratRegular, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Remove p margin inside nav li */
+body.ucsite header .header.block > div > ul > li > p {
+  margin: 0;
+}
+
+/* Section nav items (Clinical Data, Dosing) — 16px blue (matches legacy .nav-link) */
+body.ucsite header .header.block > div > ul > li:first-child > p > a,
+body.ucsite header .header.block > div > ul > li:nth-child(2) > p > a {
+  font-size: 16px;
+  font-family: MontserratRegular, Arial, sans-serif;
+  font-weight: 400;
+  color: rgb(0 50 160);
+}
+
+/* Dropdown chevron on Clinical Data — CSS border triangle */
+body.ucsite header .header.block > div > ul > li:first-child > p > a::after {
+  content: '';
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: middle;
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/* Clinical Data hover state — orange highlight like legacy */
+body.ucsite header .header.block > div > ul > li:first-child:hover > p > a {
+  color: rgb(227 114 34);
+}
+
+body.ucsite header .header.block > div > ul > li:first-child:hover > p > a::after {
+  border-top: 0;
+  border-bottom: 0.3em solid rgb(227 114 34);
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+}
+
+/* Clinical Data dropdown — needs position context on parent li */
+body.ucsite header .header.block > div > ul > li:first-child {
+  position: relative;
+}
+
+/* Invisible hover bridge so cursor can travel from Clinical Data text to dropdown */
+body.ucsite header .header.block > div > ul > li:first-child::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+
+/* Dropdown menu */
+body.ucsite header .header.block > div > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 15px 20px;
+  list-style: none;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 12%);
+  z-index: 200;
+  min-width: 160px;
+}
+
+/* Show dropdown on hover */
+body.ucsite header .header.block > div > ul > li:first-child:hover > ul {
+  display: block;
+}
+
+/* Dropdown menu items */
+body.ucsite header .header.block > div > ul > li:first-child > ul > li {
+  padding: 6px 0;
+}
+
+body.ucsite header .header.block > div > ul > li:first-child > ul > li a {
   font-size: 14px;
+  color: rgb(67 67 67);
+  font-family: MontserratRegular, Arial, sans-serif;
+  font-weight: 400;
 }
 
-body.ucsite .hero picture {
-  position: static;
-  opacity: 1;
+body.ucsite header .header.block > div > ul > li:first-child > ul > li a:hover {
+  color: rgb(0 50 160);
 }
 
-body.ucsite .hero img {
-  width: auto;
-  height: auto;
-  object-fit: none;
-}
+/* ===== HERO SECTION ===== */
 
-/* ===== HEIGHT/SPACING CORRECTIONS (match source layout) ===== */
-/* Header height: source is 91px */
-body.ucsite header .header-wrapper {
-  min-height: 91px;
-  box-sizing: border-box;
-}
-
-/* Hero total height should be 539px */
-body.ucsite main > .section:first-child {
-  min-height: 539px;
-  box-sizing: border-box;
-}
-
-body.ucsite .hero {
-  min-height: 539px;
-  box-sizing: border-box;
-  padding-top: 15px;
-  padding-bottom: 30px;
-}
-
-/* Clinical section: minimal spacing to match source 306px height */
-body.ucsite main > .section:nth-child(2) {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-/* ISI fragment: reduce space between sections */
-body.ucsite main > .section:nth-child(3) {
-  padding-top: 0;
-}
-
-/* ===== HERO SECTION — CENTERED LAYOUT (matching source screenshot) ===== */
+/* Source: #bannerBG 1470x539 full-width bg, content in 1020px container centered */
 body.ucsite main > .section:first-child {
   max-width: 100%;
-  padding: 0;
-  background-color: #A4E2FF;
+  background-color: #a4e2ff;
 }
 
 body.ucsite .hero-wrapper {
   max-width: 100%;
-  padding: 0;
 }
 
 body.ucsite .hero {
-  background: #A4E2FF;
-  padding: 40px 20px;
+  background: #a4e2ff;
+  padding: 0;
   min-height: 539px;
-  box-sizing: border-box;
   text-align: center;
   overflow: visible;
   position: relative;
 }
 
+/* Hero inner content: constrained to 1020px like source .banner-content */
 body.ucsite .hero > div > div {
-  padding-top: 68px;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 68px 15px 0 15px;
+  padding: 68px 0 0;
 }
 
+/* Intro paragraph (first p): "If your patients with moderate UC..." */
+body.ucsite .hero > div > div > p:first-child {
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  color: rgb(67 67 67);
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+body.ucsite.uc-home .hero > div > div > p:first-child {
+  margin-bottom: 16px;
+}
+
+/* H1: "BREAK THE CYCLE WITH ZEPOSIA" — 36px, left-aligned like legacy */
 body.ucsite .hero h1 {
-  color: rgb(0, 50, 160);
-  font-size: 42px;
-  line-height: 48px;
-  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
-  font-weight: 300;
-  margin: 0 0 8px;
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: rgb(0 50 160);
+  font-family: Montserrat, Arial, sans-serif;
+  margin: 0 auto 8px;
   text-align: center;
 }
 
-/* "WITH ZEPOSIA" part needs to be bold — handled by the H1 containing both lines */
-/* In the source, the h1 has "BREAK THE CYCLE" (light) + "WITH ZEPOSIA" (bold) */
+/* H1 line 1: "BREAK THE CYCLE" — regular weight */
+body.ucsite .hero h1 .hero-line1 {
+  font-weight: 400;
+}
 
+/* H1 line 2: "WITH ZEPOSIA" — bold */
+body.ucsite .hero h1 .hero-line2 {
+  color: rgb(0 50 160);
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* H1 bold text (generic) */
+body.ucsite .hero strong {
+  color: rgb(0 50 160);
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* "Take the next step" — red, semibold, visually part of the grey-con box */
+body.ucsite .hero > div > div > p:nth-child(3) {
+  margin-bottom: 0;
+  margin-top: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+body.ucsite .hero > div > div > p:nth-child(3) strong {
+  color: rgb(249 66 58);
+  font-family: MontserratSemiBold, Montserrat, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Benefits row: pill icon + "Highly selective oral + Rapid response + Well-established"
+   In legacy, .grey-con contains both the red "Take the next step" text and the pill row.
+   We use negative margin-top + extra padding-top to visually merge p3 into p4's background. */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  background: rgb(255 255 255 / 60%);
+  border-radius: 0 0 20px 20px;
+  padding: 26px 15px 8px;
+  margin: -18px auto 8px;
+  max-width: 478px;
+  width: 478px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(0 50 160);
+}
+
+/* Pill icon as CSS pseudo-element — protrudes left of the grey box like legacy */
+body.ucsite .hero > div > div > p:nth-child(4)::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 56px;
+  background: url('/images/uc/icon_pill_2.svg') no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-left: -25px;
+  margin-top: -10px;
+  margin-right: 12px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(4) img,
+body.ucsite .hero > div > div > p:nth-child(4) picture {
+  width: 35px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* CTA button: "View the Data" */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 8px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(5) a,
+body.ucsite .hero a.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(3 50 160);
+  color: #fff;
+  padding: 0 0 0 12px;
+  border-radius: 13px;
+  width: 207px;
+  height: 52px;
+  text-decoration: none;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* CTA arrow indicator */
+body.ucsite .hero > div > div > p:nth-child(5) a::after {
+  content: '\203A';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgb(255 255 255 / 20%);
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 8px;
+  color: #fff;
+}
+
+body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
+  margin-bottom: 0;
+  margin-top: 28px;
+}
+
+/* Hero generic paragraph */
 body.ucsite .hero p {
-  color: rgb(67, 67, 67);
-  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  color: rgb(67 67 67);
+  font-family: Montserrat, MontserratRegular, Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 8px;
   text-align: center;
 }
 
-/* Hero intro paragraph (first p — the patient message) */
-body.ucsite .hero > div > div > p:first-child {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 20px;
-  line-height: 22px;
-  font-weight: 500;
-  color: rgb(50, 50, 50);
-  margin-bottom: 15px;
-}
-
-/* "Take the next step" strong text */
-body.ucsite .hero strong {
-  color: rgb(0, 50, 160);
-  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* CTA Button "View the Data" */
-body.ucsite .hero a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background-color: rgb(0, 32, 80);
-  color: #fff;
-  padding: 15px 40px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  min-width: 200px;
-  margin: 15px 0;
-}
-
-/* Footnotes — left-aligned, smaller */
-body.ucsite .hero > div > div > p:nth-last-child(-n+4) {
+/* Footnotes (last paragraphs in hero): left-aligned, 12px */
+body.ucsite .hero > div > div > p:nth-child(n+6) {
   text-align: left;
   font-size: 12px;
-  line-height: 15px;
-  color: rgb(67, 67, 67);
-  margin-bottom: 4px;
+  line-height: 14px;
+  color: rgb(80 80 80);
+  margin-bottom: 3px;
+  max-width: 1020px;
 }
 
+body.ucsite .hero > div > div > p:nth-child(n+6) strong {
+  color: rgb(0 50 160);
+  font-weight: 400;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Hero images (pill capsule etc.) */
 body.ucsite .hero picture,
 body.ucsite .hero img {
   position: static;
@@ -527,14 +511,16 @@ body.ucsite .hero img {
 body.ucsite .hero sup {
   font-size: 9px;
   vertical-align: super;
-  line-height: 0;
 }
 
 /* ===== CLINICAL TRIAL INFO (Section 2) ===== */
+
+/* Source: .home-content.container 1020x306 @ y=630 */
 body.ucsite main > .section:nth-child(2) {
   max-width: 1020px;
   margin: 0 auto;
   padding: 0;
+  background: linear-gradient(to bottom, #a4e2ff 0, #a4e2ff 80px, #fff 81px, #fff 100%);
 }
 
 body.ucsite main > .section:nth-child(2) .default-content-wrapper {
@@ -543,63 +529,67 @@ body.ucsite main > .section:nth-child(2) .default-content-wrapper {
 }
 
 body.ucsite main > .section:nth-child(2) .default-content-wrapper p {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
-  color: rgb(67, 67, 67);
+  color: rgb(67 67 67);
   margin-bottom: 10px;
 }
 
 body.ucsite main > .section:nth-child(2) .default-content-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-weight: 700;
-  color: rgb(0, 50, 160);
+  color: rgb(0 50 160);
 }
 
 /* ===== ISI FRAGMENT (Section 3) ===== */
+
+/* Source: .footer.section 1020x2658 @ y=956 */
 body.ucsite .fragment-wrapper {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 0;
 }
 
 body.ucsite .fragment-wrapper .fragment {
   padding: 0;
 }
 
-body.ucsite .fragment-wrapper h2,
-body.ucsite .fragment-wrapper h3 {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+body.ucsite .fragment-wrapper h2 {
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-weight: 700;
-  color: rgb(67, 67, 67);
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(0 50 160);
+  border-top: 3px solid rgb(0 50 160);
+  padding-top: 15px;
+  margin-top: 20px;
   margin-bottom: 8px;
 }
 
-body.ucsite .fragment-wrapper h2 {
-  font-size: 20px;
-  line-height: 22px;
-  color: rgb(0, 50, 160);
-  border-top: 3px solid rgb(0, 50, 160);
-  padding-top: 15px;
-  margin-top: 20px;
+body.ucsite .fragment-wrapper h2:first-child {
+  margin-top: 5px;
 }
 
 body.ucsite .fragment-wrapper h3 {
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
+  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  color: rgb(67 67 67);
+  margin-top: 8px;
+  margin-bottom: 3px;
 }
 
 body.ucsite .fragment-wrapper p {
-  margin-bottom: 7px;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 10px;
+  color: rgb(0 0 0);
+  margin-bottom: 7px;
 }
 
 body.ucsite .fragment-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-weight: 700;
 }
 
@@ -610,15 +600,15 @@ body.ucsite .fragment-wrapper ul {
 }
 
 body.ucsite .fragment-wrapper li {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 8px;
+  color: rgb(0 0 0);
+  margin-bottom: 5px;
 }
 
 body.ucsite .fragment-wrapper a {
-  color: rgb(0, 50, 160);
+  color: rgb(0 50 160);
   text-decoration: underline;
 }
 
@@ -629,18 +619,17 @@ body.ucsite main > .section:nth-child(4) .default-content-wrapper {
 }
 
 body.ucsite main > .section:nth-child(4) .default-content-wrapper p strong {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-weight: 700;
-  color: rgb(0, 50, 160);
+  color: rgb(0 50 160);
 }
 
 body.ucsite main > .section:nth-child(4) .default-content-wrapper ol {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: rgb(67, 67, 67);
+  color: rgb(67 67 67);
   padding-left: 20px;
-  margin: 0;
 }
 
 body.ucsite main > .section:nth-child(4) .default-content-wrapper li {
@@ -659,681 +648,71 @@ body.ucsite .sticky-isi-wrapper {
   left: 0;
   right: 0;
   background-color: #fff;
-  border-top: 3px solid rgb(0, 50, 160);
+  border-top: 3px solid rgb(0 50 160);
   z-index: 1000;
   padding: 10px 20px;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 -2px 5px rgb(0 0 0 / 10%);
   max-width: 100%;
 }
 
 body.ucsite .sticky-isi-wrapper .sticky-isi p {
-  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
-  color: rgb(0, 50, 160);
-  margin: 0;
+  color: rgb(0 50 160);
+}
+
+/* Hide sticky-isi section wrapper from flow */
+body.ucsite main > .section:has(.sticky-isi-wrapper) {
+  display: contents;
 }
 
 /* ===== FOOTER ===== */
+
+/* Source: .isi-footer-wrapper 1020x196 @ y=3418 */
 body.ucsite footer {
   background-color: #f8f9fa;
   border-top: 1px solid #e0e0e0;
 }
 
-body.ucsite footer .footer-wrapper {
+body.ucsite footer.footer-wrapper {
   max-width: 1020px;
   margin: 0 auto;
   padding: 20px 15px;
 }
 
-body.ucsite footer nav ul {
+body.ucsite footer .footer.block ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-body.ucsite footer nav li {
+body.ucsite footer .footer.block li {
   margin: 0;
 }
 
-body.ucsite footer nav a {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+body.ucsite footer .footer.block a {
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 12px;
-  color: rgb(67, 67, 67);
+  color: rgb(67 67 67);
   text-decoration: none;
 }
 
 body.ucsite footer p {
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-family: MontserratRegular, Montserrat, Arial, sans-serif;
   font-size: 12px;
   line-height: 16px;
-  color: rgb(67, 67, 67);
+  color: rgb(67 67 67);
   margin-bottom: 5px;
 }
 
-
-/* ===== FOOTER ===== */
-body.ucsite footer {
-background-color: #f8f9fa;
-border-top: 1px solid #e0e0e0;
-}
-
-body.ucsite footer .footer-wrapper {
-max-width: 1020px;
-margin: 0 auto;
-padding: 20px 15px;
-}
-
-body.ucsite footer nav ul {
-list-style: none;
-padding: 0;
-margin: 0;
-display: flex;
-flex-wrap: wrap;
-gap: 15px;
-}
-
-body.ucsite footer nav a {
-font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-font-size: 12px;
-color: rgb(67, 67, 67);
-text-decoration: none;
-}
-
-body.ucsite footer p {
-font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-font-size: 12px;
-line-height: 16px;
-color: rgb(67, 67, 67);
-margin-bottom: 5px;
-}
-
-/* ===== STICKY ISI ===== */
-body.ucsite .sticky-isi-wrapper {
-position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-background-color: #fff;
-border-top: 3px solid rgb(0, 50, 160);
-z-index: 1000;
-padding: 10px 20px;
-box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-max-width: 100%;
-}
-
-body.ucsite .sticky-isi-wrapper .sticky-isi p {
-font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
-font-weight: 700;
-font-size: 14px;
-color: rgb(0, 50, 160);
-margin: 0;
-}
-
-
-/* ===== HERO REFINEMENTS (iteration 7) ===== */
-
-/* H1: "BREAK THE CYCLE" light (300) on first line, "WITH ZEPOSIA" bold (700) on second line */
-/* Since EDS renders it as one h1, we use CSS to make the overall h1 a medium weight
-   and the key visual is: large blue centered text. Source uses 300/700 split via spans
-   but the overall impression at 42px is: light top line, bold bottom line */
-body.ucsite .hero h1 {
-  font-size: 40px;
-  line-height: 38px;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  color: rgb(0, 50, 160);
-  font-family: 'Montserrat', Arial, sans-serif;
-  margin: 5px 0 15px;
-}
-
-/* Benefits row — the paragraph with pill icon + "+" separators */
-/* This paragraph contains: img + "Highly selective oral + Rapid response... + Well-established..." */
-body.ucsite .hero > div > div > p:nth-child(4) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(180deg, rgba(0,50,160,0.08) 0%, rgba(0,50,160,0.03) 100%);
-  border-radius: 8px;
-  padding: 15px 25px;
-  margin: 15px auto;
-  max-width: 700px;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgb(50, 50, 50);
-}
-
-/* Pill icon in benefits */
-body.ucsite .hero > div > div > p:nth-child(4) img,
-body.ucsite .hero > div > div > p:nth-child(4) picture {
-  width: 35px;
-  height: auto;
-  flex-shrink: 0;
-}
-
-/* CTA "View the Data" button — make it more prominent */
-body.ucsite .hero > div > div > p:nth-child(5) {
-  margin: 20px 0 25px;
-}
-
-body.ucsite .hero > div > div > p:nth-child(5) a,
-body.ucsite .hero a.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(0, 30, 80);
-  color: #fff;
-  padding: 16px 35px;
-  border-radius: 28px;
-  text-decoration: none;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  min-width: 220px;
-}
-
-/* Footnotes section (last 4 paragraphs in hero) */
-body.ucsite .hero > div > div > p:nth-child(n+6) {
-  text-align: left;
-  font-size: 12px;
-  line-height: 14px;
-  color: rgb(80, 80, 80);
-  margin-bottom: 3px;
-  max-width: 1020px;
-}
-
-body.ucsite .hero > div > div > p:nth-child(n+6) strong {
-  color: rgb(0, 50, 160);
-  font-size: 12px;
-}
-
-/* Pill icon as CSS pseudo-element (since inline <img> fails through EDS media pipeline) */
-body.ucsite .hero > div > div > p:nth-child(4)::before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 60px;
-  background: url('/images/uc/icon_pill_2.svg') no-repeat center;
-  background-size: contain;
-  flex-shrink: 0;
-  margin-right: 10px;
-}
-
-/* Force H1 to 2-line rendering like source */
-body.ucsite .hero h1 {
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 38px;
-}
-
-/* ===== EXACT SOURCE-MATCHED HERO ELEMENTS (iteration 12) ===== */
-
-/* Benefit box: semi-transparent white overlay */
-body.ucsite .hero > div > div > p:nth-child(4) {
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 0 0 20px 20px;
-  padding: 12px 20px;
-  margin: 0 auto 15px;
-  max-width: 478px;
-  width: 478px;
-  min-height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgb(0, 50, 160);
-}
-
-/* "Take the next step" - should be RED, semibold */
-body.ucsite .hero > div > div > p:nth-child(3) strong {
-  color: rgb(249, 66, 58);
-  font-family: 'MontserratSemiBold', 'Montserrat', Arial, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-/* Override the earlier blue color for this specific strong */
-body.ucsite .hero > div > div > p:nth-child(3) {
-  margin-bottom: 0;
-}
-
-/* Pill icon pseudo-element refinement */
-body.ucsite .hero > div > div > p:nth-child(4)::before {
-  width: 18px;
-  height: 45px;
-  margin-right: 5px;
-}
-
-/* CTA button exact match */
-body.ucsite .hero > div > div > p:nth-child(5) a {
-  background-color: rgb(3, 50, 160);
-  color: #fff;
-  padding: 0 0 0 12px;
-  border-radius: 13px;
-  width: 207px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  min-width: unset;
-}
-
-/* CTA arrow indicator (right side) */
-body.ucsite .hero > div > div > p:nth-child(5) a::after {
-  content: '›';
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: rgba(255,255,255,0.2);
-  border-radius: 50%;
-  font-size: 24px;
-  margin-right: 8px;
-  color: #fff;
-}
-
-/* Center the CTA button */
-body.ucsite .hero > div > div > p:nth-child(5) {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 15px;
-}
-
-/* ===== PRECISION FIXES (iteration 15) ===== */
-
-/* H1 exact: 36px/38px weight 500 */
-body.ucsite .hero h1 {
+/* ===== HERO H1 / MAIN H1 (reusable) ===== */
+body.ucsite main h1 {
+  font-family: MontserratBold, Montserrat, Arial, sans-serif;
   font-size: 36px;
   line-height: 38px;
-  font-weight: 500;
-  max-width: 440px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* Footnotes: 12px/14px, margin-bottom 3px */
-body.ucsite .hero > div > div > p:nth-child(n+6) {
-  font-size: 12px;
-  line-height: 14px;
-  margin-bottom: 3px;
-  text-align: left;
-}
-
-/* Footnote bold-blue labels: NOT bold, just blue color, weight 400 */
-body.ucsite .hero > div > div > p:nth-child(n+6) strong {
-  color: rgb(0, 50, 160);
-  font-weight: 400;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-  font-size: 12px;
-}
-
-/* Intro text exact: 20px/22px weight 500 */
-body.ucsite .hero > div > div > p:first-child {
-  font-size: 20px;
-  line-height: 22px;
-  font-weight: 500;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: rgb(67, 67, 67);
-  margin-bottom: 8px;
-}
-
-/* ===== SPACING PRECISION (iteration 16) ===== */
-
-/* Intro to H1 spacing: source has intro ending at y=103, H1 at y=106 (3px gap) */
-/* Our intro is at y=68, height 22px, ends at y=90. H1 at y=98 (8px gap). Close enough. */
-/* The bigger issue is H1 to benefit box and box to footnotes. */
-
-/* Reduce space between CTA and footnotes by making CTA shorter */
-body.ucsite .hero > div > div > p:nth-child(5) {
-  margin: 10px 0 8px;
-}
-
-/* Make benefit box slightly more compact */
-body.ucsite .hero > div > div > p:nth-child(4) {
-  padding: 8px 15px;
-  margin: 0 auto 8px;
-  min-height: 48px;
-}
-
-/* Reduce "Take the next step" margin */  
-body.ucsite .hero > div > div > p:nth-child(3) {
-  margin-bottom: 0;
-  margin-top: 5px;
-}
-
-/* Bring footnotes closer: reduce bottom margin of CTA paragraph */
-body.ucsite .hero > div > div > p:nth-child(5) a {
-  height: 44px;
-  padding: 0 0 0 12px;
-}
-
-/* Add gap between H1 and "Take the next step" */
-body.ucsite .hero h1 {
-  margin-bottom: 15px;
-}
-
-/* ===== POSITION FINE-TUNING (iteration 17) ===== */
-/* H1 needs 8px more top space */
-body.ucsite .hero h1 {
-  margin-top: 8px;
-}
-
-/* ===== ITERATION 20: Spacing fine-tune (safe approach) ===== */
-/* Move footnotes closer by reducing space after CTA */
-body.ucsite .hero > div > div > p:nth-child(5) {
-  margin-bottom: 0;
-}
-
-/* Add slight margin to intro text to push H1 toward y=106 */
-body.ucsite .hero > div > div > p:first-child {
-  margin-bottom: 13px;
-}
-
-/* Higher specificity overrides */
-body.ucsite.uc-home .hero > div > div > p:first-child {
-  margin-bottom: 13px;
-}
-body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
-  margin-bottom: 0;
-  margin-top: 18px;
-}
-
-/* Final override: intro stays at 8px margin, only CTA tightens */
-body.ucsite.uc-home .hero > div > div > p:first-child {
-  margin-bottom: 8px;
-}
-
-/* ===== HEADER HEIGHT FIX ===== */
-body.ucsite header, body.ucsite header .header {
-  min-height: 91px;
-  display: flex;
-  align-items: center;
-}
-
-body.ucsite header .header-wrapper {
-  min-height: 91px;
-  width: 100%;
-}
-
-/* Force header to 91px via padding */
-body.ucsite header .header.block {
-  min-height: 91px;
-  padding: 16px 0;
-  box-sizing: border-box;
-}
-
-/* ===== REMOVE SECTION GAPS (source has continuous flow) ===== */
-body.ucsite main > .section {
-  margin: 0;
-  padding: 0;
-}
-
-body.ucsite main > .section + .section {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-/* Hide sticky-isi section wrapper from flow (it's position:fixed anyway) */
-body.ucsite main > .section:has(.sticky-isi-wrapper) {
-  display: contents;
-}
-
-/* ISI exact source margins */
-body.ucsite .fragment-wrapper p {
-  margin-bottom: 7px;
-}
-body.ucsite .fragment-wrapper li {
-  margin-bottom: 5px;
-}
-body.ucsite .fragment-wrapper h3 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-/* ===== HEADER EXACT MATCH ===== */
-body.ucsite header {
-  background-color: #fff;
-  border-bottom: none;
-}
-
-body.ucsite header .header.block {
-  background-color: #fff;
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-body.ucsite header .header.block > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-body.ucsite header .header.block p {
-  margin: 0;
-  font-size: 12px;
-  line-height: 16px;
-}
-
-body.ucsite header .header.block p:first-child {
-  font-size: 14px;
+  color: rgb(0 50 160);
   font-weight: 700;
-  color: rgb(0, 50, 160);
-}
-
-body.ucsite header .header.block p:first-child a {
-  font-size: 14px;
-  font-weight: 700;
-  color: rgb(0, 50, 160);
-  text-decoration: none;
-}
-
-body.ucsite header .header.block ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding: 0;
-  margin: 5px 0 0;
-}
-
-body.ucsite header .header.block li {
-  margin: 0;
-}
-
-body.ucsite header .header.block a {
-  font-size: 12px;
-  color: rgb(0, 50, 160);
-  text-decoration: none;
-  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
-}
-
-/* ISI precise alignment */
-body.ucsite .fragment-wrapper h2:first-child {
-  margin-top: 5px;
-}
-
-/* CRITICAL: Font smoothing must match source exactly */
-body.ucsite {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-body.ucsite * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ===== CLEAN HEADER LAYOUT (logo left, nav right, white bg) ===== */
-body.ucsite header {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  position: relative;
-  z-index: 100;
-}
-
-body.ucsite header .header.block {
-  background-color: #fff;
-  max-width: 1020px;
-  margin: 0 auto;
-  padding: 10px 15px;
-  min-height: 91px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto;
-  gap: 5px 20px;
-  align-items: center;
-}
-
-body.ucsite header .header.block > div {
-  display: contents;
-}
-
-body.ucsite header .header.block > div > p:first-child {
-  grid-row: 1 / 3;
-  grid-column: 1;
-}
-
-body.ucsite header .header.block > div > p:first-child a {
-  display: block;
-  width: 250px;
-  height: 55px;
-  background: url('/images/uc/OZANIMOD_US_Logo_SPOT.jpg') no-repeat left center;
-  background-size: contain;
-  text-indent: -9999px;
-  overflow: hidden;
-}
-
-body.ucsite header .header.block > div > p:nth-child(2) {
-  grid-row: 2;
-  grid-column: 1;
-  font-size: 11px;
-  color: #0032A0;
-  margin: 0;
-}
-
-body.ucsite header .header.block > div > ul {
-  grid-row: 1 / 3;
-  grid-column: 2;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 25px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-body.ucsite header .header.block > div > ul > li {
-  margin: 0;
-}
-
-body.ucsite header .header.block a,
-body.ucsite header .header.block > div > ul a {
-  font-size: 13px;
-  color: #0032A0;
-  text-decoration: none;
-  font-family: 'MontserratRegular', Arial, sans-serif;
-}
-
-body.ucsite header .header.block > div > ul > li:first-child > p > a,
-body.ucsite header .header.block > div > ul > li:nth-child(2) > a {
-  font-size: 15px;
-  font-family: 'MontserratMedium', Arial, sans-serif;
-  font-weight: 500;
-}
-
-body.ucsite header .header.block > div > ul > li > ul {
-  display: none;
-  position: absolute;
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 10px 15px;
-  list-style: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 200;
-}
-
-body.ucsite header .header.block > div > ul > li:hover > ul {
-  display: block;
-}
-
-/* ===== TEXT RENDERING (match source) ===== */
-body.ucsite, body.ucsite * {
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ===== ISI FRAGMENT PRECISE MARGINS ===== */
-body.ucsite .fragment-wrapper p {
-  margin-bottom: 7px;
-}
-body.ucsite .fragment-wrapper li {
-  margin-bottom: 5px;
-}
-body.ucsite .fragment-wrapper h2:first-child {
-  margin-top: 5px;
-}
-body.ucsite .fragment-wrapper h3 {
-  margin-top: 8px;
-  margin-bottom: 3px;
-}
-
-/* ===== FORCE SCROLLBAR (match source container offset) ===== */
-html {
-  overflow-y: scroll;
-}
-
-/* ===== IMPROVEMENTS (clinical bg + ISI margins + rendering) ===== */
-
-/* Clinical section: blue bg for first 80px then white */
-body.ucsite main > .section:nth-child(2) {
-  background: linear-gradient(to bottom, #A4E2FF 0px, #A4E2FF 80px, #ffffff 81px, #ffffff 100%);
-}
-
-/* ISI fragment precise margins (source exact) */
-body.ucsite .fragment-wrapper p {
-  margin-bottom: 7px;
-}
-body.ucsite .fragment-wrapper li {
-  margin-bottom: 5px;
-}
-body.ucsite .fragment-wrapper h2:first-child {
-  margin-top: 5px;
-}
-body.ucsite .fragment-wrapper h3 {
-  margin-top: 8px;
-  margin-bottom: 3px;
-}
-
-/* Force scrollbar to match source container offset */
-html {
-  overflow-y: scroll;
-}
-
-/* Text rendering must match source */
-body.ucsite, body.ucsite * {
-  text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0 0 8px;
 }

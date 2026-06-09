@@ -169,8 +169,8 @@ async function applyTemplateOverlay(main) {
   if (!templateName) return false;
 
   const slots = readBlockSlots(main);
- window._daSlots = slots;
- window._daSlots = slots;
+  window._daSlots = slots;
+  window._daSlots = slots;
 
   // Load template-scoped CSS in parallel with the template HTML so
   // styles arrive before body.appear paints. `head.html` no longer
@@ -216,26 +216,26 @@ async function applyTemplateOverlay(main) {
 
   // Add body classes based on template for source CSS compatibility
   const templateBodyClasses = {
-    "zeposia-uc": ["ucsite", "uc-home", "disabled"],
-    "zeposia-ms": ["mssite", "ms-home", "disabled"],
-    "zeposia-ms-support": ["mssite", "ms-support", "disabled"],
-    "zeposia-ms-additional-studies": ["mssite", "ms-tk", "disabled"],
-    "zeposia-ms-safety": ["mssite", "ms-safety", "disabled"],
-    "zeposia-gateway": ["gateway-page"],
-    "uc-clinical-data": ["ucsite", "uc-home", "disabled"],
-    "zeposia-ms-efficacy": ["mssite", "ms-efficacy", "disabled"],
-    "zeposia-ms-study-design": ["mssite", "ms-studydesign", "disabled"],
-    "zeposia-ms-getting-started": ["mssite", "ms-gettingstarted", "disabled"],
-    "zeposia-ms-moa": ["mssite", "ms-moa", "disabled"],
-    "uc-efficacy": ["ucsite", "uc-home", "disabled"],
-    "uc-study-design": ["ucsite", "uc-studydesign", "disabled"],
-    "uc-safety": ["ucsite", "uc-safety", "disabled"],
+    'zeposia-uc': ['ucsite', 'uc-home', 'disabled'],
+    'zeposia-ms': ['mssite', 'ms-home', 'disabled'],
+    'zeposia-ms-support': ['mssite', 'ms-support', 'disabled'],
+    'zeposia-ms-additional-studies': ['mssite', 'ms-tk', 'disabled'],
+    'zeposia-ms-safety': ['mssite', 'ms-safety', 'disabled'],
+    'zeposia-gateway': ['gateway-page'],
+    'uc-clinical-data': ['ucsite', 'uc-home', 'disabled'],
+    'zeposia-ms-efficacy': ['mssite', 'ms-efficacy', 'disabled'],
+    'zeposia-ms-study-design': ['mssite', 'ms-studydesign', 'disabled'],
+    'zeposia-ms-getting-started': ['mssite', 'ms-gettingstarted', 'disabled'],
+    'zeposia-ms-moa': ['mssite', 'ms-moa', 'disabled'],
+    'uc-efficacy': ['ucsite', 'uc-home', 'disabled'],
+    'uc-study-design': ['ucsite', 'uc-studydesign', 'disabled'],
+    'uc-safety': ['ucsite', 'uc-safety', 'disabled'],
   };
   const bodyClasses = templateBodyClasses[templateName];
   if (bodyClasses) bodyClasses.forEach((cls) => document.body.classList.add(cls));
 
   // Inject critical CSS overrides that must win over imported source stylesheets
-  const overrideStyle = document.createElement("style");
+  const overrideStyle = document.createElement('style');
   overrideStyle.textContent = `
   .grey-con .flx-ban, .left-banner .flx-ban, .flx-ban { display: flex !important; flex-wrap: nowrap !important; }
   .banner-info.ucs_home { padding: 0 !important; width: 0 !important; overflow: hidden !important; }
@@ -247,7 +247,7 @@ main > .experiencefragment.section { display: none !important; }
 main > .column-control.aem-GridColumn { max-height: 3538px !important; overflow: hidden !important; }
   `;
   document.head.appendChild(overrideStyle);
-    
+
   await cssLoaded;
   return true;
 }
@@ -393,6 +393,9 @@ async function loadLazy(doc) {
     loadHeader(doc.querySelector('header'));
     loadFooter(doc.querySelector('footer'));
     await loadSections(main);
+  } else if (document.body.classList.contains('ucsite')) {
+    // UC overlay pages: load native EDS header for consistent experience
+    loadHeader(doc.querySelector('header'));
   }
 
   const { hash } = window.location;
@@ -449,7 +452,7 @@ async function loadPage() {
 loadPage();
 
 // Indications popup: show once, close button, localStorage persistence
-(function() {
+(function () {
   const KEY = 'zeposia_ind_seen';
   function setup() {
     const modal = document.getElementById('indication_modal');
@@ -470,7 +473,7 @@ loadPage();
       });
     }
     // Nav link toggle
-    document.querySelectorAll('#nav-ind-m, .nav-indlink').forEach(link => {
+    document.querySelectorAll('#nav-ind-m, .nav-indlink').forEach((link) => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
         const vis = modal.style.display !== 'none';
@@ -485,7 +488,7 @@ loadPage();
   const interval = setInterval(() => {
     if (setup() || ++attempts > 20) clearInterval(interval);
   }, 250);
-})();
+}());
 
 // Tab switching for efficacy page (and any page with .tab-switch + .page-section)
 (function initTabs() {
@@ -493,15 +496,15 @@ loadPage();
     const sections = document.querySelectorAll('.color-box.highlight-section, [id=week10], [id=week52], [id=ole-study]');
     if (!sections.length) return false;
     let bound = false;
-    sections.forEach(section => {
+    sections.forEach((section) => {
       const tabs = section.querySelectorAll('.tab-switch');
       const panels = section.querySelectorAll('.page-section');
       if (tabs.length === 0 || panels.length === 0) return;
       tabs.forEach((tab, idx) => {
         tab.style.cursor = 'pointer';
         tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          panels.forEach(p => { p.classList.remove('active'); p.style.display = 'none'; });
+          tabs.forEach((t) => t.classList.remove('active'));
+          panels.forEach((p) => { p.classList.remove('active'); p.style.display = 'none'; });
           tab.classList.add('active');
           if (panels[idx]) { panels[idx].classList.add('active'); panels[idx].style.display = 'block'; }
         });
@@ -509,7 +512,7 @@ loadPage();
       });
     });
     // Smooth scroll for nav-link anchors
-    document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach((link) => {
       link.addEventListener('click', (e) => {
         const target = document.querySelector(link.getAttribute('href'));
         if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
@@ -521,7 +524,7 @@ loadPage();
   const interval = setInterval(() => {
     if (setup() || ++attempts > 20) clearInterval(interval);
   }, 250);
-})();
+}());
 
 // Sticky second-level navigation bar (#jumpLinkBar)
 // On pages with a .showTop > .transparent-ms#jumpLinkBar, the nav should stick
@@ -529,16 +532,16 @@ loadPage();
 // via .fixedNavMS class which triggers position:fixed in source CSS).
 (function initStickySubNav() {
   function setup() {
-    var bar = document.getElementById('jumpLinkBar');
+    const bar = document.getElementById('jumpLinkBar');
     if (!bar) return false;
-    var showTop = bar.closest('.showTop');
+    const showTop = bar.closest('.showTop');
     if (!showTop) return false;
 
     // Calculate the bar's natural offset from the top of the document
-    var barOffsetTop = 0;
+    let barOffsetTop = 0;
     function recalcOffset() {
       // Temporarily remove fixed positioning to get natural position
-      var wasFixed = bar.classList.contains('fixedNavMS');
+      const wasFixed = bar.classList.contains('fixedNavMS');
       if (wasFixed) bar.classList.remove('fixedNavMS');
       barOffsetTop = bar.getBoundingClientRect().top + window.pageYOffset;
       if (wasFixed) bar.classList.add('fixedNavMS');
@@ -546,15 +549,15 @@ loadPage();
     recalcOffset();
 
     // Create a placeholder to prevent content jump when nav becomes fixed
-    var placeholder = document.createElement('div');
+    const placeholder = document.createElement('div');
     placeholder.id = 'jumpLinkBar-placeholder';
-    placeholder.style.cssText = 'display:none;height:' + bar.offsetHeight + 'px;';
+    placeholder.style.cssText = `display:none;height:${bar.offsetHeight}px;`;
     bar.parentNode.insertBefore(placeholder, bar.nextSibling);
 
-    var isSticky = false;
+    let isSticky = false;
 
     function onScroll() {
-      var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollY >= barOffsetTop && !isSticky) {
         bar.classList.add('fixedNavMS');
         placeholder.style.display = 'block';
@@ -568,26 +571,26 @@ loadPage();
 
     window.addEventListener('scroll', onScroll, { passive: true });
     // Handle resize (recalculate offset)
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', () => {
       if (isSticky) {
         bar.classList.remove('fixedNavMS');
         placeholder.style.display = 'none';
         isSticky = false;
       }
       recalcOffset();
-      placeholder.style.height = bar.offsetHeight + 'px';
+      placeholder.style.height = `${bar.offsetHeight}px`;
       onScroll();
     });
 
     // Also handle smooth scrolling for the nav links with hash offset
-    bar.querySelectorAll('a.nav-link[href^="#"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var targetId = link.getAttribute('href').substring(1);
-        var target = document.getElementById(targetId);
+    bar.querySelectorAll('a.nav-link[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
         if (target) {
           e.preventDefault();
-          var barHeight = bar.offsetHeight;
-          var targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
+          const barHeight = bar.offsetHeight;
+          const targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
           window.scrollTo({ top: targetTop, behavior: 'smooth' });
         }
       });
@@ -598,12 +601,12 @@ loadPage();
 
     // Handle initial hash navigation with offset
     if (window.location.hash) {
-      setTimeout(function() {
-        var targetId = window.location.hash.substring(1);
-        var target = document.getElementById(targetId);
+      setTimeout(() => {
+        const targetId = window.location.hash.substring(1);
+        const target = document.getElementById(targetId);
         if (target) {
-          var barHeight = bar.offsetHeight;
-          var targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
+          const barHeight = bar.offsetHeight;
+          const targetTop = target.getBoundingClientRect().top + window.pageYOffset - barHeight - 10;
           window.scrollTo({ top: targetTop, behavior: 'smooth' });
         }
       }, 500);
@@ -612,33 +615,32 @@ loadPage();
     return true;
   }
 
-  var attempts = 0;
-  var interval = setInterval(function() {
+  let attempts = 0;
+  var interval = setInterval(() => {
     if (setup() || ++attempts > 30) clearInterval(interval);
   }, 300);
-})();
-
+}());
 
 // Global: Request a Rep chat popup (injects on all pages)
 // Fixed: Uses unique ID 'rar-popup-window' to avoid CSS conflicts with
 // rarChatbotPageLoad.css which sets visibility:hidden and clip-path on #chat-window.
-(function() {
-  var POPUP_ID = 'rar-popup-window';
+(function () {
+  const POPUP_ID = 'rar-popup-window';
 
   function setup() {
-    var triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
+    const triggers = document.querySelectorAll('#open-converse, img[alt*="Request a Rep"], img[src*="request-rep"]');
     if (!triggers.length) return false;
 
     // Remove the original template #chat-window (conflicts with chatbot CSS)
-    var oldChatWindow = document.getElementById('chat-window');
+    const oldChatWindow = document.getElementById('chat-window');
     if (oldChatWindow) oldChatWindow.remove();
 
     // Also remove #chat-bot container if present (from template, non-functional here)
-    var chatBot = document.getElementById('chat-bot');
+    const chatBot = document.getElementById('chat-bot');
     if (chatBot) chatBot.remove();
 
     // Create our popup with a unique ID that won't be targeted by chatbot CSS
-    var popup = document.getElementById(POPUP_ID);
+    let popup = document.getElementById(POPUP_ID);
     if (!popup) {
       popup = document.createElement('div');
       popup.id = POPUP_ID;
@@ -647,24 +649,24 @@ loadPage();
       document.body.appendChild(popup);
 
       // Close button
-      popup.querySelector('.rar-popup-close').addEventListener('click', function() {
+      popup.querySelector('.rar-popup-close').addEventListener('click', () => {
         popup.style.display = 'none';
       });
       // Decline button
-      popup.querySelector('.rar-popup-decline').addEventListener('click', function() {
+      popup.querySelector('.rar-popup-decline').addEventListener('click', () => {
         popup.style.display = 'none';
       });
       // Accept button (placeholder – can be wired to real chat in future)
-      popup.querySelector('.rar-popup-accept').addEventListener('click', function() {
+      popup.querySelector('.rar-popup-accept').addEventListener('click', () => {
         popup.querySelector('.rar-popup-accept').textContent = 'Connecting...';
         popup.querySelector('.rar-popup-accept').disabled = true;
       });
     }
 
-    triggers.forEach(function(btn) {
+    triggers.forEach((btn) => {
       btn.removeAttribute('onclick');
       btn.style.cursor = 'pointer';
-      btn.addEventListener('click', function(e) {
+      btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
@@ -673,34 +675,34 @@ loadPage();
 
     return true;
   }
-  var attempts = 0;
-  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
-})();
+  let attempts = 0;
+  var interval = setInterval(() => { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+}());
 
 // Dropdown menus: toggle on click (Bootstrap dropdowns without Bootstrap JS)
-(function() {
+(function () {
   function setup() {
-    var toggles = document.querySelectorAll('.dropdown-toggle');
+    const toggles = document.querySelectorAll('.dropdown-toggle');
     if (!toggles.length) return false;
-    toggles.forEach(function(toggle) {
-      var parent = toggle.closest('.dropdown') || toggle.parentElement;
-      var menu = parent.querySelector('.dropdown-menu');
+    toggles.forEach((toggle) => {
+      const parent = toggle.closest('.dropdown') || toggle.parentElement;
+      const menu = parent.querySelector('.dropdown-menu');
       if (!menu) return;
-      toggle.addEventListener('click', function(e) {
+      toggle.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        var isOpen = menu.classList.contains('show');
-        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
+        const isOpen = menu.classList.contains('show');
+        document.querySelectorAll('.dropdown-menu.show').forEach((m) => { m.classList.remove('show'); });
         if (!isOpen) menu.classList.add('show');
       });
     });
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', (e) => {
       if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
+        document.querySelectorAll('.dropdown-menu.show').forEach((m) => { m.classList.remove('show'); });
       }
     });
     return true;
   }
-  var attempts = 0;
-  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
-})();
+  let attempts = 0;
+  var interval = setInterval(() => { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+}());
