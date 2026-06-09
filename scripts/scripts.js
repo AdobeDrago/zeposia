@@ -350,14 +350,12 @@ async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
 
-  // Path-based body classes + styles for native EDS pages (replaces overlay-injected classes)
+  // Path-based body classes for native EDS pages (replaces overlay-injected classes)
   const path = window.location.pathname;
   if (path.startsWith('/ulcerative-colitis')) {
     document.body.classList.add('ucsite');
-    loadCSS(`${window.hlx.codeBasePath}/styles/zeposia-uc-native.css`);
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
-      document.body.classList.add('disabled');
     }
   } else if (path.startsWith('/multiple-sclerosis')) {
     document.body.classList.add('mssite');
@@ -704,15 +702,4 @@ loadPage();
   }
   var attempts = 0;
   var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
-})();
-wn')) {
-        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
-      }
-    });
-    return true;
-  }
-  var attempts = 0;
-  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
-})();
-() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
