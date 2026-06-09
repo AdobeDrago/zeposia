@@ -204,6 +204,7 @@ body.ucsite .fragment-wrapper h3 {
 }
 
 body.ucsite .fragment-wrapper p {
+  margin-bottom: 7px;
   font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -589,6 +590,7 @@ body.ucsite .fragment-wrapper h3 {
 }
 
 body.ucsite .fragment-wrapper p {
+  margin-bottom: 7px;
   font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
@@ -1102,4 +1104,16 @@ body.ucsite main > .section + .section {
 /* Hide sticky-isi section wrapper from flow (it's position:fixed anyway) */
 body.ucsite main > .section:has(.sticky-isi-wrapper) {
   display: contents;
+}
+
+/* ISI exact source margins */
+body.ucsite .fragment-wrapper p {
+  margin-bottom: 7px;
+}
+body.ucsite .fragment-wrapper li {
+  margin-bottom: 5px;
+}
+body.ucsite .fragment-wrapper h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
