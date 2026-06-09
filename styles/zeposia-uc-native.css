@@ -1068,3 +1068,22 @@ body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
 body.ucsite.uc-home .hero > div > div > p:first-child {
   margin-bottom: 8px;
 }
+
+/* ===== HEADER HEIGHT FIX ===== */
+body.ucsite header, body.ucsite header .header {
+  min-height: 91px;
+  display: flex;
+  align-items: center;
+}
+
+body.ucsite header .header-wrapper {
+  min-height: 91px;
+  width: 100%;
+}
+
+/* Force header to 91px via padding */
+body.ucsite header .header.block {
+  min-height: 91px;
+  padding: 16px 0;
+  box-sizing: border-box;
+}
