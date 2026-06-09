@@ -197,3 +197,29 @@ max-width: 100vw;
 width: 100vw;
 margin-left: calc(-50vw + 50%);
 }
+
+
+/* Fix: carousel slide text must be WHITE on dark backgrounds */
+.hero-carousel .carousel-item p,
+.hero-carousel .carousel-item span,
+.hero-carousel .carousel-item strong,
+.hero-carousel .carousel-item b,
+.hero-carousel .carousel-item li,
+.hero-carousel .carousel-item h2,
+.hero-carousel .carousel-item h3,
+.hero-carousel .carousel-item h4,
+.hero-carousel .carousel-text p,
+.hero-carousel .carousel-text strong,
+.hero-carousel .carousel-text span,
+.hero-carousel .carousel-text li {
+color: #fff !important;
+}
+
+.hero-carousel .carousel-item h1 {
+color: #fff !important;
+}
+
+/* Keep the button/CTA text white */
+.hero-carousel .carousel-item a {
+color: #fff !important;
+}
