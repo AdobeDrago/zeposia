@@ -14,13 +14,13 @@
 /* ZEPOSIA UC Page — Source CSS Imports for Snowflake Overlay Fidelity */
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+/* Fonts self-hosted via @font-face above */
 
 /* AEM Source Stylesheets */
-@import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css');
-@import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css');
-@import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style.css');
-@import url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/zeposiahcp-us-en_us-publish/css/style_UC.css');
+@import url('/styles/source-base.min.css');
+@import url('/styles/source-commercial-global.min.css');
+@import url('/styles/source-style.css');
+@import url('/styles/source-style-uc.css');
 
 /* === EDS Overrides === */
 
@@ -154,5 +154,31 @@ height: 0 !important;
 .left-banner {
   width: auto !important;
   flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+to !important;
+  flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+ flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+nt;
+}
+ flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+00% !important;
+}
+nt;
+}
+ flex: 1 1 auto !important;
+  max-width: 100% !important;
+}
+00% !important;
+}
+nt;
+}
+ flex: 1 1 auto !important;
   max-width: 100% !important;
 }

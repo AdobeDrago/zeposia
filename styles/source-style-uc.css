@@ -1,0 +1,6377 @@
+@font-face { font-family: 'ProximaBold'; 
+	src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face { font-family: 'ProximaBold'; 
+	src: url('/fonts/Montserrat-Bold.ttf') format('opentype');
+}
+@font-face { font-family: 'MontserratRegular'; 
+	src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+@font-face { font-family: 'MontserratMedium'; 
+	src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face { font-family: 'MontserratBold'; 
+	src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+@font-face { font-family: 'MontserratExtraBold'; 
+	src: url('/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+}
+@font-face { font-family: 'MontserratSemiBold'; 
+	src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
+@media (max-width: 350px) {
+	.ucsite .container {
+					   max-width:340px !important;
+					   width:100% !important;
+					   padding: 0 10px 0 10px !important;
+					   margin-left: 0px !important;
+					   }
+}
+	
+body.ucsite{
+	color:#434343;
+	line-height:16px;
+	font-family:'MontserratRegular';
+	position:relative;
+}
+.ucsite p{
+	font-size:16px;
+	line-height:20px;
+	margin-bottom:20px;
+	font-family:'MontserratRegular';
+}
+.ucsite ul li{
+	font-family:'MontserratRegular';
+}
+.ucsite .container{
+	width:1020px;
+	margin:0 auto;
+	padding:0px;
+	max-width:100%;
+}
+.ucsite .img-title{
+	width:880px;
+	height:39px;
+	background-image: linear-gradient(to bottom, #0032A0 , #23B1DD);
+	border-radius:10px 10px 0px 0px;
+	color:#fff;
+	font-size: 16px;
+    line-height: 39px;
+    font-family: 'MontserratBold';
+    text-align: center;
+}
+.ucsite .cmp-footer-isi-content-element .isi-container .isi-container-title, 
+.ucsite .cmp-isi .isi-container .isi-container-title, 
+.ucsite .cmp-footer-isi-content-element .isi-container a, 
+.ucsite  .cmp-isi .isi-container a {  font-family: 'MontserratRegular'; }
+.ucsite ul.smallbullet-list { font-weight: 600; }
+.ucsite #safety-page .safety-acc1 table th:nth-child(2), 
+.ucsite #safety-page .safety-acc1 table td:nth-child(2) { width: 147px!important; }
+.blueBorder .fiveCol2 { margin-left: 325px; }
+div.table9col2 { margin-left: 300px; margin-right: 160px; }
+table.lastTable tr th:first-child, table.lastTable tr td:first-child { width: 393px; }
+.ucsite .safety-acc2 .img-title{
+	margin-top:40px;
+}
+.ucsite .white-bg{
+	background: #FAFAFA 0% 0% no-repeat padding-box;
+	width:1020px;
+	border-radius:10px 10px 10px 10px;
+	padding:40px 70px 41px 71px;
+	margin-bottom:40px;
+}
+.ucsite .white-box{
+	background-color:#fff;
+	border-radius: 0px 0px 10px 10px;
+	padding: 32px 27px 32px 27px;
+	margin-bottom:40px;
+}
+.ucsite .white-box:after{
+	content:'';
+	background: url('/images/uc/white-box-shadow.png') no-repeat;
+	width:880px;
+	height: 20px;
+    left: auto;
+    right: auto;
+    display: block;
+    position: absolute;
+    margin-top: 31px;
+	margin-left:-27px;
+}
+.ucsite #efficacy-page .white-box{
+	margin-bottom:24px;
+}
+.ucsite #efficacy-page .white-box:after{
+	content: '';
+    background: transparent radial-gradient(closest-side at 50% 50%, #ccc -35%, #00000000 83%, #00000000 100%);
+    width: 428px;
+    height: 20px;
+    left: auto;
+    right: auto;
+    display: block;
+    position: absolute;
+    margin-top: -6px;
+    margin-left: 0;
+}
+
+.ucsite #efficacy-page .white-box.section5:after{
+	width: 880px;
+	margin-top: -4px;
+}
+.ucsite p.subhealine{
+	font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    color: #0032a0;
+    font-family:'MontserratBold';
+}
+.ucsite .card-img-container .white-bg h2.fntSz20{
+	color: #0032A0;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'MontserratBold';
+    font-weight: 700;
+	margin-bottom:30px;
+}
+.ucsite .white-box.study-table table tr td:nth-child(2), 
+.ucsite .white-box.study-table table tr th:nth-child(2){
+	background-color:#E5F8FD;
+	width: 253px;
+    font-family: 'MontserratMedium';
+    text-align: center;
+}
+.ucsite .gradient{
+	background-image: linear-gradient(#0032A0, #23B1DD);
+	padding:50px;
+	    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.ucsite .callout {
+    background-color: #fff;
+    border-radius: 12px;
+	padding: 34px 26px 17px;
+	text-align:center;
+}
+.ucsite .callout-copy{
+	margin-bottom: 20px;
+    margin-top: 15px;
+	font-size: 14px;
+    line-height: 18px;
+}
+.ucsite .callout.one{
+	margin-right:47px;
+	width:435px;
+}
+.ucsite .callout-button.white-arrow.mt-30{
+	margin-top:10px;
+}
+.ucsite .callout.two{
+	width:435px;
+}
+.ucsite .sitetxt{
+	background: #ffffff linear-gradient(90deg, #FFFFFF 0%, rgba(118, 134, 146, 0.32) 100%) 0% 0% no-repeat;
+}
+.ucsite button.callout-button{
+	height: 40px;
+	position:relative;
+	width: 384px;
+    background-color: #F9423A;
+    border: none;
+    color: #fff;
+    border-radius: 26px;
+	margin-bottom:13px;
+    font-size: 16px;
+	font-family: 'ProximaBold'; 
+	cursor:pointer;
+	text-transform:uppercase;
+}
+.ucsite .callout-button.buttonCTA2{
+	height:50px;
+}
+.ucsite p.support-head, .ucsite p.support-mainhead{
+	font-size: 20px;
+    line-height: 26px;
+    color: #434343;
+    font-weight: 500;
+	font-family: 'MontserratMedium';
+	margin-bottom:10px;
+}
+button.white-arrow:after{
+	content: '';
+    background: url(/content/dam/commercial/us/zeposiahcp/en/images/btn_arw.svg);
+    background-repeat: no-repeat;
+    z-index: 9;
+    height: 10px;
+    width: 11px;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+button.white-arrow{
+	position:relative;
+}
+.callout-button.download-arrow{
+	position:relative;
+	text-indent: -31px;
+}
+body.preview div.brightcove.section{
+	display:block;
+}
+img.download-arrow{
+	position: absolute;
+	right: 23px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+}
+p.callout-title{
+	font-size: 26px;
+    line-height: 26px;
+    font-family: 'MontserratBold';
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+	
+}
+.ucsite ul.list li{
+	font-size:16px;
+	line-height:20px;
+	margin-bottom: 10px;
+	position:relative;
+	padding-left:15px;
+}
+.ucsite ul.list li:before{
+	content:'•';
+	color:#F9423A;
+	font-size: 16px;
+    font-family: open-sans;
+    margin-right: 10px;
+	position:absolute;
+	left:0px;
+}
+.ucsite ul.list.horizontal li:before{
+	content:none;
+}
+.ucsite ul.sublist li:before{
+	color:#767E84;
+	font-size:14px;
+	content:'•'!important;
+	position:absolute;
+	left:0px;
+	top:0px!important;
+}
+.ucsite ul.sublist li{
+	position:relative;
+	padding-left:10px;
+}
+.ucsite .right-intro-text h1{
+	font-size:38px;
+	 font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 700;
+	color:#0032A0;
+	margin-top: 63px;
+    margin-left: 53px;
+	line-height:44px;
+}
+.banner-info{
+	color: #0032A0;
+}
+.ucsite #studyDesignBody .card-img-container{
+	padding-top:40px;
+}
+.ucsite .ucsite-indication-head{
+	display:block!important;
+}
+.ucsite  .mssite-indication-head{
+	display:none;
+}
+.ucsite .isi-footer-wrapper{
+	margin:0 auto;
+	max-width:1020px;
+}
+.ucsite .card-img-container h2{
+	font-size:30px;
+	line-height:34px;
+    font-family: 'MontserratBold';
+    font-style: normal;
+    font-weight: 700;
+    color: #0032A0;
+    margin-bottom: 25px;
+}
+.ucsite .bodypara{
+	line-height:20px;
+	font-family:'MontserratRegular';
+}
+.cta-button.home-banner{
+	width: 162px;
+    height: 92px;
+    background-color: #fff;
+    border-radius: 13px;
+	font-size:14px;
+	line-height:18px;
+	font-weight:600;
+	padding: 12px 6px 12px 6px;
+    text-align: center;
+	margin-right:6px;
+	margin-bottom:16px;
+	position:relative;
+}
+.cta-button.home-banner img{
+	display: block;
+    text-align: center;
+    margin: 0 auto;
+    height: 22px;
+	margin-bottom:7px;
+}
+ul.footnote-list{
+	padding-left:0px;
+}
+span.blue.bold{
+	color:#0032A0;
+	font-weight:700;
+	font-family: 'MontserratBold';
+}
+span.blue.underline{
+	text-decoration:underline;
+	font-weight:500;
+	color:#0032A0;
+	font-family: 'MontserratMedium';
+}
+#ucHome .gradient{
+	padding-top: 22px;
+}
+#ucHome .gradient .callout-title{
+	margin-bottom:20px;
+}
+.secondPara p {
+    margin-bottom: 10px;
+}
+#ucHomeBanner .banner-info{
+	padding-top: 120px;
+    margin-left: 20px;
+	text-align:center;
+	font-weight:600;
+}
+.ucsite .banner-info h1{
+	font-size: 38px;
+    font-family:'MontserratBold';
+    line-height: 44px;
+	margin-top: -8px;
+    margin-bottom: 3px;
+}
+.ucsite .banner-info p{
+	font-family:'MontserratSemiBold';
+}
+#ucHomeBanner #bannerBG .card-img-container{
+	background-position: 100% -7%;
+    background-size: 100%;
+}
+.ucsite p.new-text{
+	color:#434343;
+	text-align:left;
+	font-weight:400;
+	font-family:'MontserratRegular'
+}
+#ucHomeBanner .left-banner img{
+	margin-left: -62px;
+    height: auto;
+    width: 472px;
+    margin-top: 37px;
+}
+#ucHomeBanner{
+	background: linear-gradient(#95D1F4, #93D1f4);
+}
+.ucsite ul.footnote-list li{
+	margin-bottom:10px;
+	display:flex;
+	font-size:14px;
+	font-family:'MontserratRegular'
+}
+.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu{
+	border: none;
+    position: absolute;
+    box-shadow: 0px 3px 6px #000000a0;
+    background: #fff;
+    min-width: 200px;
+	width:auto;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 16px;
+    height: auto;
+    left: -56px;
+    padding: 10px 0px 10px 0px;
+    top: 37px!important;
+}
+.ucsite nav.navbar.navbar-expand-lg{
+	    box-shadow: 0px 3px 6px #00000029;
+		z-index:1;
+}
+.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item{
+	padding: 6px 10px 6px 10px;
+    line-height: normal;
+    font-size: 16px;
+	display:block;
+    border-left: 0px;
+}
+.ucsite .dropdown-item.active {
+    font-weight: 700;
+	font-family: 'MontserratBold';
+}
+.ucsite .dropdown-item.active, .ucsite .dropdown-item:active {
+    background-color: #D5F0FF;
+}
+.ucsite .navbar-expand-lg .navbar-nav .dropdown-toggle:after {
+    position: absolute;
+    top: 21px;
+	right: -16px;
+	border-width: 0 3px 3px 0;
+}
+.ucsite  #BlueCloudBG{
+	background: url('/images/uc/Fixed_BG.jpg');
+	background-size:100%;
+	background-position:top center;
+	background-attachment:fixed;
+}
+.ucsite  .mobileCloudBG{
+	display: none;
+}
+.ucsite #BlueCloudBG .cmp-card-container .card-img-container{
+	background-size: 100%!important;
+    background-position: top center;
+	padding-top:30px;
+	background-image:none!important;
+}
+.ucsite .navbar-expand-lg .navbar-nav .nav-link{
+	font-size:16px;
+}
+ul.section-list li{
+	display:inline;
+	 font-family: 'MontserratRegular';
+	 font-weight:400;
+	font-size: 16px;
+    line-height: 26px;
+	color:#0032A0;
+	margin-left:55px;
+}
+ul.section-list li:active{
+	font-weight:700;
+	font-family: 'MontserratBold';
+}
+ul.section-list{
+	margin-left:195px;
+}
+.isolated-poll {
+    width: 228px;
+    z-index: 1;
+    position: relative;
+}
+.efficacy-banner-right.efficacy{
+	width:504px;
+	height:100%;
+	float:right;
+}
+.transparent-bg{
+	background-color: #fff;
+    height: 44px;
+    line-height: 44px;
+}
+body.preview.ucsite div.accordion.section{
+	display:block;
+}
+.ucsite .cmp-accordion__header{
+	background-color: transparent;
+    border: none;
+}
+.ucsite .cmp-accordion__item{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 3px #00000029;
+	margin-bottom:40px;
+	border-radius:10px;
+}
+
+.ucsite .isi-header.isihdr_new, .mssite .isi-header.isihdr_new{
+	line-height:33px;
+}
+.ucsite .cmp-accordion__button.cmp-accordion__button--expanded:after{
+	content: "";
+    background: url(/images/uc/Icon-minus.svg);
+    width: 19px;
+    height: 3px;
+    position: absolute;
+    right: 70px;
+    top: 48%;
+}
+.ucsite .cmp-accordion__button#accordion-b7b4db6893-item-7c4586c837-button{
+	font-size: 26px;
+	padding-right:50px;
+}
+.ucsite .cmp-accordion__button:after{
+	content: "";
+    background: url(/images/uc/Icon-plus.svg);
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 70px;
+    top: 42%;
+	cursor: pointer;
+}
+.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded{
+	  background-color: transparent;
+	      padding: 0px 70px 40px 70px;
+		  margin-top:-24px;
+}
+.ucsite .cmp-accordion__button.cmp-accordion__button--expanded{
+	border-radius: 10px 10px 0px 0px;
+}
+.ucsite .card-img-container h2.fntSz20{
+	font-size:20px !important;
+	line-height:24px;
+}
+.ucsite .efficacy-accordion-content .section3 .left-graph
+{
+	width:428px;
+	height:368px;
+}
+.ucsite .efficacy-accordion-content .section3 .right-graph{
+	width:427px;
+	height:369px;
+}
+.ucsite .cmp-accordion__button {
+    display: block;
+	position:relative;
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+    border: none;
+    appearance: none;
+    border-radius: 10px;
+    height: 121px;
+    font-size: 30px;
+    font-family:'MontserratBold';
+    color: #0032A0;
+    padding-left: 70px;
+}
+#ucHome .refrence-section.homePage{
+	display:block!important;
+}
+.refrence-section{
+	margin-top: 31px;
+}
+#study-design-page .refrence-section.study-design{
+	display:block!important;
+}
+#efficacy-page .refrence-section.efficacy{
+	display:block!important;
+}
+#safety-page .refrence-section.safety{
+	display:block!important;
+}
+#dosing-page .refrence-section.dosing{
+	display:block!important;
+}
+#moa-page .refrence-section.moa{
+	display:block!important;
+}
+p.reference-title{
+	font-size: 16px;
+    color: #0032a0;
+    font-family:'MontserratBold';
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+ol.ref-list li{
+	    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 5px;
+	color:#000;
+	font-family:'MontserratRegular';
+}
+.ucsite-indication-head ol li{
+	margin-bottom:5px;
+}
+.ucsite .head3.mt-30{
+	margin-top:25px;
+	margin-bottom:4px;
+}
+.ucsite-indication-head ol{
+	padding-left: 15px;
+	margin-top:8px;
+}
+.ucsite p.abbr{
+	font-size:14px;
+	line-height:18px;
+	margin-bottom:0px;
+	font-family:'MontserratRegular';
+}
+p.abbr .bold{
+	font-family:'MontserratBold';
+}
+.white-box.one .red-bar:before {
+    content: '';
+    background-color: #F9423A;
+	height: 77px;
+    width: 2px;
+    display: none;
+    float: left;
+    margin-right: 13px;
+    margin-top: 2px;
+}
+.red-bar p{
+	margin-bottom:0px;
+}
+p.yellow-highlight{
+	background: transparent linear-gradient(180deg, #F8EE80 0%, #F7AA3A 100%, #F7A22D 100%) 0% 0% no-repeat padding-box;
+    height: 83px;
+    border-radius: 10px;
+    text-align: center;
+    font-family:'MontserratBold';
+    padding: 24px 40px;
+}
+ul.list{
+	padding-left:0px;
+}
+ul.smallbullet-list, ul.sublist{
+	padding-left:15px;
+	margin-top:7px;
+}
+ul.smallbullet-list li{
+	font-size:14px;
+	margin-bottom:5px;
+	padding-left:15px;
+	position:relative;
+}
+ul.footnote-list li a{
+	color:#0032a0;
+	text-decoration:underline;
+	font-weight:500;
+	font-family: 'MontserratMedium';
+}
+ul.smallbullet-list li:before{
+	    content: "•";
+    color: rgb(249, 66, 58);
+    font-size: 12px;
+    font-family: open-sans;
+    margin-right: 5px;
+	position:absolute;
+	left:0;
+}
+.ucsite table tr {
+	border-bottom: 0.5px solid #B2BEC5;
+	height:53px;
+}
+.ucsite table tr.cmnHt{
+	height:30px;
+}
+.ucsite table tr.noBorder{
+	border-bottom:none;
+	height:30px;
+}
+div.white-box.study-table{
+	padding-top:0px;
+	margin-bottom:24px;
+}
+.white-box.study-table table tr span.textIndent{
+	padding-left:15px;
+}
+div.grey-section{
+	background-color: #EAEEEF;
+    height: 78px;
+    text-align: center;   
+	padding-top: 0px;
+}
+div.grey-section p{
+	font-size: 14px;
+    line-height: 23px;
+    padding: 17px 32px 17px 23px;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+}
+.footer-people.dosing img{
+	width: 382px;
+    margin-top: -134px;
+}
+.white-bg.page404{
+	margin-top:66px;
+}
+.white-bg.page404 p{
+	margin-bottom:0px;
+	    font-size: 16px;
+    line-height: 20px;
+    padding: 0 15px;
+}
+.white-bg.page404 p a{
+	text-decoration:underline;
+	    color: #0032a0;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+}
+.white-bg.page404 p.firstLine{
+	margin-bottom:10px;
+}
+
+/* Efficacy page starts here */
+.left-graph{
+	margin-right:24px;
+}
+#efficacy-page .graph-container .img-title{
+	width:auto;
+	padding-top:0px;
+	vertical-align:middle;
+	height: 58px;
+    line-height: 20px;
+    padding-top: 10px;
+	font-family:'MontserratBold';
+}
+.description4 p.blackBoldHeading.mt-0{
+	    font-family: 'MontserratBold';
+    margin-top: -12px!important;
+}
+.ucsite .graph-container{
+	width:880px;
+}
+#efficacy-page .graph-container .white-box{
+	padding:0px;
+}
+.efficacy-accordion-content .description3{
+	margin-top:45.5px;
+	margin-bottom:40px;
+}
+.white-bg.box2.efficacy-section2 .white-box img{
+	    width: 384px;
+    padding-left: 0px;
+    margin-left: 21px;
+}
+.footer-people.efficacy img{
+	height:357px;
+}
+.footer-people.safety img{
+	height:313px;
+}
+p.graph-info{
+	font-size: 18px;
+    line-height: 20px;
+	padding:0 16px;
+    font-weight: 500;
+	font-family: 'MontserratMedium';
+    color: #355CB3;
+    padding-top: 27px;
+    text-align: center;
+}
+.ucsite .description1 a, .table-note a{
+	color:#0032A0;
+	text-decoration:underline;
+	font-size:16px;
+	line-height:20px;
+}
+.ucsite span.black.bold{
+	color:#434343;
+	font-weight:700;
+	font-family: 'MontserratBold';
+}
+.ucsite p.blueBoldHeading{
+	color:#0032A0;
+	font-weight:700;
+	font-family: 'MontserratBold';
+}
+.left-ehmi img, .right-ehmi img{
+	height:340px;
+}
+.left-ehmi img{
+	margin-right:0px;
+	margin-bottom: 0px;
+	padding-bottom: 30px
+}
+.left-ehmi{
+	text-align:center;
+}
+#ehmi .chart-section{
+	margin-top:35px;
+	padding: 0px;
+}
+#efficacy-page #ehmi .graph-container .img-title {
+    width: auto;
+    line-height: 20px;
+    height: 59px;
+    padding: 10px 0px;
+}
+.efficacy-accordion-content .white-box.section3{
+	padding:0px;
+}
+.efficacy-accordion-content .white-box.section3 .fullChart{
+	text-align:center;
+}
+.ucsite #efficacy-page .efficacy-accordion-content .white-box.section3:after{
+	width:880px;
+}
+.efficacy-accordion-content .section3 img{
+	padding: 30px 19px 21px 26px;
+}
+.tnfi-charts img{
+	width:386px;
+}
+.tnfi-charts p{
+	color: #355CB3;
+    font-weight: 500;
+	font-family: 'MontserratMedium';
+    text-align: center;
+}
+.tnfi-chart2 img, .tnfi-chart4 img{
+	margin-left:64px;
+}
+.tnfi-charts{
+	margin-bottom:80px;
+	padding: 22px 20px 0px 20px;
+}
+.tnfi-charts.two {
+	padding: 0 20px 50px 20px;
+	margin-bottom:0px;
+}
+#tnfi .white-box.section7{
+	padding:0px;
+}
+.ucsite #efficacy-page #tnfi .white-box:after{
+	width:880px;
+}
+.ucsite #efficacy-page .white-box.section5{
+	padding:0px;
+}
+.tnfi-chart3{
+	border-right:none;
+}
+#efficacy-page .efficacy-section1 .graph-container .white-box, 
+#efficacy-page .white-bg.box2.efficacy-section2 .graph-container .white-box, 
+#efficacy-page .efficacy-section6 .graph-container .white-box{
+	display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#efficacy-page .efficacy-section1 .graph-container .white-box p.graph-info, 
+#efficacy-page .efficacy-section2 .graph-container .white-box p.graph-info, 
+#efficacy-page .efficacy-section6 .graph-container .white-box p.graph-info{
+	flex-grow:1;
+}
+#efficacy-page .efficacy-section1 .graph-container .white-box img, 
+#efficacy-page .efficacy-section2 .graph-container .white-box img, 
+#efficacy-page .efficacy-section6 .graph-container .white-box img{
+	padding:0 20px 25px 20px;
+}
+#efficacy-page .efficacy-section1 .graph-container .right-graph .white-box img, 
+#efficacy-page .efficacy-section2 .graph-container .right-graph .white-box img,
+#efficacy-page .efficacy-section6 .graph-container .right-graph .white-box img{
+	padding:0px;
+	margin-left: 0;
+    width: 426px;
+}
+.ucsite #efficacy-page .efficacy-section1 .white-box:after, 
+.ucsite #efficacy-page .efficacy-section2 .white-box:after, 
+.ucsite #efficacy-page .efficacy-section6 .white-box:after{
+	position: absolute;
+    margin-top: 6px;
+    margin-left: 0;
+    bottom: -14px;
+}
+.tnfi-chart3{
+	border-right:none;
+}
+.cmp-backToTop-wrapper.ucButton{
+	right: 10px;
+    display: block;
+    position: fixed;
+    bottom: 19%;
+	right:0px;
+	z-index:999;
+}
+.cmp-backToTop-wrapper.ucButton .backToTop-link{
+	height: 77px;
+    width: 80px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px 0px 0px 10px;
+	padding:12px;
+}
+.backToTop-label.ucLable{
+	text-transform: initial;
+	color: #0032A0;
+    line-height: 18px;
+}
+.ucsite .cmp-backToTop-wrapper:hover .backToTop-label{
+	color: #0032A0;
+}
+.ucsite .orangelinkel a:hover{
+	color:#F9423A;
+}
+ .cmp-backToTop-wrapper:hover img.backToTop-img.ucImg{
+	 display:block;
+ }
+.transparent-bg.safetyPage{
+	height: 63px;
+    padding-top: 12px;
+}
+
+/* Safety page starts here */
+.description.safetyInfo{
+	margin-top:25px;
+}
+ul.section-list.safety{
+	display:inline-block;
+}
+ul.section-list li a{
+	color:#0032a0;
+	display:inline-block;
+	padding:0px;
+}
+ul.section-list li a.active{
+	font-family:'MontserratBold';
+}
+ul.section-list.safety li{
+	line-height:20px;
+	margin-left:70px;
+	display: inline-block;
+    text-align: center;
+}
+.white-bg.safety .white-box{
+	padding:0px 0 40px 0px;
+}
+.firstTable.white-box .img-title, .secondTable.white-box .img-title, .thirdTable.white-box .img-title, 
+.fourthTable.white-box .img-title, .fifthTable.white-box .img-title{
+	    height: auto;
+    line-height: 20px;
+    padding: 10px;
+}
+#safety-page table{
+	width: 800px;
+    margin: 0 auto;
+	padding-bottom:40px;
+	border-collapse: collapse;
+}
+.ucsite .white-bg.safety.box1 .white-box:after{
+	margin-top:40px;
+}
+.secondTable.white-box:after, .thirdTable.white-box:after, .fourthTable.white-box:after, .fifthTable.white-box:after{
+	margin-top:0px;
+}
+div.blueBorder{
+	width: 800px;
+    border: 3px solid #0032A0;
+	border-bottom: 3px solid #697B86;
+    border-radius: 12px 12px 0px 0px;
+    height: 69px;
+	align-items:center;
+	margin: 24px auto 0px auto;
+}
+div.blueBorder div{
+	font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #0032a0;
+	font-family:'MontserratBold';
+	text-align:center;
+}
+div.col2-table{
+	margin-left: 186px;
+    margin-right: 145px;
+}
+.secondTable.white-box div.col2-table, .fourthTable.white-box div.col2-table{
+	margin-left: 330px;
+    margin-right: 145px;
+}
+.ucsite .img-caption.top{
+	font-size:18px;
+	font-weight: 700;
+	font-family: 'MontserratBold';
+    color: #0032a0;
+    text-align: center;
+}
+.ucsite .img-caption.bottom{
+	font-size:16px;
+	font-weight: 700;
+	font-family: 'MontserratBold';
+    color: #0032a0;
+    text-align: center;
+	margin-top:15px;
+}
+.thirdTable.white-box div.col2-table{
+	margin-left: 186px;
+    margin-right: 145px;
+}
+#safety-page .white-bg.safety.box3 table tr td:first-child{
+	width:212px;
+}
+#safety-page .white-bg.safety.box3 table tr td{
+	width:147px;
+}
+div.col1-table{
+	padding-left:16px;
+}
+div.blueBorder.fontStyle{
+	font-size:15px;
+	height: 47px;
+    text-align: center;
+    line-height: 40px;
+    color: #0032A0;
+    font-weight: 600;
+	font-family:'MontserratSemiBold';
+}
+.sixthTable.white-box  span.blueBold{
+	color: #0032A0;
+    font-weight: 600;
+	font-family:'MontserratSemiBold';
+    font-size: 16px;
+    line-height: 20px;
+}
+span.blueBold{
+	color: #0032A0;
+    font-weight: 600;
+	font-family:'MontserratSemiBold';
+}
+.sixthTable.white-box .left p.blackBold, .sixthTable.white-box .right p.blackBold{
+	font-size:16px;
+	font-weight:700;
+	font-family: 'MontserratBold';
+	color:#333;
+}
+.taeText .left, .taeText .right{
+	width:400px;
+	padding-top:13px;
+	text-align:center;
+}
+.d-flex.taeText{
+	margin: 0 auto;
+    width: 800px;
+}
+.taeText .right{
+	background-color:#E5F8FD;
+}
+.ucStudy.taeText .right{
+	background-color:#fff;
+}
+.ucStudy.taeText{
+	padding-top:25px;
+}
+.ucStudy.taeText p{
+	margin-bottom:0px;
+}
+.ucStudy.taeText .left p{
+	margin-left:68px;
+}
+.white-bg.safety.box2{
+	padding-bottom:20px;
+}
+.blueBorder .fiveCol2{
+	margin-left: 320px;
+}
+.blueBorder .fiveCol4{
+	margin-left: 185px;
+}
+.white-bg.safety.box3 table tr:first-child{
+	background-color:#E3E8EA;
+}
+.white-bg.safety.box3 table tr:first-child th{
+	color: #0032A0;
+    font-size: 16px;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+	text-align:center;
+	letter-spacing: -0.25px;
+}
+#safety-page .white-bg.safety.box3 table tr td:first-child{
+	color:#434343;
+	font-weight:700;
+	font-family: 'MontserratBold';
+	text-align:left;
+	padding-left:9px;
+}
+#safety-page .white-bg.safety.box3 table tr:first-child th:first-child{
+	text-align:left;
+	padding-left:9px;
+}
+
+.ucsite .tenthTable.white-box:after, .ucsite .ninethTable.white-box:after, 
+.ucsite .seventhTable.white-box:after, .ucsite .sixthTable.white-box:after{
+	margin-top:39px;
+}
+.contentShow.d-flex{
+	justify-content:center;
+}
+div.table9col2{
+	margin-left: 285px;
+    margin-right: 175px;
+}
+div.acCol3{
+	margin-left: 155px;
+    margin-right: 200px;
+}
+div.acCol1{
+	padding-left:13px;
+}
+#safety-page .safety-acc1 table tr td{
+	width:147px;
+	text-align:center;
+}
+.safety-acc2 .white-box, #safety-page .safety-acc1 table tr td th{
+	text-align:center;
+}
+.safety-acc2 .white-box img{
+	width: 487px;
+    height: 384px;
+	margin-bottom:-15px;
+}
+#safety-page .safety-acc1 table tr td:first-child{
+	width:212px;
+	font-weight:700;
+	font-family: 'MontserratBold';
+	color:#434343;
+	text-align:left;
+	padding-left:9px;
+}
+.safety-acc1 table tr th, .white-bg.safety.box3 table tr th, .white-bg.safety.box3 table tr td{
+	text-align:center;
+    padding: 5px 0;
+}
+.sixthTable.white-box .left p, .sixthTable.white-box .right p{
+	font-weight:400;
+	font-family: 'MontserratRegular';
+}
+#safety-page .safety-acc1 table td:nth-child(2), #safety-page .safety-acc1 table th:nth-child(2),
+#safety-page .white-bg.safety.box3 table td:nth-child(2){
+    background-color: #E5F8FD;
+    width: 250px;
+    text-align: center;
+}
+.ucsite #safety-page .white-bg.safety.box3 table td:nth-child(2){
+	width:150px;
+}
+.white-bg.safety.box1 table tr td:nth-child(2){
+	background-color:#E5F8FD;
+}
+#safety-page .safety-acc1 table td:nth-child(4), #safety-page .safety-acc1 table th:nth-child(4),
+#safety-page .white-bg.safety.box3 table td:nth-child(4)
+ {
+	  background-color: #E5F8FD;
+}
+#safety-page .safety-acc1 table tr td, #safety-page .white-bg.safety.box3 table tr td{
+	font-weight:500;
+	font-family: 'MontserratMedium';
+}
+#safety-page table tr{
+	border-bottom:2px solid #B2BEC5;
+}
+
+#safety-page .safety td{
+	border-bottom:none;
+	font-weight:500;
+	font-family: 'MontserratMedium';
+}
+#safety-page .white-bg.safety.box1 table td:nth-child(1){
+	width:297px;
+	font-size: 16px;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+    padding-left: 16px;
+    line-height: 17px;
+}
+#safety-page .white-bg.safety.box1 table td:nth-child(3){
+	width:256px;
+	font-weight: 500;
+	font-family: 'MontserratMedium';
+    text-align: center;
+}
+#safety-page .cmp-accordion__button{
+	font-size: 20px;
+    height: 120px;
+    line-height: 24px;
+}
+.blueBorder.d-flex.lastTableHeader{
+	height:108px;
+}
+.blueBorder.d-flex.lastTableHeader div.halfWidth{
+	width: 400px;
+    border-right: 1px solid #0032A0;
+    padding: 0;
+    height: 103px;
+    padding-left: 29px;
+    padding-top: 34px;
+	text-align:left;
+	font-family:'MontserratExtraBold';
+}
+.blueBorder.d-flex.lastTableHeader div.halfWidth-two{
+	width: 400px;
+	height:108px;
+	font-family:'MontserratExtraBold';
+}
+table.lastTable tr th{
+	font-family:'MontserratBold';
+	font-size:16px;
+}
+div.halfTop{
+	border-bottom: 1px solid #0032a0;
+	padding-top:12px;
+	height:54px;
+}
+.halfBottom.d-flex{
+	height:54px;
+}
+.halfBottom .firstHalf, .halfBottom .secondHalf{
+	width:200px;
+	max-width:100%;
+}
+.halfBottom .firstHalf{
+	border-right:1px solid #0032a0;
+	padding-top:16px;
+}
+.secondHalf{
+	padding-top:10px;
+}
+th.indent27{
+	padding-left:27px;
+}
+td.indent58{
+	padding-left:58px;
+}
+ table.lastTable tr th:first-child,  table.lastTable tr td:first-child{
+	
+}
+ table.lastTable tr td:nth-child(2),  table.lastTable tr td:nth-child(3), table.lastTable tr th:nth-child(2),  table.lastTable tr th:nth-child(3){
+	width:200px;
+	text-align:center;
+}
+table.lastTable tr th:nth-child(2),  table.lastTable tr td:nth-child(2){
+	background-color:#E5F8FD;
+}
+.section-list li.active{
+	font-weight:700;
+	font-family: 'MontserratBold';
+}
+.zeposia{
+	font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+}
+p.date{
+	font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 16px;
+}
+.sixthTable.white-box .left p.bigNumber, .sixthTable.white-box .right p.bigNumber{
+	font-size: 40px;
+    line-height: 20px;
+    color: #0032A0;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+}
+p.after-line{
+	color:#333;
+	white-space: nowrap;
+}
+p.after-line:before {
+    content: '';
+    background-color: #F9423A;
+    height: 46px;
+    width: 2px;
+    display: inline-block;
+    margin-right: 20px;
+    float: left;
+	margin-left:18px;
+}
+
+p.middleText{
+	    position: absolute;
+    width: 121px;
+    left: 200px;
+    font-size: 14px;
+    line-height: 18px;
+    top: 129px;
+}
+.bold.thirdLable{
+	margin-left: 353px;
+    top: 15px;
+    position: absolute;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.bold.fourthLable{
+	width: 100px;
+    position: absolute;
+    margin-left: 479px;
+    top: -2px;
+    text-align: center;
+}
+.bold.fifthLable{
+	    position: absolute;
+    right: 187px;
+    width: 83px;
+    text-align: center;
+    top: 13px;
+}
+p.imgBottomLable{
+	margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}
+span.leftbottom{
+	margin-left: 71px;
+    text-align: left;
+    margin-top: -33px;
+    display: inline-block;
+    position: absolute;
+}
+.imgBottomLable{
+	text-align:center;
+	font-size:14px;
+	line-height:18px;
+}
+.firstLable.colorRed{
+	    position: absolute;
+    top: 100px;
+    left: 68px;
+    line-height: 18px;
+    color: #F9423A;
+    font-weight: 700;
+	font-family: 'MontserratBold';
+    font-size: 14px;
+}
+#moa-page span.bold{
+	font-weight:600;
+}
+.moa-img1-caption span{
+	font-size:14px;
+	line-height:18px;
+}
+.blueColor{
+	color:#0032a0;
+}
+.bold.secondLable{
+	    margin-left: 94px;
+    margin-top: 78px;
+    position: absolute;
+}
+.moa-img1-caption.d-flex{
+	position:relative;
+}
+.d-flex.parentDiv{
+	position:relative;
+}
+p.rightLabel{
+	font-size: 14px;
+    margin-left: 24px;
+    line-height: 18px;
+    width: 169px;
+    padding-right: 15px;
+    margin-top: 70px;
+}
+img.moa-img2{
+	width:604px;
+}
+p.blueRightLable{
+	color:#0032a0;
+	font-size: 14px;
+    margin-left: 24px;
+    line-height: 18px;
+	width:140px;
+}
+.topTextmoa2{
+	width:297px;
+}
+p.blueColor.cornerText2{
+	position: absolute;
+    left: 175px;
+    margin-top: 27px;
+}
+p.blueColor.cornerText1{
+	margin-top: 10px;
+    position: absolute;
+}
+.bold.label2{
+	display: inline-block;
+    margin-left: 49px;
+    margin-top: 34px;
+	text-align: center;
+}
+.bold.label4{
+	display: inline-block;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 10px;
+}
+.bold.label3{
+	display: inline-block;
+    margin-left: 56px;
+    margin-top: 14px;
+    text-align: center;
+}
+.white-box.twoMoa{
+	position:relative;
+}
+.footer-people.moaFooter img{
+	width:324px;
+}
+.moa-img2Bottom-lable.blueColor{
+	text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+#moa-page .white-box.twoMoa p, #moa-page .white-box.oneMoa p{
+	font-size:14px;
+	line-height:18px;
+}
+.ucsite .cmp-backToTop-wrapper:hover .backToTop-label{
+	color:#0032a0;
+}
+.ucsite .cmp-backToTop-wrapper:hover .backToTop-img.ucImg{
+	display:block;
+}
+
+ul.list.horizontal li{
+	display:inline-block;
+	font-size:14px;
+	color:#0032a0;
+	font-weight:600;
+	text-decoration:underline;
+	list-style: none;
+    list-style-type: none;
+	padding-right:40px;
+	padding-left:0px;
+}
+ul.list.horizontal a:last-child li{
+	padding-right:0px;
+}
+ul.list.horizontal{
+	display: inline-block;
+    background-color: #fff;
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+	margin-bottom:20px;
+	    padding: 3px 15px;
+}
+ul.list.horizontal li:after{
+	content:'';
+	background:url(/content/dam/commercial/us/zeposiahcp/en/images/uc/chain-icon.svg);
+	height: 17px;
+	width: 17px;
+	display: inline-block;
+	background-repeat:no-repeat;
+	vertical-align: middle;
+	margin-left: 8px;
+}
+#resources ul.list.horizontal li:after{
+	display: none;
+}
+.ucsite .orangelinkel:before {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background: #F9423A;
+    bottom: -5px;
+    content: "";
+}
+.ucsite #resources .orangelinkel:before {
+	height:3px;
+}
+.reources-block .block-title{
+	font-weight: 600;
+	font-family:'MontserratSemiBold';
+    margin-bottom: 0px;
+	color:#000;
+}
+.ucsite p.block-copy{
+	margin-bottom:10px;
+	color:#000;
+}
+.white-bg.support-section1 .white-box, .white-bg.support-section2 .white-box {
+	padding:0px;
+}
+.white-bg.support-section2 .d-flex{
+	justify-content:space-between;
+}
+.reources-block {
+    width: 395px;
+}
+div.padding30{
+	padding:40px 30px 40px 30px;
+}
+.reources-block.block3{
+	border-bottom:2px solid #697B86;
+    margin-bottom: 15px;
+}
+.reources-block.block9, .reources-block.block11, 
+.reources-block.block17, .reources-block.block18{
+	border-top:2px solid #697B86;
+	padding-top: 15px;
+}
+.reources-block.block2{
+	border-bottom:2px solid #697B86;
+	 margin-bottom: 15px;
+} 
+.white-bg.support-section2 .reources-block.block1 .block-buttons.orangelinkel.downloadLink.d-flex{
+	justify-content:unset;
+}
+.white-box.Supportcallout1 .img-wrap, 
+.white-box.Supportcallout2 .img-wrap, 
+.white-box.Supportcallout3 .img-wrap{
+	width: 107px;
+    padding: 0px;
+    margin-left: 28px;
+    margin-top: 28px;
+}
+.support-Page ul.list{
+	padding-left:20px;
+}
+.support-Page .ucsite ul.list li:before {
+	padding-right:5px;
+}
+.white-bg.support-section2 .d-flex.enes{
+	justify-content: start;
+}
+.reources-block.block1 p.block-buttons.orangelinkel.downloadLink:first-child{
+	margin-right:40px;
+}
+.white-bg.support-section1 .white-box:after, .white-bg.support-section2 .white-box:after{
+	margin-top:0px;
+}
+p.block-copy a{
+	color: #0032a0;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.cta-button.home-banner img.go-arrow{
+	height: 11px!important;
+    width: 8px;
+    float: right;
+    position: absolute;
+    right: 17px;
+    bottom: 8px;
+}
+ul.list.supportIcons2 li, ul.list.supportIcons1 li{
+	font-weight:500;
+	font-family: 'MontserratMedium';
+}
+.supportIcons .img-wrap{
+	margin-right:10px;
+}
+.supportIcons .left.white-box{
+	margin-right:15px;
+}
+.support-icon2, .support-icon1, .support-icon3{
+	padding:35px 27px 40px 27px;
+}
+.supportIcons .white-box:after{
+	background:none;
+}
+.supportIcons .white-box{
+	width:432px;
+	padding:0px;
+}
+.supportIcons .white-box .img-title{
+	width:auto;
+}
+.white-bg.support-section1 p.abbr{
+	margin-bottom:40px;
+}
+span.alertText{
+	display: block;
+    font-size: 16px;
+    font-weight: 400;
+	font-family:'MontserratRegular';
+}
+p.yellow-highlight.support-alert-text{
+	width: 818px;
+    margin: 0 auto;
+    height: 155px;
+    font-size: 20px;
+    line-height: 26px;
+    padding: 40px 0px;
+	    margin-bottom: 40px;
+		font-family:'MontserratSemiBold';
+}
+.footer-people.supportFooter img{
+	width:438px;
+}
+p.video-description{
+	margin-bottom: 0px;
+    text-align: center;
+    margin-top: 20px;
+}
+#video-container-support .brightcove.section{
+	text-align:center;
+}
+#video-container-support img.videoPlayerImage2{
+	width: 699px;
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+}
+#video-container-support{
+	background-color: rgba(255, 255, 255, 0.7);
+    width: 1020px;
+    margin: 0 auto 40px auto;
+    padding: 40px 70px 40px 70px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.gettingStartedBody .videoinfo{
+	width: 422px;
+    margin-right: 50px;
+}
+.gettingStartedBody .videoContainer{
+	width:406px;
+}
+.gettingStartedBody img.videoPlayerImage2{
+	height:auto;
+	width:406px;
+}
+button.downloadCTA.callout-button.download-arrow.mb-bottom{
+	width: 413px;
+    margin-bottom: 46px;
+    margin-top: 4px;
+	text-transform:unset;
+}
+ul.list.dosing{
+	padding-left:0;
+}
+.ucsite ul.list.dosing li{
+	padding-left:15px;
+}
+p.yellow-highlight.dosing-callout{
+	font-size: 20px;
+    line-height: 38px;
+	margin-bottom: 40px;
+    margin-top: 40px;
+}
+p.yellow-highlight.dosing-callout2{
+	font-size: 20px;
+    line-height: 26px;
+    height: 130px;
+    padding-top: 40px; 
+	margin: 40px 0px;
+}
+.dosing-info-section .downloadCTA.callout-button.download-arrow{
+	width:495px;
+	margin-bottom: 0px;
+    margin-top: 24px;
+	text-transform:unset;
+}
+button.mb-12.watchVideo.videoButton{
+	    margin: 8px 0px 48px 90px;
+		width:180px;
+}
+.study-banner-right{
+	float:right;
+	height:100%;
+}
+.ucsite .footenote-container span.a{
+	color: #0032a0;
+    text-decoration: underline;
+    font-weight: 500;
+	font-family: 'MontserratMedium';
+}
+.ucsite .callout h3.head3{
+	flex-grow:1;
+	font-size:24px;
+	line-height:26px;
+}
+.cta-button.home-banner a{
+	color:#0032a0;
+	font-family: 'MontserratSemiBold';
+}
+.ucsite .d-flex.two>div:nth-child(1):after{
+	display:none!important;
+}
+#tuc-unmet-need-page .refrence-section.tuc-umet-need {
+	display: block!important;
+}
+#tuc-patient .refrence-section.tuc-patient {
+	display: block!important;
+}
+#tuc-unmet-need-page .study-banner-right {
+	width: 517px;
+}
+#tuc-patient .study-banner-right.gettingStarted {
+    width: 499px;
+}
+.round-btn a {
+	font-family: 'MontserratBold';
+    color: #0032A0;
+    display: block;
+    border: 1px solid #F9423A;
+    border-radius: 25px;
+    padding: 8px 12px !important;
+	text-align: center !important;
+}
+.round-btn a:hover {
+	background: #0032A0;
+	color: #FFFFFF !important;
+	border-color: #0032A0;
+}
+.ucsite .card-img-container h2.blue-graident-title {
+    color: #F6F9F9;
+    font-size: 16px;
+    line-height: 20px;
+    background: linear-gradient(#0032A0, #23B1DD);
+    text-align: center;
+	border-radius: 8px 8px 0 0;
+	padding: 9px 8px 8px;
+	font-weight: normal;
+}
+.grid-list {
+    width: 214px;
+	background: #FFFFFF;
+	position: relative;
+	border-radius: 8px;
+}
+.grid-list:after {
+	background: url(/images/uc/white-box-shadow.png) no-repeat scroll transparent;
+	content: "";
+	height: 37px;
+	display: block;
+	position: absolute;
+	background-size: 100% auto;
+	bottom: -37px;
+	left: 0;
+	right: 0;
+}
+.grid-list p {
+	padding: 0 17px 0 23px;
+	margin: 0 0 19px;
+	text-align: center;
+}
+.grid-list p .bold {
+	font-family:'MontserratBold';
+}
+.three-grid-list-section, .two-grid-list-section {
+	display: flex;
+	justify-content: space-between;
+}
+.three-grid-list-section img {
+	display: block;
+	margin: 0 auto;
+}
+.grid-list-img-wrapper {
+    min-height: 136px;
+}
+.tuc-unmet-Body p.yellow-highlight {
+    font-size: 16px;
+    line-height: 20px;
+	color: #000000;
+	font-family: 'MontserratSemiBold'; 
+    height: auto;
+    padding: 21px 0 20px;
+    margin: 37px 0px 20px;
+}
+p.fntSz20.bold {
+	font-size: 20px;
+	font-family: 'MontserratBold';
+	line-height: 20px;
+	color: #0032A0;
+	text-align: center;
+}
+.tuc-unmet-Body ul.footnote-list {
+    margin-bottom: -4px;
+}
+#tuc-patient .white-bg.box1 .para-info span {
+	display: block;
+	margin-bottom: 8px;
+}
+.two-grid-list-section .grid-list {
+	width: 420px;
+	padding-bottom: 20px;
+}
+.grid-profile-img {
+	position: relative;
+}
+.grid-profile-img img {
+	position: absolute;
+	bottom: 0;
+}
+.ucsite .card-img-container .grid-profile-img h2.blue-graident-title {
+    font-size: 20px;
+    padding: 29px 0 2px 156px;
+    text-align: left;
+	margin: 0;
+}
+.ucsite .card-img-container .grid-profile-img h2.blue-graident-title span {
+	display: block;
+	font-size: 12px;
+	font-family: 'MontserratRegular';
+	margin-top: 6px;
+	color: #fff;
+}
+.detail-info {
+	background: #E5F8FD;
+	padding: 16px 26px 14px;
+}
+.detail-info span:first-child {
+	margin-right: 25px;
+}
+.detail-info span {
+	font-size: 16px;
+}
+.detail-info span b {
+	font-family: 'MontserratBold';
+	font-weight: normal;
+	color: #0032A0;
+}
+.two-grid-list-section .grid-list .list {
+    padding: 22px 23px 0;
+	min-height: 202px;
+}
+.two-grid-list-section {
+    margin-top: 73px;
+}
+.two-grid-list-section .grid-list a { 
+	display: block;
+	text-align: center;
+}
+.detail-info span {
+	font-family: 'MontserratRegular';
+	color: #191919;
+}
+.ucsite #BlueCloudBG .two-grid-list-section button.callout-button {
+	margin-bottom: 0;
+}
+.ucsite #BlueCloudBG .two-grid-list-section button.callout-button, .ucsite #BlueCloudBG .gradient button.callout-button {
+	text-transform: uppercase;
+}
+.ucsite #tuc-patient .white-bg.box1 .gradient {
+	width: 515px;
+	margin: 40px auto 42px;
+	padding: 40px;
+}
+.ucsite #tuc-patient .white-bg.box1 .callout {
+    padding: 35px 29px 28px;
+}
+.ucsite #tuc-patient .white-bg.box1 .callout h3.head3 {
+    margin-bottom: 38px;
+}
+.ucsite #tuc-patient .box3 .callout.two {
+	padding-top: 21px;
+}
+.ucsite #tuc-patient .card-img-container #hcp h2.fntSz20 {
+	    margin-bottom: 18px;
+}
+.ucsite #tuc-patient .card-img-container #hcp h2.fntSz20 + p {
+	margin-bottom: 26px;
+	color: #000;
+}
+.ucsite #tuc-patient #video-container-support .video-description {
+	color: #000000;
+}
+.ucsite #tuc-patient .box3 .callout h3.head3{
+	margin-bottom: 19px;
+}
+.ucsite #tuc-patient .box3 .callout.two p.callout-copy {
+    margin: -3px 0 16px;
+}
+.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow {
+    text-indent: 0;
+}
+.ucsite #tuc-patient #video-container-support {
+    padding: 40px 70px 34px 70px;
+}
+.ucsite #tuc-patient .gradient {
+	margin-bottom: 0;
+}
+#efficacy-page .efficacy-section2 .graph-container .white-box p.graph-info {
+	flex-grow: .71;
+}
+.footnote-list li span:first-child {
+    display: inline-block;
+    text-align: right;
+    min-width: 10px;
+    margin-left: -10px;
+}
+#efficacy-page .efficacy-section6 .graph-container .white-box p.graph-info {
+    flex-grow: .83;
+}
+.headerWrapUC #navbarNavDropdown .utilitycont {
+	padding: 0 !important;
+}
+.ucsite .card-img-container .white-bg.box1.tuc-unmet-Body h2 sub {
+	font-family:'MontserratRegular';
+}
+.ucsite-indication-head div.bodypara.margin-val {
+    margin-top: -6px;
+}
+.ucsite #efficacy-page .card-img-container h2 {
+    font-size: 26px;
+}
+.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow.buttonCTA2 {
+	height: 40px;
+}
+#evg-exit-intent-popup .evg-popup{
+    min-width: 1020px;
+    max-height: 305px;
+    border-radius: 15px;
+}
+#evg-exit-intent-popup .headerTextA{
+    font-size: 26px;
+    font-family: 'MontserratBold';
+    color: #0032A0;
+}
+a.evg-cta.evg-btn.evg-btn-primary.evg-btn-lg {
+    background-color: #F94239 !important;
+    border: none !important;
+    font-size: 16px !important;
+    width: 288px;
+}
+#evg-exit-intent-popup .evg-btn-dismissal{
+     background: #F9423A;
+    border-radius: 50%;
+    height: 38px;
+    width: 38px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+}
+#evg-exit-intent-popup .evg-btn-lg{
+	position: relative;
+}
+.modal-backdrop.evvg{
+    background-color: #021513 !important;
+	display: none;
+}
+.modal-backdrop.evvg.show{
+	display: block;
+}
+.evg-popup.evg-style-bg:after {
+    content: '';
+	background: url(/images/uc/bluebarimgdesk.png) no-repeat;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 17px;
+    left: 0px;
+}
+#evg-exit-intent-popup .evg-btn-lg:after{
+	content: '';
+	position: absolute;
+	background: url(/images/uc/whtarww.png) no-repeat;
+	width: 11px;
+	height: 11px;
+	top: 15px;
+    right: 20px;	
+}
+.ashbg.ash1, .ashbg.ash2{
+	background: #FAFAFA 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 3px #00000029;
+	border-radius: 10px;
+    margin-top: 40px;
+}
+.z360-banner-content h1{
+    font-size: 32px;
+    line-height: 40px;
+    color: #0032A0;
+    font-family: 'MontserratBold';
+    padding: 30px 0 0 14px;
+    margin-bottom: 0;
+    position: relative;
+}
+.z360-banner-content h1:after{
+	content: '';
+	width: 4px;
+	height: 39px;
+	position: absolute;
+	background: #F9423A 0% 0% no-repeat padding-box;
+	left: 0;
+}
+.ash2 .fnt30{
+	font-size: 30px;
+	line-height: 34px;
+	color: #0032A0;
+	text-align: center;
+    padding: 30px 0 25px;
+	font-family: 'MontserratBold';
+}
+.ash2 .fnt24{
+	font-size: 24px;
+	line-height: 26px;
+	color: #0032A0;
+	margin-bottom: 2px;
+	font-family: 'MontserratBold';
+}
+.ash2 .fnt12{
+    font-size: 12px;
+    line-height: 14px;
+    color: #515B64;
+    margin-bottom: 0;
+    font-family: 'MontserratMedium';	
+}
+.ash2 .fnt14{
+	font-size: 14px;
+	line-height: 16px;
+	color: #515B64;
+    margin-bottom: 10px;
+	font-family: 'MontserratRegular';
+}
+.ash2 .fnt17{
+	font-size: 17px;
+	line-height: 20px;
+	color: #515B64;
+	margin-bottom: 2px;
+	font-family: 'MontserratMedium';
+}
+.ash2 .fnt17 .fnt20{
+	font-size: 20px;
+	line-height: 22px;
+	color: #515B64;
+	font-family: 'MontserratRegular';
+}
+.ash2 .fnt14 a{
+	color: #515B64;
+	text-decoration: underline;
+}
+.ash2 .fnt24 a{
+	color: #0032A0;
+	text-decoration: underline;
+}
+.ash2 .fnt24.numm{
+    border-bottom: 1px solid #F9423A;
+    max-width: 273px;
+    margin: 0 auto 10px;
+    padding-bottom: 10px;
+}
+.ucsite .z360-banner-content h1.supporth1 sup,
+.ucsite .zep360 .callout h3.head3 sup{
+    font-family: 'MontserratBold';
+}
+.callwrap.d-flex{
+	justify-content: center;
+    padding-bottom: 35px;
+}
+.callbox{
+    min-width: 350px;
+}
+.callbox.cbox2{
+    border-left: 1px solid #F9423A;
+    height: 176px;
+}
+.ash1 h2{
+    font-size: 30px;
+    line-height: 34px;
+    color: #0032A0;
+	padding: 49px 70px 0;
+    font-family: 'MontserratBold';
+}
+.boxwrap.d-flex {
+    justify-content: center;
+    border-bottom: 1px solid #00B5EC;
+    max-width: 878px;
+    margin: 0 auto;
+	padding-top: 32px;
+}
+.boxwrap .box {
+    max-width: 420px;
+    padding-top: 10px;
+    margin-bottom: 30px;	
+}
+.box.box2, .box.box4{
+    border-left: 1px solid #00B5EC;
+    padding-left: 25px;
+}
+.ash2 .fnt20{
+	font-size: 20px;
+	line-height: 26px;
+	color: #0032A0;
+	margin-bottom: 0;
+	font-family: 'MontserratBold';
+}
+.plaintxt{
+	padding: 17px 70px 32px;
+}
+.plaintxt .fnt14{
+	font-size: 14px;
+	line-height: 16px; 
+	color: #434343;
+	margin-bottom: 4px;
+}
+.plaintxt .fnt14 .bold{
+	font-family: 'MontserratBold';
+}
+.ash1 .fnt20{
+	font-size: 20px;
+	line-height: 26px;
+	color: #0032A0;
+	margin-bottom: 0;
+	padding: 0 0 4px;
+	font-family: 'MontserratBold';
+}
+.belowbox{
+	padding: 10px 70px 0;
+}
+.box5 img{
+	min-width: 74px;
+}
+.box6{
+    padding-left: 12px;
+}
+.ash1 .box6 .fnt20{
+	padding-top: 0;
+}
+.revideo .fnt30{
+	font-size: 30px;
+	line-height: 34px;
+	color: #0032A0;
+	margin-bottom: 14px;
+	font-family: 'MontserratBold';
+}
+.revideo .fnt20{
+	font-size: 20px;
+	line-height: 26px;
+	color: #434343;
+    margin-bottom: 5px;	
+	font-family: 'MontserratBold';
+}
+.revideo .fnt16{
+	font-style: italic;
+	color: #000000;
+}
+.belowbox .fnt16{
+	color: #000000;
+}
+.belowbox .fnt16.c4343{
+    color: #434343;
+	margin-bottom: 4px;
+}
+.belowbox.bbox1 .fnt16{
+    max-width: 425px;
+    margin-right: 40px;
+}
+.belowbox .fnt16 .bold{
+	font-family: 'MontserratBold';
+}
+.ucsite .belowbox.bbox2 ul.list li.bold{
+	font-family: 'MontserratBold';
+}
+.ucsite .belowbox.bbox2 ul.list li:before{
+	color: #0032A0;
+}
+.revideo .fnt16 a{
+	color: #0032A0;
+	text-decoration: underline;
+}
+#videocontain p.video-description{
+	color: #000000;
+	line-height: 18px;
+	text-align: left;
+}
+#videocontain .videoPlayerImage2{
+	cursor: pointer;
+}
+.blushade{
+	max-width: 882px;
+    margin: 24px auto 0;
+	background: transparent linear-gradient(180deg, #0032A0 0%, #00B6ED 100%) 0% 0% no-repeat padding-box;
+	border-radius: 10px;
+}
+.bar{
+	min-width: 396px;
+	background: #F0F9FF 0% 0% no-repeat padding-box;
+	border-radius: 12px;	
+	padding-bottom: 12px;
+}
+.barwrap{
+	justify-content: center;
+}
+.bar1, .bar3{
+    margin-right: 29px;
+}
+.bar .fnt16{
+    text-align: center;
+    padding-top: 28px;
+	font-family: 'MontserratSemiBold';
+    text-transform: uppercase;	
+}
+.ucsite p.fnt16wht{
+	color: #F6F9F9;
+	text-align: center;
+	padding-top: 25px;
+	font-family: 'MontserratBold';
+}
+.bar .whtbtn{
+	color: #0032A0;
+	line-height: 19px;
+	background: #FFFFFF;
+	border: 2px solid #0032A0;
+	font-family: 'MontserratBold';
+	border-radius: 20px;
+	text-align: center;
+	padding: 6px 0;
+    max-width: 360px;
+    margin: 20px auto;
+}
+.bar .whtbtn a{
+	position: relative;
+	color: #0032A0;	
+}
+.bar .whtbtn.dwnload a:after{
+	content: '';
+	background: url(/images/uc/bluedwnload.svg) no-repeat;
+	position: absolute;
+	width: 16px;
+	height: 20px;
+    right: -25px;
+}
+.bar .whtbtn.arww a:after{
+	content: '';
+	background: url(/images/uc/iconarrow.svg) no-repeat;
+	position: absolute;
+	width: 11px;
+	height: 11px;
+    right: -22px;
+    top: 4px;	
+}
+.ptop24{
+	padding: 24px 0 42px;
+}
+.ashbg.ash1.res1{
+    padding-bottom: 45px;
+    margin-bottom: 40px;
+}	
+#greywrap{
+	background: #FAFAFA 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 3px #00000029;
+	border-radius: 10px;
+    max-width: 1020px;
+    margin: 40px auto 25px;
+    padding: 26px 38px 40px;
+}
+#greywrap .fnt30{
+	font-size: 30px;
+	line-height: 34px;
+	color: #0032A0;
+	font-family: 'MontserratBold';
+}
+#greywrap .capcnt .fnt30{
+	padding-top: 0;
+	margin-bottom: 0;
+}
+#greywrap .fnt20{
+	font-size: 20px;
+	line-height: 26px;
+	color: #434343;
+    margin-bottom: 0;	
+	font-family: 'MontserratBold';
+}
+#greywrap .fnt16{
+	font-size: 16px;
+	line-height: 20px;
+	color: #434343;
+	margin-bottom: 0;	
+	font-family: 'MontserratRegular';
+}
+#greywrap .accCnt .fnt16{
+	font-family: 'MontserratBold';
+    padding: 20px 0 10px;	
+}
+.firstwrap{
+	position: relative;
+}
+#greywrap .fnt14{
+	font-size: 14px;
+	line-height: 16px;
+	color: #434343;
+	position: absolute;
+	text-align: center;
+	bottom: -65px;
+	left: 45px;
+	font-family: 'MontserratRegular';
+}
+.dottedbrder{
+    display: flex;
+    border: 2px dashed #434343;
+    border-radius: 10px;
+    width: 486px;
+    justify-content: space-around;
+    align-items: center;
+	padding: 13px 0;
+}
+.capbdy {
+    display: flex;
+	align-items: center;	
+}
+.capimg {
+    padding-right: 16px;
+}
+.bluearow.mrgn{
+	margin: 0 40px 0 24px;	
+}
+.capswrap{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;	
+}
+#greywrap .fnt14s{
+	font-size: 14px;
+	line-height: 16px;
+	color: #434343;
+	font-family: 'MontserratRegular';
+}
+#greywrap #postHoc{
+	margin-top: 86px;
+}
+.ucsite #greywrap .white-bg{
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+    margin-bottom: 0;	
+}
+.ucsite #greywrap .cmp-accordion__item{
+	box-shadow: 0px 0px 6px #00000029;
+	border: 1px solid #FFFFFF00;
+	border-radius: 16px;	
+}
+.ucsite #greywrap .cmp-accordion__button{
+	height: 68px;
+	padding-left: 40px;
+}
+.ucsite #greywrap .cmp-accordion__button:after{
+	cursor: pointer;
+	background: url(/images/uc/redplus.png);
+    width: 38px;
+    height: 38px;
+	top: 14px;
+    right: 35px;	
+}
+.ucsite #greywrap .cmp-accordion__button.cmp-accordion__button--expanded:after{
+	background: url(/images/uc/redminus.png);
+    width: 38px;
+    height: 38px;	
+}
+.gettingStartedBody2 .capbdy {
+    align-items: start;
+}
+.gettingStartedBody2  #greywrap .capswrap{
+	justify-content: space-evenly;	
+    align-items: start;
+}
+.gettingStartedBody2  #greywrap .capcnt .fnt16 {
+    max-width: 188px;
+	padding-top: 6px;
+}
+#greywrap .fnt16.fbold{
+	font-family: 'MontserratBold';	
+}
+#greywrap .fnt16 a{
+	text-decoration: underline;
+	color: #0032A0;
+}
+.gettingStartedBody4 #greywrap #postHoc,
+.gettingStartedBody5 #greywrap #postHoc {
+    margin-top: 40px;
+}
+.gettingStartedBody5 #greywrap{
+	padding-bottom: 12px;
+}
+.ucsite .gettingStartedBody5 .cmp-accordion__panel.cmp-accordion__panel--expanded{
+	margin-top: 0;
+}
+#greywrap .step3cnt .fnt16{
+	margin-bottom: 10px;
+}
+.ucsite .step3cnt .dosing-img {
+    text-align: center;
+}
+.step3cnt img.d-page.dektop-dosing1 {
+    width: 290px;
+	margin-right: 30px;
+}
+.step3cnt img.d-page.dektop-dosing2 {
+    width: 183px;
+    margin-top: 0;
+}
+#greywrap .step3cnt .fnt14s{
+    margin-bottom: 0;
+    padding-top: 20px;	
+}
+.gettingStartedBody3 #greywrap {
+    padding-bottom: 48px;
+}
+#greywrap .step1cnt .btnpara{
+	align-items: center;
+    margin-top: 24px;	
+}
+#greywrap .step1cnt .btnpara .fnt20{
+    color: #0032A0;
+	padding: 0 30px;
+}
+#greywrap .step1cnt .fnt16.wbtn{
+	box-shadow: 0 0 3px 2px #00000029;
+	background-color: #FFFFFF;
+	border-radius: 26px;
+	line-height: 19px;
+    color: #F9423A;
+    font-weight: bold;
+	padding: 8px 41px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#greywrap .step1cnt .fnt16.undl{
+	line-height: 19px;
+    color: #F9423A;
+    font-weight: bold;	
+}
+#greywrap .step1cnt .fnt16.undl a{
+	text-decoration: none;
+}
+#greywrap .step1cnt .fnt16.wbtn a{
+	color: #F9423A;
+	text-decoration: none;
+}
+#greywrap .step1cnt .fnt16.undl span{
+    color: #F9423A;
+	text-decoration: underline;
+}
+.zlogo{
+	padding: 6px 0 0;
+}
+.ucsite #greywrap .gettingStartedBody1 .fnt30 sup,
+.ucsite #greywrap .step1cnt .fnt20 sup{
+    font-family: 'MontserratBold';
+}
+.ucsite .gettingStartedBody4 .cmp-accordion__panel.cmp-accordion__panel--expanded{
+	margin-top: 0;
+}
+#greywrap .step2cnt .plaintxt .fnt14{
+	position: unset;
+    text-align: left;
+	margin-bottom: 0.5rem;
+}
+.ucsite .gettingStartedBody1 .cmp-accordion__panel.cmp-accordion__panel--expanded,
+.ucsite .gettingStartedBody4 .cmp-accordion__panel.cmp-accordion__panel--expanded,
+.ucsite .gettingStartedBody5 .cmp-accordion__panel.cmp-accordion__panel--expanded {
+    padding-left: 40px;
+}
+#greywrap .step2cnt .fnt16.bold10{
+	padding: 10px 0 4px;
+	font-family: 'MontserratBold';
+}
+#greywrap .step2cnt .fnt20 sup,
+#greywrap .step2cnt .fnt16.bold10 sup,
+#banner-wrap .z360-banner-content h1 sup,
+.ucsite .home-content.container .callout h3.head3 sup{
+	font-family: 'MontserratBold';
+}
+.ucsite #BlueCloudBG .btnpdng button.callout-button{
+	margin-bottom: 0;
+}
+.step2cnt .plaintxt {
+    padding: 0;
+}
+.step2cnt ul.list.dosing {
+    padding-left: 25px;
+}
+#greywrap .fnt20.red{
+	text-align: center;
+	color: #F9423A;
+}
+#greywrap .fnt20.red.yellobox{
+    background: transparent linear-gradient(180deg, #F8EE80 0%, #F7AA3A 100%, #F7A22D 100%) 0% 0% no-repeat padding-box;
+    height: auto;
+	padding: 15px 0;
+    border-radius: 10px;
+    text-align: center;
+    color: #434343;	
+}
+.firstbody{    padding-top: 23px;}
+.ucsite p.btnpdng{
+	padding: 15px 0 0;
+}
+.ucsite #BlueCloudBG .zep360 .two-grid-list-section button.callout-button, 
+.ucsite #BlueCloudBG .zep360 .gradient button.callout-button{
+	font-family: 'MontserratBold';
+}
+.tindent{text-indent: -7px;}
+.boximg img{min-width: 50px;}
+.boximg.shotbottle img{min-width: 277px; margin-top: -35px;}
+hr.bluebarr{border-top: 1px solid #00B5EC; margin-top: 0.3rem;  max-width: 878px;}
+.box.boxcnt{margin-left: 20px;}	
+.cmedss{max-width: 110px;}
+.cmss{max-width: 110px;}
+.ucsite .home-content .secondPara p{
+    font-size: 14px;
+line-height: 16px;}
+.howmodalcont .modal#genericLightbox .lightbox-modal .modal-content .transformer-modal-close{
+	background: url(/content/dam/commercial/us/zeposiahcp/en/images/uc/close.png) !important;
+	width: 38px !important; height: 38px; position: absolute;
+    right: 10px !important;  top: 9px !important;}
+.ucsite ul.footnote-list li.clroo{color: #000000; margin-left: 0;}	
+#greywrap .termss .fnt14{
+	position: unset;
+    text-align: left;
+    padding-top: 35px;
+}
+#greywrap .termss .fnt14 a{
+	text-decoration: underline;
+	color: #0032A0;
+}
+.ucsite ul.footnote-list.pextra li .bluee{
+	color:#0032A0;
+    margin-left: 0;	
+	font-family: 'MontserratBold'; 
+}
+.page-section { display: none;}
+.page-section.active { display: block;}
+.white-bg.one-box {margin-top: 30px; padding: 25px 5px 20px;} 
+.block-head { font-size: 30px; line-height: 34px; font-family: 'MontserratBold'; font-style: normal; font-weight: 700; color: #0032A0; margin-bottom: 25px;}
+.sect-hd { font-size: 30px; line-height: 34px; font-family: 'MontserratBold'; font-style: normal; font-weight: 700; color: #0032A0;	margin-bottom: 30px;}
+.ucsite p.week-head { font-size: 25px; line-height: 22px; color: #0032A0; text-align: center;  font-family: 'MontserratBold';}
+
+.ucsite .tab-switch { background: #767E84; color: #F6F9F9; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px; width: 170px; text-align: center; font-size: 14px; line-height: 16px; font-family: 'MontserratBold';	margin-right: 3px; margin-bottom: 0; cursor: pointer;}
+p.tab-switch.active { background-image: linear-gradient(to bottom, #0032A0, #005CB9, #0093D9, #00B6ED);}
+.week10-section span, .week52-section span,.ole-section span { width: 100%; height: 100%; display: block;}
+.ucsite .week10-content .dropdown-item, .ucsite .week52-content .dropdown-item, .ucsite .ole-content .dropdown-item { background-color: #F5F5F5; color: #000000; font-size: 14px; line-height: 20px; font-family: 'MontserratRegular'; border-radius: 0px; width: 100%; border: 1px solid #0032A0; margin-bottom: 0;}
+.ucsite .week10-content p.dropdown-item.wk10, .ucsite .week52-content p.dropdown-item.wk52, .ucsite .ole-content p.dropdown-item.olea  { background-color: #012D91; color: #FFFFFF; font-family: 'MontserratBold'; position: relative;}
+
+.color-box { background: #F1F7FA; padding: 20px 10px; width: 356px; margin: 0 auto 40px; border-radius: 10px; margin-bottom: 30px;}
+.ucsite .page-section .white-bg { padding: 20px 0 20px; width: 100%; margin-bottom: 20px;}
+.week10-section .dropdown-menu.show, .ole-section .dropdown-menu.show, .week52-section .dropdown-menu.show  { position: relative !important; width: 100%; transform: translate3d(0px, 0px, 0px) !important; padding-top: 0; margin: 0 0 15px; border: none; z-index: 1;}
+.week10-section .dropdown-menu .dropdown-item, .week52-section .dropdown-menu .dropdown-item, .ole-section .dropdown-menu .dropdown-item {margin-bottom: 0;}
+.ucsite  #dropdownMenu2, .ucsite  #dropdownMenu3, .ucsite  #dropdownMenu4 {
+	background-color: #012D91;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'MontserratBold';
+    border-radius: 0px;
+    width: 100%;
+	border: 1px solid #0032A0;
+	text-align: left;
+    padding-left: 1.5rem;
+}
+.week10-section .dropdown-menu.show .dropdown-item.wk10:after, .week52-section .dropdown-menu.show .dropdown-item.wk52:after, .ole-section .dropdown-menu.show .dropdown-item.olea:after{
+	display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    right: 15px;
+    position: absolute;
+    top: 15px;
+}
+.white-bg .chart-head {font-size: 12px; line-height: 15px; font-family: 'MontserratSemiBold'; color: #0032A0; text-align: center;}
+.ucsite .page-section .white-bg img { margin: 0 auto;}
+ #dropdownMenu2.dropdown-toggle::after, #dropdownMenu3.dropdown-toggle::after, #dropdownMenu4.dropdown-toggle::after { position: absolute; top: 15px; right: 15px;}
+ .ucsite .page-section .white-bg:after {
+    content: '';
+    background: transparent radial-gradient(closest-side at 50% 50%, #ccc -35%, #00000000 83%, #00000000 100%);
+    width: 349px;
+    background-size: contain;
+    height: 24px;
+    left: auto;
+    right: auto;
+    display: block;
+    position: absolute;
+    margin-top: 14px;
+    margin-left: 0px;
+}
+.page-section p.abbr { padding: 0 10px 0px 10px;}
+.page-section ul.footnote-list li a, a.acr {
+    color: #434343;
+    font-weight: 400;
+    font-family: 'MontserratRegular';
+    text-decoration: underline;
+}
+
+@media (min-width: 1023px) {
+.bodypara.boldtxt {margin-top: 18px;}
+	
+.ucsite ul.footnote-list.pextra li{font-size: 12px; line-height: 14px; margin-bottom: 3px; max-width: 500px;}
+.ucsite #greywrap .cmp-accordion__button{max-width: 880px;}
+.ucsite #BlueCloudBG button.callout-button.w405{width: 405px;}
+.ucsite .gettingStartedBody1 .cmp-accordion__panel.cmp-accordion__panel--expanded{padding-bottom: 12px;}
+.ucsite #greywrap .gettingStartedBody1 .cmp-accordion__item{margin-bottom: 65px;}
+.ucsite .exp-beft-column-control--mod-1 #greywrap{margin-top: 17px;  padding-bottom: 14px;}
+.exp-beft-column-control--mod-1 #greywrap .fnt14s{margin-bottom: 0;}
+#greywrap .fnt16.mt-4.fbold.center{margin-top: 43px !important;}
+#greywrap .step1cnt .fnt16.wbtn{padding: 8px 0 0 21px; width: 332px; height: 35px;}
+.ucsite .step3cnt .dosing-img {margin-top: -6px;}
+.ucsite .gettingStartedBody5 .cmp-accordion__panel.cmp-accordion__panel--expanded{padding-bottom: 24px;}
+.ucsite .gettingStartedBody6 .gradient{margin-top: 17px;  padding-bottom: 37px;}
+#greywrap .fnt20.red{padding-top: 16px;}
+#postHoc-item-125ef7ad6c-button{padding-right: 50px;}
+
+	.ucsite #scrollSpyContainer .support-section2 ul.list.horizontal{
+		display: flex;
+		justify-content: space-between;
+	}
+	.ucsite #scrollSpyContainer .support-section2 ul.list.horizontal a:not(:last-child) li {
+		padding-right: 35px;
+	}
+	.mssite .isi-content .isi-header.isihdr_new  div.head3{
+		padding-top:50px;
+	}
+	#postHoc-item-7c4586c837-button{
+		padding-right:70px;
+	}
+	span.addMargin{
+		margin-left: -5px;
+	}
+	span.addPlusMargin{
+		margin-left:-4px;
+	}
+	.efficacy-accordion-content .white-box.section3 .fullChart img {
+		width:390px;
+		height:auto;
+	}
+	.ucsite .fixedHeader{
+		z-index: 4;
+    box-shadow: 0px 3px 6px #00000029;
+	}	
+	.ucsite .fixedHeader nav.navbar.navbar-expand-lg{
+		box-shadow:none;
+	}
+	.tempFull.showTop{
+		position: relative;
+		z-index: 3;
+	}
+	#myVideo{
+		margin-left:-30px;
+	}
+	.ucsite #safety-page .safety-acc1 table th.addPadding{
+		padding:13px 0px;
+	}
+	#tnfi .white-box.section7 {
+		padding: 0px;
+		position: relative;
+		z-index: 1;
+	}
+	.white-bg.box7.efficacy-section7 .addBottomShadow{
+		width:880px;
+	}
+	.white-box.section7.tnfiShadow:after, 
+	.white-bg.box1.efficacy-section1 .white-box:after,  
+	.white-bg.box2.efficacy-section2 .white-box:after,
+	.white-bg.box6.efficacy-section6 .white-box:after{
+		display:none;
+	}	
+	.addBottomShadow{
+		background: transparent radial-gradient(closest-side at 50% 50%, #000000 0%, #00000000 83%, #00000000 100%) 0% 0% no-repeat;
+		opacity:0.2;
+		width: 428px;
+		height: 20px;
+		left: auto;
+		right: auto;
+		display: block;
+		position: absolute;
+		margin-top: -30px;
+		margin-left: 0;
+		z-index:0;
+	}
+	.efficacy-accordion-content.prev-acc-content .white-box:after{
+		display:none!important;
+	}	
+	.efficacy-accordion-content.prev-acc-content .white-box, 
+	.white-bg.box1.efficacy-section1 .white-box, 
+	.white-bg.box2.efficacy-section2 .white-box,
+	.white-bg.box6.efficacy-section6 .white-box{
+		position:relative;
+		z-index:1;
+	}
+	#efficacy-page .efficacy-section2 .graph-container .right-graph .white-box .img-title{
+		padding-bottom:10px;
+	}
+	.ucsite .transparent-bg.fixedSMenu {
+		position: fixed;
+		width: 100%;
+		z-index: 1;
+		top: 100px;
+		box-shadow: 0px 3px 6px #00000029;
+	}
+	.efficacy-accordion-content .white-box.section3 .fullChart img{
+		width: 390px;
+		padding-top: 23px;
+		padding-bottom: 0;
+		margin-bottom: -32px;
+	}
+	#pillar-canvas{
+		margin-left: -62px;
+		padding-left: 0px;
+		margin-right: 0px;
+	}
+	img.menu-arrow.red-arrow.d-page{
+		width: 11px;
+		height: 16px;
+		transform: rotate(90deg);
+		top: 21px;
+		right: -16px;
+		position: absolute;
+	}
+	.ucsite .white-bg.safety.box1{
+		padding-bottom:26px;
+	}
+	.ucsite .cta-buttons.d-flex{
+		margin-top:15px;
+	}
+	.ucsite .home-content.container .callout h3.head3, .ucsite .home-content.container p.callout-copy{
+		flex-grow:0;
+	}
+	.ucsite div.seventhTable.white-box ul.list{
+		padding: 26px 40px 0px 40px;
+	}
+	#study-design-page .white-box.four{
+		margin-bottom:0px;
+	}
+	#efficacy-page .white-box.section7 .graph-container .img-title{
+		height:39px;
+	}
+	.ucsite p.table-note{
+		margin-bottom:8px;
+	}
+	.ucsite .white-box.oneMoa.d-page{
+		margin-bottom:50px;
+	}
+	.ucsite p.one-line-footnote{
+		font-size: 14px;
+    line-height: 16px;
+	}
+	#efficacy-page .efficacy-accordion-content .graph-container .img-title{
+		height: 58px;
+		line-height: 37px;
+	}	
+	.ucsite div.seventhTable.white-box div.footenote-container{
+		padding-left: 15px;
+		margin-bottom: 0px;
+		margin-top:24px;
+	}
+	p.blueBoldHeading.contactinfo a{
+		color:#0032a0;
+	}
+	div.support-icon2 p.blueBoldHeading a{
+		color:#0032a0;
+	}
+	div.grey-section{
+		width:800px;
+		margin:0 auto;
+	}	
+	.ucsite .d-page.ucAlert.desktopIndi{
+	font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #515B64;
+    margin-bottom: 0px;
+    margin-top: 5px;
+	width:max-content;
+	margin-left:1px;
+	}
+	.ucsite a.navbar-brand{
+		margin:0px;
+		padding:0px;
+		width: 266px;
+	}
+	.ucsite .modal.external-link-warning-modal .indicationBody{
+		width:515px;
+		margin:0 auto;
+	}
+	.ucsite .modal.external-link-warning-modal .close {
+		right: 15px !important;
+		top: 0px !important;
+	}
+	.ucsite .modal.external-link-warning-modal .indicationBody p{
+		color:#000;
+	}
+	.utilitylink.dropdown.dropdown-toggle.indicationMenu:after{
+		display:none;
+	}
+	div.doisng-text.padddingrt20{
+		padding-right:92px;
+		margin-top:-14px;
+	}
+	.ucsite .white-box.Supportcallout2, 
+	.ucsite .white-box.Supportcallout1, 
+	.ucsite .white-box.Supportcallout3{
+		margin-bottom:55px;
+	}
+	.doisng-text.padddingrt20 ul.list.dosing li:last-child{
+		margin-bottom:0px;
+	}
+	#efficacy-page .white-box.section3 .graph-container .img-title{
+		padding-left:100px;
+		padding-right:100px;
+		line-height:20px;
+	}
+	#efficacy-page .white-box.section2 .graph-container .img-title{
+		padding-bottom:10px;
+	}
+	#efficacy-page .white-box.section2 .graph-container .right-graph img{
+		padding-top: 27px;
+		height: 330px;
+	}
+	#efficacy-page .white-bg.box6.efficacy-section6 .graph-container .img-title{
+		padding-left:100px;
+		padding-right:110px;
+		padding-bottom:10px;
+	}
+	#efficacy-page .white-bg.box6.efficacy-section6 .left-graph img{
+		margin-bottom:28px;
+	}
+	.dropdown-toggle.indicationMenu:after{
+		display:none;
+	}
+	img.d-page.dektop-dosing1{
+		width:240px;
+	}
+	a.fontBold{
+		color:#0032a0;
+		text-decoration:underline;
+		font-weight:600;
+	}
+	.ucsite .modal.fade.external-link-warning-modal div.first-button{
+		margin-right:0px;
+	}
+	img.d-page.dektop-dosing2{
+		width:160px;
+		margin-top:-20px;
+	}
+	.ucsite .doisng-left-block{
+		width:599px;
+	}
+	.ucsite .dosing-img{
+		text-align:right;
+	}
+	.ucsite .modal.fade.external-link-warning-modal.show div.last-button{
+		margin-right:50px;
+	}
+	.ucsite ul.footnote-list li {
+		margin-bottom: 10px;
+		display: flex;
+		line-height: 16px;
+		font-size: 14px;
+		font-family: 'MontserratRegular';
+	}
+	.footer-people.study-design-footer img {
+		width: 302px;
+		height: 340px;
+		margin-top: -164px;
+		margin-bottom: -40px;
+	}
+	.indicationMenu{
+		cursor:pointer;
+	}
+	.indicationMenu img.red-arrow{
+	    width: 10px;
+		height: 6px;
+		transform: rotate(90deg);
+		margin-left: 3px;
+	}
+	.dropdown-menu.indicationPopup{
+		width: 144px;
+		left: -77px;
+		height: 73px;
+		box-shadow: 0px 3px 6px #00000029;
+		border: none;
+		padding:0px;
+		text-align: center;
+		margin-top:7px;
+	}
+	.dropdown-menu.indicationPopup a{
+		font-size: 12px;
+		display:block;
+		padding: 11px 0px;
+	}
+	.navbar-open .isolated-poll.m-page{
+		display:none;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li.active-now .nav-link{
+		   font-family:'MontserratBold';
+			border-bottom: 2px solid #F9423A;
+	}
+	.dropdown-menu.indicationPopup a:first-child{
+		border-bottom: 2px solid #F9423A;
+	}
+	.ucsite .utilitycont li a, 
+	.ucsite .utilitylink.dropdown.dropdown-toggle.indicationMenu {
+		color: #515B64;
+	}
+	.ucsite .cmp-isi.sticky-element .hide-text-container .arrow, 
+	.ucsite .cmp-isi.sticky-element .more-text-container .arrow {
+		width: 14px;
+		background-size:cover;
+	}
+	.ucsite .utilitylink.dropdown .indicationPopup a{
+		color:#0032a0;
+	}
+	.ucsite .dropdown-menu.indicationPopup.show{
+		display:block
+	}
+	.ucsite .dropdown-menu.indicationPopup{
+		display:none;
+	}
+	.ucsite .navbar-nav.ucMenu{
+		top:125px;
+	}
+	.ucsite .dropdown-menu.indicationPopup .dropdown-item:focus, 
+	.ucsite .dropdown-menu.indicationPopup .dropdown-item:hover{
+		background:none;
+	}
+	.ucsite .navbar-collapse.hdrlinkscont.collapse.show + p.ucAlert{
+		margin-top:-33px;
+	}
+	.dropdown-menu.indicationPopup:before{
+		display:none;
+	}
+	.white-box.study-design.img1 img{
+		width: auto; 
+		margin: 0 auto;
+	}	
+	.white-box.study-table table{
+		max-width: 800px;
+		width: 800px;
+		margin: 0 auto;
+	}
+	
+	.white-box.study-table table tr td:first-child, 
+	.white-box.study-table table tr th:first-child{
+		font-family:'MontserratBold';
+		padding-left:16px;
+	}
+	
+	.efficacy-section1 .section1 .left-graph .white-box{
+		height:555px;
+		width:429px;
+	}
+	.efficacy-section2 .section2 .left-graph .white-box{
+		height:566px;
+		width:429px;
+	}
+	.efficacy-section1 .section1 .right-graph .white-box{
+		height:555px;
+		width:426px;
+	}
+	.efficacy-section2 .section2 .right-graph .white-box{
+		height:566px;
+		width:426px;
+	}
+	.efficacy-section6 .section1 .left-graph .white-box{
+		height:572px;
+		width:428px;
+	}
+	.efficacy-section6 .section1 .right-graph .white-box{
+		height:572px;
+		width:426px;
+	}
+	.efficacy-section6 .section1 .left-graph .white-box img{
+		padding: 10px 20px 10px 18px;
+	}
+	.white-bg.box6.efficacy-section6 p.graph-info{
+		padding-top:37px;
+	}
+	#efficacy-page .cmp-accordion__item{
+		width: 1020px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.ucsite #exampleModal .modal-dialog {
+		max-width: 880px;
+	}
+	.ucsite .modal .close {
+		right: -20px !important;
+		top: -10px !important;
+	}
+	.ucsite .close{
+		color: #fff;
+    text-shadow: none;
+	font-size: 35px;
+    font-weight: 400;
+    line-height: 1;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu.m-page.efficacySubmenu, 
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu.m-page.safetySubmenu,
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu.m-page.zeposiaSubMenu,
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu.m-page.dosingSubMenu{
+		display:none!important;
+	}
+	.study-banner-right.moa{
+		width: 421px;
+		height: 290px;
+		float: right;
+	}
+	.study-banner-right{
+		width:558px;
+		height:100%;
+		float:right;
+	}
+	.study-banner-right.gettingStarted{
+		width:410px;
+		height:100%;
+		float:right;
+	}
+	.study-banner-right.support{
+		width:518px;
+		height:291px;
+		float:right;
+	}
+	.safety-banner-right.safety{
+		width:516px;
+		height:100%;
+		position:absolute;
+		right:0;
+	}
+	.ucsite #indication_modal{
+		top:-40px;
+	}
+	table.lastTable tr th:nth-child(2) {
+		width: 200px;
+	}
+	.navbar-expand-lg .navbar-nav li {
+		margin-right: 25px;
+		margin-left: 0;
+	}
+	.navbar-expand-lg .navbar-nav li.dropdown {
+		margin-right: 46.8px;
+	}
+	.navbar-expand-lg .navbar-nav.ucMenu li.dropdown{
+		margin-right: 30px; 
+	}
+	.navbar-expand-lg .navbar-nav li.round-btn {
+		margin-right: 0;
+	}
+	.navbar-expand-lg .navbar-nav li .menu-arrow.blue-arrow.d-page {
+		display: none;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li.active-now .nav-link .menu-arrow.blue-arrow.d-page {
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: -20px;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li.active-now .nav-link .menu-arrow.red-arrow.d-page {
+		display: none;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li:hover .nav-link .menu-arrow.red-arrow.d-page {
+		transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+	}
+	.isi-content {
+		padding: 16px 40px 19px 40px !important;
+	}
+	#navbarNavDropdown .utilitycont li:not(:first-child) {
+		margin-left: 43px;
+	}
+	.mobile-list-dropdown {
+		display: none;
+	}
+	#tuc-patient .box3.gettingStartedBody3 .callout.one .callout-button {
+		margin-top: 20px;
+	}
+	.ucsite #tuc-unmet-need-page .gradient {
+		margin-bottom: 12px;
+	}
+	.mob_mb-110{
+		margin-bottom: 110px !important;
+	}	
+	.desk_padB-28{
+		padding-bottom: 28px !important;
+	}		
+	.desk_ml-70{
+		margin-left: 70px !important;	
+	}
+	.grid_common_uc_li{
+		font-size: 14px;
+		line-height: 20px;
+		margin-left: 20px;
+	}
+	.white-box.oneMoa.d-page{
+		padding: 30px 55px 0px 0;
+	}	
+	.ucsite .white-box.oneMoa.d-page:after {
+		margin-top: 0;
+	}
+	.desk_ml-3{
+	    margin-left: 1rem !important;	
+	}	
+	.ucsite ul.footnote-list.ole-sm-list li { 
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 4px;
+	}
+	.ucsite ul.list.ole-list li { 
+		font-size: 14px;
+		line-height: 16px;
+	} 
+	.uc-safety .blueBorder.d-flex.lastTableHeader {
+		height: 60px;
+	}
+	.uc-safety .blueBorder.d-flex.lastTableHeader div.halfWidth.head-two {
+		text-align: center;
+	border-right: none;
+	}
+	.uc-safety .blueBorder.d-flex.lastTableHeader {
+		border: none;
+		border-bottom: 3px solid #697B86;
+		border-radius: 0;
+		background-color: #758B97;
+	}
+	.uc-safety .blueBorder.d-flex.lastTableHeader div.halfWidth {
+		color: #FFFFFF;
+		border-right: 1px solid #ffffff;
+		height: 60px;
+		padding-top: 20px;
+	}
+	li.font-bold span, .ucsite #greywrap .font-bold { font-family: 'MontserratBold';}
+	#greywrap .termss.initiate-term .fnt14 {padding-top: 10px;}
+	.fntz-24 {font-size: 24px;}
+	#week10-crsp p.yellow-highlight {height: auto;}
+	.page-section { display: none;}
+	.page-section.active { display: block;}
+	.white-bg.one-box {margin-top: 40px; padding: 30px 65px;} 
+	.color-box {  padding: 30px 65px; width: 100%; margin-bottom: 40px;}
+	.white-bg .chart-head {font-size: 18px; line-height: 22px;}
+	.ucsite .page-section .white-bg { padding: 20px 70px 20px; width: 864px;}
+	.page-section p.abbr { padding: 0;}
+	.ucsite .page-section .white-bg:after {
+		content: '';
+		background: transparent radial-gradient(closest-side at 50% 50%, #ccc -35%, #00000000 83%, #00000000 100%);
+		width: 862px;
+		height: 20px;
+		left: auto;
+		right: auto;
+		display: block;
+		position: absolute;
+		margin-top: 14px;
+		margin-left: 0px;
+	}
+	.week10-section span, .week52-section span,.ole-section span { display: flex; align-items: center; justify-content: center;}
+	.ucsite ul.footnote-list.ole-sm-list li { 
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.uc-safety table.lastTable tr th:nth-child(2) { 
+		width: 396px;
+	}
+	.ucsite .ole-content .page-section .white-bg:after { background: none;} 
+	.ucsite ul.list li.mb-40 { margin-bottom: 40px;} 
+	.ucsite ul.list li.mb-30 { margin-bottom: 30px;} 
+}
+
+@media (max-width: 1023px) {
+	.container.gateway-site-text {margin-left: -22px !important;}
+	.ucsite footer .cmp-utility-nav ul.nav.cmp-utility-nav-list{    margin-bottom: 5px !important;     margin-left: 21px; padding-left: 0px !important;}
+
+	.ucsite .study-table div.grey-section p, 
+	.ucsite .study-banner-content .right-intro-text h1, 
+	.ucsite #efficacy-page .prev-acc-content  .graph-container .img-title {
+		font-weight: normal;
+	}
+	.ucsite .sitemap-banner-content .left-poll img{
+		top: 122px;
+	}
+	.ucsite #dosing-page #BlueCloudBG h2.fntSz20{
+		text-align: left;
+	}
+	.ucsite .cta-button.home-banner a {
+     letter-spacing: -0.9px!important; 
+	}
+	span.addMargin{
+		margin-left: -4px;
+	}
+	span.addPlusMargin{
+		margin-left:-4px;
+	}
+	.footer-people.supportFooter img {
+		width: 294px;
+		margin-top: 74px;
+	}
+	.mobileCloudBG.moaFooterBG{
+		background-position-x: -172px;
+		margin-top: -40px;
+		background-position-y: -51px;
+	}
+	.dropdown-item.active-now{
+		font-family:'MontserratSemiBold';
+	}
+	li.activeMainParent{
+		background-color:#D5F0FF;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.efficacySubmenu .dropdown-item, 
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.safetySubmenu .dropdown-item{
+		font-family:'MontserratRegular'!important;
+	}
+
+	.ucsite #navbarNavDropdown .dropdown-menu.m-page.efficacySubmenu.navaigationList{
+		top: 14px!important;
+		margin-bottom: 20px;
+	}
+	.ucsite #navbarNavDropdown .submenu.dropdown-menu.ucSubMenuMenu{
+		top: 10px!important;
+		margin-bottom: 10px;
+	}
+	.ucsite #navbarNavDropdown .dropdown-menu.dosingSubMenu.navaigationList, 	
+	.ucsite #navbarNavDropdown .dropdown-menu.zeposiaSubMenu{
+		top: 26px!important;
+		margin-bottom: 30px;
+	}
+	
+	#ucHomeBanner #bannerContent{
+		margin: 0px;
+		background: url(/images/uc/Fixed_BG.jpg);
+		background-size: 120%;
+		background-position: top center;
+		background-position-y: 32px;
+		background-position-x: -48px;
+		background-repeat: no-repeat;
+	}
+	.ucsite #study-design-page .card-img-container .box2 h2.fntSz20,
+	.ucsite #study-design-page .card-img-container .box3 h2.fntSz20{
+		padding-top:0px;
+	}
+	.ucsite .white-bg.box2.efficacy-accordion-content.prev-acc-content{
+		padding-top:20px;
+	}
+	.ucsite .white-bg.box2.efficacy-section2 h2.fntSz20{
+		padding-top:0!important;
+	}
+	.home-content.container .secondPara{
+		margin-bottom:40px;
+	}
+	.study-banner-right {
+		margin-top: 40px!important;
+	}
+	#efficacy-page .efficacy-section1 .graph-container .right-graph .white-box img,
+	#efficacy-page .efficacy-section2 .graph-container .right-graph .white-box img
+	{
+		margin-bottom:-1px;
+	}
+	div.description1, div.description2{
+		margin-top:40px!important;
+	}
+	div.description7 ul.footnote-list, div.description7 ul.footnote-list li{
+		margin-bottom:0px;
+	}
+	.safety-acc2 p.graph-info{
+		padding-top: 0px;
+		font-family: 'MontserratSemiBold';
+	}
+	#safety-page table.eigthTable{
+		margin-bottom:24px;
+	}
+	th.addDropShadow, td.addDropShadow{
+		padding:0!important;
+	}
+	th.addDropShadow div{
+		box-shadow: 3px 0px 6px #00000029;
+		transform: scale(1);
+		display: block;
+		min-height: 62.5px;
+		clip-path: inset(0px -15px 0px 0px);
+	}
+	td.addDropShadow div{
+		box-shadow: 3px 0px 6px #00000029;
+		transform: scale(1);
+		display: block;
+		padding:13px 0px 13px 9px;
+		clip-path: inset(0px -15px 0px 0px);
+	}
+	div.ninethTable td.addDropShadow div, 
+	table.eigthTable td.addDropShadow div, div.seventhTable td.addDropShadow div{
+		padding-left:0px;
+	}
+	th.addDropShadow.addPadding div{
+		display: flex;
+    align-items: center;
+    padding-left: 4.5px;
+	}
+	.safety-acc2 .white-box{
+		padding-bottom: 0;
+		height: 354px;
+	}
+	.safety-acc2 .white-box:after{
+		display:none!important;
+	}
+	
+	/* Mobile fixes---*/
+	.efficacy-accordion-content .white-box.section3 .fullChart img {
+		padding: 52px 0px 30px 0px;
+		height: auto;
+		width: 314px;
+		margin: 0 auto;
+}
+.d-flex.supportIcons .img-wrap img, 
+.d-flex.supportIcons .right.white-box .img-wrap img{
+	width:81px!important;
+	height:60px!important;
+	margin-top:0px!important;
+}
+#zeposia360 .d-flex.supportIcons .list.supportIcons1, 
+#zeposia360 .d-flex.supportIcons .list.supportIcons2 {
+    margin-top: 2px;
+}
+.reources-block.block12{
+	border-bottom: none;
+    margin-bottom: 0;
+}
+#zeposia360 a{
+	color:#0032a0;
+}
+.yellow-highlight.support-alert-text{
+	padding: 21px 12px;
+}
+.ucsite .card-img-container .white-bg.support-section1 h2, 
+.ucsite .card-img-container .white-bg.support-section2 h2{
+	text-align:left;
+}
+.reources-block.block18{
+	border-top:none;
+}
+.white-box.resources5 #acr{
+	margin-bottom:0px;
+}
+#resources .pl-22{
+	padding-left:15px;
+}
+.ucsite .card-img-container .support-video-container h2.fntSz20{
+	padding-left:0px;
+}
+
+	.mb-xs-30 { margin-bottom: 30px!important; }
+    #ucHome .gradient { padding-top: 40px; }
+    .ucsite .navbar-expand-lg .navbar-nav { background: #ffffff!important; }
+    .cta-button.home-banner img { height: 25px; margin-bottom:4px; }
+    table.lastTable tr td:nth-child(2), 
+	table.lastTable tr td:nth-child(3), 
+	table.lastTable tr th:nth-child(3) { width: 390px; }
+	table.lastTable tr th:nth-child(2) {width: 105px;}
+    
+	#safety-page .safety-acc1 table tr td, #safety-page .safety-acc1 table tr th{
+		padding:13px 0px;
+		letter-spacing:-1px;
+	}
+	.ucsite-indication-head ul li{
+		padding-left:0px;
+	}
+	.white-bg.safety.box4 ul.footnote-list{
+		padding-right:5px;
+	}
+	.ucsite .cta-button.home-banner img.go-arrow{
+		height:11px;
+	}
+	.ninethTable.white-box ul.list {
+		padding-left: 15px;
+		padding-top: 25px;
+	}
+	.ucsite .isi-content.preview-text {
+		padding: 22px 15px 22px 22px;
+	}
+	.ucsite .white-bg.box1.efficacy-section1 span.black.bold{
+		display: inline-block!important;
+		margin-bottom: 0!important;
+	}
+	.safety-acc2{
+		margin: 0 1px 0 -5px;
+	}
+	#safety-page table tr{
+		height:auto;
+	}
+	div.description1 p, div.description2 p, div.description4 p, div.description3 p, div.description5 p, div.description7 p{
+		font-size:16px;
+		line-height:20px;
+	}
+	#safetyToggle{
+		padding-bottom:17px;
+	}
+	.reources-block.block17{
+		border-top: none;
+		padding-top: 0;
+	}
+	.reources-block.block9, .reources-block.block5, .reources-block.block14, .reources-block.block16{
+		border-bottom:none;
+		margin-bottom: 0;
+	}
+	.ucsite .d-flex.supportIcons div.left.white-box{
+		margin-bottom:24px;
+	}
+	.ucsite .isi-header.isihdr_new{
+		padding-left:22px;
+		height: auto; 
+	}
+	.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link, .ucsite .cmp-isi .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {
+		font-family: 'MontserratRegular';
+		text-decoration: none;
+		line-height: 24px;
+	}
+	#ucHomeBanner #bannerBG .card-img-container {
+		background-position: 42% 0%;
+		background-size: 165% 23%;
+	}
+	.ucsite .d-flex.supportIcons div.left.white-box{
+		margin-bottom:24px;
+	}
+	p.blackBoldcopy{
+		font-size:16px;
+		line-height:20px;
+		font-family:'MontserratBold';
+		margin-top: 24px;
+	}
+	p.blackBoldcopy a{
+		color:#0032a0;
+		font-family:'MontserratBold';		
+	}
+	#moa-page .card-img-container h2.h2-head{
+		font-size:20px;
+		line-height:24px;
+	}
+	.ucsite p.callout-title {
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.ucsite .callout h3.head3{
+		line-height:18px;
+	}
+	.ucsite #zeposia360 .gradient{
+		margin:0px auto 40px auto;
+		width:362px;
+	}
+	#zeposia360 .callout-button.buttonCTA1{
+		height:40px;
+		margin-bottom:24px;
+	}
+	.ucsite #zeposia360 .callout-button.buttonCTA2 {
+		justify-content: center;
+	}
+	.ucsite .white-bg.support-section1 h2, .ucsite .white-bg.support-section2 h2{
+		font-size:20px;
+		line-height:24px;
+		text-align:left;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .nav-item {
+		background: #fff!important;
+	}
+	ul.navbar-nav.ucMenu {
+		margin-top: 0px;
+	}
+	.headerWrapUC button.navbar-toggler {
+		margin-top: 0!important;
+	}
+	h1.supporth1{
+		width:120%;
+	}
+	.white-bg.box1.efficacy-section1 p.abbr{
+		padding:0px;
+	}
+	img.menu-arrow.turndown.m-page{
+		transform:rotate(90deg);
+	}
+	.ucsite .modal.external-link-warning-modal .close img{
+		top: 5px;
+    position: absolute;
+    right: 17px;
+	}
+	.ucsite .d-page.ucAlert.desktopIndi{
+		display:none!important;
+	}
+	.ucsite .dropdown-menu  ul li a.dropdown-item{
+		font-weight:400;
+	}
+	.ucsite .white-bg.moaBody button.callout-button{
+		height:40px;
+	}
+	.ucsite .white-bg.moaBody button.white-arrow:after{
+		top:15px;
+	}
+	.ucsite .modal.fade.external-link-warning-modal.show .modal-button{
+		    flex-direction: column-reverse;
+	}
+	.ucsite .modal .modal-content .overlay-wrapper .modal-button .first-button{
+		margin-top:24px;
+	}
+	/* --- Mobile fixed menu-------*/
+	.ucsite .headerWrapUC.fixedHeader{
+		height:40px;
+		top:-1px;
+	}
+	.ucsite .headerWrapUC.fixedHeader .sitetxt,
+	.ucsite .headerWrapUC.fixedHeader .utilitycont,
+	.ucsite .headerWrapUC.fixedHeader p.ucAlert{
+		display:none!important;
+	}
+	.ucsite .headerWrapUC.fixedHeader nav.navbar.navbar-expand-lg{
+		background-color:#fff;
+		padding: 0 16px;
+	}
+	.ucsite .headerWrapUC.fixedHeader .navbar-brand img {
+		width: 108px;
+		height: 26px;
+		text-align: center;
+		margin-left: 0;
+		margin-top:-3px;
+	}
+	.ucsite .headerWrapUC.fixedHeader .container{
+		height:40px;
+	}
+	.ucsite .headerWrapUC.fixedHeader img.mobile-menu-icon{
+		display:none;
+	}
+	.ucsite .headerWrapUC.fixedHeader .navbar-toggler-icon {
+		display: block!important;
+		background-color: #0032a0 !important;
+		margin: 3px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		width: 31px;
+		height: 3px;
+	}
+	.ucsite .headerWrapUC.fixedHeader .navbar-toggler{
+		margin-top: 0;
+		margin-right: 14px;
+		margin-top: -5px;
+	}
+	.ucsite .headerWrapUC.fixedHeader .navbar-brand{
+		padding:0px;
+		margin-top:4px;
+	}
+	
+	.transparent-bg.safetyPage{
+		height:40px;
+	}
+	.ucsite .m-page.mobile-dosing1{
+		width: 275px;
+	}
+	.ucsite .m-page.mobile-dosing2{
+		width:194px;
+		margin-bottom: 16px;
+	}
+	.ucsite .navbar-toggler-icon{
+		background: none;
+		width: 47px;
+		height: 40px;
+	}
+	.ucsite .dosing-img{
+		text-align:center;
+	}
+	.efficacy-banner-right.efficacy {
+		width: auto;
+		height: 190px;
+		float: right;
+		margin-right: -171px;
+	}
+	#safety-page .safety-banner-right.safety{
+		width: 339px;
+		margin-right: -153px;
+		float: right;
+		height:100%;
+	}
+	.study-banner-right.gettingStarted{
+		width: 147px;
+		height: 150px;
+		float: right;
+		margin-right: -49px;
+	}
+	.study-banner-right.moa{
+		width:108px;
+		height:100%;
+		float:right;
+		margin-right: 0;
+		padding-top: 0;
+	}
+	.study-banner-right.support{
+		width:160px;
+		height:190px;
+		float:right;
+		margin-top: 0!important;
+    margin-right: 0;
+	}
+	.study-banner-right{
+		width: 200px;
+    float: right;
+    height: auto;
+    margin-right: -87px;
+    margin-top: 28px;
+	}
+	.uciste div.white-bg.box3.gettingStartedBody3 h2.fntSz28{
+		text-align:left;
+	}
+	.ucsite .white-bg{
+		padding: 37px 5px 38px 5px;
+		margin: 30px auto 40px auto;
+		width: 362px;
+	}
+	.ucsite .white-box {
+		background-color: #fff;
+		border-radius: 0px 0px 10px 10px;
+		padding: 37px 5px 38px 5px;
+		margin-bottom: 40px;
+		width: 349px;
+		margin: 0 auto;
+	}
+	.ucsite #banner-wrap .cmp-bgimage .mobile-img-container {
+		display: block;
+		background-position: top;
+	}
+	.ucsite .right-intro-text h1{
+		font-size: 22px;
+		font-family: 'MontserratBold';
+		font-style: normal;
+		color: #0032A0;
+		margin-top: 45px;
+		margin-left: 98px;
+		line-height: 28px;
+	}
+	.ucsite .card-img-container h2{
+		font-size: 30px;
+		line-height: 34px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.ucsite #study-design-page div.img-description{
+		padding: 25px 11px 10px 11px;
+	}
+	.ucsite #study-design-page div.img-description p{
+		font-size:16px;
+		line-height:20px;
+	}
+	.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded div.blueBorder div.acCol5{
+		border-left: 0.5px solid #758B97;
+		height:100%;
+		line-height:77px;
+		padding-left:23px;
+		margin-left:7px;
+	}
+	.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded div.blueBorder div.acCol1{
+		box-shadow: 3px 0px 6px #00000029;
+		height: 100%;
+		width: 64px;
+		padding-left: 2px;
+		padding-top: 13px;
+	}
+	.seventhTable.white-box div.blueBorder div {
+		font-size: 12px;
+	}
+
+	#study-design-page ul.smallbullet-list li {
+		font-family: 'MontserratBold';
+		padding-right: 5px;
+		margin-bottom: 10px;
+	}
+	.ucsite #study-design-page .white-bg.box2 p.yellow-highlight{
+		margin-left:0px;
+		margin-bottom:15px;
+	}
+	.ucsite .card-img-container h2.fntSz20{
+		font-size: 20px;
+		line-height: 24px;
+		padding: 0 20px;
+		text-align:center;
+	}
+	.transparent-bg {
+		background-color: #fff;
+		height: 40px;
+		line-height: 40px;
+	}
+	.ucsite p.ucAlert{
+		display: block!important;
+		color: #515B64;
+		font-size: 10px;
+		line-height: 16px;
+		margin-bottom:10px;
+	}
+	.utilitycont{
+		padding-top: 8px;
+    padding-bottom: 12px;
+	}
+	.ucsite .banner-info h1 {
+		font-size: 24px;
+		font-family: 'MontserratBold';
+		line-height: 28px;
+		margin-top: -8px;
+		margin-bottom: 10px;
+	}
+	#ucHome .gradient .callout-title {
+		margin-bottom: 20px;
+		font-size: 24px;
+		line-height: 26px;
+	}
+	.ucsite .container {
+		width: 375px;
+		margin: 0 auto;
+		padding: 0px;
+		max-width: 100%;
+	}
+	.ucsite #bmscustmerconnect .container { 
+		padding: 0 10px;
+	}
+	.ucsite p{
+		font-size:14px;
+		line-height:16px;
+	}
+	.ucsite p.new-text{
+		font-size:16px;
+		line-height:18px;
+	}
+	.ucsite .contentBlock.d-flex{
+		height: auto;
+		width: 100%;
+		margin-top: 0;
+		margin-left: -15px;
+		display: block;
+	}
+	.ucsite #bannerContent{
+		margin:0px;
+	}
+	.ucsite #bannerContent .col.col-12{
+		padding:0px;
+	}
+	.ucsite p.colorBlue{
+		color:#0032a0;
+		font-family:'MontserratSemiBold';
+	}
+	.ucsite div.banner-content{
+		padding-top: 20px;
+		margin-left: 0px;
+		text-align: center;
+		margin-top: 0px;
+		font-weight: 600;
+	}
+	.ucsite #ucHomeBanner .banner-info {
+		padding-top: 20px;
+		margin-left: 0px;
+		text-align: center;
+		font-weight: 600;
+		z-index: 1;
+	}
+	#ucHomeBanner .left-banner img {
+		margin-left: -28px;
+		width: 204px;
+		height: 240px;
+		margin-top: 0px;
+		z-index:1;
+	}
+	.ucsite .cta-button.home-banner.button2{
+		margin-left: 7px;
+		margin-right: 7px;
+	}
+	.ucsite .cta-button.home-banner{
+		width: 116px;
+		height: 104px;
+		margin-right:0px;
+		color: #0032a0;
+	}
+	.ucsite .cta-button.home-banner a{
+		color:#0032a0;
+	}
+	.ucsite .cta-buttons.d-flex{
+		justify-content:center;
+		    margin-top: -4px;
+	}
+	.cta-button.home-banner img.go-arrow{
+		width: 8px;
+		float: right;
+		height: 11px!important;
+		margin-top: 4px;
+		bottom: 7px;
+		right: 8px;
+	}
+	.cmp-backToTop-wrapper.ucButton{
+		right:0px;
+	}
+	.ucsite #BlueCloudBG .cmp-card-container .card-img-container{
+		background-image:none!important;
+	}
+	.ucsite #BlueCloudBG{
+		background-image:none!important;
+		background-color:#9ED3F3;;
+	}
+	.ucsite p.new-text {
+		padding-left: 8px;
+		padding-right: 6px;
+	}
+	.ucsite .home-content.container{
+		padding-left: 10px;
+		padding-right: 6px;
+	}
+	.ucsite .callout-flex.d-flex{
+		display:block!important;
+	}
+	.ucsite .callout.one {
+		margin-right: auto;
+		margin-left:auto;
+		width: 320px;
+		margin-bottom: 26px;
+	}
+	.ucsite .gradient {
+		background-image: linear-gradient(#0032A0, #23B1DD);
+		padding: 28px 16px 32px 15px;
+		border-radius: 12px;
+		width:362px;
+		margin:0 auto 40px auto;
+    }
+	.ucsite .callout {
+		background-color: #fff;
+		border-radius: 12px;
+		padding: 22px 20px 24px 19px;
+		text-align: center;
+	}
+	.callout-button.download-arrow {
+		position: relative;
+		text-indent: 0px;
+	}
+	.ucsite button.callout-button {
+		height: 60px;
+		position: relative;
+		width: 280px;
+		background-color: #F9423A;
+		border: none;
+		color: #fff;
+		border-radius: 26px;
+		margin-bottom: 13px;
+		font-size: 16px;
+		line-height:19px;
+		font-family: 'ProximaBold';
+		cursor: pointer;
+		text-transform: unset;
+	}
+	.ucsite .callout.two {
+		width: 320px;
+		margin:0 auto;
+	}
+	.ucsite .head3 {
+		font-size:24px;
+	}
+	.ucsite .isi-header:after{
+		height: 57px;
+	}
+	.ucsite .isi-container-title {
+		font-size: 18px!important;
+		line-height: 22px!important;
+		padding-top: 8px;
+		color:#0032a0;
+		padding-right: 0;
+		white-space: pre-line;
+	}
+	.ucsite .isi-content div.head3 {
+		padding-bottom: 4px;
+		padding-top: 0px;
+		font-size: 16px;
+		line-height: 19px;
+	}
+	button.navbar-toggler.collapsed{
+		margin-right:20px;
+	}
+	.ucsite .container.cmp-footer-isi-content-element {
+		padding: 0px 16px 0 22px;
+		overflow-x: hidden!important;
+		margin-top: 39px;
+	}
+	.ucsite .head3{
+		font-size:16px;
+		line-height:19px;
+	}
+	.ucsite .bodypara {
+		line-height: 19px;
+		margin-bottom: 6px;
+	}
+	.ucsite #ucHomeBanner .isi-footer-wrapper .row{
+		margin:0px!important;
+	}
+	#ucsite nav.navbar.navbar-expand-lg{
+		background:none;
+	}
+	.pageNotFound-banner-content .isolated-poll{
+		top:0px;
+		z-index:0;
+	}
+	.mobileCloudBG.safetyFooterBG.m-page{
+		margin-top: -41px;
+		background-position-y: -62px;
+	}
+	.ucsite ul.footnote-list li strong{
+		font-family:'MontserratBold';
+	}
+	.ucsite .pageNotFound-banner-content{
+		position:relative;
+	}
+	.ucsite .pageNotFound-banner-content .right-intro-text h1{
+		margin-left: 99px;
+		padding-right: 76px;
+	}
+	.ucsite .pageNotFound-banner-content.server-error .right-intro-text h1{
+		padding-right:16px;
+	}
+	.ucsite nav.navbar.navbar-expand-lg{
+		background-color:#fff;
+	}
+	.ucsite nav.navbar.navbar-expand-lg .navbar-nav .nav-link{
+		font-family:'MontserratSemiBold';
+		font-size:18px;
+		line-height:22px;
+	}
+	div.white-bg.page404{
+		margin-top:40px;
+	}
+	.ucsite .isi-footer-wrapper {
+		margin: 0 auto;
+		max-width: 375px;
+		width: 375px;
+		margin-top:0px;
+	}
+	img.mobile-menu-icon{
+		width: 40px;
+		height: 40px;
+	}
+	.ucsite .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon{
+		background:none;
+	}
+	.ucsite .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon img.mobile-menu-icon{
+		display:none;
+	}
+	.ucsite .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon .openMenu.d-none{
+		display: block!important;
+		font-size: 14px;
+		line-height: 18px;
+		text-transform: uppercase;
+		color: #434343;
+		margin-top: -5px;
+		margin-left:-12px;
+		padding-top: 0px;
+		font-weight: 600;		
+	}
+	.ucsite .navbar-toggler[aria-expanded="true"] .isolated-poll{
+		z-index:0;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li:first-child:before {
+		background: transparent;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li.active, .nav-item.dropdown.show {
+		background-color: #D5F0FF;
+	}
+	.ucsite.slide_down_hdr .navbar-expand-lg .navbar-nav{
+		top: 85px;
+		overflow: auto;
+		padding-bottom: 117px;
+	}
+	.ucsite .navbar-brand img {
+		width: 175px;
+		height: 42px;
+		text-align: center;
+	}
+	span.closeMenubutton{
+		font-size:32px;
+		margin-left:12px;
+	}
+	
+	.ucsite button.navbar-toggler.collapsed {
+     margin-right: 0px!important; 
+}
+	.ucsite .navbar-toggler[aria-expanded="true"]{	
+    width: 70px;
+    height: 72px;
+    float: right;
+    z-index: 1;
+    margin-top: 0;
+    position: absolute;
+    right: 0px;
+    top: 35px;
+	}
+	ul.dropdown-menu.m-page.efficacySubmenu.show li, ul.dropdown-menu.m-page.safetySubmenu.show li {
+		margin-top:0;
+		height: auto;
+		padding-bottom: 3px;
+		padding-top: 3px;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item.active-now{
+		font-family:'MontserratBold'!important;
+	}
+	ul.dropdown-menu.m-page.activeParent.show li.activeBoldMenu{
+		font-family:'MontserratBold'!important;
+	}
+	li.blueColorBG{
+		background: #D5F0FF!important;
+	}
+	ul.dropdown-menu.m-page.activeParent.show{
+		background: #D5F0FF!important;
+	}
+	.dropdown-menu.zeposiaSubMenu.show li, .dropdown-menu.dosingSubMenu.show li{
+		padding-bottom: 3px;
+		padding-top: 3px;
+	}
+	ul.navbar-nav.ucMenu li ul li:first-child {
+    box-shadow: none;
+}
+	ul.navbar-nav.ucMenu li:first-child {
+    box-shadow: inset 0 3px 4px 0px rgb(140 140 140 / 35%);
+}
+	.ucsite .navbar-expand-lg .navbar-nav li.active {
+    background-color: #D5F0FF!important;
+}
+	.ucsite .navbar-expand-lg .navbar-nav li.active, .nav-item.dropdown.show{
+		background-color:#fff;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu{
+		border: none;
+		position: relative;
+		box-shadow: none;
+		background: #fff;
+		width: 100%;
+		border-radius: 0px;
+		margin-bottom:0px;
+		font-size: 16px;
+		height: auto;
+		left: auto;
+		padding: 0px 0px 0px 0px;
+		top: auto;
+		margin-left:0px;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item{
+		padding-left:31px;
+		font-size: 14px!important;
+		line-height: 18px!important;
+		font-family: 'MontserratMedium'!important;
+		padding-right: 17px;
+		margin-top:0px;
+	}
+	.ucsite .submenu.dropdown-menu.show li.blueColor{
+		background-color:#D5F0FF;
+		padding-bottom:1px;
+	}
+	.ucsite .nav-item.dropdown.m-page.activeParent.show{
+		background-color:#D5F0FF!important;
+	}
+	.ucsite .nav-item.dropdown.m-page.activeParent.show a.dropdown-item{
+		background-color:#D5F0FF!important;
+	}
+	.ucsite .dropdown-item:focus, .ucsite .dropdown-item:hover {
+		background-color:transparent!important;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.zeposiaSubMenu .dropdown-item,
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu.dosingSubMenu .dropdown-item {
+		padding:6px 0px 10px 31px;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item ul li a{
+		font-family:'MontserratRegular';
+	}
+	.ucsite .navbar-expand-lg .navbar-nav li:before, 
+	.navbar-expand-lg .navbar-nav li:last-child::after {
+        background: #F9423A;
+        content: "";
+        height: 1.5px;
+        display: block;
+		    margin-top: 4px; 
+    }
+	.ucsite .navbar-expand-lg .navbar-nav .ucSubMenuMenu li:before, 
+	.ucsite .navbar-expand-lg .navbar-nav .ucSubMenuMenu li:after{
+		display:none!important;
+	}
+	.ucsite a.nav-link.dropdown-toggle img.menu-arrow.m-page, img.menu-arrow.m-page{
+		width: 8px;
+		height: 12px;
+		transform: rotate(0deg);
+		float: right;
+		margin-right: 19px;
+		margin-top:5px;
+	}
+	.ucsite .nav-link.dropdown-item.dropdown-toggle.active img.menu-arrow.m-page{
+		transform: rotate(-90deg);
+	}
+	.ucsite a.nav-link.dropdown-toggle[aria-expanded="true"] + .submenu .dropdown-toggle:not(.active) > img.menu-arrow.m-page, 
+	.ucsite a.nav-link.dropdown-toggle[aria-expanded="true"] + .submenu .dropdown-toggle.active[aria-expanded="false"] > img.menu-arrow.m-page { 
+		transform: rotate(90deg);
+	}
+	.dropdown-menu.zeposiaSubMenu a:last-child, .dropdown-menu.dosingSubMenu a:last-child{
+		padding-bottom:17px;
+	}
+	
+	.ucsite a.nav-link.dropdown-toggle[aria-expanded="true"] img.menu-arrow.m-page, 
+	img.menu-arrow.m-page{	
+		transform: rotate(-180deg);
+	}
+	img.menu-arrow.m-page.safetyArrow{
+		margin-right:48px;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav.ucMenu .dropdown-menu{
+		padding-top:0px;
+		margin-top:0;
+	}
+	.isolated-poll {
+		position: absolute;
+		height: 244px;
+		top: 0px;
+		margin-left: -113px;
+		z-index:1;
+	}
+	.ucsite .cmp-bgimage .mobile-img-container{
+		background-position:top;
+	}
+	.ucsite #dosing-page .cmp-bgimage .mobile-img-container,
+	.ucsite #banner-wrap-support .cmp-bgimage .mobile-img-container,
+	.ucsite #tuc-unmet-need-page .cmp-bgimage .mobile-img-container,
+	.ucsite #tuc-patient .cmp-bgimage .mobile-img-container,
+	.ucsite #moa-page .cmp-bgimage .mobile-img-container,
+	.ucsite #study-design-page .cmp-bgimage .mobile-img-container,
+	.ucsite #efficacy-page .cmp-bgimage .mobile-img-container, 
+	.ucsite #safety-page .cmp-bgimage .mobile-img-container
+	{
+		background-position: top;
+		background-color: #95D1F4;
+		background-size: 215%;
+		background-position-y: -44px;
+	}
+	p.moa-copy{
+		font-size: 16px;
+		line-height: 20px;
+		padding-left: 5px;
+		margin-bottom: 24px;
+	}
+	.ucsite .white-box.oneMoa{
+		border-radius:10px;
+	}
+	.img-moa-wrap-1{
+		float: left;
+		width: 102px;
+		margin-left: 25px;
+	}
+	.moa-block1{
+		position:relative;
+	}
+	p.imgCaption-moa1{
+		float: right;
+		width: 171px;
+		display: block;
+		margin-top: 25px;
+		margin-left: 25px;
+	}
+	div.img-part2{
+		clear: both;
+		position: relative;
+	}
+	.bold.fifthLable {
+		position: absolute;
+		right: 10px;
+		width: 83px;
+		text-align: center;
+		top: 62px;
+	}
+	.bold.fourthLable {
+		width: 100px;
+		position: absolute;
+		right: 64px;
+		top: 48px;
+		text-align: center;
+	}
+	.bold.thirdLable {
+		margin-left: 65px;
+		top: 62px;
+		position: absolute;
+		width: 100px;
+		display: inline-block;
+		text-align: center;
+	}
+	div.img-part2 img{
+		width: 286px;
+		margin-left: 10px;
+		text-align: center;
+	}
+	.white-box.oneMoa p.rightLabel {
+		font-size: 14px;
+		margin-left: 24px;
+		line-height: 16px;
+		width: auto;
+		padding-right: 0;
+		margin-top: 15px;
+	}
+	.white-box.oneMoa p.imgBottomLable {
+		margin-top: 20px;
+		text-align: left;
+		padding-right: 16px;
+		margin-left: 24px;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom:0px;
+	}
+	.ucsite .white-box:after {
+		content: '';
+		background: url(/images/uc/white-box-shadow.png) no-repeat;
+		width: 349px;
+		background-size: contain;
+		height: 24px;
+		left: auto;
+		right: auto;
+		display: block;
+		position: absolute;
+		margin-top: 37px;
+		margin-left: -22px;
+	}
+	.ucsite .white-box.twoMoa.m-page{
+		padding-top:27px;
+	}
+	.topTextmoa2 {
+		width: auto;
+		padding-right: 5%;
+		padding-left: 11px;
+	}
+	div.moa-block2-mobile img{
+		width: 111px;
+		margin-top: 42px;
+		margin-left: 40px;
+	}
+	div.moa-block2-mobile{
+		position:relative;
+	}
+	.bold.label4 {
+		display: inline-block;
+		text-align: center;
+		margin-top: 32px;
+		margin-left: 3px;
+	}
+	.ucsite p.yellow-highlight{
+		width:330px;
+		height:auto;
+	}
+	.bold.label3 {
+		display: inline-block;
+		margin-left: 31px;
+		margin-top: 14px;
+		text-align: center;
+	}
+	button.mb-12.watchVideo.videoButton{
+		text-indent: -15px;
+		width: 330px;
+		height: 40px;
+		margin-left: 0px;
+		margin-bottom: 5px;
+		margin-top: 30px;
+	}
+	button.watchVideo.videoButton.white-arrow:after{
+		right: 19px;
+		top: 14px;
+	}
+	.gettingStartedBody .videoinfo {
+		width: auto;
+		margin-right: 0px;
+	}
+	.gettingStartedBody .videoContainer {
+		width: auto;
+	}
+	.bold.label2 {
+		display: inline-block;
+		margin-left: 134px;
+		margin-top: 34px;
+		text-align: center;
+	}
+	p.blueColor.cornerText2 {
+		    position: relative;
+			left: auto;
+			float: right;
+			margin-top: 71px;
+			margin-right: 59px;
+			margin-left: 10px;
+	}
+	.ucsite ul.list.dosing li {
+		padding-left: 15px;
+		margin-bottom: 12px;
+	}
+	.dosing-img p.m-page{
+		font-size: 16px;
+		line-height: 20px;
+		padding-top: 40px;
+	}
+	.doisng-text p{
+		font-size:16px;
+		line-height:19px;
+	}
+	#moa-page .white-box.twoMoa p.blueColor.cornerText1{
+		margin-top: 10px;
+		position: absolute;
+		left: 55px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	#moa-page .white-box.twoMoa p.blueRightLable{
+		color: #0032a0;
+		font-size: 14px;
+		margin-left: 16px;
+		line-height: 16px;
+		width: auto;
+		padding-right: 35px;
+		margin-top:35px;
+	}
+	#moa-page button.white-arrow:after{
+		top:15px;
+	}
+	.ucsite #moa-page button.callout-button{
+		height:40px;
+	}
+	.moa-img2Bottom-lable.blueColor {
+		text-align: left;
+		padding-left: 35px;
+		margin-top: 20px;
+		margin-bottom: 0px;
+	}
+	.ucsite .callout h3.head3{
+		line-height:29px;
+	}
+	.ucsite .white-box.twoMoa.m-page{
+		margin-bottom:40px;
+	}
+	div.white-box.oneMoa.m-page{
+		margin-bottom:58px;
+		padding-top:35px; 
+	}
+	.bold.secondLable {
+		margin-left: 18px;
+		margin-top: 0;
+		top: -30px;
+		position: absolute;
+	}
+	span.leftbottom {
+		margin-left: 15px;
+		text-align: left;
+		margin-top: 0px;
+		display: block;
+		position: relative;
+	}
+	.firstLable.colorRed {
+		position: absolute;
+		top: -11px;
+		left: 28px;
+		line-height: 18px;
+		color: #F9423A;
+		font-family: 'MontserratBold';
+		font-size: 14px;
+	}
+	.imgCaption-moa1{
+		float: right;
+		width: 171px;
+		display: inline-block;
+	}
+	#moa-page span.bold {
+		font-family: 'MontserratBold';
+		font-size: 12px;
+		line-height: 14px;
+	}
+	.ucsite .img-title {
+		width: 348px;
+		height: 53px;
+		background-image: linear-gradient(to bottom, #0032A0 , #23B1DD);
+		border-radius: 10px 10px 0px 0px;
+		color: #fff;
+		font-size: 16px;
+		line-height: 53px;
+		font-weight: bold;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.ucsite .white-box.study-design.img1{
+		padding-top:24px;
+		padding-left:0;
+		padding-right:0;
+	}
+	#study-design-page .ucsite .card-img-container h2.fntSz20{
+		padding-top:0px;
+	}
+	div.img-description{
+		padding: 25px 16px 10px 16px;
+	}
+	#study-design-page div.footenote-container, #study-design-page .white-box p.abbr{
+		padding:0 16px;
+	}
+	.white-box.one .red-bar:before{
+		display:none!important;
+	}
+	#study-design-page .white-bg.box2 div.white-box.one, 
+	#study-design-page .white-bg.box2 div.white-box.two, 
+	#study-design-page .white-bg.box2 div.white-box.three
+	{
+		padding: 23px 21px 30px 24px;
+		margin-bottom: 37px;
+	}
+	#study-design-page .white-bg.box2 div.white-box.four {
+		margin-bottom:0px;
+	}
+	#study-design-page .white-bg.box2 div.white-box.three, 
+	#study-design-page .white-bg.box2 div.white-box.four {
+		padding:23px 10px 33px 9px;
+	}
+	div.white-box.study-table{
+		margin-bottom: 24px;
+    border-top: 0.5px solid #B2BEC5;
+    padding: 25px 10px 38px 9px;
+	}
+	.white-box.study-table table tr:first-child{
+		border-top: 1px solid #B2BEC5!important;
+	}
+	.ucsite #study-design-page .white-bg.box2 div.white-box.one p, 
+	.ucsite #study-design-page .white-bg.box2 div.white-box.two p{
+		font-size:16px;
+		line-height:20px;
+		font-family:'MontserratMedium';
+	}
+	.ucsite #study-design-page .white-bg.box2 div.white-box p.subhealine {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 0px;
+		color: #0032a0;
+		font-family: 'MontserratBold';
+	}
+	div.grey-section{
+		height:auto;
+		padding:0px;
+	}
+	.ucsite p.yellow-highlight{
+		margin-left:-13px;
+	}
+	.ucsite p.yellow-highlight {
+		height: auto;
+		width: 330px;
+		font-size: 20px;
+		line-height: 26px;
+		border-radius: 10px;
+		text-align: center;
+		font-weight: 600;
+		padding: 21px 17px;
+		margin: 40px auto;
+	}
+	.ucsite #study-design-page .white-bg.box2 div.white-box:after{
+		margin-top:30px;
+	}
+	.ucsite .white-box.study-table table tr td:nth-child(2), .ucsite .white-box.study-table table tr th:nth-child(2) {
+		background-color: #E5F8FD;
+		width: 96px;
+		font-weight: 500;
+		font-family: 'MontserratMedium';
+		text-align: center;
+	}
+	.white-box.study-table table tr{
+		color:#434343;
+	}
+	.white-box.study-table table tr span.textIndent {
+		margin-right:43px;
+		margin-left: 0px;
+		padding-left:20px;
+		display:block;
+		padding-bottom:10px;
+	}
+	
+	.ucsite #study-design-page .gradient{
+		    width: 349px;
+			margin: 0 auto;
+			padding:padding: 28px 10px 32px 9px;
+	}
+	.white-box.study-table table tr:last-child span.textIndent{
+		padding-left:49px;
+	}
+	.white-box.study-table table tr td:first-child, .white-box.study-table table tr th:first-child{
+		padding-left: 18px;
+		font-family: 'MontserratBold';
+		font-size: 12px;
+		line-height: 17px;
+		color: #434343;
+	}
+	div.grey-section p {
+		font-size: 11px;
+		line-height: 16px;
+		padding: 17px 34px 32px 19px;
+		font-family: 'MontserratBold';
+		color: #434343;
+		margin-bottom:0px;
+		text-align:left;
+	}
+	p.abbr{
+		padding: 0 16px 0px 0px;
+	}
+	p.abbr span.bold{
+		font-family: 'MontserratBold';
+	}
+	button.callout-button.white-arrow{
+		padding: 0px 39px;
+	}
+	button.white-arrow:after{
+		right: 30px;
+		top: 23px;
+	}
+	.footer-people.study-design-footer img{
+		height:278px;
+		margin-top: 70px;
+    margin-bottom: 10px;
+	}
+	.footer-people.study-design-footer{
+		height:auto;
+	}
+	.ucsite .white-bg.box1 .card-img-container h2.study-design-title{
+		padding:0 38px;
+	}
+	.d-flex.videowrap{
+		flex-direction:column;
+	}
+	.gettingStartedBody img.videoPlayerImage2 {
+		height: auto;
+		width: 330px;
+		margin: 0 auto;
+	}
+	.ucsite .white-bg.box1.gettingStartedBody h2{
+		text-align:left;
+		font-size:20px;
+		line-height:24px;
+	}
+	.ucsite .white-bg.box3.gettingStartedBody3 h2{
+		text-align:left;
+	}
+	.ucsite .white-bg.box3.gettingStartedBody3 h2.fntSz28{
+		font-size:28px;
+		line-height:32px;
+	}
+	a.fontBold{
+		color: #0032a0;
+		text-decoration: underline;
+		font-family:'MontserratSemiBold';
+	}
+	.ucsite .white-bg.box2.gettingStartedBody2 h2{
+		font-size:20px;
+		line-height:24px;
+	}
+	.ucsite .white-bg.box1.gettingStartedBody p.video-description{
+		text-align:left;
+		margin-top: 15px;
+	}
+	.ucsite .white-bg.box1.gettingStartedBody{
+		padding:40px 16px;
+	}
+	.ucsite .white-bg.box2.gettingStartedBody2 .white-box.group1{
+		background-color:transparent;
+		padding:0px;
+		width:auto;
+	}
+	.ucsite .white-bg.box2.gettingStartedBody2 .white-box.group1:after{
+		display:none;
+	}
+	p.img-caption.top{
+		margin-bottom:24px;
+		font-size: 20px;
+		line-height: 24px;
+		margin-top: -17px;
+		padding-top:40px;
+	}
+	h2.fntSz28{
+		font-size:28px;
+		line-height:32px;
+		margin-bottom:24px;
+	}
+	p.img-caption.bottom{
+		display:block;
+	}
+	.ucsite .img-caption.bottom {
+		font-size: 18px;
+		margin-bottom:-10px;
+	}
+	img.gettingStartImg1{
+		width: 310px;
+		margin: 0 auto;
+	}
+	button.downloadCTA.callout-button.download-arrow.mb-bottom {
+		width: 290px;
+		height: 60px;
+		margin-bottom: 40px;
+		margin-top: 4px;
+		
+		padding: 0 24px;
+		margin-left:20px;
+	}
+	.dosing-info-section .d-flex{
+		flex-direction:column-reverse;
+	}
+	.ucsite div.white-bg.box2.gettingStartedBody2, .ucsite .white-bg.box3.gettingStartedBody3{
+		padding:40px 16px;
+	}
+	.ucsite .dosing-info-section .downloadCTA.callout-button.download-arrow {
+		width: 338px;
+		height: 60px;
+		
+		margin-bottom: 0px;
+		margin-left:-13px;
+		margin-top: 24px;
+		padding: 0 20px;
+		text-indent: -16px;
+	}
+	.ucsite #dosing-page .callout-button.download-arrow.buttonCTA1{
+		margin-bottom:24px;
+	}
+	.footer-people.dosing img {
+		width: 323px;
+		margin-top: 51px;
+	}
+	.ucsite #dosing-page .callout-button.buttonCTA2, .support-Page .callout-button.buttonCTA2{
+		height: 60px;
+	}
+	#dosing-page .callout-button.download-arrow.buttonCTA1, #dosing-page .callout-button.white-arrow,
+	.support-Page .callout-button.download-arrow.buttonCTA1, .support-Page .callout-button.white-arrow{
+		height:40px;
+	}
+	#dosing-page .callout-button.white-arrow:after, .support-Page .callout-button.white-arrow:after{
+		top:14px;
+	}
+	.white-bg.support-section1 div.white-box{
+		margin-bottom:60px;
+	}
+	.white-bg.support-section1 div.right.white-box{
+		margin-bottom:5px;
+	}
+	div.d-flex.supportIcons, div.d-flex.supportIcons .d-flex{
+		flex-direction: column;
+	}
+	.white-bg.support-section1 div.white-box .d-flex, div.padding30 .d-flex, .d-flex.padding30{
+		flex-direction: column;
+	}
+	div.padding30 .d-flex .d-flex.enes{
+		flex-direction:row;
+	}
+	.support-icon2, .support-icon1, .support-icon3 {
+		padding: 22px 13px 20px 19px;
+	}
+	.white-box.Supportcallout1 .img-wrap, .white-box.Supportcallout2 .img-wrap, .white-box.Supportcallout3 .img-wrap {
+		width: 70px;
+		margin: 0 auto;
+		padding-top: 15px;
+	}
+	.white-bg.support-section2 .white-box {
+		padding: 0px;
+		margin-bottom: 40px;
+	}
+	.reources-block.block3 {
+		border-top: none;
+		
+		padding-top: 0;
+		
+	}
+	.reources-block .block-title {
+		font-weight: 600;
+		margin-bottom: 0px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.reources-block.block7, .reources-block.block9, .reources-block.block11 {
+		border-top: none;
+		padding-top: 0;
+	}
+	.ucsite p.block-copy {
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.reources-block, .reources-block.block2 {
+		width: auto;
+		border-bottom: 2px solid #697B86;
+		margin-bottom: 15px;
+	}
+	div.padding30 {
+		padding: 26px 12px 40px 21px;
+	}
+	.supportIcons .left.white-box {
+		margin-right: 0px;
+		margin-bottom: 40px;
+	}
+	.supportIcons .img-wrap {
+		margin-right: 0;
+		text-align: center;
+		margin-top: 22px;
+		margin-bottom: 9px;
+	}
+	#video-container-support {
+		background-color: rgba(255, 255, 255, 0.7);
+		width: 362px;
+		margin: 0 auto 40px auto;
+		padding: 40px 22px;
+		border-radius: 10px 10px 10px 10px;
+	}
+	.ucsite .card-img-container .support-video-container h2.fntSz20{
+		text-align:left;
+		margin-bottom:30px;
+	}
+	#video-container-support img.videoPlayerImage2 {
+		width: 100% !important;
+		margin: 0 auto;
+		height:auto;
+		margin-bottom: -13px;
+		margin-top: -13px;
+		text-align: center;
+	}
+	ul.list.horizontal li {
+		display: block;
+	}
+	ul.list.horizontal {
+		display: block;
+		background-color: #fff;
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		height: auto;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		padding: 15px 0px;
+	}
+	.ucsite #safety-page div.img-title{
+		text-align:center;
+		height: auto;
+		line-height: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	div.blueBorder {
+		width: 328px;
+		border: 3px solid #0032A0;
+		border-bottom: 3px solid #697B86;
+		border-radius: 12px 12px 0px 0px;
+		height: 77px;
+		align-items: center;
+		margin: 24px auto 0px auto;
+	}
+	div.blueBorder div {
+		font-size: 14px;
+	}
+	#safety-page div.blueBorder div {
+		font-size: 12px;
+	}
+	#safety-page .safety-acc1 div.blueBorder div{
+		letter-spacing:-1px;
+	}
+	#safety-page .safety-acc1 div.blueBorder div.acCol1,
+	#safety-page .safety-acc1 div.blueBorder div.acCol5{
+	    line-height: 14px;
+	}
+	#safety-page .safety-acc1 div.blueBorder div.acCol3{
+	    padding-top: 1px;
+	}
+	#safety-page .safety-acc1 div.blueBorder div.acCol5{
+	    padding-top: 21px;
+	}
+	div.col2-table {
+		margin-left: 60px;
+		margin-right: 34px;
+	}
+	div.col3-table{
+		margin-left: -5px;
+		margin-right: 15px;
+	}
+	.white-bg.safety .white-box {
+		padding: 0px 0 40px 0px;
+		margin-bottom: 40px;
+	}
+	.secondTable.white-box div.col2-table, .fourthTable.white-box div.col2-table {
+		margin-left: 133px;
+		margin-right: 33px;
+	}
+	.secondTable.white-box div.col3-table, .fourthTable.white-box div.col3-table{
+		margin-right: 25px;
+	}
+	.firstTable.white-box .img-title, .secondTable.white-box .img-title, 
+	.thirdTable.white-box .img-title, .fourthTable.white-box .img-title, 
+	.fifthTable.white-box .img-title, .seventhTable.white-box .img-title, 
+	.ninethTable.white-box .img-title{
+		height: auto;
+		line-height: 20px;
+		padding: 20px 12px;
+		text-align: left;
+	}
+	.thirdTable.white-box div.col2-table {
+		margin-left: 67px;
+		margin-right: 36px;
+	}
+	div.table9col2 {
+		margin-left: 69px;
+		padding-left: 4px;
+		padding-right: 4px;
+		border-left: 0.5px solid #758B97;
+		height: 100%;
+		margin-right: 0px;
+		padding-top: 10px;
+	}
+	div.table9col4{
+		border-left: 0.5px solid #758B97;
+		height: 100%;
+		padding-left: 20px;
+		padding-top:10px;
+	}
+	.blueBorder.d-flex.lastTableHeader {
+		height: 102px;
+	}
+	.blueBorder.d-flex.lastTableHeader div.halfWidth-two {
+		width: 166px;
+		height: 102px;
+	}
+	.cmp-footer-isi-content-element .isi-container ul li, .cmp-isi .isi-container ul li{
+		list-style:none!important;
+	}
+	.blueBorder.d-flex.lastTableHeader div.halfWidth {
+		width: 168px;
+		height: 102px;
+		padding-left: 12px;
+		padding-top: 44px;
+		text-align: left;
+		word-break: break-all;
+	}
+	td.indent58 {
+		padding-left: 31px;
+	}
+	table.lastTable tr th:first-child, table.lastTable tr td:first-child {
+		width: 392px;
+		padding:12px 0px;
+	}
+	table.lastTable tr th:first-child, table.lastTable tr td:first-child{
+		letter-spacing:-0.8px;
+	}
+	th.indent27 {
+		padding-left: 12px;
+	}
+	.ucsite .cmp-accordion__button.cmp-accordion__button--expanded:after {
+		right: 20px;
+		top: 18px;
+	}
+	.ucsite .cmp-accordion__button:after {
+		right: 10px;
+		top: 12px;
+	}
+	.footer-people.efficacy img {
+		height: 187px;
+		width: 170px;
+	}
+	.footer-people.efficacy{
+		padding-top:180px;
+	}
+	.ucsite div.efficacy-banner-content .right-intro-text h1{
+		margin-left:100px;
+	}
+	.head3.paddingTop80{
+		padding-top:80px!important;
+	}
+	.ucsite .isi-container.expand-container .head3.paddingTop80{
+		padding-top:0px!important;
+	}
+	.ucsite .footer .copy-right-section .row, .ucsite .cmp-isi .copy-right-section .row{
+		margin:0px;
+	}
+	.ucsite .cmp-isi.is-expanded{
+		top:140px;
+	}
+	.ucsite .cmp-isi .up-arrow, .ucsite .cmp-isi .down-arrow{
+		background-size: auto;
+	}
+	.ucsite .cmp-isi.sticky-element .hide-text-container, 
+	.ucsite .cmp-isi.sticky-element .more-text-container{
+		right:25px;
+	}
+	.ucsite .footer .cmp-isi .isi-header{
+		padding-left:22px;
+	}
+	.ucsite .description7 p.abbr{
+		padding:0px;
+	}
+	.ucsite #safety-page .firstTable.white-box div.img-title,
+	.ucsite #safety-page .thirdTable.white-box div.img-title {
+		text-align:left;
+	}
+	.ucsite p.fntSZ16{
+		font-size:16px;
+		line-height:20px;
+	}
+	.ucsite p.table-note{
+		font-size:16px;
+		line-height:18px;
+		margin-bottom:28px;
+	}
+	.ucsite .cmp-accordion__item{
+		width:362px;
+		margin: 0 auto 40px auto;
+	}
+	#accordion-wrapUC .ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded{
+		margin-top:-13px;
+	}
+	.safety-acc1 div.blueBorder{
+		margin-top:-7px;
+		height: 57px;
+	}
+	.ucsite p.table-note span.blueBoldHeading{
+		color: #0032a0;
+		font-family: 'MontserratBold';
+		display: block;
+	}
+	.ucsite .isi-content ul li:before{
+		position:relative;
+		top:0px!important;
+		margin-right:5px;
+		margin-left: -10px;
+	}
+	.ucsite-indication-head ul li {
+		margin-left: 10px;
+	}
+	.ucsite-indication-head ul li{
+		padding-left:0px;
+	}
+	.ucsite ul.indication-li li.bodypara{
+		padding-left:0px;
+	}
+	.ucsite .cmp-isi .isi-content.expand-text {
+		padding: 15px 19px 15px 22px;
+	}
+	.ucsite .cmp-isi.sticky-element .hide-text-container .arrow, 
+	.ucsite .cmp-isi.sticky-element .more-text-container .arrow {
+		width: 22px;
+		height: 20px;
+		position: relative;
+		background-position: 0px 0px;
+		text-indent: 0;
+		left: 0px;
+		background-size:cover;
+	}
+	#safety-page .cmp-accordion__button {
+		font-size: 20px;
+		height: auto;
+		padding: 40px 39px;
+		line-height: 24px;
+		text-align:center;
+		width: 362px;
+		margin: 0 auto;
+	}
+	.ucsite #safety-page .white-bg.safety.box3 h2, 
+	.ucsite #safety-page .white-bg.safety.box2 h2{
+		font-size:30px;
+		line-height:34px;
+	}
+	.ucsite #safety-page .white-bg.safety.box3 h2.fntSz20, 
+	.ucsite #safety-page .white-bg.safety.box2 h2.fntSz20{
+		font-size:20px;
+		line-height:24px;
+	}
+	.thirdTable.white-box div.col3-table{
+		margin-right:21px;
+	}
+	.ninethTable.white-box table{
+		margin-bottom:40px;
+	}
+	.ucsite .ninethTable.white-box ul.list{
+		padding-left:12px;
+		padding-right:6px;
+	}
+	#safety-page .white-bg.safety.box1 table td:nth-child(1) {
+		width: 134px;
+		font-size: 14px;
+		font-family: 'MontserratBold';
+		padding-left: 16px;
+		line-height: 16px;
+	}
+	#safety-page .white-bg.safety.box1 table td:nth-child(3) {
+		width: 96px;
+		font-weight: 500;
+		text-align: center;
+		font-family: 'MontserratMedium';
+	}
+	#safety-page table {
+		width: 328px;
+		margin: 0 auto;
+		padding-bottom: 40px;
+		border-collapse: collapse;
+	}
+	.safety_callout_cont{
+		width: 328px !important;
+		height: fit-content !important;	
+	}	
+	.safety_callout_footnote{
+		padding: 0 1rem !important;
+	}	
+	.taeText .left, .taeText .right {
+		width: auto;
+		padding-top: 13px;
+		text-align: center;
+	}
+	.d-flex.taeText {
+		margin: 0 auto;
+		width: auto;
+		flex-direction: column;
+	}
+	.ucStudy.taeText .left p {
+		margin-left: auto;
+	}
+	div.blueBorder.fontStyle {
+		font-size: 14px;
+		height: 77px;
+		text-align: center;
+		line-height: 16px;
+		color: #0032A0;
+		padding: 13px 53px;
+		font-family: 'MontserratBold';
+	}
+	.taeText .right {
+		background-color: #E5F8FD;
+		width: 328px;
+		margin: 0 auto;
+	}
+	.sixthTable.white-box .right p.blackBold{
+		padding-top:6px;
+	}
+	.sixthTable.white-box .right .contentShow.d-flex{
+		padding-bottom:28px;
+	}
+	.sixthTable.white-box .ucStudy.taeText .right .contentShow.d-flex{
+		padding-bottom:0px;
+	}
+	.blueBorder .fiveCol4 {
+		padding-left: 20px;
+		margin-left: 44px;
+		margin-right: 28px;
+		border-left: 0.5px solid #758B97;
+		height: 100%;
+		line-height: 42px;
+	}
+	.white-bg.safety.box3 .seventhTable.white-box .blueBorder{
+		height:47px;
+	}
+	
+	#safety-page .white-bg.safety.box3 table tr td:first-child{
+		font-family: 'MontserratSemiBold';
+		text-align: left;
+		padding-left: 9px;
+		font-size: 12px;
+		line-height: 13px;
+	}
+	.blueBorder .fiveCol2 {
+		margin-left: 82px;
+		border-left: 0.5px solid #758B97;
+		height: 100%;
+		line-height: 42px;
+		padding-left: 30px;
+	}
+	.blueBorder .fiveCol4 {
+		margin-left: 25px;
+		margin-right: 28px;
+	}
+	.ucsite #dosing-page #BlueCloudBG .white-bg.box3.gettingStartedBody3 h2.fntSz20{
+		padding-top: 0;
+	}
+	.seventhTable.white-box table tr td{
+		font-size:12px;
+		line-height:16px;
+	}
+	#safety-page .white-bg.safety.box3 table.eigthTable tr td:first-child{
+		font-size:11px;
+	}
+	#safety-page .white-bg.safety.box3 table.eigthTable th.addDropShadow div.m-page, 
+	#safety-page .white-bg.safety .seventhTable th.addDropShadow div {
+		padding-left: 4.5px;
+		padding-top: 18px;
+		width: 85px;
+	}
+	 #safety-page .white-bg.safety .ninethTable th.addDropShadow div {
+		width: 72px;
+	}
+	#safety-page .white-bg.safety .tenthTable th.indent27 {
+		width: 134px;
+    display: block;
+	}
+	#safety-page .white-bg.safety.box3 div.seventhTable th.addDropShadow div{
+		padding-top: 24px;
+    padding-left: 4px;
+	}
+	.white-bg.safety.box3 table tr:first-child th {
+		color: #0032A0;
+		font-size: 12px;
+		line-height: 15px;
+	}
+	div.seventhTable.white-box ul.list {
+		padding: 38px 10px 0px 8px;
+		margin-bottom: 0;
+	}
+	#safety-page .white-bg.safety.box3 table tr td:first-child {
+		width: 68px;
+	}
+	.halfBottom.d-flex {
+		height: 51px;
+	}
+	.halfBottom .firstHalf, .halfBottom .secondHalf {
+		width: 84px;
+		max-width: 100%;
+	}
+	div.halfTop {
+		border-bottom: 1px solid #0032a0;
+		padding-top: 12px;
+		height: 51px;
+	}
+	.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded {
+		
+		padding: 0px 11.5px 40px 11.5px;
+		width: 362px;
+		margin: 0 auto;
+		
+	}
+	.ucsite  #accordion-wrapUC .cmp-accordion__panel.cmp-accordion__panel--expanded{
+		margin-top:-18px;
+	}
+	.ucsite  #efficacy-page .cmp-accordion__item{
+		width:362px;
+		margin:0 0 auto 40px auto;
+	}
+	.ucsite #efficacy-page .cmp-accordion__panel.cmp-accordion__panel--expanded{
+		margin-top:-25px!important;
+	}
+	div.acCol3 {
+		margin-left: 36px;
+		margin-right: 36px;
+	}
+	div.acCol5{
+		margin-right:25px;
+	}
+	#safety-page .safety-acc1 table td:nth-child(2), 
+	#safety-page .safety-acc1 table th:nth-child(2), 
+	#safety-page .white-bg.safety.box3 table td:nth-child(2) {
+		background-color: #E5F8FD;
+		width: 175px;
+		text-align: center;
+	}
+	.safety-acc1{
+		font-size:12px;
+		line-height:12px;
+	}
+	.safety-acc1 ul.list, .safety-acc2 ul.list{
+		margin-top:24px;
+	}
+	.safety-acc2 ul.list{
+		padding-left:15px;
+	}
+	.safety-acc2 .white-box img {
+		width: 328px;
+	}
+	p.graph-info{
+		font-size:16px;
+		line-height:20px;
+	}
+	.white-bg.box2.efficacy-section2 .white-box img {
+		width: 300px;
+		padding: 0!important;
+		margin: 0 auto 28px auto;
+	}
+	.white-bg.box2.efficacy-section2 .right-graph .white-box img{
+		margin-bottom:0px;
+	}
+	.ucsite .cmp-accordion__panel.cmp-accordion__panel--expanded div.blueBorder div {
+		font-size: 12px;
+	}
+	.footer-people.safety img{
+		width: 100%;
+    height: 437px;
+	}
+	.footer-people.safety{
+		padding:0px;
+	}
+	#efficacy-page .graph-container .img-title {
+		width: 349px;
+		height: auto;
+		line-height: 20px;
+		padding:18px 19px 18px 22px;
+	}
+	#efficacy-page .section3 .graph-container .img-title{
+		padding:18px 0px 18px 0px;
+	}
+	#efficacy-page .Pad-b-55 { padding-bottom: 55px !important;} 
+	.ucsite .efficacy-accordion-content{
+		padding: 0 16px 40px 6px;
+	}
+	.ucsite #efficacy-page .graph-container {
+		width: 349px;
+		flex-direction: column;
+		margin:0 auto;
+	}
+	.ucsite #efficacy-page .cmp-accordion__button.cmp-accordion__button--expanded:after{
+		right: 10px;
+		top: 22px;
+	}
+	.ucsite #efficacy-page .cmp-accordion__panel.cmp-accordion__panel--expanded{
+		padding: 0;
+    width: 362px;
+    margin: 0 auto;
+	}
+	.ucsite .sitetxt{
+		text-align:center;
+	}
+	.ucsite #efficacy-page .white-box {
+		margin-bottom: 0;
+	}
+	.ucsite #efficacy-page .cmp-accordion__button.cmp-accordion__button--expanded{
+		width: 362px;
+		margin: 0 auto;
+	}
+	.ucsite #efficacy-page .cmp-accordion__button{
+		width: 362px;
+		margin: 0 auto;
+		height:auto;
+		padding-left: 0px;
+		font-size:30px;
+		line-height:34px;
+		text-align: center;
+	}
+	.efficacy-accordion-content .description3 {
+		margin-bottom: 0px;
+		margin-top:24px;
+	}
+	.efficacy-accordion-content .description3 ul.footnote-list{
+		margin-bottom:0px;
+	}
+	#efficacy-page #ehmi .graph-container .img-title{
+		height:auto;
+		padding: 18px 19px 22px 18px
+	}
+	.description3 p.blueBoldHeading{
+		font-size:16px;
+		line-height:20px;
+	}
+	.ucsite .efficacy-accordion-content .section3 .right-graph {
+		width: auto;
+		height: auto;
+	}
+	.ucsite .efficacy-accordion-content .section3 .left-graph {
+		width: 350px;
+		height: auto;
+	}
+	.ucsite #efficacy-page .white-bg h2{
+		font-size: 30px; 
+		line-height:34px;
+	}
+	.ucsite #efficacy-page .white-bg.box7.efficacy-section7 h2.fntSz26, .ucsite #ole h2.fntSz26{
+		font-size: 26px;
+		line-height: 30px;
+	}
+	.ucsite #efficacy-page .white-box.section7 .fullChart p{
+		font-size:16px;
+		line-height:20px;
+	}
+	.tnfi-chart1, .tnfi-chart3{
+		margin-bottom:28px;
+	}
+	div.description7 ul.list{
+		padding-left:10px;
+	}
+	.ucsite #efficacy-page .white-bg h2.fntSz20{
+		font-size:20px;
+		line-height:24px;
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.ucsite .efficacy-accordion-content .section3 .left-graph {
+		width: 350px;
+		height: 375px;
+	}
+	.left-graph {
+		margin-right: 0;
+	}
+	div.description1, div.description2, div.description4, div.description3, div.description5, div.description7{
+		margin-top: 24px;
+		padding: 0 1px;
+	}
+	div.description5{
+		margin-top:40px!important;
+	}
+	#efficacy-page .graph-container .right-graph .white-box {
+		padding: 0px;
+		margin-left: 0px;
+	}
+	.left-ehmi img, .right-ehmi img {
+		height: 630px;
+		width: auto;
+		margin:0 auto;
+		text-align:center;
+		
+	}
+	.left-ehmi img{
+		margin-bottom:0px;
+		padding-top:30px;
+	}
+	.ucsite #efficacy-page .white-box:after, .ucsite #efficacy-page .efficacy-section2 .white-box:after
+	{
+		width:350px;
+	}
+	.ucsite #efficacy-page #tnfi .white-box:after {
+		width: 350px;
+	}
+	.ucsite #efficacy-page .white-box.section5:after, .ucsite #efficacy-page .efficacy-accordion-content .white-box.section3:after {
+		width: 350px;
+		margin-top: -5px;
+		bottom:inherit;
+	}
+	.left-ehmi, .right-ehmi{
+		margin:0 auto;
+	}
+	#ehmi .chart-section {
+		margin-top: 24px;
+		padding: 0px;
+		flex-direction: column;
+	}
+	.tnfi-charts {
+		margin-bottom: 50px;
+		padding: 22px 20px 0px 20px;
+		flex-direction: column;
+	}
+	.tnfi-chart2 img, .tnfi-chart4 img {
+		margin-left: 0;
+	}
+	.tnfi-charts img {
+		width: 295px;
+	}
+	body.ucsite{
+		margin:0 auto;
+	}
+	.ucsite .footer .cmp-isi{
+		margin:0 auto;
+	}
+	.ucsite .cmp-isi.sticky-element{
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	.ucsite .modal.fade.external-link-warning-modal.show .modal-button {
+		display: flex;
+		flex-direction: column-reverse!important;
+		margin-right:0px!important;
+	}
+	.ucsite .modal.external-link-warning-modal  .modal-header .head2{
+		padding-top:27px;
+	}
+	.ucsite .modal .close img {
+		top: 10px;
+		position: absolute;
+		right: 35px;
+	}
+	.ucsite .modal.external-link-warning-modal .indicationBody div.IndicationContent{
+		padding: 0 24px;
+	}
+	div.support-icon2 p.blueBoldHeading{
+		font-size:16px;
+		line-height:20px;
+	}
+	.support-icon3 li span.bold{
+		font-family:'MontserratMedium';
+	}
+	p.blueBoldHeading.contactinfo{
+		font-size:16px;
+		line-height:20px;
+	}
+	.footer-people.moaFooter img {
+		width: 187px;
+		margin-top:81px;
+	}
+	.ucsite .footer.footer-variation-one.my-4{
+		margin-bottom:0px!important;
+		overflow-x:hidden;
+	}
+	.ucsite footer .cmp-utility-nav ul.nav.cmp-utility-nav-list, .ucsite .cmp-isi .cmp-utility-nav ul.nav.cmp-utility-nav-list {
+		padding-left:28px;
+		margin-bottom:5px;
+		padding-top:15px;
+	}
+	.ucsite .onlyMobile{
+		display:contents;
+	}
+	.ucsite .ftrcopytxt.noUCMobile{
+		display:none;
+	}
+	.ucsite footer img.cmp-image__image, .ucsite .cmp-isi img.cmp-image__image {
+		margin-left:15px;
+	}
+	.navbar-open img.isolated-poll.m-page{
+		display:none!important;
+	}
+	.ucsite .callout-button.buttonCTA2{
+		display:flex;
+		align-items:center;
+	}
+	.ucsite .slide_down_hdr .navbar-expand-lg .navbar-nav {
+		top: 125px!important;
+		overflow:auto;
+		padding-bottom:120px;
+	}
+	body.ucsite.fixed.slide_down_hdr.navbar-open p.ucAlert{
+		margin-top:0px!important;
+	}
+	p.video-description {
+		margin-bottom: 0px;
+		text-align: left;
+		margin-top: 20px;
+	}
+	ul.list.horizontal li{
+		padding-right:0px;
+	}
+	#video-container-support .col.col-12{
+		padding:0px;
+	}
+	.ucsite-indication-head ul li{
+		padding-left:0px!important;
+	}
+	.cmp-isi .isi-container .ucsite-indication-head div.bodypara a{
+		color:#0032a0;
+		font-family:'MontserratRegular';
+		font-weight:400;
+	}
+	.cmp-isi .isi-container .ucsite-indication-head div.bodypara .boldtxt, .cmp-isi .isi-container .ucsite-indication-head div.bodypara.boldtxt a{
+		font-family:'MontserratBold'!important;
+	}
+	.ucsite ul.footnote-list li span:first-child {
+		min-width: 10px;
+		text-align: right;
+	}
+	.ucsite #banner-wrap-getting-started .study-banner-right.gettingStarted {
+		width: 210px;
+		margin-right: -66px!important;
+	}
+	.gettingStartedBody3 ul.list.dosing2 {
+		padding-left: 0 !important; 
+	}
+	#tuc-unmet-need-page .study-banner-right {
+		width: 185px;
+		margin: 0!important;
+		height: auto;
+	}
+	#tuc-unmet-need-page .isolated-poll {
+		width: auto;
+		margin-left: -52px;
+		margin-top: 16px;
+	}
+	.three-grid-list-section, .two-grid-list-section {
+		flex-direction: column;
+	}
+	.grid-list {
+		width: auto;
+		margin-top: 42px;
+	}
+	.grid-list:first-child {
+		margin-top: 0;
+	}
+	.ucsite .card-img-container h2.blue-graident-title {
+		padding: 21px 8px 24px;
+		margin-bottom: 33px;
+	}
+	.grid-list-img-wrapper {
+		min-height: 146px;
+	}
+	.grid-list p {
+		padding: 0 50px;
+		text-align: center;
+		margin: 0 0 41px;
+	}
+	.ucsite .tuc-unmet-Body .grid-list p {
+		font-size: 18px;
+	}
+	.tuc-unmet-Body p.yellow-highlight {
+	    padding: 23px 12px 22px;
+		width: auto;
+		font-size: 16px;
+		margin: 47px 0px 20px;
+		line-height: 20px;
+	}
+	p.fntSz20.bold {
+		margin-bottom: 28px;
+	}
+	.ucsite #tuc-unmet-need-page .white-bg {
+		padding: 37px 5px 25px 5px;
+	}
+	#tuc-unmet-need-page .footer-people.moaFooter img {
+		width: 223px;
+		margin-top: 0;
+	}
+	.ucsite #tuc-patient #banner-wrap-getting-started .study-banner-right.gettingStarted {
+		width: auto;
+		margin: 0 !important;
+	}
+	.ucsite #tuc-patient .isolated-poll {
+		height: 257px;
+	}
+	.ucsite #tuc-patient #BlueCloudBG .transparent-bg {
+		height: 30px;
+	}
+	.ucsite #tuc-patient .white-bg.box1.gettingStartedBody h2 {
+		text-align: center;
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.two-grid-list-section .grid-list {
+		width: auto;
+	}
+	.ucsite #tuc-patient .card-img-container .grid-profile-img h2.blue-graident-title {
+		font-size: 20px;
+		padding: 29px 0 2px 145px;
+		line-height: 20px;
+		text-align: left;
+	}
+	.ucsite .card-img-container .grid-profile-img h2.blue-graident-title span {
+		margin-top: 3px;
+	}
+	.detail-info span {
+		display: block;
+	}
+	.detail-info {
+		padding: 12px 20px 14px;
+	}
+	.detail-info span:first-child {
+		margin-right: 0;
+		margin-bottom: 7px;
+	}
+	.two-grid-list-section .grid-list .list {
+		padding: 22px 18px 0;
+		min-height: auto;
+		margin-bottom: 0;
+	}
+	.ucsite #tuc-patient .white-bg.box1.gettingStartedBody {
+		padding: 40px 9px;
+	}
+	.ucsite #tuc-patient .gettingStartedBody img.download-arrow {
+		margin-top: auto;
+	}
+	.ucsite #BlueCloudBG .two-grid-list-section button.callout-button {
+		margin-top: 8px;
+	}
+	.two-grid-list-section {
+		margin-top: 108px;
+	}
+	.two-grid-list-section .grid-list {
+		width: auto;
+		margin-bottom: 85px;
+	}
+	.two-grid-list-section .grid-list:first-child .grid-profile-img img {
+		left: -7px;
+	}
+	.ucsite #tuc-patient .white-bg.box1 .callout {
+		padding: 35px 20px 28px;
+	}
+	.ucsite #tuc-patient .gettingStartedBody button.callout-button {
+		text-transform: uppercase;
+	}
+	.two-grid-list-section .grid-list:last-child {
+		margin-bottom: 0;
+	}
+	.ucsite #tuc-patient .white-bg.box1 .gradient {
+		width: auto;
+		margin: 40px -9px 39px;
+		padding: 36px 16px;
+	}
+	.ucsite #tuc-patient .gettingStartedBody button.callout-button {
+		width: 330px;
+		max-width: 330px;
+		height: 40px!important;
+	}
+	.ucsite ul.footnote-list li {
+		margin-left: 10px;
+	}
+	.ucsite #tuc-patient .gettingStartedBody .gradient button.callout-button {
+		width: 290px;
+		max-width: 290px;
+	}
+	.ucsite #tuc-patient .white-bg.box1 .gradient button.white-arrow:after {
+		right: 30px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+	.ucsite #tuc-patient .white-bg.box1 .callout {
+		padding: 28px 20px 28px;
+	}
+	.ucsite #tuc-patient .white-bg.box1 .callout h3.head3 {
+		margin-bottom: 9px;
+	}
+	.ucsite #tuc-patient ul.footnote-list {
+		margin-bottom: 0;
+	}
+	.ucsite #tuc-patient .card-img-container #hcp h2.fntSz20 {
+		margin-bottom: 18px;
+		padding: 0;
+	}
+	.ucsite #tuc-patient #video-container-support {
+		padding: 40px 15px 38px;
+	}
+	.ucsite #tuc-patient #video-container-support #hcp h2.fntSz20 {
+		margin-bottom: 9px;
+		font-weight: normal; 
+	}
+	.ucsite #tuc-patient .card-img-container #hcp h2.fntSz20 + p {
+		margin-bottom: 21px;
+	}
+	.ucsite #tuc-patient #video-container-support #hcp h2.fntSz20, .ucsite #tuc-patient .card-img-container #hcp h2.fntSz20 + p {
+	    padding-left: 8px;
+	}
+	.ucsite #tuc-patient #video-container-support img.videoPlayerImage2 {
+		width: auto;
+	}
+	.ucsite .callout {
+		padding: 22px 12px 24px 12px;
+	}
+	.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow {
+		margin: 0px auto 6px;
+	}
+	.ucsite #tuc-patient .box3 .callout h3.head3 {
+		margin-bottom: 21px;
+	}
+	.ucsite #tuc-patient .box3 .callout {
+		padding: 28px 12px 16px 12px;
+	}
+	.ucsite #tuc-patient .box3 .callout.two {
+		padding-top: 28px;
+	}
+	.ucsite #tuc-patient .box3 .callout.two h3.head3 {
+		margin-bottom: 12px;
+	}
+	.ucsite #tuc-patient .box3 .callout.two p.callout-copy {
+		margin: -3px 0 24px;
+	}
+	.ucsite #tuc-patient .box3 .callout.two .callout-button.download-arrow.buttonCTA1 {
+		margin: 0px auto 13px;
+	}
+	.ucsite #tuc-patient .mobileCloudBG {
+		margin-top: 0;
+	}
+	.ucsite #tuc-patient .callout-button.buttonCTA2 {
+		justify-content: center;
+	}
+	.round-btn.m-page {
+		width: 200px;
+		margin: 38px auto 0;
+	}
+	
+	.ucsite .isi-content div.head3.mt-30 {
+		margin-top: 16px;
+	}
+	.isi-footer-wrapper {
+		padding-top: 19px;
+	}
+	.ucsite .home-content.container {
+		margin-bottom: 40px;		
+	}
+	.cmp-footer-isi-content-element .isihdr_new .isi-container-title {
+		padding-right: 17px;
+	}
+	.ftrcopytxtcont .sitetxt .container.gateway-site-text {
+		font-size: 10px;
+		line-height: 13px;
+		font-family:'MontserratRegular';
+		margin-left: -22px !important;
+	}
+	.ucsite .navbar-expand-lg .navbar-nav .nav-item.m-page.treating-uc-link:before {
+		display: none;
+	}
+	.navbar-expand-lg .navbar-nav {
+		top: 120px;
+	}
+	.headerWrapUC #navbarNavDropdown ul.navbar-nav.ucMenu.activeMainParent {
+		height: 480px;
+		overflow-x: scroll;
+	}
+	.dropdown.mobile-list-dropdown {
+		padding: 0 10px 0 50px;
+	}
+	.dropdown.mobile-list-dropdown.mobile-scroll-link {
+		background: #ffffff;
+		position: fixed;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 0 10px;
+		top: 38px;
+		box-shadow: 0px 3px 6px #00000029;
+		z-index: 9;
+	}
+	.dropdown.mobile-list-dropdown button, 
+	.dropdown.mobile-list-dropdown button:not(:disabled):not(.disabled):active,  
+	.dropdown.mobile-list-dropdown.show>.btn-secondary.dropdown-toggle {
+		background: #D5F0FF 0% 0% no-repeat padding-box;
+	    padding: 4px 10px;
+		font-size: 16px;
+		line-height: 18px;
+		margin: 10px auto;
+		font-family: 'MontserratBold';
+		color: #0032A0;
+		border: none;
+		border-radius: 0;
+		min-width: 249px;
+		text-align: left;	
+		position: relative;		
+	}
+	.dropdown.mobile-list-dropdown button.focus, .dropdown.mobile-list-dropdown button:focus, .dropdown.mobile-list-dropdown.show>.btn-secondary.dropdown-toggle:focus {
+		box-shadow: none;
+	}
+	.dropdown.mobile-list-dropdown .dropdown-toggle::after {
+		background: url(/images/uc/redArrow.svg) no-repeat;
+		width: 12px !important;
+		height: 7px !important;
+		box-shadow: none !important;
+		margin: auto;
+		vertical-align: 0;
+		border: none;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 3px;
+	}
+	.dropdown.mobile-list-dropdown .dropdown-menu.show {
+		display: block !important;
+		margin: 0;
+		border: none;
+		background: #ffffff;
+		padding-top: 0;
+		width: 250px;
+		box-shadow: 0px 3px 6px #00000029;
+		border-radius: 0px 0px 10px 10px;
+	}
+	.dropdown.mobile-list-dropdown .dropdown-menu.show a {
+		font-family: 'MontserratRegular' !important;
+		font-size: 16px !important;
+		color: #0032A0;
+		line-height: 18px !important;
+		padding: 5px 10px !important;
+	}
+	.dropdown.mobile-list-dropdown.show .dropdown-item.active {
+		display: none;
+	}
+	#study-design-page .study-banner-right {
+		margin-right: -122px!important;
+		margin-top: 20px!important;
+		width: 240px;
+	}
+
+	.ads-img img { width: 86px;}
+	.bc-img img { width: 132px;}
+	.grid_common_uc_li{
+		margin-left: 40px;
+	}
+	.mob_ml-30{
+	    margin-left: 31px !important;
+	}	
+		
+.z360-banner-content h1 {
+    font-size: 30px;
+    line-height: 34px;
+	margin-left: 12px;
+}	
+.ash1 h2 {
+    font-size: 20px;
+    line-height: 24px;
+	padding: 10px 15px 0;
+}
+.boxwrap.d-flex{
+	border-bottom: 0 solid;
+	flex-direction: column;
+    max-width: 330px;
+    padding-top: 0;
+}
+.support-Page .ash1 ul.list {
+    padding-left: 0;
+}	
+.box.box2, .box.box4 {
+    border-left: 0 solid;
+    padding-left: 0;
+}
+.boxwrap .box {
+    max-width: none;
+    padding-top: 21px;
+    margin-bottom: 13px;
+    border-bottom: 1px solid #00B5EC;
+}
+.callwrap.d-flex{
+    padding: 0 15px 30px;	
+	flex-direction: column;
+}
+.ashbg.ash1, .ashbg.ash2{
+    max-width: 362px;
+    margin-left: auto;
+    margin-right: auto;	
+}
+.ashbg.ash1.res1{
+	margin-top: 23px;	
+}	
+.belowbox {
+    padding: 0 15px;
+}
+.box6 {
+    padding-left: 0;
+}
+.plaintxt {
+    padding: 0 15px 24px;
+}
+.ash2 .fnt30 {
+    font-size: 24px;
+    line-height: 26px;
+    text-align: left;
+    padding: 24px 15px 0;
+}	
+.ash2 .fnt24 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 0;
+}
+.ash2 .fnt24 a{
+	text-decoration: none;
+}
+.ash2 .fnt24.numm{
+	max-width: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.ashbg.ash2{
+	margin-bottom: 40px;
+}
+.callbox {
+    min-width: auto;
+}
+.callbox.cbox2 {
+    border-left: 0 solid;
+    height: auto;
+    text-align: left;
+}
+.callwrap .rdlnem{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #F9423A;
+	max-width: none;
+}
+.ash2 .fnt17 {
+    font-size: 15px;
+}
+.ash2 .fnt17 .fnt20 {
+    font-size: 18px;
+}
+.ash2 .fnt12{
+	margin-bottom: 20px;
+}	
+.revideo .fnt30 {
+    font-size: 24px;
+    line-height: 26px;
+}
+.revideo .fnt20 {
+    font-size: 16px;
+    line-height: 20px;
+}
+#videocontain p.video-description {
+    font-size: 14px;
+    line-height: 16px;
+	margin-top: 0;
+}
+.barwrap {
+    flex-direction: column;
+}	
+.bar .whtbtn{
+    font-size: 14px;
+    line-height: 18px;
+	max-width: 318px;
+	padding: 8px 0;
+}
+.bar {
+    min-width: 338px;
+    margin: 0 auto 30px;	
+}
+.ucsite p.fnt16wht{
+	font-size: 16px;
+}	
+.bar .fnt16{
+	font-size: 16px;
+    line-height: 22px;	
+	color: #000000;
+}
+.blushade {
+    max-width: 353px;
+}
+.ash1.res1 h2{
+	padding-top: 30px;
+}
+.ptop24 {
+    padding: 0;
+}
+#greywrap{
+	max-width: 362px;
+	padding: 40px 0 10px;
+}
+#greywrap .fnt30 {
+    font-size: 20px;
+    line-height: 24px;
+}
+#greywrap .fnt20 {
+    font-size: 18px;
+    line-height: 24px;
+}
+.capswrap{
+	flex-direction: column;
+}
+.dottedbrder{
+	margin-bottom: 20px;
+	flex-direction: column;
+    width: 240px;
+	height: 329px;
+}
+#greywrap .fnt14{
+	min-width: 334px;
+    left: -46px;
+}
+.bluearow.mrgn {
+    margin: 65px 0 25px;
+}
+.bluearow img{	
+    transform: rotate(90deg);
+}
+.ucsite #greywrap .cmp-accordion__button{
+    font-size: 20px;
+    line-height: 24px;
+    height: 95px;
+    padding: 0 45px 0 15px;
+}
+.ucsite #greywrap .cmp-accordion__item{
+	width: auto
+}
+.ucsite #greywrap .cmp-accordion__panel.cmp-accordion__panel--expanded{
+	width: auto;
+    padding-bottom: 15px;	
+}
+.capbdy{
+    align-items: start;
+}
+#greywrap .caps1 .capcnt .fnt30,
+#greywrap .caps2 .capcnt .fnt30,
+#greywrap .caps3 .capcnt .fnt30 {
+    font-size: 30px;
+    line-height: 32px;
+}
+#greywrap .capcnt .fnt30 {
+    padding: 4px 0;
+}
+#greywrap #postHoc {
+    margin-top: 20px;
+}
+.gettingStartedBody2  #greywrap .capswrap{
+	align-items: center;
+}
+.ucsite #greywrap .cmp-accordion__button:after{
+	right: 12px;
+}
+.gettingStartedBody2 .capbdy.caps5{
+	    padding: 50px 0;
+}
+.gettingStartedBody2 #greywrap{
+	padding-bottom: 40px;
+}	
+#greywrap .step1cnt .btnpara{
+	flex-direction: column;
+}
+#greywrap .step1cnt .btnpara .fnt20 {
+    padding: 8px 0 0;
+}
+#greywrap .step1cnt .fnt16.wbtn{
+    width: 332px;
+    padding: 8px 0 8px 18px;	
+}
+.ucsite .gettingStartedBody1 .cmp-accordion__panel.cmp-accordion__panel--expanded, 
+.ucsite .gettingStartedBody4 .cmp-accordion__panel.cmp-accordion__panel--expanded, 
+.ucsite .gettingStartedBody5 .cmp-accordion__panel.cmp-accordion__panel--expanded {
+    padding-left: 20px;
+}
+.step2cnt ul.list.dosing {
+    padding-left: 10px;
+}
+.ucsite #BlueCloudBG .btnpdng button.callout-button{
+	margin: 0 auto;
+}
+#greywrap .step2cnt .plaintxt .fnt14{
+	min-width: auto;
+}
+.ucsite .exp-beft-column-control--mod-1 #greywrap{margin-top: 10px;}
+.evg-popup.evg-style-bg:after{
+	background: url(/images/uc/bluebarimgmob.png) no-repeat;
+}
+.ucsite #BlueCloudBG .zep360 .gradient button.callout-button{
+	height: 40px;
+}	
+.ucsite .callout.one, .ucsite .callout.two{
+	min-height: 230px;
+}	
+hr.bluebarr{
+    max-width: 330px;
+}	
+.boximg.shotbottle{
+	text-align: center;
+}
+.boximg.shotbottle img{
+    margin-top: -20px;
+}
+#greywrap.covermds .fnt30 {
+    padding-top: 10px;
+}	
+.covermds .zlogo {
+    padding: 10px 0 0;
+}
+#greywrap.bodypara.covermds .fnt20{
+	line-height: 20px;
+}
+.ucsite ul.footnote-list.uc_home_mc.pextra li{
+	text-align: left;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 7px;	
+}		
+#efficacy-page .transparent-bg{
+    padding-top: 4px;
+    margin-top: -118px;
+}
+#safety-page .transparent-bg.safetyPage{
+	margin-top: -140px;	
+    padding-top: 4px;
+}
+#safety-page .z360-banner-content h1 {
+    font-size: 22px;
+    line-height: 28px;
+}	
+#safety-page .z360-banner-content h1:after{
+	height: 55px;
+	bottom: 0;
+}
+.ucsite #efficacy-page .cmp-accordion__button{
+    font-size: 20px;
+    line-height: 24px;
+    padding: 10px 20px;
+}
+.ucsite .utilitycont li a{
+    color: #515B64;
+}
+#bannerBG {
+    height: auto;
+}
+#tuc-patient .z360-banner-content h1:after,
+#efficacy-page .z360-banner-content h1:after{
+	/* height: 31px; */
+	height: 135px !important;
+	bottom: 0;
+}
+	.uc-safety table.lastTable tr td:first-child {width: 237px;}
+	.uc-safety #safety-page table tr {height: 53px;}
+	.uc-safety table.lastTable tr th:first-child, table.lastTable tr td:first-child {padding-left: 10px;}
+	.uc-safety .blueBorder.d-flex.lastTableHeader { height: 60px;}
+	.fntz-24 {font-size: 21px;}
+	.ucsite.uc-efficacy .page-section p.yellow-highlight { font-size: 16px; line-height: 19px;}
+}
+
+.ucsite .head3, .ucsite .isi-container-title{
+	font-family:'MontserratBold'!important;
+}
+.ucsite-indication-head div.bodypara.boldtxt{
+	font-family:'MontserratBold';
+}
+.ucsite sup{
+	font-family:'MontserratRegular';
+	font-size: 70%;
+}
+.ucsite .ucJobCode, .ucsite div.ftrcopytxt{
+	font-size:14px;
+	line-height:16px;
+	color:#000;
+	font-family:arial;
+}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link, .ucsite .cmp-isi .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {
+	font-family:arial Regular!important;
+	text-decoration: none;
+}
+.ucsite .yellowtxt {
+		display:none;
+	}
+	.ucsite .ucJobCode{
+		display:inline-block!important;
+	}
+	.ucsite .noUC{
+		display:none!important;
+	}
+	.ucsite .pinkText{
+		color: #000;
+	}
+.ucsite .white-bg.box2.gettingStartedBody2 .white-box.group1{
+	border-radius:10px;
+}
+p.yellow-highlight.support-alert-text span.bold{
+	font-family: 'MontserratExtraBold';
+}
+.doisng-text p.bold-heading{
+	font-size: 20px;
+    line-height: 24px;
+    color: #434343;
+    font-family: 'MontserratBold';
+}
+.d-flex.supportIcons .img-wrap{
+	margin-right:0px
+}
+.d-flex.supportIcons .img-wrap img{
+	width: 47px;
+    margin-top: 17px;
+    margin-left: 20px;
+}
+.d-flex.supportIcons .list.supportIcons1, .d-flex.supportIcons .list.supportIcons2{
+	margin-top:30px;
+}
+.d-flex.supportIcons .right.white-box .img-wrap img{
+	height: 47px;
+    margin-top: 25px;
+    margin-left: 32px;
+}
+.white-bg.box1.gettingStartedBody p.video-description{
+	text-align:left;
+}
+.ucsite .modal .close img {
+    background: url(/content/dam/commercial/us/zeposiahcp/en/images/modal_cls.svg);
+    width: 100%;
+    top: 15px;
+    position: absolute;
+    right: 15px;
+}
+.ucsite .modal.fade.external-link-warning-modal.show .icon.icon-close{
+	display:none;
+}
+.ucsite .modal.fade.external-link-warning-modal.show .modal-button{
+	    display: flex;
+    flex-direction: row-reverse;
+}
+.ucsite .modal.fade.external-link-warning-modal.show .modal-button{
+	margin-right:0px;
+}
+.ninethTable.white-box ul.list{
+	padding-left: 55px;
+    padding-top: 25px;
+}
+.ucsite .callout.one, .ucsite .callout.two{
+	    display: flex;
+    flex-direction: column;
+	min-height: 220px;
+}
+.ucsite p.callout-copy{
+	flex-grow:1;
+	color:#000;
+}
+.ucsite .removable-wrapper-div.section{
+	display:block!important;
+}
+ul.smallbullet-list{
+	font-family: 'MontserratBold';
+}
+p.one-line-footenote{
+	font-family: 'MontserratBold';
+    font-size: 14px;
+    line-height: 16px;
+}
+ul.list.dosing2 li span.bold{
+	font-family: 'MontserratBold';
+}
+.white-bg.sitemapdiv{
+	margin-top:40px;
+}
+.white-bg.sitemapdiv .d-flex{
+	justify-content:space-around;
+}
+.white-bg.sitemapdiv ul li a{
+	color: #0032a0;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+	font-family: 'MontserratMedium';
+}
+.white-bg.sitemapdiv ul.sublist li a { 
+	font-size:18px;
+	font-weight:400;	
+}
+.white-bg.sitemapdiv ul.sublist li a, .rightlinkcont.sitemap a {
+	text-decoration: underline;
+}
+.white-bg.sitemapdiv ul.sublist{
+	padding-top:15px;
+}
+.white-bg.sitemapdiv ul.sublist span{
+	font-weight:500;
+	font-family:'MontserratMedium';
+	display:block;
+	margin-bottom:15px;
+}
+.ucsite-indication-head div.bodypara{
+	margin-bottom:7px;
+	font-family:'MontserratRegular';
+	color:#000;
+}
+.ucsite-indication-head div.bodypara span.head3{
+	font-family:'MontserratBold';
+}
+.ucsite-indication-head ul.indication-li{
+	margin-bottom:7px;
+}
+.ucsite-indication-head ul li{
+	margin-bottom:5px;
+	color:#000;
+	padding-left:15px;
+}
+.isi-content .ucsite-indication-head ul div.head3{
+	margin-bottom:5px;
+}
+.ucsite .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(5){
+	display:none;
+}
+.mssite .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(6){
+	display:none;
+}
+/* .mssite .cmp-utility-nav-list li.cmp-utility-nav-list-item:nth-child(5) a.nav-link:after{
+	display:none;
+} */
+.ucsite .footer .nav-link, .ucsite .cmp-isi .nav-link {
+	text-decoration:underline;
+}
+.text-decoration{
+	text-decoration:underline;	
+}
+p.d-page.fullWidth{
+	width:110%;
+}
+.blackBoldcopy{
+	font-size:16px;
+	line-height:20px;
+	color:#434343;
+	font-family:'MontserratBold';
+}
+.blackBoldcopy a{
+	text-decoration:none;
+	color:#0032a0;
+}
+.ucsite .white-bg.box1.efficacy-section1 span.black.bold{
+	display: block;
+    margin-bottom: 8px;
+	font-family:'MontserratBold';
+}
+.ucsite .white-bg.box1.efficacy-section1 .description1 ul.list,
+.ucsite .white-bg.box2.efficacy-section2 .description2 ul.list
+{
+	padding-left:16px;
+}
+.ucsite .d-flex.two>div:nth-child(1){
+	border-right:none;
+}
+.nonhcp_btn.entrymodal_btn {
+    border: 2px solid #F9423A;
+    background-color: transparent !important;
+	background-image: url(/content/dam/commercial/us/zeposiahcp/en/images/uc/Icon-feather-download-blue.svg);
+}
+.nonhcp_btn.entrymodal_btn a {
+    color: #0032A0 !important;
+	line-height: 36px;
+}
+.ucsite tr.blackTitle th{
+	font-family:'MontserratBold';
+}
+.ucsite .orangelinkel a{
+	text-transform:capitalize;
+}
+.ucsite .modal-button > div a, .ucsite .entrymodal_btn, .ucsite .entrymodal_btn a{
+	font-family:'ProximaBold';
+}
+.entry-modal .modalhead{
+	font-family:'MontserratBold';
+}
+.ucsite #indication_modal .modal-body{
+	font-family:'MontserratRegular';
+}
+.ucsite #indication_modal .modal-title{
+	font-family:'MontserratBold';
+}
+.ucsite .rotation-error p:not(:empty){
+	font-family:'MontserratBold';
+	font-size:22px;
+}
+.onlyMobile{
+	display:none;
+}
+.ucsite p.table-note span.blueBoldHeading{
+		color: #0032a0;
+		font-family: 'MontserratBold';
+}
+.yellow-highlight.safety-callout{
+	height:auto;
+	padding-bottom:25px;
+}
+.ucsite #efficacy-page .efficacy-section2 .prev-acc-content  .graph-container .white-box img { margin-left: 0;}
+.ucsite #efficacy-page .efficacy-section2 .prev-acc-content  .graph-container .left-graph .white-box img {padding: 37px 19px 40px 26px;}
+.ucsite #efficacy-page .efficacy-section2 .prev-acc-content  .graph-container .right-graph .white-box img {padding: 30px 19px 21px 26px;}
+.ucsite #efficacy-page .prev-acc-content  .graph-container .img-title {height: 58px;line-height: 37px;}
+.ucsite .video-js .vjs-big-play-button:focus, .video-js:hover .vjs-big-play-button { background-color: #73859f!important; }
+
+@media only screen  and (min-device-width: 390px)   and (max-device-width: 844px)   and (-webkit-min-device-pixel-ratio: 3) { 
+.cta-button.home-banner {font-size: 12px;}
+.ucsite .card-img-container h2 { line-height: 32px; }
+.ucsite table tr { border-bottom: 0.5px solid #B2BEC5; }
+.ucsite #study-design-page .gradient {margin-bottom: 40px;}
+.ucsite p.blueBoldHeading { font-size: 14px; color: #0032A0; }
+p.blueBoldHeading.contactinfo {color: #0032A0;}
+#safety-page div.blueBorder div {font-size: 11px;}
+div.blueBorder.fontStyle {font-size: 13px;}
+.ucsite .callout h3.head3 {font-size: 23px;}
+.bold.label2 {margin-left: 125px;}
+.ucsite footer .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link, .ucsite .cmp-isi .cmp-utility-nav ul.nav>li.cmp-utility-nav-list-item>a.nav-link {font-family: arial Regular!important;}
+}
+@media only screen and (min-device-width: 390px) and (max-device-width: 844px) and (-webkit-min-device-pixel-ratio: 3){
+.ucsite .cta-button.home-banner a {
+     letter-spacing: -0.8px!important; 
+	 font-size:14px;
+	 line-height:18px;
+}
+#safety-page .seventhTable .blueBorder .fiveCol2 {
+    margin-left: 60px!important;
+}
+#safety-page .seventhTable .blueBorder .fiveCol4 {
+    margin-left: 50px!important;
+}
+
+}
+.video-js .vjs-dock-title{
+	display:none;
+}
+.isi-content ul li::marker{
+	display:none!important;
+}
+.entry-modal .buttoncnt .btncont p b{
+	font-family:'MontserratBold';	
+}
+sup.width80{
+	font-size:80%;
+	top:-3px;
+}
+.white-box.study-table table tr span.textIndent.moreText{
+		padding-left:30px;
+	}
+	p.video-description a{
+		color:#0032a0;
+		text-decoration:underline;
+	}
+	span.leftAlign1{
+		margin-left: 4px;
+	}
+	span.leftAlign2{
+		margin-left: -4px;
+	}
+	
+	#gatewayWrapper .copy-right-section:not(:root:root){
+		float: left;
+		width: auto;
+		margin-bottom: 25px;
+		margin-left: 10px;
+	}
+	
+	.safety_callout_cont{
+		margin: 20px auto;
+		width: 800px;
+		height: 100px;
+		padding: 20px 40px;
+		background: #E3E8EA;
+		color: #0032A0;
+		text-align: center;
+	}	
+	.safety_callout_footnote{
+		padding: 0 3rem;
+	}	
+	
+	.grid_common_uc_p{
+		padding: 0 20px !important;
+		margin: 0 !important;
+	}	
+	.grid_indication-li li{
+		list-style: inherit !important;
+	}	
+	.color_black{
+		color: #000000 !important;
+	}	
+	
+	/*.ucsite .fixedHeader, .ucsite .fixedSMenu { animation: mymove 1s 1; }
+    @keyframes mymove { from {top: -50px;} to {top: 0px;}} */px;} to {top: 0px;}} */px;} to {top: 0px;}} */px;} to {top: 0px;}} */px;} to {top: 0px;}} */px;} to {top: 0px;}} */;}} */px;} to {top: 0px;}} */;}} */px;} to {top: 0px;}} */to {top: 0px;}} */to {top: 0px;}} */px;} to {top: 0px;}} */;}} */px;} to {top: 0px;}} */;}} */px;} to {top: 0px;}} */to {top: 0px;}} */
