@@ -1063,3 +1063,8 @@ body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
   margin-bottom: 0;
   margin-top: 18px;
 }
+
+/* Final override: intro stays at 8px margin, only CTA tightens */
+body.ucsite.uc-home .hero > div > div > p:first-child {
+  margin-bottom: 8px;
+}
