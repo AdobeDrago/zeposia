@@ -245,18 +245,15 @@ async function applyTemplateOverlay(main) {
 .bann_big { max-height: 76px !important; overflow: hidden !important; }
 main > .experiencefragment.section { display: none !important; }
 main > .column-control.aem-GridColumn { max-height: 3538px !important; overflow: hidden !important; }
-.hero-carousel .carousel-item p,
-.hero-carousel .carousel-item strong,
-.hero-carousel .carousel-item span,
-.hero-carousel .carousel-item li,
-.hero-carousel .carousel-item h2,
-.hero-carousel .carousel-item h3,
-.hero-carousel .carousel-item h4,
-.hero-carousel .carousel-text p,
-.hero-carousel .carousel-text strong,
-.hero-carousel .box-crd p,
-.hero-carousel .first-box-banner p,
-.hero-carousel .first-box-banner strong { color: #fff !important; }
+.hero-carousel .first-csrl p,
+  .hero-carousel .first-csrl strong,
+  .hero-carousel .first-csrl span,
+  .hero-carousel .first-csrl li,
+  .hero-carousel .first-csrl h1,
+  .hero-carousel .first-csrl h2,
+  .hero-carousel .first-csrl h3,
+  .hero-carousel .first-csrl h4,
+  .hero-carousel .first-csrl a { color: #fff !important; }
 
   `;
   document.head.appendChild(overrideStyle);
