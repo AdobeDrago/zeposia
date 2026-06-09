@@ -118,3 +118,14 @@ body.ucsite header .header.block > div > p:first-child a {
 body.ucsite header .header.block {
   min-height: 91px;
 }
+
+/* Force dark blue text for header links (override block CSS white) */
+body.ucsite header .header.block a,
+body.ucsite header .header.block > div > ul > li > a,
+body.ucsite header .header.block > div > ul > li > p > a,
+body.ucsite header .header.block > div > ul a {
+  color: #0032A0;
+}
+body.ucsite header .header.block > div > ul > li > ul > li > a {
+  color: #0032A0;
+}
