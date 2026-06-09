@@ -710,3 +710,64 @@ loadPage();
   var attempts = 0;
   var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
+
+/**
+ * Map EDS DOM elements to source CSS classes for pixel-perfect rendering.
+ * This adds classes that the self-hosted source CSS targets.
+ */
+function applySourceClasses() {
+  const path = window.location.pathname;
+  if (!path.startsWith('/ulcerative-colitis')) return;
+
+  // Fragment wrapper (ISI) → source classes
+  document.querySelectorAll('.fragment-wrapper h3').forEach(el => el.classList.add('head3'));
+  document.querySelectorAll('.fragment-wrapper h2').forEach(el => el.classList.add('head3'));
+  document.querySelectorAll('.fragment-wrapper p').forEach(el => el.classList.add('bodypara'));
+  document.querySelectorAll('.fragment-wrapper ul').forEach(el => el.classList.add('indication-li'));
+  document.querySelectorAll('.fragment-wrapper li').forEach(el => el.classList.add('bodypara'));
+  document.querySelectorAll('.fragment-wrapper p strong').forEach(el => el.classList.add('head3'));
+  
+  // ISI container class
+  const fragWrapper = document.querySelector('.fragment-wrapper');
+  if (fragWrapper) {
+    fragWrapper.classList.add('cmp-footer-isi-content-element');
+    const frag = fragWrapper.querySelector('.fragment');
+    if (frag) frag.classList.add('isi-content');
+  }
+  
+  // Clinical trial section → source classes  
+  const sections = document.querySelectorAll('main > .section');
+  if (sections[1]) {
+    sections[1].classList.add('home-content', 'container');
+    const wrapper = sections[1].querySelector('.default-content-wrapper');
+    if (wrapper) wrapper.classList.add('secondPara');
+    sections[1].querySelectorAll('p strong').forEach(el => {
+      el.classList.add('blue', 'bold');
+    });
+  }
+  
+  // Hero section → source classes
+  if (sections[0]) {
+    const heroBlock = sections[0].querySelector('.hero');
+    if (heroBlock) {
+      heroBlock.classList.add('left-banner');
+      const firstP = heroBlock.querySelector('p');
+      if (firstP) firstP.classList.add('bane_one');
+    }
+  }
+  
+  // Footer
+  const footer = document.querySelector('footer');
+  if (footer) {
+    footer.classList.add('footer', 'footer-variation-one');
+    const wrapper = footer.querySelector('.footer-wrapper');
+    if (wrapper) wrapper.classList.add('isi-footer-wrapper');
+  }
+}
+
+// Run after page is decorated
+if (document.readyState === 'complete') {
+  applySourceClasses();
+} else {
+  window.addEventListener('load', applySourceClasses);
+}
