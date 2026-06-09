@@ -820,8 +820,8 @@ function transformToSourceDOM() {
 
 // Run after all blocks are loaded
 if (document.readyState === 'complete') {
-  setTimeout(transformToSourceDOM, 100);
+  setTimeout(transformToSourceDOM, 3000);
 } else {
-  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 100));
+  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 3000));
 }
 
