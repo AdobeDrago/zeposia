@@ -780,7 +780,7 @@ margin: 0;
    but the overall impression at 42px is: light top line, bold bottom line */
 body.ucsite .hero h1 {
   font-size: 40px;
-  line-height: 46px;
+  line-height: 38px;
   font-weight: 400;
   letter-spacing: -0.5px;
   color: rgb(0, 50, 160);
@@ -837,7 +837,7 @@ body.ucsite .hero a.button {
 /* Footnotes section (last 4 paragraphs in hero) */
 body.ucsite .hero > div > div > p:nth-child(n+6) {
   text-align: left;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 14px;
   color: rgb(80, 80, 80);
   margin-bottom: 3px;
@@ -846,7 +846,7 @@ body.ucsite .hero > div > div > p:nth-child(n+6) {
 
 body.ucsite .hero > div > div > p:nth-child(n+6) strong {
   color: rgb(0, 50, 160);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* Pill icon as CSS pseudo-element (since inline <img> fails through EDS media pipeline) */
@@ -866,7 +866,7 @@ body.ucsite .hero h1 {
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 46px;
+  line-height: 38px;
 }
 
 /* ===== EXACT SOURCE-MATCHED HERO ELEMENTS (iteration 12) ===== */
@@ -948,4 +948,43 @@ body.ucsite .hero > div > div > p:nth-child(5) {
   display: flex;
   justify-content: center;
   margin: 20px 0 15px;
+}
+
+/* ===== PRECISION FIXES (iteration 15) ===== */
+
+/* H1 exact: 36px/38px weight 500 */
+body.ucsite .hero h1 {
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 500;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Footnotes: 12px/14px, margin-bottom 3px */
+body.ucsite .hero > div > div > p:nth-child(n+6) {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+/* Footnote bold-blue labels: NOT bold, just blue color, weight 400 */
+body.ucsite .hero > div > div > p:nth-child(n+6) strong {
+  color: rgb(0, 50, 160);
+  font-weight: 400;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Intro text exact: 20px/22px weight 500 */
+body.ucsite .hero > div > div > p:first-child {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
 }
