@@ -1205,3 +1205,8 @@ body.ucsite, body.ucsite * {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
+/* Clinical section should have the SAME blue background as hero (source extends hero bg) */
+body.ucsite main > .section:nth-child(2) {
+  background-color: #A4E2FF;
+}
