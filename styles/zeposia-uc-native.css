@@ -1198,3 +1198,10 @@ body.ucsite * {
 html {
   overflow-y: scroll;
 }
+
+/* Text rendering must match source exactly */
+body.ucsite, body.ucsite * {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
