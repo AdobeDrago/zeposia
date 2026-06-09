@@ -1,0 +1,222 @@
+/* zeposia-uc-native.css — Native EDS styles for UC pages (de-overlaid) */
+/* Targets EDS DOM structure, reproduces source visual appearance */
+
+/* ===== GLOBAL UC PAGE STYLES ===== */
+body.ucsite {
+  color: #434343;
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+body.ucsite main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.ucsite main .section {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== CLINICAL TRIAL INFO SECTION ===== */
+/* Second section after hero — plain text paragraphs with bold-blue labels */
+body.ucsite main .section:nth-child(2) .default-content-wrapper p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  color: #434343;
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+}
+
+body.ucsite main .section:nth-child(2) .default-content-wrapper p strong {
+  color: #0032A0;
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite main .section:nth-child(2) .default-content-wrapper {
+  padding-top: 200px; /* matches source .ptop200 class */
+  margin-bottom: 40px;
+}
+
+/* ===== HERO SECTION ===== */
+body.ucsite main .section:first-child {
+  max-width: 100%;
+  padding: 0;
+}
+
+body.ucsite main .hero-wrapper {
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
+  padding: 40px 0;
+}
+
+body.ucsite main .hero-wrapper .hero {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body.ucsite main .hero-wrapper h1 {
+  font-family: 'Montserrat', 'MontserratExtraBold', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 42px;
+  color: #0032A0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main .hero-wrapper p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #434343;
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+}
+
+body.ucsite main .hero-wrapper a {
+  color: #0032A0;
+  text-decoration: none;
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* CTA button style */
+body.ucsite main .hero-wrapper .button-container a,
+body.ucsite main .hero-wrapper a.button {
+  display: inline-block;
+  background-color: #0032A0;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* Footnotes in hero */
+body.ucsite main .hero-wrapper p sup {
+  font-size: 10px;
+  vertical-align: super;
+}
+
+/* ===== ISI FRAGMENT SECTION ===== */
+body.ucsite main .fragment-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+body.ucsite main .fragment-wrapper h2 {
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #0032A0;
+  margin-bottom: 10px;
+}
+
+body.ucsite main .fragment-wrapper h3 {
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #434343;
+  margin-bottom: 8px;
+}
+
+body.ucsite main .fragment-wrapper p {
+  font-size: 14px;
+  line-height: 18px;
+  color: #434343;
+  margin-bottom: 10px;
+}
+
+body.ucsite main .fragment-wrapper p strong {
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite main .fragment-wrapper ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+body.ucsite main .fragment-wrapper li {
+  font-size: 14px;
+  line-height: 18px;
+  color: #434343;
+  margin-bottom: 8px;
+}
+
+body.ucsite main .fragment-wrapper a {
+  color: #0032A0;
+  text-decoration: underline;
+}
+
+/* ===== REFERENCES SECTION ===== */
+body.ucsite main .section:nth-child(4) .default-content-wrapper ol {
+  font-size: 12px;
+  line-height: 16px;
+  color: #434343;
+  padding-left: 20px;
+}
+
+body.ucsite main .section:nth-child(4) .default-content-wrapper li {
+  margin-bottom: 5px;
+}
+
+body.ucsite main .section:nth-child(4) .default-content-wrapper em {
+  font-style: italic;
+}
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+body.ucsite footer .footer-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ===== HEADER ===== */
+body.ucsite header .header-wrapper {
+  max-width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+body.ucsite header nav {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.ucsite header nav a {
+  color: #0032A0;
+  text-decoration: none;
+  font-family: 'Montserrat', 'MontserratMedium', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 2px solid #0032A0;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
