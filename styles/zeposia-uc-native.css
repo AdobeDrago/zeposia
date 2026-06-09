@@ -1054,3 +1054,12 @@ body.ucsite .hero > div > div > p:nth-child(5) {
 body.ucsite .hero > div > div > p:first-child {
   margin-bottom: 13px;
 }
+
+/* Higher specificity overrides */
+body.ucsite.uc-home .hero > div > div > p:first-child {
+  margin-bottom: 13px;
+}
+body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
+  margin-bottom: 0;
+  margin-top: 18px;
+}
