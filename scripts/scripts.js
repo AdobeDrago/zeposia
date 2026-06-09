@@ -471,53 +471,46 @@ if (!isiEl) return false;
 var moreContainer = isiEl.querySelector('.more-text-container');
 var previewContainer = isiEl.querySelector('.preview-container');
 var expandContainer = isiEl.querySelector('.expand-container');
-var arrow = isiEl.querySelector('.arrow');
 
 if (!moreContainer || !expandContainer) return false;
 
-// Add EXPAND text
-moreContainer.innerHTML = '<span class="isi-toggle-btn" style="cursor:pointer;display:flex;align-items:center;gap:5px;font-family:MontserratBold,sans-serif;font-size:14px;color:#0032A0;"><span class="isi-toggle-icon">+</span> <span class="isi-toggle-text">EXPAND</span></span>';
+// Create EXPAND button
+moreContainer.innerHTML = '<span class="isi-toggle-btn" style="cursor:pointer;display:flex;align-items:center;gap:5px;font-family:MontserratBold,sans-serif;font-size:14px;color:#0032A0;white-space:nowrap;"><span class="isi-toggle-icon">+</span> <span class="isi-toggle-text">EXPAND</span></span>';
 
 var isExpanded = false;
 var toggleBtn = moreContainer.querySelector('.isi-toggle-btn');
 var toggleIcon = moreContainer.querySelector('.isi-toggle-icon');
 var toggleText = moreContainer.querySelector('.isi-toggle-text');
 
-toggleBtn.addEventListener('click', function(e) {
-e.preventDefault();
-e.stopPropagation();
-isExpanded = !isExpanded;
-
-if (isExpanded) {
-// Expand: show full ISI content, fill viewport
-isiEl.style.cssText = 'display:block;position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;background:#fff;overflow-y:auto;padding:20px 40px;max-height:100vh;';
+function expand() {
+isExpanded = true;
+isiEl.setAttribute('style', 'display:block;position:fixed;top:0;left:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;z-index:99999;background:#fff;overflow-y:auto;padding:60px 40px 40px;box-sizing:border-box;');
 if (previewContainer) previewContainer.style.display = 'none';
-        // Keep header visible
-        var isiHeader = isi.querySelector('.isi-header');
-        if (isiHeader) isiHeader.style.display = 'flex';
-if (expandContainer) expandContainer.style.display = 'block';
+expandContainer.style.display = 'block';
 toggleIcon.textContent = '−';
 toggleText.textContent = 'COLLAPSE';
 document.body.style.overflow = 'hidden';
-} else {
-// Collapse: back to sticky bar
-isiEl.style.cssText = '';
+// Move toggle button to top-right of expanded panel
+moreContainer.style.cssText = 'position:fixed;top:20px;right:40px;z-index:100000;';
+}
+
+function collapse() {
+isExpanded = false;
+isiEl.removeAttribute('style');
+isiEl.style.display = 'block';
 if (previewContainer) previewContainer.style.display = 'block';
-if (expandContainer) expandContainer.style.display = 'none';
+expandContainer.style.display = 'none';
 toggleIcon.textContent = '+';
 toggleText.textContent = 'EXPAND';
 document.body.style.overflow = '';
+moreContainer.style.cssText = '';
 }
-});
 
-// Also handle clicking on the ISI header to toggle
-var isiHeader = isiEl.querySelector('.isi-header');
-if (isiHeader) {
-isiHeader.style.cursor = 'pointer';
-isiHeader.addEventListener('click', function() {
-toggleBtn.click();
+toggleBtn.addEventListener('click', function(e) {
+e.preventDefault();
+e.stopPropagation();
+if (isExpanded) { collapse(); } else { expand(); }
 });
-}
 
 return true;
 }
