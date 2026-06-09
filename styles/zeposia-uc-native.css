@@ -1043,3 +1043,14 @@ iA3KSA9PT09PSAqLwoKLyogSDE6ICJCUkVB\nSyBUSEUgQ1lDTEUiIGxpZ2h0ICgzMDApIG9uIGZpcnN
     "html": "https://github.com/AdobeDrago/zeposia/blob/c7b29f5/styles/zeposia-uc-native.css"
   }
 }
+
+/* ===== ITERATION 20: Spacing fine-tune (safe approach) ===== */
+/* Move footnotes closer by reducing space after CTA */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin-bottom: 0;
+}
+
+/* Add slight margin to intro text to push H1 toward y=106 */
+body.ucsite .hero > div > div > p:first-child {
+  margin-bottom: 13px;
+}
