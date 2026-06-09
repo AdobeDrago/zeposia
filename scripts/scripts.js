@@ -355,7 +355,6 @@ async function loadEager(doc) {
   if (path.startsWith('/ulcerative-colitis')) {
     document.body.classList.add('ucsite');
     loadCSS(`${window.hlx.codeBasePath}/styles/zeposia-uc-native.css`);
-    // Load self-hosted source CSS for pixel-perfect rendering
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
       document.body.classList.add('disabled');
@@ -706,122 +705,14 @@ loadPage();
   var attempts = 0;
   var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
 })();
-
-/**
- * Map EDS DOM elements to source CSS classes for pixel-perfect rendering.
- * This adds classes that the self-hosted source CSS targets.
- */
-
-/**
- * Transform EDS DOM to source-equivalent structure for pixel-perfect CSS rendering.
- * Runs after page decoration. Converts semantic HTML (p, strong, ul, li) to 
- * source-style DOM (div.bodypara, span.head3, ul.indication-li, li.bodypara).
- */
-function transformToSourceDOM() {
-  const path = window.location.pathname;
-  if (!path.startsWith('/ulcerative-colitis')) return;
-
-  // Transform ISI fragment content
-  const fragWrapper = document.querySelector('.fragment-wrapper');
-  if (fragWrapper) {
-    const content = fragWrapper.querySelector('.fragment');
-    if (content) {
-      // Transform all <p> to <div class="bodypara">
-      content.querySelectorAll('p').forEach(p => {
-        const div = document.createElement('div');
-        div.className = 'bodypara';
-        div.innerHTML = p.innerHTML;
-        p.replaceWith(div);
-      });
-      
-      // Transform <h3> to <div class="head3">
-      content.querySelectorAll('h3').forEach(h3 => {
-        const div = document.createElement('div');
-        div.className = 'head3';
-        if (h3.id) div.id = h3.id;
-        div.innerHTML = h3.innerHTML;
-        h3.replaceWith(div);
-      });
-      
-      // Transform <h2> to <div class="head3 newhead-uc">  
-      content.querySelectorAll('h2').forEach(h2 => {
-        const div = document.createElement('div');
-        div.className = 'head3 newhead-uc';
-        div.innerHTML = h2.innerHTML;
-        h2.replaceWith(div);
-      });
-      
-      // Transform <strong> inside .bodypara to <span class="head3">
-      content.querySelectorAll('.bodypara > strong:first-child').forEach(strong => {
-        const span = document.createElement('span');
-        span.className = 'head3';
-        span.innerHTML = strong.innerHTML;
-        // Move the remaining text after the span
-        const parent = strong.parentElement;
-        strong.replaceWith(span);
-      });
-      
-      // Add indication-li class to ULs
-      content.querySelectorAll('ul').forEach(ul => {
-        ul.classList.add('indication-li');
-      });
-      
-      // Add bodypara class to LIs
-      content.querySelectorAll('li').forEach(li => {
-        li.classList.add('bodypara');
-      });
-      
-      // Wrap content in ISI structure
-      fragWrapper.classList.add('cmp-footer-isi-content-element');
-      content.classList.add('isi-content');
-    }
-  }
-  
-  // Transform clinical section
-  const sections = document.querySelectorAll('main > .section');
-  if (sections[1]) {
-    const wrapper = sections[1].querySelector('.default-content-wrapper');
-    if (wrapper) {
-      // Add source container classes
-      sections[1].classList.add('column-control');
-      wrapper.classList.add('home-content', 'container', 'ptop200');
-      
-      // Wrap paragraphs in secondPara div
-      const secondPara = document.createElement('div');
-      secondPara.className = 'secondPara';
-      while (wrapper.firstChild) {
-        secondPara.appendChild(wrapper.firstChild);
+wn')) {
+        document.querySelectorAll('.dropdown-menu.show').forEach(function(m) { m.classList.remove('show'); });
       }
-      wrapper.appendChild(secondPara);
-      
-      // Transform <strong> to <span class="blue bold">
-      secondPara.querySelectorAll('p strong').forEach(strong => {
-        const span = document.createElement('span');
-        span.className = 'blue bold';
-        span.innerHTML = strong.innerHTML;
-        strong.replaceWith(span);
-      });
-    }
+    });
+    return true;
   }
-  
-  // Transform hero section
-  if (sections[0]) {
-    const hero = sections[0].querySelector('.hero');
-    if (hero) {
-      hero.classList.add('left-banner');
-      // Add banner-content wrapper
-      const innerDiv = hero.querySelector(':scope > div > div');
-      if (innerDiv) {
-        innerDiv.classList.add('banner-content', 'contentBlock');
-      }
-    }
-  }
-}
-
-// Run after all blocks are loaded
-if (document.readyState === 'complete') {
-  setTimeout(transformToSourceDOM, 3000);
-} else {
-  window.addEventListener('load', () => setTimeout(transformToSourceDOM, 3000));
-}
-
+  var attempts = 0;
+  var interval = setInterval(function() { if (setup() || ++attempts > 30) clearInterval(interval); }, 300);
+})();
+() || ++attempts > 30) clearInterval(interval); }, 300);
+})();
