@@ -1,0 +1,1070 @@
+/* zeposia-uc-native.css — Native EDS styles for UC pages (de-overlaid)
+   Matches computed styles from source: www.zeposiahcp.com/ulcerative-colitis
+   All values extracted from live page computed styles */
+
+/* ===== GLOBAL UC PAGE STYLES ===== */
+body.ucsite {
+  color: rgb(67, 67, 67);
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+body.ucsite main {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.ucsite main > .section {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ===== HEADER ===== */
+body.ucsite header .header-wrapper {
+  max-width: 100%;
+  background-color: #fff;
+}
+
+body.ucsite header nav {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 91px;
+  box-sizing: border-box;
+}
+
+body.ucsite header nav p {
+  margin: 0;
+  font-size: 14px;
+}
+
+body.ucsite header nav a {
+  color: rgb(0, 50, 160);
+  text-decoration: none;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+}
+
+body.ucsite header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+body.ucsite header nav li {
+  margin: 0;
+}
+
+/* ===== HERO SECTION ===== */
+body.ucsite main > .section:first-child {
+  max-width: 100%;
+  padding: 0;
+  background-color: #A4E2FF;
+}
+
+body.ucsite .hero-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 30px 0 20px;
+}
+
+body.ucsite .hero-wrapper .hero {
+  padding: 0;
+}
+
+body.ucsite .hero-wrapper .hero > div > div {
+  padding: 68px 15px 0 15px;
+}
+
+body.ucsite .hero-wrapper .hero p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+/* Hero intro line */
+body.ucsite .hero-wrapper .hero > div > div > p:first-child {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+/* H1 */
+body.ucsite .hero-wrapper h1,
+body.ucsite main h1 {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-size: 36px;
+  line-height: 38px;
+  color: rgb(0, 50, 160);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+/* Bold strong text in hero */
+body.ucsite .hero-wrapper .hero strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+/* CTA button */
+body.ucsite .hero-wrapper .hero .button-container a,
+body.ucsite .hero-wrapper .hero a.button {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(3, 50, 160);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 13px;
+  text-decoration: none;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Footnotes */
+body.ucsite .hero-wrapper .hero sup {
+  font-size: 10px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ===== CLINICAL TRIAL INFO (Section 2) ===== */
+body.ucsite main > .section:nth-child(2) {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 10px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+/* ===== ISI FRAGMENT (Section 3) ===== */
+body.ucsite .fragment-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper .fragment {
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper h2,
+body.ucsite .fragment-wrapper h3 {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper h2 {
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(0, 50, 160);
+  border-top: 3px solid rgb(0, 50, 160);
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+body.ucsite .fragment-wrapper h3 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body.ucsite .fragment-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+body.ucsite .fragment-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite .fragment-wrapper ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+body.ucsite .fragment-wrapper li {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper a {
+  color: rgb(0, 50, 160);
+  text-decoration: underline;
+}
+
+/* ===== REFERENCES (Section 4) ===== */
+body.ucsite main > .section:nth-child(4) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper ol {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  padding-left: 20px;
+  margin: 0;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper li {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper em {
+  font-style: italic;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 3px solid rgb(0, 50, 160);
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  max-width: 100%;
+}
+
+body.ucsite .sticky-isi-wrapper .sticky-isi p {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(0, 50, 160);
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+body.ucsite footer .footer-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+body.ucsite footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+body.ucsite footer nav li {
+  margin: 0;
+}
+
+body.ucsite footer nav a {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  color: rgb(67, 67, 67);
+  text-decoration: none;
+}
+
+body.ucsite footer p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 5px;
+}
+
+/* ===== HERO BLOCK OVERRIDES (override blocks/hero/hero.css) ===== */
+body.ucsite .hero {
+  background: #A4E2FF;
+  padding: 30px 0;
+  min-height: auto;
+  text-align: left;
+  overflow: visible;
+}
+
+body.ucsite .hero h1 {
+  color: rgb(0, 50, 160);
+  font-size: 36px;
+  font-weight: 700;
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  line-height: 38px;
+  max-width: none;
+  margin: 0 0 8px;
+}
+
+body.ucsite .hero p {
+  color: rgb(67, 67, 67);
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+body.ucsite .hero > div > div > p:first-child {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+body.ucsite .hero strong {
+  color: rgb(0, 50, 160);
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite .hero a {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgb(3, 50, 160);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 13px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+body.ucsite .hero picture {
+  position: static;
+  opacity: 1;
+}
+
+body.ucsite .hero img {
+  width: auto;
+  height: auto;
+  object-fit: none;
+}
+
+/* ===== HEIGHT/SPACING CORRECTIONS (match source layout) ===== */
+/* Header height: source is 91px */
+body.ucsite header .header-wrapper {
+  min-height: 91px;
+  box-sizing: border-box;
+}
+
+/* Hero total height should be 539px */
+body.ucsite main > .section:first-child {
+  min-height: 539px;
+  box-sizing: border-box;
+}
+
+body.ucsite .hero {
+  min-height: 539px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+/* Clinical section: minimal spacing to match source 306px height */
+body.ucsite main > .section:nth-child(2) {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* ISI fragment: reduce space between sections */
+body.ucsite main > .section:nth-child(3) {
+  padding-top: 0;
+}
+
+/* ===== HERO SECTION — CENTERED LAYOUT (matching source screenshot) ===== */
+body.ucsite main > .section:first-child {
+  max-width: 100%;
+  padding: 0;
+  background-color: #A4E2FF;
+}
+
+body.ucsite .hero-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+body.ucsite .hero {
+  background: #A4E2FF;
+  padding: 40px 20px;
+  min-height: 539px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: visible;
+  position: relative;
+}
+
+body.ucsite .hero > div > div {
+  padding-top: 68px;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 68px 15px 0 15px;
+}
+
+body.ucsite .hero h1 {
+  color: rgb(0, 50, 160);
+  font-size: 42px;
+  line-height: 48px;
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 300;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+/* "WITH ZEPOSIA" part needs to be bold — handled by the H1 containing both lines */
+/* In the source, the h1 has "BREAK THE CYCLE" (light) + "WITH ZEPOSIA" (bold) */
+
+body.ucsite .hero p {
+  color: rgb(67, 67, 67);
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Hero intro paragraph (first p — the patient message) */
+body.ucsite .hero > div > div > p:first-child {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  margin-bottom: 15px;
+}
+
+/* "Take the next step" strong text */
+body.ucsite .hero strong {
+  color: rgb(0, 50, 160);
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* CTA Button "View the Data" */
+body.ucsite .hero a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(0, 32, 80);
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 200px;
+  margin: 15px 0;
+}
+
+/* Footnotes — left-aligned, smaller */
+body.ucsite .hero > div > div > p:nth-last-child(-n+4) {
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 4px;
+}
+
+body.ucsite .hero picture,
+body.ucsite .hero img {
+  position: static;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  object-fit: none;
+  display: inline-block;
+}
+
+body.ucsite .hero sup {
+  font-size: 9px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ===== CLINICAL TRIAL INFO (Section 2) ===== */
+body.ucsite main > .section:nth-child(2) {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 10px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+/* ===== ISI FRAGMENT (Section 3) ===== */
+body.ucsite .fragment-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper .fragment {
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper h2,
+body.ucsite .fragment-wrapper h3 {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper h2 {
+  font-size: 20px;
+  line-height: 22px;
+  color: rgb(0, 50, 160);
+  border-top: 3px solid rgb(0, 50, 160);
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+body.ucsite .fragment-wrapper h3 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body.ucsite .fragment-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+body.ucsite .fragment-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite .fragment-wrapper ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+body.ucsite .fragment-wrapper li {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper a {
+  color: rgb(0, 50, 160);
+  text-decoration: underline;
+}
+
+/* ===== REFERENCES (Section 4) ===== */
+body.ucsite main > .section:nth-child(4) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper ol {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  padding-left: 20px;
+  margin: 0;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper li {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper em {
+  font-style: italic;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 3px solid rgb(0, 50, 160);
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  max-width: 100%;
+}
+
+body.ucsite .sticky-isi-wrapper .sticky-isi p {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(0, 50, 160);
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+body.ucsite footer .footer-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+body.ucsite footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+body.ucsite footer nav li {
+  margin: 0;
+}
+
+body.ucsite footer nav a {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  color: rgb(67, 67, 67);
+  text-decoration: none;
+}
+
+body.ucsite footer p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 5px;
+}
+
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+background-color: #f8f9fa;
+border-top: 1px solid #e0e0e0;
+}
+
+body.ucsite footer .footer-wrapper {
+max-width: 1020px;
+margin: 0 auto;
+padding: 20px 15px;
+}
+
+body.ucsite footer nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+body.ucsite footer nav a {
+font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+font-size: 12px;
+color: rgb(67, 67, 67);
+text-decoration: none;
+}
+
+body.ucsite footer p {
+font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+font-size: 12px;
+line-height: 16px;
+color: rgb(67, 67, 67);
+margin-bottom: 5px;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #fff;
+border-top: 3px solid rgb(0, 50, 160);
+z-index: 1000;
+padding: 10px 20px;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+max-width: 100%;
+}
+
+body.ucsite .sticky-isi-wrapper .sticky-isi p {
+font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+font-weight: 700;
+font-size: 14px;
+color: rgb(0, 50, 160);
+margin: 0;
+}
+
+
+/* ===== HERO REFINEMENTS (iteration 7) ===== */
+
+/* H1: "BREAK THE CYCLE" light (300) on first line, "WITH ZEPOSIA" bold (700) on second line */
+/* Since EDS renders it as one h1, we use CSS to make the overall h1 a medium weight
+   and the key visual is: large blue centered text. Source uses 300/700 split via spans
+   but the overall impression at 42px is: light top line, bold bottom line */
+body.ucsite .hero h1 {
+  font-size: 40px;
+  line-height: 38px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: rgb(0, 50, 160);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 5px 0 15px;
+}
+
+/* Benefits row — the paragraph with pill icon + "+" separators */
+/* This paragraph contains: img + "Highly selective oral + Rapid response... + Well-established..." */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, rgba(0,50,160,0.08) 0%, rgba(0,50,160,0.03) 100%);
+  border-radius: 8px;
+  padding: 15px 25px;
+  margin: 15px auto;
+  max-width: 700px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(50, 50, 50);
+}
+
+/* Pill icon in benefits */
+body.ucsite .hero > div > div > p:nth-child(4) img,
+body.ucsite .hero > div > div > p:nth-child(4) picture {
+  width: 35px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* CTA "View the Data" button — make it more prominent */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin: 20px 0 25px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(5) a,
+body.ucsite .hero a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 30, 80);
+  color: #fff;
+  padding: 16px 35px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 220px;
+}
+
+/* Footnotes section (last 4 paragraphs in hero) */
+body.ucsite .hero > div > div > p:nth-child(n+6) {
+  text-align: left;
+  font-size: 12px;
+  line-height: 14px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 3px;
+  max-width: 1020px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(n+6) strong {
+  color: rgb(0, 50, 160);
+  font-size: 12px;
+}
+
+/* Pill icon as CSS pseudo-element (since inline <img> fails through EDS media pipeline) */
+body.ucsite .hero > div > div > p:nth-child(4)::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 60px;
+  background: url('/images/uc/icon_pill_2.svg') no-repeat center;
+  background-size: contain;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+/* Force H1 to 2-line rendering like source */
+body.ucsite .hero h1 {
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 38px;
+}
+
+/* ===== EXACT SOURCE-MATCHED HERO ELEMENTS (iteration 12) ===== */
+
+/* Benefit box: semi-transparent white overlay */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 20px 20px;
+  padding: 12px 20px;
+  margin: 0 auto 15px;
+  max-width: 478px;
+  width: 478px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(0, 50, 160);
+}
+
+/* "Take the next step" - should be RED, semibold */
+body.ucsite .hero > div > div > p:nth-child(3) strong {
+  color: rgb(249, 66, 58);
+  font-family: 'MontserratSemiBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Override the earlier blue color for this specific strong */
+body.ucsite .hero > div > div > p:nth-child(3) {
+  margin-bottom: 0;
+}
+
+/* Pill icon pseudo-element refinement */
+body.ucsite .hero > div > div > p:nth-child(4)::before {
+  width: 18px;
+  height: 45px;
+  margin-right: 5px;
+}
+
+/* CTA button exact match */
+body.ucsite .hero > div > div > p:nth-child(5) a {
+  background-color: rgb(3, 50, 160);
+  color: #fff;
+  padding: 0 0 0 12px;
+  border-radius: 13px;
+  width: 207px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  min-width: unset;
+}
+
+/* CTA arrow indicator (right side) */
+body.ucsite .hero > div > div > p:nth-child(5) a::after {
+  content: '›';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 8px;
+  color: #fff;
+}
+
+/* Center the CTA button */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 15px;
+}
+
+/* ===== PRECISION FIXES (iteration 15) ===== */
+
+/* H1 exact: 36px/38px weight 500 */
+body.ucsite .hero h1 {
+  font-size: 36px;
+  line-height: 38px;
+  font-weight: 500;
+  max-width: 440px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Footnotes: 12px/14px, margin-bottom 3px */
+body.ucsite .hero > div > div > p:nth-child(n+6) {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 3px;
+  text-align: left;
+}
+
+/* Footnote bold-blue labels: NOT bold, just blue color, weight 400 */
+body.ucsite .hero > div > div > p:nth-child(n+6) strong {
+  color: rgb(0, 50, 160);
+  font-weight: 400;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* Intro text exact: 20px/22px weight 500 */
+body.ucsite .hero > div > div > p:first-child {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+/* ===== SPACING PRECISION (iteration 16) ===== */
+
+/* Intro to H1 spacing: source has intro ending at y=103, H1 at y=106 (3px gap) */
+/* Our intro is at y=68, height 22px, ends at y=90. H1 at y=98 (8px gap). Close enough. */
+/* The bigger issue is H1 to benefit box and box to footnotes. */
+
+/* Reduce space between CTA and footnotes by making CTA shorter */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin: 10px 0 8px;
+}
+
+/* Make benefit box slightly more compact */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  padding: 8px 15px;
+  margin: 0 auto 8px;
+  min-height: 48px;
+}
+
+/* Reduce "Take the next step" margin */  
+body.ucsite .hero > div > div > p:nth-child(3) {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+/* Bring footnotes closer: reduce bottom margin of CTA paragraph */
+body.ucsite .hero > div > div > p:nth-child(5) a {
+  height: 44px;
+  padding: 0 0 0 12px;
+}
+
+/* Add gap between H1 and "Take the next step" */
+body.ucsite .hero h1 {
+  margin-bottom: 15px;
+}
+
+/* ===== POSITION FINE-TUNING (iteration 17) ===== */
+/* H1 needs 8px more top space */
+body.ucsite .hero h1 {
+  margin-top: 8px;
+}
+
+/* CTA needs to be 21px lower — add margin-top to the CTA paragraph */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+iA3KSA9PT09PSAqLwoKLyogSDE6ICJCUkVB\nSyBUSEUgQ1lDTEUiIGxpZ2h0ICgzMDApIG9uIGZpcnN0IGxpbmUsICJXSVRI\nIFpFUE9TSUEiIGJvbGQgKDcwMCkgb24gc2Vjb25kIGxpbmUgKi8KLyogU2lu\nY2UgRURTIHJlbmRlcnMgaXQgYXMgb25lIGgxLCB3ZSB1c2UgQ1NTIHRvIG1h\na2UgdGhlIG92ZXJhbGwgaDEgYSBtZWRpdW0gd2VpZ2h0CiAgIGFuZCB0aGUg\na2V5IHZpc3VhbCBpczogbGFyZ2UgYmx1ZSBjZW50ZXJlZCB0ZXh0LiBTb3Vy\nY2UgdXNlcyAzMDAvNzAwIHNwbGl0IHZpYSBzcGFucwogICBidXQgdGhlIG92\nZXJhbGwgaW1wcmVzc2lvbiBhdCA0MnB4IGlzOiBsaWdodCB0b3AgbGluZSwg\nYm9sZCBib3R0b20gbGluZSAqLwpib2R5LnVjc2l0ZSAuaGVybyBoMSB7CiAg\nZm9udC1zaXplOiA0MHB4OwogIGxpbmUtaGVpZ2h0OiAzOHB4OwogIGZvbnQt\nd2VpZ2h0OiA0MDA7CiAgbGV0dGVyLXNwYWNpbmc6IC0wLjVweDsKICBjb2xv\ncjogcmdiKDAsIDUwLCAxNjApOwogIGZvbnQtZmFtaWx5OiAnTW9udHNlcnJh\ndCcsIEFyaWFsLCBzYW5zLXNlcmlmOwogIG1hcmdpbjogNXB4IDAgMTVweDsK\nfQoKLyogQmVuZWZpdHMgcm93IOKAlCB0aGUgcGFyYWdyYXBoIHdpdGggcGls\nbCBpY29uICsgIisiIHNlcGFyYXRvcnMgKi8KLyogVGhpcyBwYXJhZ3JhcGgg\nY29udGFpbnM6IGltZyArICJIaWdobHkgc2VsZWN0aXZlIG9yYWwgKyBSYXBp\nZCByZXNwb25zZS4uLiArIFdlbGwtZXN0YWJsaXNoZWQuLi4iICovCmJvZHku\ndWNzaXRlIC5oZXJvID4gZGl2ID4gZGl2ID4gcDpudGgtY2hpbGQoNCkgewog\nIGRpc3BsYXk6IGZsZXg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBqdXN0\naWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICBnYXA6IDhweDsKICBiYWNrZ3JvdW5k\nOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCByZ2JhKDAsNTAsMTYwLDAuMDgp\nIDAlLCByZ2JhKDAsNTAsMTYwLDAuMDMpIDEwMCUpOwogIGJvcmRlci1yYWRp\ndXM6IDhweDsKICBwYWRkaW5nOiAxNXB4IDI1cHg7CiAgbWFyZ2luOiAxNXB4\nIGF1dG87CiAgbWF4LXdpZHRoOiA3MDBweDsKICBmb250LXNpemU6IDE0cHg7\nCiAgbGluZS1oZWlnaHQ6IDE4cHg7CiAgY29sb3I6IHJnYig1MCwgNTAsIDUw\nKTsKfQoKLyogUGlsbCBpY29uIGluIGJlbmVmaXRzICovCmJvZHkudWNzaXRl\nIC5oZXJvID4gZGl2ID4gZGl2ID4gcDpudGgtY2hpbGQoNCkgaW1nLApib2R5\nLnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRpdiA+IHA6bnRoLWNoaWxkKDQpIHBp\nY3R1cmUgewogIHdpZHRoOiAzNXB4OwogIGhlaWdodDogYXV0bzsKICBmbGV4\nLXNocmluazogMDsKfQoKLyogQ1RBICJWaWV3IHRoZSBEYXRhIiBidXR0b24g\n4oCUIG1ha2UgaXQgbW9yZSBwcm9taW5lbnQgKi8KYm9keS51Y3NpdGUgLmhl\ncm8gPiBkaXYgPiBkaXYgPiBwOm50aC1jaGlsZCg1KSB7CiAgbWFyZ2luOiAy\nMHB4IDAgMjVweDsKfQoKYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYgPiBkaXYg\nPiBwOm50aC1jaGlsZCg1KSBhLApib2R5LnVjc2l0ZSAuaGVybyBhLmJ1dHRv\nbiB7CiAgZGlzcGxheTogaW5saW5lLWZsZXg7CiAgYWxpZ24taXRlbXM6IGNl\nbnRlcjsKICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47CiAgYmFj\na2dyb3VuZC1jb2xvcjogcmdiKDAsIDMwLCA4MCk7CiAgY29sb3I6ICNmZmY7\nCiAgcGFkZGluZzogMTZweCAzNXB4OwogIGJvcmRlci1yYWRpdXM6IDI4cHg7\nCiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOwogIGZvbnQtZmFtaWx5OiAnTW9u\ndHNlcnJhdCcsIEFyaWFsLCBzYW5zLXNlcmlmOwogIGZvbnQtc2l6ZTogMTZw\neDsKICBmb250LXdlaWdodDogNDAwOwogIG1pbi13aWR0aDogMjIwcHg7Cn0K\nCi8qIEZvb3Rub3RlcyBzZWN0aW9uIChsYXN0IDQgcGFyYWdyYXBocyBpbiBo\nZXJvKSAqLwpib2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRpdiA+IHA6bnRo\nLWNoaWxkKG4rNikgewogIHRleHQtYWxpZ246IGxlZnQ7CiAgZm9udC1zaXpl\nOiAxMnB4OwogIGxpbmUtaGVpZ2h0OiAxNHB4OwogIGNvbG9yOiByZ2IoODAs\nIDgwLCA4MCk7CiAgbWFyZ2luLWJvdHRvbTogM3B4OwogIG1heC13aWR0aDog\nMTAyMHB4Owp9Cgpib2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRpdiA+IHA6\nbnRoLWNoaWxkKG4rNikgc3Ryb25nIHsKICBjb2xvcjogcmdiKDAsIDUwLCAx\nNjApOwogIGZvbnQtc2l6ZTogMTJweDsKfQoKLyogUGlsbCBpY29uIGFzIENT\nUyBwc2V1ZG8tZWxlbWVudCAoc2luY2UgaW5saW5lIDxpbWc+IGZhaWxzIHRo\ncm91Z2ggRURTIG1lZGlhIHBpcGVsaW5lKSAqLwpib2R5LnVjc2l0ZSAuaGVy\nbyA+IGRpdiA+IGRpdiA+IHA6bnRoLWNoaWxkKDQpOjpiZWZvcmUgewogIGNv\nbnRlbnQ6ICcnOwogIGRpc3BsYXk6IGlubGluZS1ibG9jazsKICB3aWR0aDog\nMzBweDsKICBoZWlnaHQ6IDYwcHg7CiAgYmFja2dyb3VuZDogdXJsKCcvaW1h\nZ2VzL3VjL2ljb25fcGlsbF8yLnN2ZycpIG5vLXJlcGVhdCBjZW50ZXI7CiAg\nYmFja2dyb3VuZC1zaXplOiBjb250YWluOwogIGZsZXgtc2hyaW5rOiAwOwog\nIG1hcmdpbi1yaWdodDogMTBweDsKfQoKLyogRm9yY2UgSDEgdG8gMi1saW5l\nIHJlbmRlcmluZyBsaWtlIHNvdXJjZSAqLwpib2R5LnVjc2l0ZSAuaGVybyBo\nMSB7CiAgbWF4LXdpZHRoOiA0NDBweDsKICBtYXJnaW4tbGVmdDogYXV0bzsK\nICBtYXJnaW4tcmlnaHQ6IGF1dG87CiAgbGluZS1oZWlnaHQ6IDM4cHg7Cn0K\nCi8qID09PT09IEVYQUNUIFNPVVJDRS1NQVRDSEVEIEhFUk8gRUxFTUVOVFMg\nKGl0ZXJhdGlvbiAxMikgPT09PT0gKi8KCi8qIEJlbmVmaXQgYm94OiBzZW1p\nLXRyYW5zcGFyZW50IHdoaXRlIG92ZXJsYXkgKi8KYm9keS51Y3NpdGUgLmhl\ncm8gPiBkaXYgPiBkaXYgPiBwOm50aC1jaGlsZCg0KSB7CiAgYmFja2dyb3Vu\nZDogcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjYpOwogIGJvcmRlci1yYWRpdXM6\nIDAgMCAyMHB4IDIwcHg7CiAgcGFkZGluZzogMTJweCAyMHB4OwogIG1hcmdp\nbjogMCBhdXRvIDE1cHg7CiAgbWF4LXdpZHRoOiA0NzhweDsKICB3aWR0aDog\nNDc4cHg7CiAgbWluLWhlaWdodDogNTJweDsKICBkaXNwbGF5OiBmbGV4Owog\nIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAganVzdGlmeS1jb250ZW50OiBjZW50\nZXI7CiAgZ2FwOiA1cHg7CiAgZm9udC1zaXplOiAxNHB4OwogIGxpbmUtaGVp\nZ2h0OiAxOHB4OwogIGNvbG9yOiByZ2IoMCwgNTAsIDE2MCk7Cn0KCi8qICJU\nYWtlIHRoZSBuZXh0IHN0ZXAiIC0gc2hvdWxkIGJlIFJFRCwgc2VtaWJvbGQg\nKi8KYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYgPiBkaXYgPiBwOm50aC1jaGls\nZCgzKSBzdHJvbmcgewogIGNvbG9yOiByZ2IoMjQ5LCA2NiwgNTgpOwogIGZv\nbnQtZmFtaWx5OiAnTW9udHNlcnJhdFNlbWlCb2xkJywgJ01vbnRzZXJyYXQn\nLCBBcmlhbCwgc2Fucy1zZXJpZjsKICBmb250LXdlaWdodDogNjAwOwogIGZv\nbnQtc2l6ZTogMTRweDsKfQoKLyogT3ZlcnJpZGUgdGhlIGVhcmxpZXIgYmx1\nZSBjb2xvciBmb3IgdGhpcyBzcGVjaWZpYyBzdHJvbmcgKi8KYm9keS51Y3Np\ndGUgLmhlcm8gPiBkaXYgPiBkaXYgPiBwOm50aC1jaGlsZCgzKSB7CiAgbWFy\nZ2luLWJvdHRvbTogMDsKfQoKLyogUGlsbCBpY29uIHBzZXVkby1lbGVtZW50\nIHJlZmluZW1lbnQgKi8KYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYgPiBkaXYg\nPiBwOm50aC1jaGlsZCg0KTo6YmVmb3JlIHsKICB3aWR0aDogMThweDsKICBo\nZWlnaHQ6IDQ1cHg7CiAgbWFyZ2luLXJpZ2h0OiA1cHg7Cn0KCi8qIENUQSBi\ndXR0b24gZXhhY3QgbWF0Y2ggKi8KYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYg\nPiBkaXYgPiBwOm50aC1jaGlsZCg1KSBhIHsKICBiYWNrZ3JvdW5kLWNvbG9y\nOiByZ2IoMywgNTAsIDE2MCk7CiAgY29sb3I6ICNmZmY7CiAgcGFkZGluZzog\nMCAwIDAgMTJweDsKICBib3JkZXItcmFkaXVzOiAxM3B4OwogIHdpZHRoOiAy\nMDdweDsKICBoZWlnaHQ6IDUycHg7CiAgZGlzcGxheTogZmxleDsKICBhbGln\nbi1pdGVtczogY2VudGVyOwogIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0\nd2VlbjsKICBmb250LWZhbWlseTogJ01vbnRzZXJyYXRSZWd1bGFyJywgJ01v\nbnRzZXJyYXQnLCBBcmlhbCwgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDE0\ncHg7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICB0ZXh0LWRlY29yYXRpb246IG5v\nbmU7CiAgbWluLXdpZHRoOiB1bnNldDsKfQoKLyogQ1RBIGFycm93IGluZGlj\nYXRvciAocmlnaHQgc2lkZSkgKi8KYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYg\nPiBkaXYgPiBwOm50aC1jaGlsZCg1KSBhOjphZnRlciB7CiAgY29udGVudDog\nJ+KAuic7CiAgZGlzcGxheTogZmxleDsKICBhbGlnbi1pdGVtczogY2VudGVy\nOwogIGp1c3RpZnktY29udGVudDogY2VudGVyOwogIHdpZHRoOiAzNnB4Owog\nIGhlaWdodDogMzZweDsKICBiYWNrZ3JvdW5kOiByZ2JhKDI1NSwyNTUsMjU1\nLDAuMik7CiAgYm9yZGVyLXJhZGl1czogNTAlOwogIGZvbnQtc2l6ZTogMjRw\neDsKICBtYXJnaW4tcmlnaHQ6IDhweDsKICBjb2xvcjogI2ZmZjsKfQoKLyog\nQ2VudGVyIHRoZSBDVEEgYnV0dG9uICovCmJvZHkudWNzaXRlIC5oZXJvID4g\nZGl2ID4gZGl2ID4gcDpudGgtY2hpbGQoNSkgewogIHRleHQtYWxpZ246IGNl\nbnRlcjsKICBkaXNwbGF5OiBmbGV4OwogIGp1c3RpZnktY29udGVudDogY2Vu\ndGVyOwogIG1hcmdpbjogMjBweCAwIDE1cHg7Cn0KCi8qID09PT09IFBSRUNJ\nU0lPTiBGSVhFUyAoaXRlcmF0aW9uIDE1KSA9PT09PSAqLwoKLyogSDEgZXhh\nY3Q6IDM2cHgvMzhweCB3ZWlnaHQgNTAwICovCmJvZHkudWNzaXRlIC5oZXJv\nIGgxIHsKICBmb250LXNpemU6IDM2cHg7CiAgbGluZS1oZWlnaHQ6IDM4cHg7\nCiAgZm9udC13ZWlnaHQ6IDUwMDsKICBtYXgtd2lkdGg6IDQ0MHB4OwogIG1h\ncmdpbi1sZWZ0OiBhdXRvOwogIG1hcmdpbi1yaWdodDogYXV0bzsKICB0ZXh0\nLWFsaWduOiBjZW50ZXI7Cn0KCi8qIEZvb3Rub3RlczogMTJweC8xNHB4LCBt\nYXJnaW4tYm90dG9tIDNweCAqLwpib2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+\nIGRpdiA+IHA6bnRoLWNoaWxkKG4rNikgewogIGZvbnQtc2l6ZTogMTJweDsK\nICBsaW5lLWhlaWdodDogMTRweDsKICBtYXJnaW4tYm90dG9tOiAzcHg7CiAg\ndGV4dC1hbGlnbjogbGVmdDsKfQoKLyogRm9vdG5vdGUgYm9sZC1ibHVlIGxh\nYmVsczogTk9UIGJvbGQsIGp1c3QgYmx1ZSBjb2xvciwgd2VpZ2h0IDQwMCAq\nLwpib2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRpdiA+IHA6bnRoLWNoaWxk\nKG4rNikgc3Ryb25nIHsKICBjb2xvcjogcmdiKDAsIDUwLCAxNjApOwogIGZv\nbnQtd2VpZ2h0OiA0MDA7CiAgZm9udC1mYW1pbHk6ICdNb250c2VycmF0UmVn\ndWxhcicsICdNb250c2VycmF0JywgQXJpYWwsIHNhbnMtc2VyaWY7CiAgZm9u\ndC1zaXplOiAxMnB4Owp9CgovKiBJbnRybyB0ZXh0IGV4YWN0OiAyMHB4LzIy\ncHggd2VpZ2h0IDUwMCAqLwpib2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRp\ndiA+IHA6Zmlyc3QtY2hpbGQgewogIGZvbnQtc2l6ZTogMjBweDsKICBsaW5l\nLWhlaWdodDogMjJweDsKICBmb250LXdlaWdodDogNTAwOwogIGZvbnQtZmFt\naWx5OiAnTW9udHNlcnJhdCcsIEFyaWFsLCBzYW5zLXNlcmlmOwogIGNvbG9y\nOiByZ2IoNjcsIDY3LCA2Nyk7CiAgbWFyZ2luLWJvdHRvbTogOHB4Owp9Cgov\nKiA9PT09PSBTUEFDSU5HIFBSRUNJU0lPTiAoaXRlcmF0aW9uIDE2KSA9PT09\nPSAqLwoKLyogSW50cm8gdG8gSDEgc3BhY2luZzogc291cmNlIGhhcyBpbnRy\nbyBlbmRpbmcgYXQgeT0xMDMsIEgxIGF0IHk9MTA2ICgzcHggZ2FwKSAqLwov\nKiBPdXIgaW50cm8gaXMgYXQgeT02OCwgaGVpZ2h0IDIycHgsIGVuZHMgYXQg\neT05MC4gSDEgYXQgeT05OCAoOHB4IGdhcCkuIENsb3NlIGVub3VnaC4gKi8K\nLyogVGhlIGJpZ2dlciBpc3N1ZSBpcyBIMSB0byBiZW5lZml0IGJveCBhbmQg\nYm94IHRvIGZvb3Rub3Rlcy4gKi8KCi8qIFJlZHVjZSBzcGFjZSBiZXR3ZWVu\nIENUQSBhbmQgZm9vdG5vdGVzIGJ5IG1ha2luZyBDVEEgc2hvcnRlciAqLwpi\nb2R5LnVjc2l0ZSAuaGVybyA+IGRpdiA+IGRpdiA+IHA6bnRoLWNoaWxkKDUp\nIHsKICBtYXJnaW46IDEwcHggMCA4cHg7Cn0KCi8qIE1ha2UgYmVuZWZpdCBi\nb3ggc2xpZ2h0bHkgbW9yZSBjb21wYWN0ICovCmJvZHkudWNzaXRlIC5oZXJv\nID4gZGl2ID4gZGl2ID4gcDpudGgtY2hpbGQoNCkgewogIHBhZGRpbmc6IDhw\neCAxNXB4OwogIG1hcmdpbjogMCBhdXRvIDhweDsKICBtaW4taGVpZ2h0OiA0\nOHB4Owp9CgovKiBSZWR1Y2UgIlRha2UgdGhlIG5leHQgc3RlcCIgbWFyZ2lu\nICovICAKYm9keS51Y3NpdGUgLmhlcm8gPiBkaXYgPiBkaXYgPiBwOm50aC1j\naGlsZCgzKSB7CiAgbWFyZ2luLWJvdHRvbTogMDsKICBtYXJnaW4tdG9wOiA1\ncHg7Cn0KCi8qIEJyaW5nIGZvb3Rub3RlcyBjbG9zZXI6IHJlZHVjZSBib3R0\nb20gbWFyZ2luIG9mIENUQSBwYXJhZ3JhcGggKi8KYm9keS51Y3NpdGUgLmhl\ncm8gPiBkaXYgPiBkaXYgPiBwOm50aC1jaGlsZCg1KSBhIHsKICBoZWlnaHQ6\nIDQ0cHg7CiAgcGFkZGluZzogMCAwIDAgMTJweDsKfQoKLyogQWRkIGdhcCBi\nZXR3ZWVuIEgxIGFuZCAiVGFrZSB0aGUgbmV4dCBzdGVwIiAqLwpib2R5LnVj\nc2l0ZSAuaGVybyBoMSB7CiAgbWFyZ2luLWJvdHRvbTogMTVweDsKfQoKLyog\nPT09PT0gUE9TSVRJT04gRklORS1UVU5JTkcgKGl0ZXJhdGlvbiAxNykgPT09\nPT0gKi8KLyogSDEgbmVlZHMgOHB4IG1vcmUgdG9wIHNwYWNlICovCmJvZHku\ndWNzaXRlIC5oZXJvIGgxIHsKICBtYXJnaW4tdG9wOiA4cHg7Cn0KCi8qIENU\nQSBuZWVkcyB0byBiZSAyMXB4IGxvd2VyIOKAlCBhZGQgbWFyZ2luLXRvcCB0\nbyB0aGUgQ1RBIHBhcmFncmFwaCAqLwpib2R5LnVjc2l0ZSAuaGVybyA+IGRp\ndiA+IGRpdiA+IHA6bnRoLWNoaWxkKDUpIHsKICBtYXJnaW4tdG9wOiAyOHB4\nOwogIG1hcmdpbi1ib3R0b206IDEycHg7Cn0K\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/AdobeDrago/zeposia/contents/styles/zeposia-uc-native.css?ref=c7b29f5",
+    "git": "https://api.github.com/repos/AdobeDrago/zeposia/git/blobs/12f0516ee5f67157ac9c56ef78881397f3670fb6",
+    "html": "https://github.com/AdobeDrago/zeposia/blob/c7b29f5/styles/zeposia-uc-native.css"
+  }
+}
+
+/* ===== ITERATION 20: Spacing fine-tune (safe approach) ===== */
+/* Move footnotes closer by reducing space after CTA */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin-bottom: 0;
+}
+
+/* Add slight margin to intro text to push H1 toward y=106 */
+body.ucsite .hero > div > div > p:first-child {
+  margin-bottom: 13px;
+}
+
+/* Higher specificity overrides */
+body.ucsite.uc-home .hero > div > div > p:first-child {
+  margin-bottom: 13px;
+}
+body.ucsite.uc-home .hero > div > div > p:nth-child(5) {
+  margin-bottom: 0;
+  margin-top: 18px;
+}
+
+/* Final override: intro stays at 8px margin, only CTA tightens */
+body.ucsite.uc-home .hero > div > div > p:first-child {
+  margin-bottom: 8px;
+}

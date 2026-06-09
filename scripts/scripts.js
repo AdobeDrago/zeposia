@@ -349,6 +349,19 @@ export function decorateMain(main) {
 async function loadEager(doc) {
   document.documentElement.lang = 'en';
   decorateTemplateAndTheme();
+
+  // Path-based body classes + styles for native EDS pages (replaces overlay-injected classes)
+  const path = window.location.pathname;
+  if (path.startsWith('/ulcerative-colitis')) {
+    document.body.classList.add('ucsite');
+    loadCSS(`${window.hlx.codeBasePath}/styles/zeposia-uc-native.css`);
+    if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
+      document.body.classList.add('uc-home');
+    }
+  } else if (path.startsWith('/multiple-sclerosis')) {
+    document.body.classList.add('mssite');
+  }
+
   const main = doc.querySelector('main');
   if (!main) return;
 
