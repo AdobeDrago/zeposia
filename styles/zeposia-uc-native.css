@@ -770,3 +770,80 @@ color: rgb(0, 50, 160);
 margin: 0;
 }
 
+
+/* ===== HERO REFINEMENTS (iteration 7) ===== */
+
+/* H1: "BREAK THE CYCLE" light (300) on first line, "WITH ZEPOSIA" bold (700) on second line */
+/* Since EDS renders it as one h1, we use CSS to make the overall h1 a medium weight
+   and the key visual is: large blue centered text. Source uses 300/700 split via spans
+   but the overall impression at 42px is: light top line, bold bottom line */
+body.ucsite .hero h1 {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  color: rgb(0, 50, 160);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 5px 0 15px;
+}
+
+/* Benefits row — the paragraph with pill icon + "+" separators */
+/* This paragraph contains: img + "Highly selective oral + Rapid response... + Well-established..." */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(180deg, rgba(0,50,160,0.08) 0%, rgba(0,50,160,0.03) 100%);
+  border-radius: 8px;
+  padding: 15px 25px;
+  margin: 15px auto;
+  max-width: 700px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(50, 50, 50);
+}
+
+/* Pill icon in benefits */
+body.ucsite .hero > div > div > p:nth-child(4) img,
+body.ucsite .hero > div > div > p:nth-child(4) picture {
+  width: 35px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* CTA "View the Data" button — make it more prominent */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin: 20px 0 25px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(5) a,
+body.ucsite .hero a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 30, 80);
+  color: #fff;
+  padding: 16px 35px;
+  border-radius: 28px;
+  text-decoration: none;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 220px;
+}
+
+/* Footnotes section (last 4 paragraphs in hero) */
+body.ucsite .hero > div > div > p:nth-child(n+6) {
+  text-align: left;
+  font-size: 11px;
+  line-height: 14px;
+  color: rgb(80, 80, 80);
+  margin-bottom: 3px;
+  max-width: 1020px;
+}
+
+body.ucsite .hero > div > div > p:nth-child(n+6) strong {
+  color: rgb(0, 50, 160);
+  font-size: 11px;
+}
