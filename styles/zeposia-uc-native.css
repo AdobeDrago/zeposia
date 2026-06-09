@@ -190,7 +190,7 @@ body.ucsite .fragment-wrapper h3 {
 }
 
 body.ucsite .fragment-wrapper h2 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   color: rgb(0, 50, 160);
   border-top: 3px solid rgb(0, 50, 160);
@@ -472,8 +472,8 @@ body.ucsite .hero p {
 /* Hero intro paragraph (first p — the patient message) */
 body.ucsite .hero > div > div > p:first-child {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 22px;
   font-weight: 500;
   color: rgb(50, 50, 50);
   margin-bottom: 15px;
@@ -575,7 +575,7 @@ body.ucsite .fragment-wrapper h3 {
 }
 
 body.ucsite .fragment-wrapper h2 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   color: rgb(0, 50, 160);
   border-top: 3px solid rgb(0, 50, 160);
@@ -940,4 +940,12 @@ body.ucsite .hero > div > div > p:nth-child(5) a::after {
   font-size: 24px;
   margin-right: 8px;
   color: #fff;
+}
+
+/* Center the CTA button */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 15px;
 }
