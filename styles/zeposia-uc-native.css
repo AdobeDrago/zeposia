@@ -1087,3 +1087,19 @@ body.ucsite header .header.block {
   padding: 16px 0;
   box-sizing: border-box;
 }
+
+/* ===== REMOVE SECTION GAPS (source has continuous flow) ===== */
+body.ucsite main > .section {
+  margin: 0;
+  padding: 0;
+}
+
+body.ucsite main > .section + .section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Hide sticky-isi section wrapper from flow (it's position:fixed anyway) */
+body.ucsite main > .section:has(.sticky-isi-wrapper) {
+  display: contents;
+}
