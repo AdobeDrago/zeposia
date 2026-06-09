@@ -1316,3 +1316,38 @@ body.ucsite .fragment-wrapper h3 {
 html {
   overflow-y: scroll;
 }
+
+/* ===== IMPROVEMENTS (clinical bg + ISI margins + rendering) ===== */
+
+/* Clinical section: blue bg for first 80px then white */
+body.ucsite main > .section:nth-child(2) {
+  background: linear-gradient(to bottom, #A4E2FF 0px, #A4E2FF 80px, #ffffff 81px, #ffffff 100%);
+}
+
+/* ISI fragment precise margins (source exact) */
+body.ucsite .fragment-wrapper p {
+  margin-bottom: 7px;
+}
+body.ucsite .fragment-wrapper li {
+  margin-bottom: 5px;
+}
+body.ucsite .fragment-wrapper h2:first-child {
+  margin-top: 5px;
+}
+body.ucsite .fragment-wrapper h3 {
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+/* Force scrollbar to match source container offset */
+html {
+  overflow-y: scroll;
+}
+
+/* Text rendering must match source */
+body.ucsite, body.ucsite * {
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
