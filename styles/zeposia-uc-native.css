@@ -97,3 +97,24 @@ body.ucsite header .header.block > div > ul > li > ul > li > a {
   font-size: 13px;
   color: #0032A0;
 }
+
+/* Override header block dark blue background */
+body.ucsite header .header.block {
+  background-color: #fff;
+}
+
+/* Logo as background image on the first link */
+body.ucsite header .header.block > div > p:first-child a {
+  display: block;
+  width: 250px;
+  height: 55px;
+  background: url('/images/uc/OZANIMOD_US_Logo_SPOT.jpg') no-repeat left center;
+  background-size: contain;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/* Fix header height */
+body.ucsite header .header.block {
+  min-height: 91px;
+}
