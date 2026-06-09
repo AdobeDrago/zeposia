@@ -70,7 +70,7 @@ body.ucsite header nav li {
 body.ucsite main > .section:first-child {
   max-width: 100%;
   padding: 0;
-  background-color: #E8F4FF;
+  background-color: #A4E2FF;
 }
 
 body.ucsite .hero-wrapper {
@@ -329,7 +329,7 @@ body.ucsite footer p {
 
 /* ===== HERO BLOCK OVERRIDES (override blocks/hero/hero.css) ===== */
 body.ucsite .hero {
-  background: #E8F4FF;
+  background: #A4E2FF;
   padding: 30px 0;
   min-height: auto;
   text-align: left;
@@ -422,7 +422,7 @@ body.ucsite main > .section:nth-child(3) {
 body.ucsite main > .section:first-child {
   max-width: 100%;
   padding: 0;
-  background-color: #E8F4FF;
+  background-color: #A4E2FF;
 }
 
 body.ucsite .hero-wrapper {
@@ -431,7 +431,7 @@ body.ucsite .hero-wrapper {
 }
 
 body.ucsite .hero {
-  background: #E8F4FF;
+  background: #A4E2FF;
   padding: 40px 20px;
   min-height: 539px;
   box-sizing: border-box;
