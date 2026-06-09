@@ -988,3 +988,38 @@ body.ucsite .hero > div > div > p:first-child {
   color: rgb(67, 67, 67);
   margin-bottom: 8px;
 }
+
+/* ===== SPACING PRECISION (iteration 16) ===== */
+
+/* Intro to H1 spacing: source has intro ending at y=103, H1 at y=106 (3px gap) */
+/* Our intro is at y=68, height 22px, ends at y=90. H1 at y=98 (8px gap). Close enough. */
+/* The bigger issue is H1 to benefit box and box to footnotes. */
+
+/* Reduce space between CTA and footnotes by making CTA shorter */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin: 10px 0 8px;
+}
+
+/* Make benefit box slightly more compact */
+body.ucsite .hero > div > div > p:nth-child(4) {
+  padding: 8px 15px;
+  margin: 0 auto 8px;
+  min-height: 48px;
+}
+
+/* Reduce "Take the next step" margin */  
+body.ucsite .hero > div > div > p:nth-child(3) {
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+/* Bring footnotes closer: reduce bottom margin of CTA paragraph */
+body.ucsite .hero > div > div > p:nth-child(5) a {
+  height: 44px;
+  padding: 0 0 0 12px;
+}
+
+/* Add gap between H1 and "Take the next step" */
+body.ucsite .hero h1 {
+  margin-bottom: 15px;
+}
