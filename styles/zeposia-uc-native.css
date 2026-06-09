@@ -444,7 +444,7 @@ body.ucsite .hero > div > div {
   padding-top: 68px;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 68px 15px 0 15px;
 }
 
 body.ucsite .hero h1 {
