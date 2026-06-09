@@ -492,6 +492,9 @@ if (isExpanded) {
 // Expand: show full ISI content, fill viewport
 isiEl.style.cssText = 'display:block;position:fixed;top:0;left:0;right:0;bottom:0;z-index:10000;background:#fff;overflow-y:auto;padding:20px 40px;max-height:100vh;';
 if (previewContainer) previewContainer.style.display = 'none';
+        // Keep header visible
+        var isiHeader = isi.querySelector('.isi-header');
+        if (isiHeader) isiHeader.style.display = 'flex';
 if (expandContainer) expandContainer.style.display = 'block';
 toggleIcon.textContent = '−';
 toggleText.textContent = 'COLLAPSE';
