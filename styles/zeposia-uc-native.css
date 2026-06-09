@@ -1117,3 +1117,64 @@ body.ucsite .fragment-wrapper h3 {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+
+/* ===== HEADER EXACT MATCH ===== */
+body.ucsite header {
+  background-color: #fff;
+  border-bottom: none;
+}
+
+body.ucsite header .header.block {
+  background-color: #fff;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body.ucsite header .header.block > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+body.ucsite header .header.block p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+body.ucsite header .header.block p:first-child {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+body.ucsite header .header.block p:first-child a {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+  text-decoration: none;
+}
+
+body.ucsite header .header.block ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+body.ucsite header .header.block li {
+  margin: 0;
+}
+
+body.ucsite header .header.block a {
+  font-size: 12px;
+  color: rgb(0, 50, 160);
+  text-decoration: none;
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+}
