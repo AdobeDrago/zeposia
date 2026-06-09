@@ -417,3 +417,356 @@ body.ucsite main > .section:nth-child(2) {
 body.ucsite main > .section:nth-child(3) {
   padding-top: 0;
 }
+
+/* ===== HERO SECTION — CENTERED LAYOUT (matching source screenshot) ===== */
+body.ucsite main > .section:first-child {
+  max-width: 100%;
+  padding: 0;
+  background-color: #E8F4FF;
+}
+
+body.ucsite .hero-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+
+body.ucsite .hero {
+  background: #E8F4FF;
+  padding: 40px 20px;
+  min-height: 539px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: visible;
+  position: relative;
+}
+
+body.ucsite .hero > div > div {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body.ucsite .hero h1 {
+  color: rgb(0, 50, 160);
+  font-size: 42px;
+  line-height: 48px;
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 300;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+/* "WITH ZEPOSIA" part needs to be bold — handled by the H1 containing both lines */
+/* In the source, the h1 has "BREAK THE CYCLE" (light) + "WITH ZEPOSIA" (bold) */
+
+body.ucsite .hero p {
+  color: rgb(67, 67, 67);
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+/* Hero intro paragraph (first p — the patient message) */
+body.ucsite .hero > div > div > p:first-child {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  margin-bottom: 15px;
+}
+
+/* "Take the next step" strong text */
+body.ucsite .hero strong {
+  color: rgb(0, 50, 160);
+  font-family: 'Montserrat', 'MontserratBold', Arial, sans-serif;
+  font-weight: 700;
+}
+
+/* CTA Button "View the Data" */
+body.ucsite .hero a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgb(0, 32, 80);
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Montserrat', 'MontserratRegular', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 200px;
+  margin: 15px 0;
+}
+
+/* Footnotes — left-aligned, smaller */
+body.ucsite .hero > div > div > p:nth-last-child(-n+4) {
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 4px;
+}
+
+body.ucsite .hero picture,
+body.ucsite .hero img {
+  position: static;
+  opacity: 1;
+  width: auto;
+  height: auto;
+  object-fit: none;
+  display: inline-block;
+}
+
+body.ucsite .hero sup {
+  font-size: 9px;
+  vertical-align: super;
+  line-height: 0;
+}
+
+/* ===== CLINICAL TRIAL INFO (Section 2) ===== */
+body.ucsite main > .section:nth-child(2) {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 10px;
+}
+
+body.ucsite main > .section:nth-child(2) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+/* ===== ISI FRAGMENT (Section 3) ===== */
+body.ucsite .fragment-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper .fragment {
+  padding: 0;
+}
+
+body.ucsite .fragment-wrapper h2,
+body.ucsite .fragment-wrapper h3 {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(67, 67, 67);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper h2 {
+  font-size: 18px;
+  line-height: 22px;
+  color: rgb(0, 50, 160);
+  border-top: 3px solid rgb(0, 50, 160);
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+body.ucsite .fragment-wrapper h3 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+body.ucsite .fragment-wrapper p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+body.ucsite .fragment-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+}
+
+body.ucsite .fragment-wrapper ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+body.ucsite .fragment-wrapper li {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 8px;
+}
+
+body.ucsite .fragment-wrapper a {
+  color: rgb(0, 50, 160);
+  text-decoration: underline;
+}
+
+/* ===== REFERENCES (Section 4) ===== */
+body.ucsite main > .section:nth-child(4) .default-content-wrapper {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper p strong {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  color: rgb(0, 50, 160);
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper ol {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  padding-left: 20px;
+  margin: 0;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper li {
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+body.ucsite main > .section:nth-child(4) .default-content-wrapper em {
+  font-style: italic;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 3px solid rgb(0, 50, 160);
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  max-width: 100%;
+}
+
+body.ucsite .sticky-isi-wrapper .sticky-isi p {
+  font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: rgb(0, 50, 160);
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+body.ucsite footer .footer-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+body.ucsite footer nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+body.ucsite footer nav li {
+  margin: 0;
+}
+
+body.ucsite footer nav a {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  color: rgb(67, 67, 67);
+  text-decoration: none;
+}
+
+body.ucsite footer p {
+  font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgb(67, 67, 67);
+  margin-bottom: 5px;
+}
+
+
+/* ===== FOOTER ===== */
+body.ucsite footer {
+background-color: #f8f9fa;
+border-top: 1px solid #e0e0e0;
+}
+
+body.ucsite footer .footer-wrapper {
+max-width: 1020px;
+margin: 0 auto;
+padding: 20px 15px;
+}
+
+body.ucsite footer nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+body.ucsite footer nav a {
+font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+font-size: 12px;
+color: rgb(67, 67, 67);
+text-decoration: none;
+}
+
+body.ucsite footer p {
+font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
+font-size: 12px;
+line-height: 16px;
+color: rgb(67, 67, 67);
+margin-bottom: 5px;
+}
+
+/* ===== STICKY ISI ===== */
+body.ucsite .sticky-isi-wrapper {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: #fff;
+border-top: 3px solid rgb(0, 50, 160);
+z-index: 1000;
+padding: 10px 20px;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+max-width: 100%;
+}
+
+body.ucsite .sticky-isi-wrapper .sticky-isi p {
+font-family: 'MontserratBold', 'Montserrat', Arial, sans-serif;
+font-weight: 700;
+font-size: 14px;
+color: rgb(0, 50, 160);
+margin: 0;
+}
+
