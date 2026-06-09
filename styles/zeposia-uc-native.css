@@ -1035,3 +1035,13 @@ body.ucsite .hero > div > div > p:nth-child(5) {
   margin-top: 28px;
   margin-bottom: 12px;
 }
+
+/* CTA paragraph total height should equal button height (~52px) */
+body.ucsite .hero > div > div > p:nth-child(5) {
+  margin: 15px 0 3px;
+  line-height: 0;
+}
+
+body.ucsite .hero > div > div > p:nth-child(5) a {
+  height: 44px;
+}
