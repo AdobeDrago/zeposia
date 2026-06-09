@@ -1193,3 +1193,8 @@ body.ucsite * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Force scrollbar to match source's 202.5px container offset */
+html {
+  overflow-y: scroll;
+}
