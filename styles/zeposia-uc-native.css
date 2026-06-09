@@ -863,7 +863,7 @@ body.ucsite .hero > div > div > p:nth-child(4)::before {
 
 /* Force H1 to 2-line rendering like source */
 body.ucsite .hero h1 {
-  max-width: 520px;
+  max-width: 440px;
   margin-left: auto;
   margin-right: auto;
   line-height: 46px;
