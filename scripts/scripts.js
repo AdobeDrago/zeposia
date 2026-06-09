@@ -465,53 +465,67 @@ loadPage();
 // ISI Expand/Collapse functionality
 (function initISIToggle() {
 function setup() {
-var isiEl = document.querySelector('.cmp-isi.sticky-element');
-if (!isiEl) return false;
+var isiEls = document.querySelectorAll('.cmp-isi.sticky-element');
+if (!isiEls.length) return false;
+// Use the first visible one
+var isiEl = null;
+for (var i = 0; i < isiEls.length; i++) {
+if (isiEls[i].offsetHeight > 0) { isiEl = isiEls[i]; break; }
+}
+if (!isiEl) isiEl = isiEls[0];
 
 var moreContainer = isiEl.querySelector('.more-text-container');
-var previewContainer = isiEl.querySelector('.preview-container');
 var expandContainer = isiEl.querySelector('.expand-container');
-
 if (!moreContainer || !expandContainer) return false;
 
-// Create EXPAND button
-moreContainer.innerHTML = '<span class="isi-toggle-btn" style="cursor:pointer;display:flex;align-items:center;gap:5px;font-family:MontserratBold,sans-serif;font-size:14px;color:#0032A0;white-space:nowrap;"><span class="isi-toggle-icon">+</span> <span class="isi-toggle-text">EXPAND</span></span>';
+moreContainer.innerHTML = '<span class="isi-toggle-btn" style="cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-family:MontserratBold,sans-serif;font-size:14px;color:#0032A0;white-space:nowrap;"><span class="isi-toggle-icon">+</span><span class="isi-toggle-text">EXPAND</span></span>';
 
-var isExpanded = false;
+var overlay = null;
 var toggleBtn = moreContainer.querySelector('.isi-toggle-btn');
-var toggleIcon = moreContainer.querySelector('.isi-toggle-icon');
-var toggleText = moreContainer.querySelector('.isi-toggle-text');
-
-function expand() {
-isExpanded = true;
-      // Move to body for correct fixed positioning
-      if (isiEl.parentElement !== document.body) { document.body.appendChild(isiEl); }
-isiEl.setAttribute('style', 'display:block;position:fixed;top:0;left:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;z-index:99999;background:#fff;overflow-y:auto;padding:60px 40px 40px;box-sizing:border-box;');
-if (previewContainer) previewContainer.style.display = 'none';
-expandContainer.style.display = 'block';
-toggleIcon.textContent = '−';
-toggleText.textContent = 'COLLAPSE';
-document.body.style.overflow = 'hidden';
-// Move toggle button to top-right of expanded panel
-moreContainer.style.cssText = 'position:fixed;top:20px;right:40px;z-index:100000;';
-}
-
-function collapse() {
-isExpanded = false;
-isiEl.removeAttribute('style');
-isiEl.style.display = 'block';
-if (previewContainer) previewContainer.style.display = 'block';
-expandContainer.style.display = 'none';
-toggleIcon.textContent = '+';
-toggleText.textContent = 'EXPAND';
-document.body.style.overflow = '';
-moreContainer.style.cssText = '';
-}
 
 toggleBtn.addEventListener('click', function(e) {
 e.preventDefault();
 e.stopPropagation();
-if (isExpanded) { collapse(); } else { expand(); }
+
+if (!overlay) {
+// CREATE OVERLAY
+overlay = document.createElement('div');
+overlay.id = 'isi-expand-overlay';
+overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:999999;background:#fff;overflow-y:auto;padding:20px 40px;box-sizing:border-box;';
+
+// Header bar
+var header = document.createElement('div');
+header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:10px 0 20px;border-bottom:2px solid #0032A0;margin-bottom:20px;position:sticky;top:0;background:#fff;z-index:1;';
+header.innerHTML = '<div style="font-family:MontserratBold,sans-serif;font-size:16px;color:#0032A0;">IMPORTANT SAFETY INFORMATION</div><span id="isi-collapse-btn" style="cursor:pointer;display:inline-flex;align-items:center;gap:5px;font-family:MontserratBold,sans-serif;font-size:14px;color:#0032A0;">− COLLAPSE</span>';
+overlay.appendChild(header);
+
+// Content
+var content = document.createElement('div');
+content.innerHTML = expandContainer.querySelector('.isi-content') ? expandContainer.querySelector('.isi-content').innerHTML : expandContainer.innerHTML;
+overlay.appendChild(content);
+
+document.body.appendChild(overlay);
+document.body.style.overflow = 'hidden';
+
+// Collapse handler
+document.getElementById('isi-collapse-btn').addEventListener('click', function() {
+overlay.remove();
+overlay = null;
+document.body.style.overflow = '';
+moreContainer.querySelector('.isi-toggle-icon').textContent = '+';
+moreContainer.querySelector('.isi-toggle-text').textContent = 'EXPAND';
+});
+
+moreContainer.querySelector('.isi-toggle-icon').textContent = '−';
+moreContainer.querySelector('.isi-toggle-text').textContent = 'COLLAPSE';
+} else {
+// COLLAPSE
+overlay.remove();
+overlay = null;
+document.body.style.overflow = '';
+moreContainer.querySelector('.isi-toggle-icon').textContent = '+';
+moreContainer.querySelector('.isi-toggle-text').textContent = 'EXPAND';
+}
 });
 
 return true;
