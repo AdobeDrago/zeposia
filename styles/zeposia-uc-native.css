@@ -1178,3 +1178,18 @@ body.ucsite header .header.block a {
   text-decoration: none;
   font-family: 'MontserratRegular', 'Montserrat', Arial, sans-serif;
 }
+
+/* ISI precise alignment */
+body.ucsite .fragment-wrapper h2:first-child {
+  margin-top: 5px;
+}
+
+/* CRITICAL: Font smoothing must match source exactly */
+body.ucsite {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body.ucsite * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
