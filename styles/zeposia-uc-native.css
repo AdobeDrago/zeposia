@@ -1193,3 +1193,13 @@ body.ucsite * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Match source container positioning (scrollbar compensation) */
+body.ucsite main > .section {
+  margin-left: 202.5px;
+  margin-right: auto;
+}
+body.ucsite .fragment-wrapper {
+  margin-left: 202.5px;
+  margin-right: auto;
+}
