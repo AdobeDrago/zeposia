@@ -362,6 +362,7 @@ async function loadEager(doc) {
     loadCSS(`${window.hlx.codeBasePath}/styles/source-style-uc.css`);
     if (path === '/ulcerative-colitis' || path === '/ulcerative-colitis/') {
       document.body.classList.add('uc-home');
+      document.body.classList.add('disabled');
     }
   } else if (path.startsWith('/multiple-sclerosis')) {
     document.body.classList.add('mssite');
