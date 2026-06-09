@@ -1217,3 +1217,47 @@ body.ucsite .fragment-wrapper h2:first-child {
 body.ucsite main > .section:nth-child(2) {
   background: linear-gradient(to bottom, #A4E2FF 0px, #A4E2FF 80px, #ffffff 81px, #ffffff 100%);
 }
+
+/* Reset EDS defaults inside ISI for source CSS to work correctly */
+body.ucsite .cmp-footer-isi-content-element .bodypara {
+  margin: 0 0 7px 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'MontserratRegular', Arial, sans-serif;
+  color: #000;
+}
+body.ucsite .cmp-footer-isi-content-element .head3 {
+  margin: 10px 0 5px;
+  padding: 0;
+  font-family: 'MontserratBold', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+}
+body.ucsite .cmp-footer-isi-content-element .indication-li {
+  padding-left: 20px;
+  margin: 0 0 10px;
+  list-style: disc;
+}
+body.ucsite .cmp-footer-isi-content-element .indication-li .bodypara {
+  margin-bottom: 5px;
+  display: list-item;
+}
+body.ucsite .cmp-footer-isi-content-element .isi-content {
+  padding: 0;
+  margin: 0;
+}
+body.ucsite .cmp-footer-isi-content-element {
+  padding: 0;
+  margin: 0;
+}
+/* Override EDS fragment block default styles */
+body.ucsite .fragment-wrapper {
+  padding: 0;
+  margin: 0;
+}
+body.ucsite .fragment-wrapper .fragment {
+  padding: 0;
+  margin: 0;
+}
