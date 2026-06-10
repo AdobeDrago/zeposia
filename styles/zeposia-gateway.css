@@ -11,7 +11,7 @@
 @font-face { font-family: "BMSHumanity"; src: url("/fonts/BMSHumanity-Regular.woff2") format("woff2"); font-weight: normal; font-display: swap; }
 @font-face { font-family: "BMSHumanity-Regular"; src: url("/fonts/BMSHumanity-Regular.woff2") format("woff2"); font-weight: normal; font-display: swap; }
 
-/* Zeposia Gateway — import source site CSS directly for pixel-perfect match */
+/* Zeposia Gateway â import source site CSS directly for pixel-perfect match */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial-shared/clientlibs/base.min.css');
 @import url('https://www.zeposiahcp.com/etc.clientlibs/bms-commercial/design/themes-clientlbs/commercial-global.min.css');
@@ -47,7 +47,7 @@ main {
   }
 }
 
-/* === HCP MODAL — positioning only, styling from source CSS === */
+/* === HCP MODAL â positioning only, styling from source CSS === */
 .entry-modal.show:not(.hcp-dismissed),
 .entry-modal[style*="display: block"],
 .entry-modal[style*="display:block"] {
@@ -92,7 +92,7 @@ body:has(.entry-modal[style*="display:block"]) {
   height: 100vh !important;
 }
 
-/* Fix: Bootstrap imported CSS sets pointer-events:none on .modal-dialog — override everything to auto */
+/* Fix: Bootstrap imported CSS sets pointer-events:none on .modal-dialog â override everything to auto */
 .entry-modal,
 .entry-modal .modal-dialog,
 .entry-modal .modal-content,
@@ -128,7 +128,7 @@ body:has(.entry-modal[style*="display:block"]) {
 padding: 0 !important;
 }
 
-/* === GATEWAY LAYOUT FIXES — match legacy reference === */
+/* === GATEWAY LAYOUT FIXES â match legacy reference === */
 
 /* Hide scrollbar to match legacy page width */
 html { scrollbar-width: none !important; }
@@ -177,3 +177,17 @@ main { max-width: none !important; width: 100% !important; }
 .isi-footer-wrapper img.cmp-image__image { width: 272px !important; }
 .bg-lighter-blue { background-color: #fff !important; padding: 10px 0 !important; }
 .ftrcopytxt { font-size: 11px !important; line-height: 15px !important; }
+
+/* Fix: center text + arrow icon in callout buttons */
+.main-buttons a.mobile-arrow {
+display: flex !important;
+align-items: center !important;
+justify-content: center !important;
+text-align: center !important;
+}
+
+.main-buttons a.mobile-arrow span {
+padding: 0 40px 0 0 !important;
+text-indent: 0 !important;
+line-height: normal !important;
+}
