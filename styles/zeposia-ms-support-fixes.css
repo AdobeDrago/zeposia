@@ -20,3 +20,28 @@ main { display: block !important; }
 #greenbg {
   background-image: url('https://www.zeposiahcp.com/content/dam/commercial/us/zeposiahcp/en/images/background-inner.png') !important;
 }
+/* Full-bleed green background - break out of main max-width */
+#greenbg {
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
+}
+
+/* Fix: header navigation font sizes to match legacy site */
+.utilitycont li.utilitylink,
+.utilitycont li.utilitylink a {
+font-size: 12px !important;
+line-height: normal !important;
+margin-bottom: 0 !important;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-item > a.nav-link,
+.navbar-nav .nav-item > .nav-link {
+font-size: 18px !important;
+line-height: 22px !important;
+margin-bottom: 0 !important;
+}
