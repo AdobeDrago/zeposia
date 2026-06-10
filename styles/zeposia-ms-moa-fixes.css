@@ -1,1 +1,11 @@
 /* Styles consolidated into zeposia-ms-moa.css */
+
+/* Full-bleed green background - break out of main max-width */
+#greenbg {
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
+}
