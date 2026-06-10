@@ -1,11 +1,11 @@
 /* stylelint-disable no-descending-specificity */
 
-/* zeposia-uc-native.css â Native EDS styles for UC pages
+/* zeposia-uc-native.css — Native EDS styles for UC pages
    Matches computed styles from source: www.zeposiahcp.com/ulcerative-colitis
    All values extracted from live page getComputedStyle.
-   v3.2 Â§4.1 UA-reset-first; single canonical rule per selector. */
+   v3.2 §4.1 UA-reset-first; single canonical rule per selector. */
 
-/* ===== UA RESET (Â§4.1 â neutralize user-agent defaults) ===== */
+/* ===== UA RESET (§4.1 — neutralize user-agent defaults) ===== */
 body.ucsite *, body.ucsite *::before, body.ucsite *::after {
   margin: 0;
   padding: 0;
@@ -60,7 +60,7 @@ body.ucsite.disabled header * {
   visibility: visible !important;
 }
 
-/* Hide legacy scraped header inside main on overlay pages â our EDS header replaces it */
+/* Hide legacy scraped header inside main on overlay pages — our EDS header replaces it */
 body.ucsite.disabled main nav.navbar {
   display: none !important;
 }
@@ -150,7 +150,7 @@ body.ucsite header .header.block p {
   line-height: 16px;
 }
 
-/* Nav list: 2-row layout â utility links (items 3+) right-aligned on top,
+/* Nav list: 2-row layout — utility links (items 3+) right-aligned on top,
    section nav (items 1-2) left-aligned on bottom */
 body.ucsite header .header.block > div > ul {
   grid-row: 1 / 3;
@@ -167,7 +167,7 @@ body.ucsite header .header.block > div > ul > li {
   margin: 0;
 }
 
-/* Utility links (USFPI, Med Guide, BMS Resources, Visit Patient Site, Indications) â top row */
+/* Utility links (USFPI, Med Guide, BMS Resources, Visit Patient Site, Indications) — top row */
 body.ucsite header .header.block > div > ul > li:nth-child(n+3) {
   order: -1;
 }
@@ -189,14 +189,14 @@ body.ucsite header .header.block > div > ul::before {
   order: 0;
 }
 
-/* Section nav items (Clinical Data, Dosing) â bottom row, left-aligned */
+/* Section nav items (Clinical Data, Dosing) — bottom row, left-aligned */
 body.ucsite header .header.block > div > ul > li:first-child,
 body.ucsite header .header.block > div > ul > li:nth-child(2) {
   order: 1;
   margin-top: 14px;
 }
 
-/* Utility links â gray, 12px (matches legacy .utilitylink a) */
+/* Utility links — gray, 12px (matches legacy .utilitylink a) */
 body.ucsite header .header.block a,
 body.ucsite header .header.block > div > ul a {
   font-size: 12px;
@@ -211,7 +211,7 @@ body.ucsite header .header.block > div > ul > li > p {
   margin: 0;
 }
 
-/* Section nav items (Clinical Data, Dosing) â 16px blue (matches legacy .nav-link) */
+/* Section nav items (Clinical Data, Dosing) — 16px blue (matches legacy .nav-link) */
 body.ucsite header .header.block > div > ul > li:first-child > p > a,
 body.ucsite header .header.block > div > ul > li:nth-child(2) > p > a {
   font-size: 16px;
@@ -220,7 +220,7 @@ body.ucsite header .header.block > div > ul > li:nth-child(2) > p > a {
   color: rgb(0 50 160);
 }
 
-/* Dropdown chevron on Clinical Data â CSS border triangle */
+/* Dropdown chevron on Clinical Data — CSS border triangle */
 body.ucsite header .header.block > div > ul > li:first-child > p > a::after {
   content: '';
   display: inline-block;
@@ -232,7 +232,7 @@ body.ucsite header .header.block > div > ul > li:first-child > p > a::after {
   border-left: 0.3em solid transparent;
 }
 
-/* Clinical Data hover state â orange highlight like legacy */
+/* Clinical Data hover state — orange highlight like legacy */
 body.ucsite header .header.block > div > ul > li:first-child:hover > p > a {
   color: rgb(227 114 34);
 }
@@ -244,7 +244,7 @@ body.ucsite header .header.block > div > ul > li:first-child:hover > p > a::afte
   border-left: 0.3em solid transparent;
 }
 
-/* Clinical Data dropdown â needs position context on parent li */
+/* Clinical Data dropdown — needs position context on parent li */
 body.ucsite header .header.block > div > ul > li:first-child {
   position: relative;
 }
@@ -338,7 +338,7 @@ body.ucsite.uc-home .hero > div > div > p:first-child {
   margin-bottom: 16px;
 }
 
-/* H1: "BREAK THE CYCLE WITH ZEPOSIA" â 36px, left-aligned like legacy */
+/* H1: "BREAK THE CYCLE WITH ZEPOSIA" — 36px, left-aligned like legacy */
 body.ucsite .hero h1 {
   font-size: 36px;
   line-height: 38px;
@@ -350,12 +350,12 @@ body.ucsite .hero h1 {
   text-align: center;
 }
 
-/* H1 line 1: "BREAK THE CYCLE" â regular weight */
+/* H1 line 1: "BREAK THE CYCLE" — regular weight */
 body.ucsite .hero h1 .hero-line1 {
   font-weight: 400;
 }
 
-/* H1 line 2: "WITH ZEPOSIA" â bold */
+/* H1 line 2: "WITH ZEPOSIA" — bold */
 body.ucsite .hero h1 .hero-line2 {
   color: rgb(0 50 160);
   font-family: MontserratBold, Montserrat, Arial, sans-serif;
@@ -369,7 +369,7 @@ body.ucsite .hero strong {
   font-weight: 700;
 }
 
-/* "Take the next step" â red, semibold, visually part of the grey-con box */
+/* "Take the next step" — red, semibold, visually part of the grey-con box */
 body.ucsite .hero > div > div > p:nth-child(3) {
   margin-bottom: 0;
   margin-top: 5px;
@@ -404,7 +404,7 @@ body.ucsite .hero > div > div > p:nth-child(4) {
   color: rgb(0 50 160);
 }
 
-/* Pill icon as CSS pseudo-element â protrudes left of the grey box like legacy */
+/* Pill icon as CSS pseudo-element — protrudes left of the grey box like legacy */
 body.ucsite .hero > div > div > p:nth-child(4)::before {
   content: '';
   display: inline-block;
@@ -742,12 +742,4 @@ display: none;
 body.ucsite .fragment-wrapper ~ .fragment-wrapper {
 display: none;
 }
-/* Fix: hide EDS footer block ISI (overlay template provides its own) */
-body.ucsite .footer.footer-variation-one {
-display: none !important;
-}
 
-/* Fix: enforce d-none class (Bootstrap not loading from cross-origin) */
-body.ucsite .d-none {
-display: none !important;
-}
