@@ -716,3 +716,29 @@ body.ucsite main h1 {
   font-weight: 700;
   margin: 0 0 8px;
 }
+
+
+/* Hide duplicate sticky-isi sections on UC page (only show as fixed bar, not inline) */
+body.ucsite main > .section:has(.sticky-isi-wrapper) {
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+z-index: 1000;
+max-height: 60px;
+overflow: hidden;
+background: #fff;
+border-top: 2px solid #0032A0;
+padding: 10px 20px;
+box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Hide any second .sticky-isi-wrapper */
+body.ucsite .sticky-isi-wrapper ~ .sticky-isi-wrapper {
+display: none;
+}
+
+/* Only show ONE instance of inline ISI header */
+body.ucsite .fragment-wrapper ~ .fragment-wrapper {
+display: none;
+}
