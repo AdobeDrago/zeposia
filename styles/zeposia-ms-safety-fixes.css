@@ -1,6 +1,6 @@
 /* EDS Snowflake Overlay Fixes for MS Safety Page */
 
-/* Hide EDS default header/footer — template provides its own */
+/* Hide EDS default header/footer â template provides its own */
 body > header, body > footer { display: none !important; }
 
 /* Ensure overlay main is visible */
@@ -62,4 +62,19 @@ left: 50%;
 right: 50%;
 margin-left: -50vw;
 margin-right: -50vw;
+}
+/* Fix: header navigation font sizes to match legacy site */
+.utilitycont li.utilitylink,
+.utilitycont li.utilitylink a {
+font-size: 12px !important;
+line-height: normal !important;
+margin-bottom: 0 !important;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-item > a.nav-link,
+.navbar-nav .nav-item > .nav-link {
+font-size: 18px !important;
+line-height: 22px !important;
+margin-bottom: 0 !important;
 }
