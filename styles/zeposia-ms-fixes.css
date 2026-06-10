@@ -223,3 +223,21 @@ color: #fff !important;
 .hero-carousel .carousel-item a {
 color: #fff !important;
 }
+
+/* Fix: header navigation font sizes to match legacy site */
+/* Utility links row (U.S. Full Prescribing Info, Medication Guide, etc.) - legacy uses 12px */
+.utilitycont li.utilitylink,
+.utilitycont li.utilitylink a {
+font-size: 12px !important;
+line-height: normal !important;
+margin-bottom: 0 !important;
+}
+
+/* Main nav links (Clinical Data, Dosing & Initiation, Support) - legacy uses 18px */
+.navbar-nav .nav-item,
+.navbar-nav .nav-item > a.nav-link,
+.navbar-nav .nav-item > .nav-link {
+font-size: 18px !important;
+line-height: 22px !important;
+margin-bottom: 0 !important;
+}
