@@ -110,3 +110,28 @@ main > .isi-rendering.aem-GridColumn { display: none !important; height: 0 !impo
   #getting-started-pgcont #common-pgcont .head2 { padding-left: 25px !important; }
   #getting-started-pgcont #common-pgcont div#innersectioncont > .col > .column-control-column { justify-content: center; }
 }
+/* Full-bleed green background - break out of main max-width */
+#greenbg {
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
+}
+
+/* Fix: header navigation font sizes to match legacy site */
+.utilitycont li.utilitylink,
+.utilitycont li.utilitylink a {
+font-size: 12px !important;
+line-height: normal !important;
+margin-bottom: 0 !important;
+}
+
+.navbar-nav .nav-item,
+.navbar-nav .nav-item > a.nav-link,
+.navbar-nav .nav-item > .nav-link {
+font-size: 18px !important;
+line-height: 22px !important;
+margin-bottom: 0 !important;
+}
