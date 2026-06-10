@@ -5,6 +5,16 @@ main { display: block !important; }
 .isi-master-container { display: block !important; }
 .isi-rendering-footer { display: block !important; }
 #common-pgcont .column-control .column-control .col {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+padding-left: 0 !important;
+padding-right: 0 !important;
+}
+
+/* Full-bleed green background - break out of main max-width */
+#greenbg {
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
 }
