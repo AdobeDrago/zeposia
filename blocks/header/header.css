@@ -105,3 +105,8 @@ align-items: flex-start;
 gap: 8px;
 }
 }
+/* Fix: remove dash markers from dropdown list items */
+.header ul ul li {
+list-style-type: none !important;
+display: block;
+}
