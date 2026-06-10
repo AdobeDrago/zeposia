@@ -17,3 +17,13 @@ main > .experiencefragment.section { display: none !important; }
 
 /* Hide HCP entry modal on EDS */
 .cmp-modal.entry-modal, .modal-backdrop { display: none !important; }
+
+/* Full-bleed green background - break out of main max-width */
+#greenbg {
+width: 100vw;
+position: relative;
+left: 50%;
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
+}
