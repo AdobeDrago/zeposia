@@ -491,7 +491,7 @@ if (!overlay) {
 // CREATE OVERLAY
 overlay = document.createElement('div');
 overlay.id = 'isi-expand-overlay';
-overlay.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:999999;background:#fff;overflow-y:auto;padding:20px 40px;box-sizing:border-box;';
+overlay.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:52%;max-width:780px;height:80vh;max-height:80vh;z-index:999999;background:#fff;overflow-y:auto;padding:20px 40px;box-sizing:border-box;border:1px solid #ddd;box-shadow:0 4px 20px rgba(0,0,0,0.3);';
 
 // Header bar
 var header = document.createElement('div');
@@ -505,11 +505,12 @@ content.innerHTML = expandContainer.querySelector('.isi-content') ? expandContai
 overlay.appendChild(content);
 
 document.body.appendChild(overlay);
+        var backdrop = document.createElement('div'); backdrop.id = 'isi-backdrop'; backdrop.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);z-index:999998;'; document.body.appendChild(backdrop);
 document.body.style.overflow = 'hidden';
 
 // Collapse handler
 document.getElementById('isi-collapse-btn').addEventListener('click', function() {
-overlay.remove();
+overlay.remove(); var _bd = document.getElementById('isi-backdrop'); if (_bd) _bd.remove();
 overlay = null;
 document.body.style.overflow = '';
 moreContainer.querySelector('.isi-toggle-icon').textContent = '+';
@@ -520,7 +521,7 @@ moreContainer.querySelector('.isi-toggle-icon').textContent = '−';
 moreContainer.querySelector('.isi-toggle-text').textContent = 'COLLAPSE';
 } else {
 // COLLAPSE
-overlay.remove();
+overlay.remove(); var _bd = document.getElementById('isi-backdrop'); if (_bd) _bd.remove();
 overlay = null;
 document.body.style.overflow = '';
 moreContainer.querySelector('.isi-toggle-icon').textContent = '+';
